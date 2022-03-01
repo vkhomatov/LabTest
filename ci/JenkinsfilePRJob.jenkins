@@ -1,0 +1,129 @@
+//Библиотека общих классов
+@Library("DevOps-CI-CD-Library@master") _
+//----------------------------------------------------------PreInit--------------------------------------------------------------------------------
+pipeline {
+    options {     
+        // Указываем дни и кол-во хранимых сборок;
+        buildDiscarder(logRotator(daysToKeepStr: '10', numToKeepStr: '20'))
+
+        // Запрет одновременных сборок;
+        disableConcurrentBuilds()                             
+
+        // Запрет запуска сборки при перезапуске контроллера ;
+        disableResume()
+    }
+    agent {
+        // Указываем где должна собираться сборка (только для steps где явно не указан label);
+        label 'ios-1'                                                                                
+    }
+    parameters {
+        string(name: 'sourceBranch',      defaultValue: '', description: 'Ветка с pr, обязательный параметр')
+        string(name: 'destinationBranch', defaultValue: '', description: 'Ветка, в которую будет мержиться пр, обязательный параметр')
+        string(name: 'authorUsername',    defaultValue: '', description: 'username в github создателя пр, нужно для отправки собщений, обязательный параметр')
+    }
+    environment {
+        //Креды Github Builder. Находятся в Jenkins -> Manage Credentials.
+        git_cred = 'jenkins-surf-builder-token'
+
+        //Канал Slack куда слать оповещение.
+        slack_chanel = ''
+    }
+    //Тригер сборки и переменные прилетевшие с вебхука;
+    triggers { 
+        GenericTrigger(
+        genericVariables: [
+            [key: 'sourceBranch', value: '$.pull_request.head.ref'],
+            [key: 'destinationBranch', value: '$.pull_request.base.ref'],
+            [key: 'authorUsername', value: '$.sender.login'],
+            [key: 'repoUrl', value: '$.repository.html_url'],
+            [key: 'targetBranchChanged', value: '$.target_branch.changed'],
+            [key: 'prUrl', value: '$.pull_request.html_url'],
+            [key: 'repoName', value: '$.repository.name']
+        ],
+        causeString: 'Triggered by Github',
+        //Regexp для фильтрации запуска
+        regexpFilterText: ("\$repoUrl"),
+        //Указать репу проекта 
+        regexpFilterExpression: ("$repoUrl"),
+        printContributedVariables: true,
+        printPostContent: true
+        )
+    }
+//----------------------------------------------------------Init-----------------------------------------------------------------------------------
+   stages {
+        stage('Init') {
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    // Отправляем статус в GitHub
+                    gitNotify(stageName: "Init", statusName: "PENDING")
+                    
+                    script {
+                        //Отмечаем где собираем проект
+                        currentBuild.description = "Building on ${env.NODE_NAME}"
+                    }
+                }
+            }
+            post {
+                success {
+                    // Отправляем статус в GitHub
+                    gitNotify(stageName: "Init", statusName: "SUCCESS")
+                }
+                failure {
+                    // Отправляем в слак сообщение;
+                     slackSend color: '#FF5733', channel: "${slack_chanel}", message: "Build is aborted due to failure of Init stage, ${prUrl}"
+                    // Отправляем статус в GitHub
+                    gitNotify(stageName: "Init", statusName: "FAILURE")
+                }
+            }
+        }
+//----------------------------------------------------------Checkout-------------------------------------------------------------------------------
+        stage('Checkout'){
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    gitNotify(stageName: "Checkout", statusName: "PENDING")
+
+                    // Очищаем от всех возможных хвостов;
+                    sh 'git reset --merge'
+                    sh 'git reset'
+                    sh 'git checkout .'
+                    sh 'git clean -fdx'
+
+                    // Делаем Checkout;
+                    git url: "${env.repoUrl}",                                                                                   
+                        credentialsId: "${git_cred}",
+                        branch: "${sourceBranch}"
+                }
+            }
+            post {
+                success {
+                    gitNotify(stageName: "Checkout", statusName: "SUCCESS")
+                }
+                failure {
+                    slackSend color: '#FF5733', channel: "${slack_chanel}", message: 'Build is aborted due to failure of Checkout stage'
+                    gitNotify(stageName: "Checkout", statusName: "FAILURE")
+                }
+            }
+        }
+//----------------------------------------------------------SurfGen lint-------------------------------------------------------------------------------
+        stage('SurfGen lint'){
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    gitNotify(stageName: "SurfGen lint", statusName: "PENDING")
+
+                    //Запускаем сам Linter
+                    sh "./surfgen lint -c surfgen_linter_config.yaml ."
+                }
+            }
+            post {
+                success {
+                    gitNotify(stageName: "SurfGen lint", statusName: "SUCCESS")
+                }
+                failure {
+                    gitNotify(stageName: "SurfGen lint", statusName: "FAILURE")
+                    slackSend color: '#FF5733', channel: "${slack_chanel}", message: 'Build is aborted due to failure of Checkout stage'
+                }
+            }
+        }
+    }
+}
+//----------------------------------------------------------Finish--------------------------------------------------------------------------------------------------------
