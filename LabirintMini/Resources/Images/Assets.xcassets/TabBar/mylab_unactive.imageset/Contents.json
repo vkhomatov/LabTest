@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "mylab_unactive.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -7,4 +7,19 @@
 
 import Foundation
 
-final class MainTabBarPresenter { }
+final class MainTabBarPresenter {
+
+    // MARK: - Properties
+
+    weak var view: MainTabBarScreenInput?
+    var router: MainTabBarRouterInput?
+
+}
+
+// MARK: - MainTabBarViewOutput
+
+extension MainTabBarPresenter: MainTabBarScreenOutput {
+
+    func viewLoaded() { }
+
+}
