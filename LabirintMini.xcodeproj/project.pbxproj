@@ -14,7 +14,7 @@
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
-		9E12D29327D1CC88000F1CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E12D29227D1CC88000F1CF3 /* Localizable.strings */; };
+		9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E12D29727D1CDC2000F1CF3 /* Localizable.strings */; };
 		9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E274727CFC32600D78244 /* UINavigationBar.swift */; };
 		9EBC235227CE233100AB1BA3 /* MainTabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
@@ -70,7 +70,9 @@
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		9E12D29227D1CC88000F1CF3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9E12D29427D1CD90000F1CF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9E12D29827D1CDC8000F1CF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E2E274727CFC32600D78244 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreen.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +176,7 @@
 			children = (
 				9E12D28A27D0E5C1000F1CF3 /* Constants */,
 				3C0BA2A6268DCB4300C47C74 /* Images */,
-				9E12D29227D1CC88000F1CF3 /* Localizable.strings */,
+				9E12D29727D1CDC2000F1CF3 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -549,13 +551,14 @@
 					};
 				};
 			};
-			buildConfigurationList = 3C0BA288268DC98D00C47C74 /* Build configuration list for PBXProject "Localizable.strings" */;
+			buildConfigurationList = 3C0BA288268DC98D00C47C74 /* Build configuration list for PBXProject "LabirintMini" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 3C0BA284268DC98D00C47C74;
 			productRefGroup = 3C0BA28E268DC98D00C47C74 /* Products */;
@@ -573,7 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */,
-				9E12D29327D1CC88000F1CF3 /* Localizable.strings in Resources */,
+				9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */,
 				3C0BA29A268DC98F00C47C74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,8 +706,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				3C0BA29C268DC98F00C47C74 /* Base */,
+				9E12D29427D1CD90000F1CF3 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9E12D29727D1CDC2000F1CF3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E12D29627D1CDC2000F1CF3 /* en */,
+				9E12D29827D1CDC8000F1CF3 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -881,7 +894,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C0BA288268DC98D00C47C74 /* Build configuration list for PBXProject "Localizable.strings" */ = {
+		3C0BA288268DC98D00C47C74 /* Build configuration list for PBXProject "LabirintMini" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C0BA29F268DC98F00C47C74 /* Debug */,

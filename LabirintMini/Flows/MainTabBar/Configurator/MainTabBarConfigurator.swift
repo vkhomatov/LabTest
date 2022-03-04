@@ -27,14 +27,6 @@ final class MainTabBarConfigurator {
 
 private extension MainTabBarConfigurator {
 
-    private enum TabNames {
-        static let labirint = ("Лабиринт", "TabBar/labirint_unactive", "TabBar/labirint_active")
-        static let catalog = ("Каталог", "TabBar/catalog_unactive", "TabBar/catalog_active")
-        static let basket = ("Корзина", "TabBar/basket_unactive", "TabBar/basket_active")
-        static let promo = ("Акции", "TabBar/promo_unactive", "TabBar/promo_active")
-        static let mylab = ("Мой лаб", "TabBar/mylab_unactive", "TabBar/mylab_active")
-    }
-
     func makeMainTabBarController() -> MainTabBarScreen {
         let view = MainTabBarScreen()
 
@@ -45,17 +37,13 @@ private extension MainTabBarConfigurator {
         return view
     }
 
-    // swiftlint:disable image_name_initialization
-
     func getLabirintTab() -> UINavigationController {
         let labirintVC = LabirintConfigurator().configure()
-        labirintVC.title = TabNames.labirint.0
-        labirintVC.tabBar.isTranslucent = false
-        labirintVC.tabBar.clipsToBounds = true
+        labirintVC.title = L10n.labirint
         let labirintNavigationController = UINavigationController(rootViewController: labirintVC)
-        let labirintBarItem = UITabBarItem(title: nil,
-                                           image: UIImage(named: TabNames.labirint.1),
-                                           selectedImage: UIImage(named: TabNames.labirint.2))
+        let labirintBarItem = UITabBarItem(title: L10n.labirint,
+                                           image: Assets.TabBar.labirintUnactive.image,
+                                           selectedImage: Assets.TabBar.labirintActive.image)
         labirintBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         labirintNavigationController.tabBarItem = labirintBarItem
         return labirintNavigationController
@@ -63,11 +51,11 @@ private extension MainTabBarConfigurator {
 
     func getCatalogTab() -> UINavigationController {
         let catalogVC = CatalogConfigurator().configure()
-        catalogVC.title = TabNames.catalog.0
+        catalogVC.title = L10n.catalog
         let catalogNavigationController = UINavigationController(rootViewController: catalogVC)
-        let catalogBarItem = UITabBarItem(title: nil,
-                                          image: UIImage(named: TabNames.catalog.1),
-                                          selectedImage: UIImage(named: TabNames.catalog.2))
+        let catalogBarItem = UITabBarItem(title: L10n.catalog,
+                                          image: Assets.TabBar.catalogUnactive.image,
+                                          selectedImage: Assets.TabBar.catalogActive.image)
         catalogBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         catalogNavigationController.tabBarItem = catalogBarItem
         return catalogNavigationController
@@ -75,11 +63,11 @@ private extension MainTabBarConfigurator {
 
     func getBasketTab() -> UINavigationController {
         let basketVC = BasketConfigurator().configure()
-        basketVC.title = TabNames.basket.0
+        basketVC.title = L10n.basket
         let basketNavigationController = UINavigationController(rootViewController: basketVC)
-        let basketBarItem = UITabBarItem(title: nil,
-                                         image: UIImage(named: TabNames.basket.1),
-                                         selectedImage: UIImage(named: TabNames.basket.2))
+        let basketBarItem = UITabBarItem(title: L10n.basket,
+                                         image: Assets.TabBar.basketUnactive.image,
+                                         selectedImage: Assets.TabBar.basketActive.image)
         basketBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         basketNavigationController.tabBarItem = basketBarItem
         return basketNavigationController
@@ -87,11 +75,11 @@ private extension MainTabBarConfigurator {
 
     func getPromoTab() -> UINavigationController {
         let promoVC = PromoConfigurator().configure()
-        promoVC.title = TabNames.promo.0
+        promoVC.title = L10n.promo
         let promoNavigationController = UINavigationController(rootViewController: promoVC)
-        let promoBarItem = UITabBarItem(title: nil,
-                                        image: UIImage(named: TabNames.promo.1),
-                                        selectedImage: UIImage(named: TabNames.promo.2))
+        let promoBarItem = UITabBarItem(title: L10n.promo,
+                                        image: Assets.TabBar.promoUnactive.image,
+                                        selectedImage: Assets.TabBar.catalogActive.image)
         promoBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         promoNavigationController.tabBarItem = promoBarItem
         return promoNavigationController
@@ -99,16 +87,14 @@ private extension MainTabBarConfigurator {
 
     func getMyLabTab() -> UINavigationController {
         let myLabVC = MyLabConfigurator().configure()
-        myLabVC.title = TabNames.mylab.0
+        myLabVC.title = L10n.myLab
         let myLabNavigationController = UINavigationController(rootViewController: myLabVC)
-        let myLabBarItem = UITabBarItem(title: nil,
-                                        image: UIImage(named: TabNames.mylab.1),
-                                        selectedImage: UIImage(named: TabNames.mylab.2))
+        let myLabBarItem = UITabBarItem(title: L10n.myLab,
+                                        image: Assets.TabBar.mylabUnactive.image,
+                                        selectedImage: Assets.TabBar.mylabActive.image)
         myLabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         myLabNavigationController.tabBarItem = myLabBarItem
-        return myLabNavigationController
+        return myLabNavigationController        
     }
-
-    // swiftlint:enable image_name_initialization
 
 }

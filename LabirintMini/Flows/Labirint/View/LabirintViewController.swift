@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LabirintViewController: UITabBarController {
+final class LabirintViewController: UIViewController {
 
     // MARK: - Properties
 

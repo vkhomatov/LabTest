@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:LabirintMini.xcodeproj">
+      location = "group:/Users/homatov/surf-ios-practice-homatov/LabirintMini.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
