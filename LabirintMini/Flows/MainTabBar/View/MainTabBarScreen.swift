@@ -18,7 +18,6 @@ class MainTabBarScreen: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
-        configureNavigationBar()
     }
 
 }
@@ -26,11 +25,3 @@ class MainTabBarScreen: UITabBarController {
 // MARK: - MainTabBarScreenInput
 
 extension MainTabBarScreen: MainTabBarScreenInput { }
-
-private extension MainTabBarScreen {
-
-    func configureNavigationBar() {
-        UINavigationBar().makeBlackNavBar()
-    }
-
-}

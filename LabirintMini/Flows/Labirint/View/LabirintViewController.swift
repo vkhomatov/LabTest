@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LabirintViewController: UITabBarController {
+final class LabirintViewController: UIViewController {
 
     // MARK: - Properties
 
@@ -18,6 +18,7 @@ final class LabirintViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
+        configureView()
     }
 
 }
@@ -25,3 +26,13 @@ final class LabirintViewController: UITabBarController {
 // MARK: - LabirintViewInput
 
 extension LabirintViewController: LabirintViewInput { }
+
+// MARK: - Private Methods
+
+private extension LabirintViewController {
+
+    private func configureView() {
+        view.backgroundColor = .white
+    }
+
+}
