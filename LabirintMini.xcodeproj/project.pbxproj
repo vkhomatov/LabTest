@@ -11,6 +11,10 @@
 		3C0BA291268DC98D00C47C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BA290268DC98D00C47C74 /* AppDelegate.swift */; };
 		3C0BA29A268DC98F00C47C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA299268DC98F00C47C74 /* Assets.xcassets */; };
 		3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA29B268DC98F00C47C74 /* LaunchScreen.storyboard */; };
+		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
+		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
+		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
+		9E12D29327D1CC88000F1CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E12D29227D1CC88000F1CF3 /* Localizable.strings */; };
 		9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E274727CFC32600D78244 /* UINavigationBar.swift */; };
 		9EBC235227CE233100AB1BA3 /* MainTabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
@@ -63,6 +67,10 @@
 		3C0BA29C268DC98F00C47C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C0BA29E268DC98F00C47C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449573616019490BDAFFF4D4 /* Pods-LabirintMini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabirintMini.release.xcconfig"; path = "Target Support Files/Pods-LabirintMini/Pods-LabirintMini.release.xcconfig"; sourceTree = "<group>"; };
+		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		9E12D29227D1CC88000F1CF3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9E2E274727CFC32600D78244 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreen.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
@@ -143,8 +151,8 @@
 		3C0BA28F268DC98D00C47C74 /* LabirintMini */ = {
 			isa = PBXGroup;
 			children = (
-				9EBC235327CE283F00AB1BA3 /* Flows */,
 				3C0BA2A4268DCB1C00C47C74 /* Application */,
+				9EBC235327CE283F00AB1BA3 /* Flows */,
 				3C0BA2A5268DCB2F00C47C74 /* Resources */,
 				9E2E274627CFAED100D78244 /* Extensions */,
 				3C0BA29E268DC98F00C47C74 /* Info.plist */,
@@ -164,7 +172,9 @@
 		3C0BA2A5268DCB2F00C47C74 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9E12D28A27D0E5C1000F1CF3 /* Constants */,
 				3C0BA2A6268DCB4300C47C74 /* Images */,
+				9E12D29227D1CC88000F1CF3 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -193,6 +203,17 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		9E12D28A27D0E5C1000F1CF3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9E12D28B27D0E5C1000F1CF3 /* Strings.swift */,
+				9E12D28C27D0E5C1000F1CF3 /* Assets.swift */,
+				9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */,
+			);
+			name = Constants;
+			path = LabirintMini/Constants;
+			sourceTree = SOURCE_ROOT;
 		};
 		9E2E274627CFAED100D78244 /* Extensions */ = {
 			isa = PBXGroup;
@@ -499,6 +520,7 @@
 			buildConfigurationList = 3C0BA2A1268DC98F00C47C74 /* Build configuration list for PBXNativeTarget "LabirintMini" */;
 			buildPhases = (
 				8AB06EEEB3BC731CF8565595 /* [CP] Check Pods Manifest.lock */,
+				9E600E8627D0BB7D00C826B1 /* SwiftGen */,
 				344BA4042695C620008B2B81 /* [RS] SwiftLint */,
 				3C0BA289268DC98D00C47C74 /* Sources */,
 				3C0BA28A268DC98D00C47C74 /* Frameworks */,
@@ -527,7 +549,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3C0BA288268DC98D00C47C74 /* Build configuration list for PBXProject "LabirintMini" */;
+			buildConfigurationList = 3C0BA288268DC98D00C47C74 /* Build configuration list for PBXProject "Localizable.strings" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -551,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */,
+				9E12D29327D1CC88000F1CF3 /* Localizable.strings in Resources */,
 				3C0BA29A268DC98F00C47C74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,7 +583,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		344BA4042695C620008B2B81 /* [RS] SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -572,7 +595,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if which ${SRCROOT}/Pods/SwiftLint/swiftlint >/dev/null; then\n    ${SRCROOT}/Pods/SwiftLint/swiftlint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
 		};
@@ -597,6 +620,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9E600E8627D0BB7D00C826B1 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/Pods/SwiftGen/bin/swiftgen\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -629,9 +670,11 @@
 				9EBC23A127CE40A900AB1BA3 /* PromoConfigurator.swift in Sources */,
 				9EBC23A727CE40F600AB1BA3 /* PromoPresenter.swift in Sources */,
 				9EBC23A327CE40C700AB1BA3 /* PromoRouter.swift in Sources */,
+				9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */,
 				9EBC236327CE2FE300AB1BA3 /* LabirintPresenter.swift in Sources */,
 				9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */,
 				9EBC238927CE394C00AB1BA3 /* MainTabBarScreenInput.swift in Sources */,
+				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
 				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
 				9EBC23BB27CE424200AB1BA3 /* MyLabViewOutput.swift in Sources */,
 				9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */,
@@ -642,6 +685,7 @@
 				9EBC238127CE38C400AB1BA3 /* MainTabBarConfigurator.swift in Sources */,
 				9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */,
 				9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */,
+				9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */,
 				9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */,
 				9EBC239F27CE407800AB1BA3 /* BasketViewOutput.swift in Sources */,
 				9EBC23A927CE411700AB1BA3 /* PromoViewController.swift in Sources */,
@@ -670,6 +714,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -717,7 +762,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -731,6 +776,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -772,7 +818,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -835,7 +881,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C0BA288268DC98D00C47C74 /* Build configuration list for PBXProject "LabirintMini" */ = {
+		3C0BA288268DC98D00C47C74 /* Build configuration list for PBXProject "Localizable.strings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C0BA29F268DC98F00C47C74 /* Debug */,
