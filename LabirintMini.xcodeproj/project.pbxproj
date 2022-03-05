@@ -16,6 +16,16 @@
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
 		9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E12D29727D1CDC2000F1CF3 /* Localizable.strings */; };
 		9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E274727CFC32600D78244 /* UINavigationBar.swift */; };
+		9E3C491727D35F6D00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491627D35F6D00F4D9E6 /* AutorizedHeaderView.xib */; };
+		9E3C491927D364C200F4D9E6 /* AutorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* AutorizedHeaderView.swift */; };
+		9E3C491B27D3659E00F4D9E6 /* UnautorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* UnautorizedHeaderView.xib */; };
+		9E3C491D27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491C27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift */; };
+		9E3C492127D3706B00F4D9E6 /* StandartReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491F27D3706B00F4D9E6 /* StandartReusableCell.swift */; };
+		9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492027D3706B00F4D9E6 /* StandartReusableCell.xib */; };
+		9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C492427D3737700F4D9E6 /* DeliveryAddressCell.swift */; };
+		9E3C492727D3737700F4D9E6 /* DeliveryAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */; };
+		9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */; };
+		9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */; };
 		9EBC235227CE233100AB1BA3 /* MainTabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
 		9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */; };
@@ -74,6 +84,16 @@
 		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E12D29827D1CDC8000F1CF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E2E274727CFC32600D78244 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		9E3C491627D35F6D00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
+		9E3C491827D364C200F4D9E6 /* AutorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizedHeaderView.swift; sourceTree = "<group>"; };
+		9E3C491A27D3659E00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
+		9E3C491C27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
+		9E3C491F27D3706B00F4D9E6 /* StandartReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartReusableCell.swift; sourceTree = "<group>"; };
+		9E3C492027D3706B00F4D9E6 /* StandartReusableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandartReusableCell.xib; sourceTree = "<group>"; };
+		9E3C492427D3737700F4D9E6 /* DeliveryAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressCell.swift; sourceTree = "<group>"; };
+		9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressCell.xib; sourceTree = "<group>"; };
+		9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonCell.swift; sourceTree = "<group>"; };
+		9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitButtonCell.xib; sourceTree = "<group>"; };
 		9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreen.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
 		9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewInput.swift; sourceTree = "<group>"; };
@@ -223,6 +243,51 @@
 				9E2E274727CFC32600D78244 /* UINavigationBar.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9E3C491427D35DA400F4D9E6 /* AutorizedHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C491827D364C200F4D9E6 /* AutorizedHeaderView.swift */,
+				9E3C491627D35F6D00F4D9E6 /* AutorizedHeaderView.xib */,
+			);
+			path = AutorizedHeader;
+			sourceTree = "<group>";
+		};
+		9E3C491527D35DDD00F4D9E6 /* UnautorizedHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C491C27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift */,
+				9E3C491A27D3659E00F4D9E6 /* UnautorizedHeaderView.xib */,
+			);
+			path = UnautorizedHeader;
+			sourceTree = "<group>";
+		};
+		9E3C491E27D3701B00F4D9E6 /* StandartReusebleCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C491F27D3706B00F4D9E6 /* StandartReusableCell.swift */,
+				9E3C492027D3706B00F4D9E6 /* StandartReusableCell.xib */,
+			);
+			path = StandartReusebleCell;
+			sourceTree = "<group>";
+		};
+		9E3C492327D3733700F4D9E6 /* DeliveryAddressCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C492427D3737700F4D9E6 /* DeliveryAddressCell.swift */,
+				9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */,
+			);
+			path = DeliveryAddressCell;
+			sourceTree = "<group>";
+		};
+		9E3C492827D3756800F4D9E6 /* ExitButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */,
+				9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */,
+			);
+			path = ExitButtonCell;
 			sourceTree = "<group>";
 		};
 		9EBC235327CE283F00AB1BA3 /* Flows */ = {
@@ -452,6 +517,11 @@
 		9EBC237727CE35B800AB1BA3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9E3C492827D3756800F4D9E6 /* ExitButtonCell */,
+				9E3C492327D3733700F4D9E6 /* DeliveryAddressCell */,
+				9E3C491E27D3701B00F4D9E6 /* StandartReusebleCell */,
+				9E3C491427D35DA400F4D9E6 /* AutorizedHeader */,
+				9E3C491527D35DDD00F4D9E6 /* UnautorizedHeader */,
 				9EBC23B627CE420100AB1BA3 /* MyLabViewController.swift */,
 				9EBC23B827CE422A00AB1BA3 /* MyLabViewInput.swift */,
 				9EBC23BA27CE424200AB1BA3 /* MyLabViewOutput.swift */,
@@ -575,9 +645,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3C492727D3737700F4D9E6 /* DeliveryAddressCell.xib in Resources */,
+				9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */,
 				3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */,
 				9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */,
 				3C0BA29A268DC98F00C47C74 /* Assets.xcassets in Resources */,
+				9E3C491B27D3659E00F4D9E6 /* UnautorizedHeaderView.xib in Resources */,
+				9E3C491727D35F6D00F4D9E6 /* AutorizedHeaderView.xib in Resources */,
+				9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,8 +732,10 @@
 				9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */,
 				9EBC237A27CE364900AB1BA3 /* LabirintConfigurator.swift in Sources */,
 				9EBC238F27CE3A4C00AB1BA3 /* CatalogRouter.swift in Sources */,
+				9E3C491D27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift in Sources */,
 				9EBC239327CE3FB900AB1BA3 /* BasketConfigurator.swift in Sources */,
 				9EBC238B27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift in Sources */,
+				9E3C492127D3706B00F4D9E6 /* StandartReusableCell.swift in Sources */,
 				9EBC23B127CE41A700AB1BA3 /* MyLabRouter.swift in Sources */,
 				9EBC236727CE33EA00AB1BA3 /* LabirintRouterInput.swift in Sources */,
 				9EBC23AF27CE419500AB1BA3 /* MyLabConfigurator.swift in Sources */,
@@ -676,6 +753,7 @@
 				9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */,
 				9EBC236327CE2FE300AB1BA3 /* LabirintPresenter.swift in Sources */,
 				9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */,
+				9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */,
 				9EBC238927CE394C00AB1BA3 /* MainTabBarScreenInput.swift in Sources */,
 				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
 				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
@@ -683,6 +761,7 @@
 				9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */,
 				9EBC238527CE390F00AB1BA3 /* MainTabBarRouterInput.swift in Sources */,
 				9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */,
+				9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */,
 				9EBC23BD27CE479100AB1BA3 /* CatalogPresenter.swift in Sources */,
 				9EBC239527CE3FD400AB1BA3 /* BasketRouter.swift in Sources */,
 				9EBC238127CE38C400AB1BA3 /* MainTabBarConfigurator.swift in Sources */,
@@ -696,6 +775,7 @@
 				9EBC236527CE339A00AB1BA3 /* LabirintRouter.swift in Sources */,
 				9EBC23B727CE420100AB1BA3 /* MyLabViewController.swift in Sources */,
 				9EBC23A527CE40DB00AB1BA3 /* PromoRouterInput.swift in Sources */,
+				9E3C491927D364C200F4D9E6 /* AutorizedHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
