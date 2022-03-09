@@ -18,6 +18,7 @@ final class BasketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
+        configureView()
     }
 
 }
@@ -25,3 +26,13 @@ final class BasketViewController: UIViewController {
 // MARK: - BasketViewInput
 
 extension BasketViewController: BasketViewInput { }
+
+// MARK: - Private Methods
+
+private extension BasketViewController {
+
+    private func configureView() {
+        view.backgroundColor = .white
+    }
+
+}

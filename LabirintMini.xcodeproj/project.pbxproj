@@ -58,6 +58,7 @@
 		9EBC23BF27CE47AF00AB1BA3 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23BE27CE47AF00AB1BA3 /* CatalogViewController.swift */; };
 		9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */; };
 		9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */; };
+		9EC960E227D257EC00FB9787 /* MainTaBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC960E127D257EC00FB9787 /* MainTaBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		9EBC23BE27CE47AF00AB1BA3 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewInput.swift; sourceTree = "<group>"; };
 		9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewOutput.swift; sourceTree = "<group>"; };
+		9EC960E127D257EC00FB9787 /* MainTaBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTaBar.swift; sourceTree = "<group>"; };
 		C93EA6D505DF2CCA658F849A /* Pods-LabirintMini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabirintMini.debug.xcconfig"; path = "Target Support Files/Pods-LabirintMini/Pods-LabirintMini.debug.xcconfig"; sourceTree = "<group>"; };
 		F5ECB53148855FE14315F3F3 /* Pods_LabirintMini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabirintMini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -483,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				9EBC238027CE38C400AB1BA3 /* MainTabBarConfigurator.swift */,
+				9EC960E127D257EC00FB9787 /* MainTaBar.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				9EBC237A27CE364900AB1BA3 /* LabirintConfigurator.swift in Sources */,
 				9EBC238F27CE3A4C00AB1BA3 /* CatalogRouter.swift in Sources */,
 				9EBC239327CE3FB900AB1BA3 /* BasketConfigurator.swift in Sources */,
+				9EC960E227D257EC00FB9787 /* MainTaBar.swift in Sources */,
 				9EBC238B27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift in Sources */,
 				9EBC23B127CE41A700AB1BA3 /* MyLabRouter.swift in Sources */,
 				9EBC236727CE33EA00AB1BA3 /* LabirintRouterInput.swift in Sources */,

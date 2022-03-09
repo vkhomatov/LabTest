@@ -18,6 +18,7 @@ final class PromoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
+        configureView()
     }
 
 }
@@ -25,3 +26,13 @@ final class PromoViewController: UIViewController {
 // MARK: - PromoViewInput
 
 extension PromoViewController: PromoViewInput { }
+
+// MARK: - Private Methods
+
+private extension PromoViewController {
+
+    private func configureView() {
+        view.backgroundColor = .white
+    }
+
+}

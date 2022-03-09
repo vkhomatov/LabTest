@@ -18,6 +18,7 @@ final class MyLabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
+        configureView()
     }
 
 }
@@ -25,3 +26,13 @@ final class MyLabViewController: UIViewController {
 // MARK: - MyLabViewInput
 
 extension MyLabViewController: MyLabViewInput { }
+
+// MARK: - Private Methods
+
+private extension MyLabViewController {
+
+    private func configureView() {
+        view.backgroundColor = .white
+    }
+
+}

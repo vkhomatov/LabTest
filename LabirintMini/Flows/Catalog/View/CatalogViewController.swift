@@ -18,6 +18,7 @@ final class CatalogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
+        configureView()
     }
 
 }
@@ -25,3 +26,13 @@ final class CatalogViewController: UIViewController {
 // MARK: - CatalogViewInput
 
 extension CatalogViewController: CatalogViewInput { }
+
+// MARK: - Private Methods
+
+private extension CatalogViewController {
+
+    private func configureView() {
+        view.backgroundColor = .white
+    }
+
+}

@@ -19,7 +19,6 @@ final class MainTabBarConfigurator {
         presenter.router = router
         router.view = view
 
-        view.viewControllers = [getLabirintTab(), getCatalogTab(), getBasketTab(), getPromoTab(), getMyLabTab()]
         return view
     }
 
@@ -33,7 +32,6 @@ private extension MainTabBarConfigurator {
         view.tabBar.tintColor = .red
         view.tabBar.isTranslucent = false
         view.tabBar.clipsToBounds = true
-
         return view
     }
 
@@ -94,7 +92,17 @@ private extension MainTabBarConfigurator {
                                         selectedImage: Assets.TabBar.mylabActive.image)
         myLabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         myLabNavigationController.tabBarItem = myLabBarItem
-        return myLabNavigationController        
+        return myLabNavigationController    
+
+        view.viewControllers = [
+            MainTabBar.labirint.makeController(),
+            MainTabBar.catalog.makeController(),
+            MainTabBar.basket.makeController(),
+            MainTabBar.promo.makeController(),
+            MainTabBar.mylab.makeController()
+        ]
+
+        return view
     }
 
 }
