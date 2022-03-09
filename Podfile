@@ -5,6 +5,7 @@ use_modular_headers!
 
 target 'LabirintMini' do
   pod 'SwiftLint'
+  pod 'SwiftGen', '~> 6.0'
 end
 
 post_install do |installer|
