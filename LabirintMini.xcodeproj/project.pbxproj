@@ -3,23 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D8E5FBFE5BFD58DC5C5665E /* Pods_LabirintMini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5ECB53148855FE14315F3F3 /* Pods_LabirintMini.framework */; };
 		3C0BA291268DC98D00C47C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BA290268DC98D00C47C74 /* AppDelegate.swift */; };
-		3C0BA29A268DC98F00C47C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA299268DC98F00C47C74 /* Assets.xcassets */; };
+		3C0BA29A268DC98F00C47C74 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA299268DC98F00C47C74 /* assets.xcassets */; };
 		3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA29B268DC98F00C47C74 /* LaunchScreen.storyboard */; };
+		9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E06B1A127D8E76600E0DC46 /* MyLabViewController.xib */; };
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
 		9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E12D29727D1CDC2000F1CF3 /* Localizable.strings */; };
 		9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E274727CFC32600D78244 /* UINavigationBar.swift */; };
-		9E3C491727D35F6D00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491627D35F6D00F4D9E6 /* AutorizedHeaderView.xib */; };
-		9E3C491927D364C200F4D9E6 /* AutorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* AutorizedHeaderView.swift */; };
-		9E3C491B27D3659E00F4D9E6 /* UnautorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* UnautorizedHeaderView.xib */; };
-		9E3C491D27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491C27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift */; };
+		9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */; };
+		9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */; };
+		9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */; };
+		9E3C491D27D36D1C00F4D9E6 /* AutorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491C27D36D1C00F4D9E6 /* AutorizedHeaderView.swift */; };
 		9E3C492127D3706B00F4D9E6 /* StandartReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491F27D3706B00F4D9E6 /* StandartReusableCell.swift */; };
 		9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492027D3706B00F4D9E6 /* StandartReusableCell.xib */; };
 		9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C492427D3737700F4D9E6 /* DeliveryAddressCell.swift */; };
@@ -73,10 +74,11 @@
 /* Begin PBXFileReference section */
 		3C0BA28D268DC98D00C47C74 /* LabirintMini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabirintMini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0BA290268DC98D00C47C74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C0BA299268DC98F00C47C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C0BA299268DC98F00C47C74 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		3C0BA29C268DC98F00C47C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C0BA29E268DC98F00C47C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449573616019490BDAFFF4D4 /* Pods-LabirintMini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabirintMini.release.xcconfig"; path = "Target Support Files/Pods-LabirintMini/Pods-LabirintMini.release.xcconfig"; sourceTree = "<group>"; };
+		9E06B1A127D8E76600E0DC46 /* MyLabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLabViewController.xib; sourceTree = "<group>"; };
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -84,10 +86,10 @@
 		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E12D29827D1CDC8000F1CF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E2E274727CFC32600D78244 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
-		9E3C491627D35F6D00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
-		9E3C491827D364C200F4D9E6 /* AutorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizedHeaderView.swift; sourceTree = "<group>"; };
-		9E3C491A27D3659E00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
-		9E3C491C27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
+		9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
+		9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
+		9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
+		9E3C491C27D36D1C00F4D9E6 /* AutorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizedHeaderView.swift; sourceTree = "<group>"; };
 		9E3C491F27D3706B00F4D9E6 /* StandartReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartReusableCell.swift; sourceTree = "<group>"; };
 		9E3C492027D3706B00F4D9E6 /* StandartReusableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandartReusableCell.xib; sourceTree = "<group>"; };
 		9E3C492427D3737700F4D9E6 /* DeliveryAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressCell.swift; sourceTree = "<group>"; };
@@ -204,7 +206,7 @@
 		3C0BA2A6268DCB4300C47C74 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3C0BA299268DC98F00C47C74 /* Assets.xcassets */,
+				3C0BA299268DC98F00C47C74 /* assets.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -245,22 +247,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9E3C491427D35DA400F4D9E6 /* AutorizedHeader */ = {
+		9E3C491427D35DA400F4D9E6 /* UnautorizedHeader */ = {
 			isa = PBXGroup;
 			children = (
-				9E3C491827D364C200F4D9E6 /* AutorizedHeaderView.swift */,
-				9E3C491627D35F6D00F4D9E6 /* AutorizedHeaderView.xib */,
-			);
-			path = AutorizedHeader;
-			sourceTree = "<group>";
-		};
-		9E3C491527D35DDD00F4D9E6 /* UnautorizedHeader */ = {
-			isa = PBXGroup;
-			children = (
-				9E3C491C27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift */,
-				9E3C491A27D3659E00F4D9E6 /* UnautorizedHeaderView.xib */,
+				9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */,
+				9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */,
 			);
 			path = UnautorizedHeader;
+			sourceTree = "<group>";
+		};
+		9E3C491527D35DDD00F4D9E6 /* AutorizedHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C491C27D36D1C00F4D9E6 /* AutorizedHeaderView.swift */,
+				9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */,
+			);
+			path = AutorizedHeader;
 			sourceTree = "<group>";
 		};
 		9E3C491E27D3701B00F4D9E6 /* StandartReusebleCell */ = {
@@ -520,11 +522,12 @@
 				9E3C492827D3756800F4D9E6 /* ExitButtonCell */,
 				9E3C492327D3733700F4D9E6 /* DeliveryAddressCell */,
 				9E3C491E27D3701B00F4D9E6 /* StandartReusebleCell */,
-				9E3C491427D35DA400F4D9E6 /* AutorizedHeader */,
-				9E3C491527D35DDD00F4D9E6 /* UnautorizedHeader */,
+				9E3C491427D35DA400F4D9E6 /* UnautorizedHeader */,
+				9E3C491527D35DDD00F4D9E6 /* AutorizedHeader */,
 				9EBC23B627CE420100AB1BA3 /* MyLabViewController.swift */,
 				9EBC23B827CE422A00AB1BA3 /* MyLabViewInput.swift */,
 				9EBC23BA27CE424200AB1BA3 /* MyLabViewOutput.swift */,
+				9E06B1A127D8E76600E0DC46 /* MyLabViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				3C0BA289268DC98D00C47C74 /* Sources */,
 				3C0BA28A268DC98D00C47C74 /* Frameworks */,
 				3C0BA28B268DC98D00C47C74 /* Resources */,
+				F56DF0AB9ABEEE1377CAC936 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -649,9 +653,10 @@
 				9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */,
 				3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */,
 				9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */,
-				3C0BA29A268DC98F00C47C74 /* Assets.xcassets in Resources */,
-				9E3C491B27D3659E00F4D9E6 /* UnautorizedHeaderView.xib in Resources */,
-				9E3C491727D35F6D00F4D9E6 /* AutorizedHeaderView.xib in Resources */,
+				3C0BA29A268DC98F00C47C74 /* assets.xcassets in Resources */,
+				9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */,
+				9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */,
+				9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */,
 				9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,6 +722,23 @@
 			shellPath = /bin/sh;
 			shellScript = "${SRCROOT}/Pods/SwiftGen/bin/swiftgen\n";
 		};
+		F56DF0AB9ABEEE1377CAC936 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -732,7 +754,7 @@
 				9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */,
 				9EBC237A27CE364900AB1BA3 /* LabirintConfigurator.swift in Sources */,
 				9EBC238F27CE3A4C00AB1BA3 /* CatalogRouter.swift in Sources */,
-				9E3C491D27D36D1C00F4D9E6 /* UnautorizedHeaderView.swift in Sources */,
+				9E3C491D27D36D1C00F4D9E6 /* AutorizedHeaderView.swift in Sources */,
 				9EBC239327CE3FB900AB1BA3 /* BasketConfigurator.swift in Sources */,
 				9EBC238B27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift in Sources */,
 				9E3C492127D3706B00F4D9E6 /* StandartReusableCell.swift in Sources */,
@@ -775,7 +797,7 @@
 				9EBC236527CE339A00AB1BA3 /* LabirintRouter.swift in Sources */,
 				9EBC23B727CE420100AB1BA3 /* MyLabViewController.swift in Sources */,
 				9EBC23A527CE40DB00AB1BA3 /* PromoRouterInput.swift in Sources */,
-				9E3C491927D364C200F4D9E6 /* AutorizedHeaderView.swift in Sources */,
+				9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

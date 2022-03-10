@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainTabBarScreen = MainTabBarConfigurator().configure()
         self.window?.rootViewController = mainTabBarScreen
-        window?.backgroundColor = .white
         self.window?.makeKeyAndVisible()
         return true
     }

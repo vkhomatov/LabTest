@@ -5,9 +5,29 @@
   Created by homatov on 04.03.2022.
   
 */
+// MARK: - TabBar
 
 "Labirint" = "Labirint";
 "Catalog" = "Catalog";
 "Basket" = "Basket";
 "Promo" = "Promo";
 "My lab" = "My lab";
+
+// MARK: - MyLabTab
+
+"My orders" = "My orders";
+"My coupons" = "My coupons";
+"Saving goods" = "Saving goods";
+"My subscriptions" = "My subscriptions";
+"Purchased goods" = "Purchased goods";
+"My reviews" = "My reviews";
+"Delivery" = "Delivery";
+"156 pickup points" = "156 pickup points";
+"Profile settings" = "Profile settings";
+"App settings" = "App settings";
+"Store Information" = "Store Information";
+"Logout" = "Logout";
+"Login" = "Login";
+"Sign in to get all the features of the profile" = "Sign in to get all the features of the profile";
+"By logging in or registering, I agree with terms and conditions" = "By logging in or registering, I agree with terms and conditions";
+

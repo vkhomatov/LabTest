@@ -18,24 +18,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb0-O6-db2">
-                        <rect key="frame" x="135.5" y="6" width="49" height="32"/>
+                        <rect key="frame" x="15.5" y="6" width="289" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Gb0-O6-db2" secondAttribute="height" multiplier="289:32" id="FTj-uu-g49"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <state key="normal" title="Выйти"/>
                         <connections>
-                            <action selector="ExitButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Yko-TK-iRG"/>
+                            <action selector="exitButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Q1v-1m-ZLo"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Gb0-O6-db2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JAa-hL-XT9"/>
-                    <constraint firstItem="Gb0-O6-db2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="xIQ-Og-3WP"/>
+                    <constraint firstItem="Gb0-O6-db2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="WfE-OQ-OuY"/>
+                    <constraint firstItem="Gb0-O6-db2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uLx-Ez-y3S"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="ExitButton" destination="Gb0-O6-db2" id="S7Z-gl-hNk"/>
+                <outlet property="exitButton" destination="Gb0-O6-db2" id="TAa-tK-Z6T"/>
             </connections>
-            <point key="canvasLocation" x="75" y="83"/>
+            <point key="canvasLocation" x="73.913043478260875" y="82.366071428571431"/>
         </tableViewCell>
     </objects>
 </document>

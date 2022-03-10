@@ -7,4 +7,8 @@
 
 import Foundation
 
-protocol MyLabViewInput: AnyObject { }
+protocol MyLabViewInput: AnyObject {
+
+    func setupInitialState()
+
+}
