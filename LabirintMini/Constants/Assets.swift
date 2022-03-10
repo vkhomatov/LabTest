@@ -20,19 +20,19 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Assets {
   public enum Launch {
-    public static let labirintLabel = ImageAsset(name: "Launch/LabirintLabel")
+    public static let labirintLabel = ImageAsset(name: "Launch/labirintLabel")
   }
   public enum TabBar {
-    public static let basketActive = ImageAsset(name: "TabBar/basket_active")
-    public static let basketUnactive = ImageAsset(name: "TabBar/basket_unactive")
-    public static let catalogActive = ImageAsset(name: "TabBar/catalog_active")
-    public static let catalogUnactive = ImageAsset(name: "TabBar/catalog_unactive")
-    public static let labirintActive = ImageAsset(name: "TabBar/labirint_active")
-    public static let labirintUnactive = ImageAsset(name: "TabBar/labirint_unactive")
-    public static let mylabActive = ImageAsset(name: "TabBar/mylab_active")
-    public static let mylabUnactive = ImageAsset(name: "TabBar/mylab_unactive")
-    public static let promoActive = ImageAsset(name: "TabBar/promo_active")
-    public static let promoUnactive = ImageAsset(name: "TabBar/promo_unactive")
+    public static let basketActive = ImageAsset(name: "TabBar/basketActive")
+    public static let basketUnactive = ImageAsset(name: "TabBar/basketUnactive")
+    public static let catalogActive = ImageAsset(name: "TabBar/catalogActive")
+    public static let catalogUnactive = ImageAsset(name: "TabBar/catalogUnactive")
+    public static let labirintActive = ImageAsset(name: "TabBar/labirintActive")
+    public static let labirintUnactive = ImageAsset(name: "TabBar/labirintUnactive")
+    public static let mylabActive = ImageAsset(name: "TabBar/mylabActive")
+    public static let mylabUnactive = ImageAsset(name: "TabBar/mylabUnactive")
+    public static let promoActive = ImageAsset(name: "TabBar/promoActive")
+    public static let promoUnactive = ImageAsset(name: "TabBar/promoUnactive")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

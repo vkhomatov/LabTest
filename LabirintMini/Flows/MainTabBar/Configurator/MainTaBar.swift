@@ -20,21 +20,17 @@ enum MainTabBar: CaseIterable {
 extension MainTabBar {
 
     func makeController() -> UINavigationController {
-        // swiftlint:disable image_name_initialization
-
         let vc = vc
         vc.title = title
         let navigationController = UINavigationController(rootViewController: vc)
-        let barItem = UITabBarItem(title: nil,
-                                   image: UIImage(named: unactiveIcon),
-                                   selectedImage: UIImage(named: activeIcon))
+        let barItem = UITabBarItem(title: title,
+                                   image: unactiveIcon,
+                                   selectedImage: activeIcon)
         barItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         navigationController.tabBarItem = barItem
         navigationController.navigationBar.makeBlackNavBar()
 
         return navigationController
-
-        // swiftlint:enable image_name_initialization
     }
 
 }
@@ -59,45 +55,45 @@ private extension MainTabBar {
     var title: String {
         switch self {
         case .labirint:
-            return "Лабиринт"
+            return L10n.labirint
         case .catalog:
-            return "Каталог"
+            return L10n.catalog
         case .basket:
-            return "Корзина"
+            return L10n.basket
         case .promo:
-            return "Акции"
+            return L10n.promo
         case .mylab:
-            return "Мой лаб"
+            return L10n.myLab
         }
     }
 
-    var activeIcon: String {
+    var activeIcon: UIImage {
         switch self {
         case .labirint:
-            return "TabBar/labirint_active"
+            return Assets.TabBar.labirintActive.image
         case .catalog:
-            return "TabBar/catalog_active"
+            return Assets.TabBar.catalogActive.image
         case .basket:
-            return "TabBar/basket_active"
+            return Assets.TabBar.basketActive.image
         case .promo:
-            return "TabBar/promo_active"
+            return Assets.TabBar.promoActive.image
         case .mylab:
-            return "TabBar/mylab_active"
+            return Assets.TabBar.mylabActive.image
         }
     }
 
-    var unactiveIcon: String {
+    var unactiveIcon: UIImage {
         switch self {
         case .labirint:
-            return "TabBar/labirint_unactive"
+            return Assets.TabBar.labirintUnactive.image
         case .catalog:
-            return "TabBar/catalog_unactive"
+            return Assets.TabBar.catalogUnactive.image
         case .basket:
-            return "TabBar/basket_unactive"
+            return Assets.TabBar.basketUnactive.image
         case .promo:
-            return "TabBar/promo_unactive"
+            return Assets.TabBar.promoUnactive.image
         case .mylab:
-            return "TabBar/mylab_unactive"
+            return Assets.TabBar.mylabUnactive.image
         }
     }
 

@@ -7,4 +7,8 @@
 
 import Foundation
 
-protocol MainTabBarScreenInput: AnyObject { }
+protocol MainTabBarScreenInput: AnyObject {
+    
+    func configure(with tabs: [MainTabBar])
+    
+}

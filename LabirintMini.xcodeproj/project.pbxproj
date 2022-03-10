@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -71,10 +71,10 @@
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		9E12D29427D1CD90000F1CF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9E12D29827D1CDC8000F1CF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E2E274727CFC32600D78244 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		9EAE91E227DA4B18003988F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9EAE91ED27DA5F3C003988F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreen.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
 		9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewInput.swift; sourceTree = "<group>"; };
@@ -530,7 +530,7 @@
 				3C0BA289268DC98D00C47C74 /* Sources */,
 				3C0BA28A268DC98D00C47C74 /* Frameworks */,
 				3C0BA28B268DC98D00C47C74 /* Resources */,
-				7D698170649AAB75DFF09E26 /* [CP] Embed Pods Frameworks */,
+				DD82443961B6E9A182D7F90E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -606,23 +606,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which ${SRCROOT}/Pods/SwiftLint/swiftlint >/dev/null; then\n    ${SRCROOT}/Pods/SwiftLint/swiftlint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
 		};
-		7D698170649AAB75DFF09E26 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8AB06EEEB3BC731CF8565595 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -662,6 +645,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${SRCROOT}/Pods/SwiftGen/bin/swiftgen\n";
+		};
+		DD82443961B6E9A182D7F90E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -728,7 +728,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3C0BA29C268DC98F00C47C74 /* Base */,
-				9E12D29427D1CD90000F1CF3 /* ru */,
+				9EAE91E227DA4B18003988F1 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -737,7 +737,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9E12D29627D1CDC2000F1CF3 /* en */,
-				9E12D29827D1CDC8000F1CF3 /* ru */,
+				9EAE91ED27DA5F3C003988F1 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

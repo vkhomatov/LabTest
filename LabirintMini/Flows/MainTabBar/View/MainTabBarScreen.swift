@@ -17,6 +17,10 @@ class MainTabBarScreen: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupInitialState()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         output?.viewLoaded()
     }
 
@@ -24,4 +28,20 @@ class MainTabBarScreen: UITabBarController {
 
 // MARK: - MainTabBarScreenInput
 
-extension MainTabBarScreen: MainTabBarScreenInput { }
+extension MainTabBarScreen: MainTabBarScreenInput {
+    
+    func configure(with tabs: [MainTabBar]) {
+        viewControllers = tabs.map { $0.makeController() }
+    }
+    
+}
+
+private extension MainTabBarScreen {
+    
+    func setupInitialState() {
+        tabBar.tintColor = .red
+        tabBar.isTranslucent = false
+        tabBar.clipsToBounds = true
+    }
+    
+}
