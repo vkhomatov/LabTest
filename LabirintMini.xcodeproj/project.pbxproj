@@ -530,6 +530,7 @@
 				3C0BA289268DC98D00C47C74 /* Sources */,
 				3C0BA28A268DC98D00C47C74 /* Frameworks */,
 				3C0BA28B268DC98D00C47C74 /* Resources */,
+				7D698170649AAB75DFF09E26 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -604,6 +605,23 @@
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if which ${SRCROOT}/Pods/SwiftLint/swiftlint >/dev/null; then\n    ${SRCROOT}/Pods/SwiftLint/swiftlint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
+		};
+		7D698170649AAB75DFF09E26 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		8AB06EEEB3BC731CF8565595 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
