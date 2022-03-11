@@ -15,6 +15,12 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
 
     enum Constants {
         static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
+        static let whiteColor: UIColor = .white
+        static let headerHeight: CGFloat = 208
+        static let bigFont: CGFloat = 27
+        static let middleFont: CGFloat = 14
+        static let preMiddleFont: CGFloat = 13
+        static let smallFont: CGFloat = 12
     }
     
     // MARK: - IBOutlets
@@ -47,34 +53,32 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
 private extension AutorizedHeaderView {
 
     func setupInitialState() {
-        self.backgroundColor = .black
-        
         nameLabel.numberOfLines = 1
-        nameLabel?.font = .systemFont(ofSize: 14)
-        nameLabel?.textColor = .white
+        nameLabel?.font = .systemFont(ofSize: Constants.middleFont)
+        nameLabel?.textColor = Constants.whiteColor
 
         numberLabel.numberOfLines = 1
-        numberLabel?.font = .systemFont(ofSize: 14)
+        numberLabel?.font = .systemFont(ofSize: Constants.middleFont)
         numberLabel?.textColor = Constants.greyColor
         
         discountTitleLabel.numberOfLines = 1
-        discountTitleLabel?.font = .systemFont(ofSize: 13)
+        discountTitleLabel?.font = .systemFont(ofSize: Constants.preMiddleFont)
         discountTitleLabel?.textColor = .white
         
         discountLabel.numberOfLines = 1
-        discountLabel?.font = .systemFont(ofSize: 27)
+        discountLabel?.font = .systemFont(ofSize: Constants.bigFont)
         discountLabel?.textColor = .white
         
         discountInfoLabel.numberOfLines = 2
-        discountInfoLabel?.font = .systemFont(ofSize: 12)
+        discountInfoLabel?.font = .systemFont(ofSize: Constants.smallFont)
         discountInfoLabel?.textColor = Constants.greyColor
         
         balanceTitleLabel.numberOfLines = 1
-        balanceTitleLabel?.font = .systemFont(ofSize: 13)
+        balanceTitleLabel?.font = .systemFont(ofSize: Constants.preMiddleFont)
         balanceTitleLabel?.textColor = .white
         
         balanceLabel.numberOfLines = 1
-        balanceLabel?.font = .systemFont(ofSize: 27)
+        balanceLabel?.font = .systemFont(ofSize: Constants.bigFont)
         balanceLabel?.textColor = .white
         
         ballanceInfoImageView.image = Assets.TabBar.ic.image

@@ -41,15 +41,6 @@ final class MyLabViewController: UIViewController {
 private extension MyLabViewController {
     
     func setupTableView() {
-        
-        let bundle = Bundle(for: type(of: self))
-
-        tableView.register(UINib(nibName: "StandartReusableCell", bundle: bundle), forCellReuseIdentifier: "StandartReusableCell")
-        tableView.register(UINib(nibName: "DeliveryAddressCell", bundle: bundle), forCellReuseIdentifier: "DeliveryAddressCell")
-        tableView.register(UINib(nibName: "ExitButtonCell", bundle: bundle), forCellReuseIdentifier: "ExitButtonCell")
-        tableView.register(UINib(nibName: "AutorizedHeaderView", bundle: bundle), forHeaderFooterViewReuseIdentifier: "AutorizedHeaderView")
-        tableView.register(UINib(nibName: "UnautorizedHeaderView", bundle: bundle), forHeaderFooterViewReuseIdentifier: "UnautorizedHeaderView")
-
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = .clear
         tableView.showsVerticalScrollIndicator = false
@@ -105,7 +96,7 @@ private extension MyLabViewController {
 
         }
 
-        let deliveryModel = DeliveryAddressCellViewModel(title: L10n.delivery, address: "г. Петропавловск, от 1600 р. бесплатно, доставим завтра")
+        let deliveryModel = DeliveryAddressCellViewModel(title: L10n.delivery, address: "г. Петропавловск, от 1600 р. бесплатно, доставим завтра", login: login)
         let deliveryGenerator = BaseNonReusableCellGenerator<DeliveryAddressCell>(with: deliveryModel)
         adapter.addCellGenerator(deliveryGenerator)
 

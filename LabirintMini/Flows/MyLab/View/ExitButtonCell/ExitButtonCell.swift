@@ -21,7 +21,8 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     // MARK: - Constants
     
     enum Constants {
-        static let redColor = UIColor(red: 0.878, green: 0.376, blue: 0.376, alpha: 1)
+        static let redColor =  UIColor(red: 0.902, green: 0.082, blue: 0.169, alpha: 1)
+        static let fontSize: CGFloat = 16
     }
 
     // MARK: - IBOutlets
@@ -47,7 +48,7 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     // MARK: - Internal Methods
     
     func configure(with model: Model) {
-        exitButton.titleLabel?.text = model.title
+        exitButton.setTitle(model.title, for: .normal)
     }
     
 }
@@ -59,11 +60,13 @@ private extension ExitButtonCell {
     func setupInitialState() {
         
         exitButton.backgroundColor = .clear
-        exitButton.titleLabel?.font = .systemFont(ofSize: 16)
-        exitButton.titleLabel?.textColor = Constants.redColor
+        exitButton.titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
+        exitButton.setTitleColor(Constants.redColor, for: .normal)
+        
+        selectionStyle = .none
+        separatorInset = .zero
+        separatorInset = UIEdgeInsets(top: .zero, left: .greatestFiniteMagnitude, bottom: .zero, right: .zero)
 
-        self.selectionStyle = .gray
-        self.separatorInset = UIEdgeInsets(top: 0, left: 200, bottom: 0, right: 0)
     }
 
 }

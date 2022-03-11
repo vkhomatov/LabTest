@@ -15,7 +15,10 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
 
     enum Constants {
         static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
+        static let whiteColor: UIColor = .white
         static let headerHeight: CGFloat = 208
+        static let bigFont: CGFloat = 15
+        static let smallFont: CGFloat = 13
     }
     
     // MARK: - IBOutlets
@@ -23,6 +26,15 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
     
+    // MARK: - IBActions
+
+    @IBAction func enterButtonTouchDown(_ sender: UIButton) {
+        enterButton.backgroundColor = Constants.greyColor
+    }
+    
+    @IBAction func enterButtonTouchUp(_ sender: UIButton) {
+        enterButton.backgroundColor = Constants.whiteColor
+    }
     // MARK: - System Methods
     
     class func instanceFromNib() -> UIView? {
@@ -32,7 +44,6 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
-        self.backgroundColor = .black
     }
 }
 
@@ -44,19 +55,25 @@ private extension UnautorizedHeaderView {
     func setupInitialState() {
         
         mainLabel.numberOfLines = 2
-        mainLabel?.font = .systemFont(ofSize: 15)
-        mainLabel?.textColor = .white
+        mainLabel?.font = .systemFont(ofSize: Constants.bigFont)
+        mainLabel?.textColor = Constants.whiteColor
         mainLabel.text = L10n.signInToGetAllTheFeaturesOfTheProfile
         
         infoLabel.numberOfLines = 2
-        infoLabel?.font = .systemFont(ofSize: 13)
+        infoLabel?.font = .systemFont(ofSize: Constants.smallFont)
         infoLabel?.textColor = Constants.greyColor
-        infoLabel?.text = L10n.byLoggingInOrRegisteringIAgreeWithTermsAndConditions
         
-        enterButton.titleLabel?.text = L10n.login
-        enterButton.backgroundColor = .white
-        enterButton.setTitleColor(.blue, for: .normal)
+        let infoText = NSMutableAttributedString.init(string:  L10n.byLoggingInOrRegisteringIAgreeWithTermsAndConditions)
+        if Locale.current.languageCode == "en"{
+            infoText.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: NSRange.init(location: 43, length: 5))
+            infoText.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: NSRange.init(location: 53, length: 10))
+        } else if Locale.current.languageCode == "ru" {
+            infoText.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: NSRange.init(location: 38, length: 11))
+            infoText.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: NSRange.init(location: 52, length: 9))
+        }
 
+        infoLabel.attributedText = infoText
+        enterButton.loginButton(title: L10n.login)
     }
 
 }

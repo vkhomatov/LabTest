@@ -13,7 +13,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="KGk-i7-Jjw" customClass="StandartReusableCell" customModule="LabirintMini" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -35,15 +35,32 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAY-GW-dzC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="320" id="SGn-b2-Jam"/>
+                            <constraint firstAttribute="height" constant="65" id="wQw-6r-kcB"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="gYV-1w-wJl" firstAttribute="centerY" secondItem="d2P-Q6-tvV" secondAttribute="centerY" id="6Uu-lu-6qv"/>
+                    <constraint firstAttribute="bottom" secondItem="SAY-GW-dzC" secondAttribute="bottom" id="7gB-Ex-Dxz"/>
                     <constraint firstAttribute="trailing" secondItem="gYV-1w-wJl" secondAttribute="trailing" constant="17" id="FZj-ny-ybS"/>
                     <constraint firstItem="d2P-Q6-tvV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="MXJ-ne-X9n"/>
+                    <constraint firstItem="SAY-GW-dzC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cbu-FN-BYx"/>
+                    <constraint firstAttribute="trailing" secondItem="SAY-GW-dzC" secondAttribute="trailing" id="dRx-7j-sC1"/>
+                    <constraint firstItem="SAY-GW-dzC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eRG-1J-olB"/>
                     <constraint firstItem="d2P-Q6-tvV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ne4-tY-Rsb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="5lB-D2-G8a"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="9X7-yA-U4I"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="trailing" secondItem="njF-e1-oar" secondAttribute="trailing" id="ZFn-ir-gE1"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" id="brq-nY-1Dz"/>
+            </constraints>
             <connections>
                 <outlet property="TitleLabel" destination="d2P-Q6-tvV" id="bva-7e-mFT"/>
                 <outlet property="ValueLabel" destination="gYV-1w-wJl" id="uN7-YW-NMV"/>

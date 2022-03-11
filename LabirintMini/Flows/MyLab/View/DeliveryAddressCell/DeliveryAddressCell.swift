@@ -14,6 +14,7 @@ import ReactiveDataDisplayManager
 struct DeliveryAddressCellViewModel {
     let title: String
     let address: String
+    let login: Bool
 }
 
 class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
@@ -26,6 +27,11 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
     
     enum Constants {
         static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
+        static let blackColor: UIColor = .black
+        static let whiteColor: UIColor = .white
+        static let bigFont: CGFloat = 17
+        static let smallFont: CGFloat = 13
+        static let cornerRadius: CGFloat = 6
     }
     
     // MARK: - IBOutlets
@@ -49,6 +55,12 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
     func configure(with model: Model) {
         deliveryTitleLabel.text = model.title
         deliveryAddressLabel.text = model.address
+        
+        if !model.login {
+            layer.masksToBounds = true
+            layer.cornerRadius = Constants.cornerRadius
+            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        }
     }
     
 }
@@ -60,17 +72,17 @@ private extension DeliveryAddressCell {
 
     func setupInitialState() {
         deliveryTitleLabel.numberOfLines = 1
-        deliveryTitleLabel.backgroundColor = .clear
-        deliveryTitleLabel?.font = .systemFont(ofSize: 17)
-        deliveryTitleLabel?.textColor = .black
+        deliveryTitleLabel?.font = .systemFont(ofSize: Constants.bigFont)
+        deliveryTitleLabel?.textColor = Constants.blackColor
         
-        deliveryAddressLabel.numberOfLines = 1
-        deliveryAddressLabel.backgroundColor = .clear
-        deliveryAddressLabel?.font = .systemFont(ofSize: 14)
+        deliveryAddressLabel.numberOfLines = 3
+        deliveryAddressLabel?.font = .systemFont(ofSize: Constants.smallFont)
         deliveryAddressLabel?.textColor = Constants.greyColor
 
-        self.selectionStyle = .gray
-        self.accessoryType = .disclosureIndicator
+        selectionStyle = .gray
+        accessoryType = .disclosureIndicator
+        separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
+        backgroundColor = Constants.whiteColor
     }
 
 }

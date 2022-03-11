@@ -21,13 +21,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-h7-7Ok">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="363"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
+                    <autoresizingMask key="autoresizingMask"/>
                     <color key="backgroundColor" systemColor="labelColor"/>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9JK-rs-3Ke">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9JK-rs-3Ke">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -36,7 +37,7 @@
                 <constraint firstItem="9JK-rs-3Ke" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2QQ-3S-zMP"/>
                 <constraint firstItem="9JK-rs-3Ke" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GZS-Y4-S6S"/>
                 <constraint firstItem="9JK-rs-3Ke" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Xdo-TI-Jwi"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9JK-rs-3Ke" secondAttribute="bottom" id="iz6-1x-t3P"/>
+                <constraint firstAttribute="bottom" secondItem="9JK-rs-3Ke" secondAttribute="bottom" id="iz6-1x-t3P"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
         </view>

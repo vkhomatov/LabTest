@@ -27,6 +27,7 @@
 		9E3C492727D3737700F4D9E6 /* DeliveryAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */; };
 		9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */; };
 		9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */; };
+		9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91EE27DB3061003988F1 /* UIButton.swift */; };
 		9EBC235227CE233100AB1BA3 /* MainTabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
 		9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */; };
@@ -96,6 +97,7 @@
 		9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressCell.xib; sourceTree = "<group>"; };
 		9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonCell.swift; sourceTree = "<group>"; };
 		9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitButtonCell.xib; sourceTree = "<group>"; };
+		9EAE91EE27DB3061003988F1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreen.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
 		9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewInput.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				9E2E274727CFC32600D78244 /* UINavigationBar.swift */,
+				9EAE91EE27DB3061003988F1 /* UIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				9EBC238127CE38C400AB1BA3 /* MainTabBarConfigurator.swift in Sources */,
 				9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */,
 				9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */,
+				9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */,
 				9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */,
 				9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */,
 				9EBC239F27CE407800AB1BA3 /* BasketViewOutput.swift in Sources */,

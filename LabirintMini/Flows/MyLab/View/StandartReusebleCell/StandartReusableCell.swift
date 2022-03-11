@@ -18,8 +18,8 @@ struct StandartReusableCellViewModel {
 
 // MARK: - CellClass
 
-class StandartReusableCell: UITableViewCell, ConfigurableItem {
-
+class StandartReusableCell: UITableViewCell, CalculatableHeightItem {
+    
     // MARK: - Typealias
 
     typealias Model = StandartReusableCellViewModel
@@ -29,6 +29,12 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
     enum Constants {
         static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
         static let redColor = UIColor(red: 0.878, green: 0.376, blue: 0.376, alpha: 1)
+        static let blackColor: UIColor = .black
+        static let whiteColor: UIColor = .white
+        static let bigFont: CGFloat = 17
+        static let smallFont: CGFloat = 14
+        static let rowHeight: CGFloat = 65
+        static let cornerRadius: CGFloat = 6
     }
     
     // MARK: - IBOutlets
@@ -43,6 +49,11 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
         setupInitialState()
     }
 
+    override func prepareForReuse() {
+        layer.masksToBounds = false
+        contentView.layer.cornerRadius = .zero
+    }
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -53,6 +64,16 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
         titleLabel.text = model.title
         valueLabel.text = model.value
         valueLabel.textColor = model.valueTextColor
+
+        if model.title == L10n.myOrders {
+            layer.masksToBounds = true
+            layer.cornerRadius = Constants.cornerRadius
+            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        }
+    }
+    
+    static func getHeight(forWidth width: CGFloat, with model: StandartReusableCellViewModel) -> CGFloat {
+        return Constants.rowHeight
     }
 
 }
@@ -63,17 +84,17 @@ private extension StandartReusableCell {
 
     func setupInitialState() {
         titleLabel.numberOfLines = 1
-        titleLabel.backgroundColor = .clear
-        titleLabel?.font = .systemFont(ofSize: 17)
-        titleLabel?.textColor = .black
+        titleLabel?.font = .systemFont(ofSize: Constants.bigFont)
+        titleLabel?.textColor = Constants.blackColor
 
         valueLabel.numberOfLines = 1
-        valueLabel.backgroundColor = .clear
-        valueLabel?.font = .systemFont(ofSize: 14)
+        valueLabel?.font = .systemFont(ofSize: Constants.smallFont)
         valueLabel?.textColor = Constants.redColor
 
-        self.selectionStyle = .gray
-        self.accessoryType = .disclosureIndicator
+        selectionStyle = .gray
+        accessoryType = .disclosureIndicator
+        separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
+        backgroundColor = Constants.whiteColor
     }
 
 }
