@@ -11,11 +11,11 @@ final class MainTabBarPresenter {
 
     // MARK: - Properties
 
-    weak var view: MainTabBarScreenInput?
+    weak var view: MainTabBarControllerInput?
     var router: MainTabBarRouterInput?
-    var tabs: [MainTabBar]
+    private var tabs: [MainTabBar]
 
-    // MARK: - UIViewController
+    // MARK: - Init
     
     init(with tabs: [MainTabBar]) {
         self.tabs = tabs
@@ -25,7 +25,7 @@ final class MainTabBarPresenter {
 
 // MARK: - MainTabBarViewOutput
 
-extension MainTabBarPresenter: MainTabBarScreenOutput {
+extension MainTabBarPresenter: MainTabBarControllerOutput {
 
     func viewLoaded() {
         view?.configure(with: tabs)

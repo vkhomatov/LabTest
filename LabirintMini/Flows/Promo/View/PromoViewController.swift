@@ -31,7 +31,7 @@ extension PromoViewController: PromoViewInput { }
 
 private extension PromoViewController {
 
-    private func configureView() {
+    func configureView() {
         view.backgroundColor = .white
     }
 

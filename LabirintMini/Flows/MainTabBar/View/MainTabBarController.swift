@@ -1,5 +1,5 @@
 //
-//  MainTabBarScreen.swift
+//  MainTabBarController.swift
 //  LabirintMini
 //
 //  Created by homatov on 01.03.2022.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class MainTabBarScreen: UITabBarController {
+class MainTabBarController: UITabBarController {
 
     // MARK: - Properties
 
-    var output: MainTabBarScreenOutput?
+    var output: MainTabBarControllerOutput?
 
     // MARK: - UIViewController
 
@@ -28,7 +28,7 @@ class MainTabBarScreen: UITabBarController {
 
 // MARK: - MainTabBarScreenInput
 
-extension MainTabBarScreen: MainTabBarScreenInput {
+extension MainTabBarController: MainTabBarControllerInput {
     
     func configure(with tabs: [MainTabBar]) {
         viewControllers = tabs.map { $0.makeController() }
@@ -36,7 +36,7 @@ extension MainTabBarScreen: MainTabBarScreenInput {
     
 }
 
-private extension MainTabBarScreen {
+private extension MainTabBarController {
     
     func setupInitialState() {
         tabBar.tintColor = .red

@@ -6,8 +6,8 @@
   
 */
 
-"Labirint" = "Labirint";
-"Catalog" = "Catalog";
-"Basket" = "Basket";
-"Promo" = "Promo";
-"My lab" = "My lab";
+"TabBar.labirint" = "Labirint";
+"TabBar.catalog" = "Catalog";
+"TabBar.basket" = "Basket";
+"TabBar.promo" = "Promo";
+"TabBar.mylab" = "My lab";

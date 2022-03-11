@@ -20,7 +20,7 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Assets {
   public enum Launch {
-    public static let labirintLabel = ImageAsset(name: "Launch/labirintLabel")
+    public static let labirintLabel = ImageAsset(name: "Launch/LabirintLabel")
   }
   public enum TabBar {
     public static let basketActive = ImageAsset(name: "TabBar/basketActive")

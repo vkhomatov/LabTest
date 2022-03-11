@@ -9,9 +9,9 @@ import UIKit
 
 final class MainTabBarConfigurator {
 
-    func configure() -> MainTabBarScreen {
+    func configure() -> MainTabBarController {
         let router = MainTabBarRouter()
-        let view = MainTabBarScreen()
+        let view = MainTabBarController()
         let presenter = MainTabBarPresenter(with: MainTabBar.allCases)
 
         view.output = presenter

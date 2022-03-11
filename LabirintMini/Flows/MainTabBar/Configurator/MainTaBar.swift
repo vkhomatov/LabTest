@@ -17,6 +17,8 @@ enum MainTabBar: CaseIterable {
 
 }
 
+// MARK: - NavigationController
+
 extension MainTabBar {
 
     func makeController() -> UINavigationController {
@@ -34,6 +36,8 @@ extension MainTabBar {
     }
 
 }
+
+// MARK: - Private Properties
 
 private extension MainTabBar {
 
@@ -55,15 +59,15 @@ private extension MainTabBar {
     var title: String {
         switch self {
         case .labirint:
-            return L10n.labirint
+            return L10n.TabBar.labirint
         case .catalog:
-            return L10n.catalog
+            return L10n.TabBar.catalog
         case .basket:
-            return L10n.basket
+            return L10n.TabBar.basket
         case .promo:
-            return L10n.promo
+            return L10n.TabBar.promo
         case .mylab:
-            return L10n.myLab
+            return L10n.TabBar.mylab
         }
     }
 

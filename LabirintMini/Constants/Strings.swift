@@ -10,16 +10,19 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
-  /// Basket
-  public static let basket = L10n.tr("Localizable", "Basket")
-  /// Catalog
-  public static let catalog = L10n.tr("Localizable", "Catalog")
-  /// Labirint
-  public static let labirint = L10n.tr("Localizable", "Labirint")
-  /// My lab
-  public static let myLab = L10n.tr("Localizable", "My lab")
-  /// Promo
-  public static let promo = L10n.tr("Localizable", "Promo")
+
+  public enum TabBar {
+    /// Basket
+    public static let basket = L10n.tr("Localizable", "TabBar.basket")
+    /// Catalog
+    public static let catalog = L10n.tr("Localizable", "TabBar.catalog")
+    /// Labirint
+    public static let labirint = L10n.tr("Localizable", "TabBar.labirint")
+    /// My lab
+    public static let mylab = L10n.tr("Localizable", "TabBar.mylab")
+    /// Promo
+    public static let promo = L10n.tr("Localizable", "TabBar.promo")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
