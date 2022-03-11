@@ -13,13 +13,26 @@ final class MyLabPresenter {
 
     weak var view: MyLabViewInput?
     var router: MyLabRouterInput?
+    var viewModel: MyLabViewModel
+    
+    // MARK: - Initialization
+
+    init(state: LogState) {
+        self.viewModel = MyLabViewModel(state)
+    }
 
 }
 
 // MARK: - MyLabViewOutput
 
 extension MyLabPresenter: MyLabViewOutput {
-
-    func viewLoaded() { }
+    
+    func viewLoaded() {
+        view?.setupViewState(viewModel)
+    }
+    
+    func changeState(_ state: LogState) {
+        view?.setupViewState(MyLabViewModel(state))
+    }
 
 }

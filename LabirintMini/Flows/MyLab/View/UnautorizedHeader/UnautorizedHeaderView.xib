@@ -42,6 +42,7 @@
                             <connections>
                                 <action selector="enterButtonTouchDown:" destination="-1" eventType="touchDown" id="91P-Ta-G8B"/>
                                 <action selector="enterButtonTouchUp:" destination="-1" eventType="touchUpInside" id="iae-Rt-LjW"/>
+                                <action selector="enterButtonTouchUpOutside:" destination="-1" eventType="touchUpOutside" id="z0U-bA-0cc"/>
                             </connections>
                         </button>
                     </subviews>

@@ -14,7 +14,11 @@ final class MyLabViewController: UIViewController {
     // MARK: - IBOutlet
 
     @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - NSLayoutConstraints
 
+    @IBOutlet weak var blackViewHeightConstraint: NSLayoutConstraint!
+    
     // MARK: - Private Properties
 
     private lazy var adapter = tableView.rddm.manualBuilder
@@ -30,10 +34,9 @@ final class MyLabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
-        setupTableView()
-        fillAdapter(with: true)
+        setupInitialState()
     }
-
+    
 }
 
 // MARK: - Private Methods
@@ -41,81 +44,11 @@ final class MyLabViewController: UIViewController {
 private extension MyLabViewController {
     
     func setupTableView() {
-        tableView.tableFooterView = UIView()
         tableView.backgroundColor = .clear
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.keyboardDismissMode = .onDrag
-
         view.addSubview(tableView)
-    }
-    
-    
-    func fillAdapter(with login: Bool) {
-/// ToDo:  реализация для просмотра верстки, заменить на модели logout и login в дальнейшем
-        if login {
-            let header = AutorizedHeaderGenerator()
-            adapter.addSectionHeaderGenerator(header)
-        } else {
-            let header = UnautorizedHeaderGenerator()
-            adapter.addSectionHeaderGenerator(header)
-        }
-        
-        if login {
-            let myOrdersModel = StandartReusableCellViewModel(title: L10n.myOrders, value: "1 в обработке", valueTextColor: StandartReusableCell.Constants.redColor)
-            let myOrdersGenerator = BaseCellGenerator<StandartReusableCell>(with: myOrdersModel)
-            adapter.addCellGenerator(myOrdersGenerator)
-
-            let myCouponsModel = StandartReusableCellViewModel(title: L10n.myCoupons, value: "1 сгорает", valueTextColor: StandartReusableCell.Constants.redColor)
-            let myCouponsGenerator = BaseCellGenerator<StandartReusableCell>(with: myCouponsModel)
-            adapter.addCellGenerator(myCouponsGenerator)
-
-            let savingGoodsModel = StandartReusableCellViewModel(title: L10n.savingGoods, value: "367", valueTextColor: StandartReusableCell.Constants.greyColor)
-            let savingGoodsGenerator = BaseCellGenerator<StandartReusableCell>(with: savingGoodsModel)
-            adapter.addCellGenerator(savingGoodsGenerator)
-
-            let mySubscriptionsModel = StandartReusableCellViewModel(title: L10n.mySubscriptions, value: "78 обновлений", valueTextColor: StandartReusableCell.Constants.redColor)
-            let mySubscriptionsGenerator = BaseCellGenerator<StandartReusableCell>(with: mySubscriptionsModel)
-            adapter.addCellGenerator(mySubscriptionsGenerator)
-
-            let purchasedGoodsModel = StandartReusableCellViewModel(title: L10n.purchasedGoods, value: nil, valueTextColor: nil)
-            let purchasedGoodsGenerator = BaseCellGenerator<StandartReusableCell>(with: purchasedGoodsModel)
-            adapter.addCellGenerator(purchasedGoodsGenerator)
-
-            let myReviewsModel = StandartReusableCellViewModel(title: L10n.myReviews, value: nil, valueTextColor: nil)
-            let myReviewsGenerator = BaseCellGenerator<StandartReusableCell>(with: myReviewsModel)
-            adapter.addCellGenerator(myReviewsGenerator)
-
-            let _156PickupPointsModel = StandartReusableCellViewModel(title: L10n._156PickupPoints, value: nil, valueTextColor: nil)
-            let _156PickupPointsGenerator = BaseCellGenerator<StandartReusableCell>(with: _156PickupPointsModel)
-            adapter.addCellGenerator(_156PickupPointsGenerator)
-
-            let profileSettingsModel = StandartReusableCellViewModel(title: L10n.profileSettings, value: nil, valueTextColor: nil)
-            let profileSettingsGenerator = BaseCellGenerator<StandartReusableCell>(with: profileSettingsModel)
-            adapter.addCellGenerator(profileSettingsGenerator)
-
-        }
-
-        let deliveryModel = DeliveryAddressCellViewModel(title: L10n.delivery, address: "г. Петропавловск, от 1600 р. бесплатно, доставим завтра", login: login)
-        let deliveryGenerator = BaseNonReusableCellGenerator<DeliveryAddressCell>(with: deliveryModel)
-        adapter.addCellGenerator(deliveryGenerator)
-
-        let appSettingsModel = StandartReusableCellViewModel(title: L10n.appSettings, value: nil, valueTextColor: nil)
-        let appSettingsGenerator = BaseCellGenerator<StandartReusableCell>(with: appSettingsModel)
-        adapter.addCellGenerator(appSettingsGenerator)
-
-        let storeInformationModel = StandartReusableCellViewModel(title: L10n.storeInformation, value: nil, valueTextColor: nil)
-        let storeInformationGenerator = BaseCellGenerator<StandartReusableCell>(with: storeInformationModel)
-        adapter.addCellGenerator(storeInformationGenerator)
-
-        if login {
-            let model = ExitButtonCellViewModel(title: L10n.logout)
-            let logoutGenerator = BaseNonReusableCellGenerator<ExitButtonCell>(with: model)
-            adapter.addCellGenerator(logoutGenerator)
-        }
-
-        adapter.forceRefill()
-
     }
     
 }
@@ -124,8 +57,57 @@ private extension MyLabViewController {
 
 extension MyLabViewController: MyLabViewInput {
 
-    func setupInitialState() {
+    func setupViewState(_ model: MyLabViewModel) {
+        adapter.clearHeaderGenerators()
+        adapter.clearCellGenerators()
         
+        switch model.state {
+        
+        case .login:
+            
+            adapter.addSectionHeaderGenerator(model.makeHeader(with: .loginHeader))
+            adapter.addCellGenerator(model.makeStandartRow(with: .myOrders))
+            adapter.addCellGenerator(model.makeStandartRow(with: .myCoupons))
+            adapter.addCellGenerator(model.makeStandartRow(with: .savingGoods))
+            adapter.addCellGenerator(model.makeStandartRow(with: .mySubscription))
+            adapter.addCellGenerator(model.makeStandartRow(with: .purchasedGoods))
+            adapter.addCellGenerator(model.makeStandartRow(with: .myReviews))
+            adapter.addCellGenerator(model.makeDeliveryRow(model.state))
+            adapter.addCellGenerator(model.makeStandartRow(with: .pickupPoints))
+            adapter.addCellGenerator(model.makeStandartRow(with: .profileSetting))
+            adapter.addCellGenerator(model.makeStandartRow(with: .appSetting))
+            adapter.addCellGenerator(model.makeStandartRow(with: .aboutStore))
+            
+            let logoutGenerator = model.makeExitRow()
+            adapter.addCellGenerator(logoutGenerator)
+            logoutGenerator.cell?.stateChangeCallback = { [weak self] state in
+                self?.output?.changeState(state)
+            }
+            
+        case .loguot:
+            
+            let headerGenerator = model.makeHeader(with: .logoutHeader)
+            adapter.addSectionHeaderGenerator(headerGenerator)
+            if let header = headerGenerator.generate() as? UnautorizedHeaderView {
+                header.stateChangeCallback = { [weak self] state in
+                    self?.output?.changeState(state)
+                }
+            }
+            
+            adapter.addCellGenerator(model.makeDeliveryRow(model.state))
+            adapter.addCellGenerator(model.makeStandartRow(with: .appSetting))
+            adapter.addCellGenerator(model.makeStandartRow(with: .aboutStore))
+            
+        }
+
+        adapter.forceRefill()
+
+    }
+    
+    func setupInitialState() {
+        setupTableView()
+        // заглушка, которая не очень работает
+        blackViewHeightConstraint.constant = tableView.frame.height / 3
     }
 
 }

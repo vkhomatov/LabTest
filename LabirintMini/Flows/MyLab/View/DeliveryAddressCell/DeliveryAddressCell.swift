@@ -14,7 +14,7 @@ import ReactiveDataDisplayManager
 struct DeliveryAddressCellViewModel {
     let title: String
     let address: String
-    let login: Bool
+    let state: LogState
 }
 
 class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
@@ -56,7 +56,7 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
         deliveryTitleLabel.text = model.title
         deliveryAddressLabel.text = model.address
         
-        if !model.login {
+        if model.state == .loguot {
             layer.masksToBounds = true
             layer.cornerRadius = Constants.cornerRadius
             layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]

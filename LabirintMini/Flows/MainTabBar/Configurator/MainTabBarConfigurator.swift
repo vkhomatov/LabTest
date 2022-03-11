@@ -86,7 +86,7 @@ private extension MainTabBarConfigurator {
     }
 
     func getMyLabTab() -> UINavigationController {
-        let myLabVC = MyLabConfigurator().configure()
+        let myLabVC = MyLabConfigurator().configure(state: .loguot)
         myLabVC.title = L10n.myLab
         let myLabNavigationController = UINavigationController(rootViewController: myLabVC)
         let myLabBarItem = UITabBarItem(title: L10n.myLab,

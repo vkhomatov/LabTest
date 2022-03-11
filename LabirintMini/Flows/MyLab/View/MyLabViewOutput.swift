@@ -7,8 +7,15 @@
 
 import Foundation
 
+enum LogState {
+    case login 
+    case loguot
+}
+
 protocol MyLabViewOutput {
 
     func viewLoaded()
+    
+    func changeState(_ state: LogState)
 
 }

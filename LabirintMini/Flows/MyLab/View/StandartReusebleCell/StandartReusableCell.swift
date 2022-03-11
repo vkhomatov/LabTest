@@ -12,13 +12,13 @@ import ReactiveDataDisplayManager
 
 struct StandartReusableCellViewModel {
     let title: String
-    let value: String?
-    let valueTextColor: UIColor?
+    var value: String? = nil
+    var valueTextColor: UIColor? = UIColor(red: 0.878, green: 0.376, blue: 0.376, alpha: 1)
 }
 
 // MARK: - CellClass
 
-class StandartReusableCell: UITableViewCell, CalculatableHeightItem {
+class StandartReusableCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
@@ -52,6 +52,7 @@ class StandartReusableCell: UITableViewCell, CalculatableHeightItem {
     override func prepareForReuse() {
         layer.masksToBounds = false
         contentView.layer.cornerRadius = .zero
+        valueLabel?.textColor = Constants.redColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

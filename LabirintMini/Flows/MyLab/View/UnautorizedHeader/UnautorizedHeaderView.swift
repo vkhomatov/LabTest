@@ -31,10 +31,20 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     @IBAction func enterButtonTouchDown(_ sender: UIButton) {
         enterButton.backgroundColor = Constants.greyColor
     }
+
+    @IBAction func enterButtonTouchUpOutside(_ sender: UIButton) {
+        enterButton.backgroundColor = Constants.whiteColor
+    }
     
     @IBAction func enterButtonTouchUp(_ sender: UIButton) {
         enterButton.backgroundColor = Constants.whiteColor
+        stateChangeCallback?(.login)
     }
+    
+    // MARK: - Properites
+    
+    public var stateChangeCallback: ((_ state: LogState) -> Void)?
+    
     // MARK: - System Methods
     
     class func instanceFromNib() -> UIView? {
@@ -59,7 +69,7 @@ private extension UnautorizedHeaderView {
         mainLabel?.textColor = Constants.whiteColor
         mainLabel.text = L10n.signInToGetAllTheFeaturesOfTheProfile
         
-        infoLabel.numberOfLines = 2
+        infoLabel.numberOfLines = 3
         infoLabel?.font = .systemFont(ofSize: Constants.smallFont)
         infoLabel?.textColor = Constants.greyColor
         

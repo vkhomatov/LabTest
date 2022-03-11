@@ -32,8 +32,13 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     // MARK: - Actions
 
     @IBAction func exitButtonAction(_ sender: UIButton) {
+        stateChangeCallback?(.loguot)
     }
     
+    // MARK: - Properites
+    
+    public var stateChangeCallback: ((_ state: LogState) -> Void)?
+
     // MARK: - System Methods
 
     override func awakeFromNib() {
@@ -64,9 +69,8 @@ private extension ExitButtonCell {
         exitButton.setTitleColor(Constants.redColor, for: .normal)
         
         selectionStyle = .none
-        separatorInset = .zero
         separatorInset = UIEdgeInsets(top: .zero, left: .greatestFiniteMagnitude, bottom: .zero, right: .zero)
-
+        
     }
 
 }

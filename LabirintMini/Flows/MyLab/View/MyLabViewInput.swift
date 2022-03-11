@@ -10,5 +10,7 @@ import Foundation
 protocol MyLabViewInput: AnyObject {
 
     func setupInitialState()
+    
+    func setupViewState(_ model: MyLabViewModel)
 
 }

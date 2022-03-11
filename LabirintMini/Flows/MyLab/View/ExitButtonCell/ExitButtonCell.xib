@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb0-O6-db2">
-                                <rect key="frame" x="145" y="29" width="30" height="32"/>
+                                <rect key="frame" x="16" y="29" width="288" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <connections>
                                     <action selector="exitButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Q1v-1m-ZLo"/>
@@ -30,9 +30,11 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="width" constant="320" id="8Wg-2Z-1ZK"/>
+                            <constraint firstItem="Gb0-O6-db2" firstAttribute="leading" secondItem="khc-QY-jfl" secondAttribute="leading" constant="16" id="DZP-7M-0Ib"/>
                             <constraint firstItem="Gb0-O6-db2" firstAttribute="centerY" secondItem="khc-QY-jfl" secondAttribute="centerY" id="iMI-sm-Mho"/>
                             <constraint firstItem="Gb0-O6-db2" firstAttribute="centerX" secondItem="khc-QY-jfl" secondAttribute="centerX" id="lPp-gv-rjA"/>
                             <constraint firstAttribute="height" constant="90" id="pGL-gv-8kR"/>
+                            <constraint firstAttribute="trailing" secondItem="Gb0-O6-db2" secondAttribute="trailing" constant="16" id="qxg-X2-p4G"/>
                         </constraints>
                     </view>
                 </subviews>
