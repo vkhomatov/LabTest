@@ -18,6 +18,7 @@ final class LabirintViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
+        configureView()
     }
 
 }
@@ -25,3 +26,13 @@ final class LabirintViewController: UIViewController {
 // MARK: - LabirintViewInput
 
 extension LabirintViewController: LabirintViewInput { }
+
+// MARK: - Private Methods
+
+private extension LabirintViewController {
+
+    private func configureView() {
+        view.backgroundColor = .white
+    }
+
+}

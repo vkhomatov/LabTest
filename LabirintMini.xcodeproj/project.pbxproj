@@ -41,7 +41,7 @@
 		9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238227CE38EC00AB1BA3 /* MainTabBarRouter.swift */; };
 		9EBC238527CE390F00AB1BA3 /* MainTabBarRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238427CE390F00AB1BA3 /* MainTabBarRouterInput.swift */; };
 		9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238627CE392B00AB1BA3 /* MainTabBarPresenter.swift */; };
-		9EBC238927CE394C00AB1BA3 /* MainTabBarScreenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238827CE394C00AB1BA3 /* MainTabBarScreenInput.swift */; };
+		9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238827CE394C00AB1BA3 /* MainTabBarControllerInput.swift */; };
 		9EBC238B27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238A27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift */; };
 		9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238C27CE39A000AB1BA3 /* CatalogConfigurator.swift */; };
 		9EBC238F27CE3A4C00AB1BA3 /* CatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238E27CE3A4C00AB1BA3 /* CatalogRouter.swift */; };
@@ -71,6 +71,7 @@
 		9EBC23BF27CE47AF00AB1BA3 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23BE27CE47AF00AB1BA3 /* CatalogViewController.swift */; };
 		9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */; };
 		9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */; };
+		9EC960E227D257EC00FB9787 /* MainTaBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC960E127D257EC00FB9787 /* MainTaBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,9 +85,7 @@
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		9E12D29427D1CD90000F1CF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9E12D29827D1CDC8000F1CF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E2E274727CFC32600D78244 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
 		9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
@@ -112,7 +111,7 @@
 		9EBC238227CE38EC00AB1BA3 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
 		9EBC238427CE390F00AB1BA3 /* MainTabBarRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouterInput.swift; sourceTree = "<group>"; };
 		9EBC238627CE392B00AB1BA3 /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
-		9EBC238827CE394C00AB1BA3 /* MainTabBarScreenInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreenInput.swift; sourceTree = "<group>"; };
+		9EBC238827CE394C00AB1BA3 /* MainTabBarControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerInput.swift; sourceTree = "<group>"; };
 		9EBC238A27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreeenOutput.swift; sourceTree = "<group>"; };
 		9EBC238C27CE39A000AB1BA3 /* CatalogConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogConfigurator.swift; sourceTree = "<group>"; };
 		9EBC238E27CE3A4C00AB1BA3 /* CatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRouter.swift; sourceTree = "<group>"; };
@@ -142,6 +141,7 @@
 		9EBC23BE27CE47AF00AB1BA3 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewInput.swift; sourceTree = "<group>"; };
 		9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewOutput.swift; sourceTree = "<group>"; };
+		9EC960E127D257EC00FB9787 /* MainTaBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTaBar.swift; sourceTree = "<group>"; };
 		C93EA6D505DF2CCA658F849A /* Pods-LabirintMini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabirintMini.debug.xcconfig"; path = "Target Support Files/Pods-LabirintMini/Pods-LabirintMini.debug.xcconfig"; sourceTree = "<group>"; };
 		F5ECB53148855FE14315F3F3 /* Pods_LabirintMini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabirintMini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -562,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				9EBC238027CE38C400AB1BA3 /* MainTabBarConfigurator.swift */,
+				9EC960E127D257EC00FB9787 /* MainTaBar.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -586,8 +587,8 @@
 		9EBC237F27CE382700AB1BA3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */,
-				9EBC238827CE394C00AB1BA3 /* MainTabBarScreenInput.swift */,
+				9EBC235127CE233100AB1BA3 /* MainTabBarController.swift */,
+				9EBC238827CE394C00AB1BA3 /* MainTabBarControllerInput.swift */,
 				9EBC238A27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift */,
 			);
 			path = View;
@@ -752,7 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBC235227CE233100AB1BA3 /* MainTabBarScreen.swift in Sources */,
+				9EBC235227CE233100AB1BA3 /* MainTabBarController.swift in Sources */,
 				9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */,
 				9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */,
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
@@ -762,6 +763,7 @@
 				9EBC238F27CE3A4C00AB1BA3 /* CatalogRouter.swift in Sources */,
 				9E3C491D27D36D1C00F4D9E6 /* AutorizedHeaderView.swift in Sources */,
 				9EBC239327CE3FB900AB1BA3 /* BasketConfigurator.swift in Sources */,
+				9EC960E227D257EC00FB9787 /* MainTaBar.swift in Sources */,
 				9EBC238B27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift in Sources */,
 				9E3C492127D3706B00F4D9E6 /* StandartReusableCell.swift in Sources */,
 				9EBC23B127CE41A700AB1BA3 /* MyLabRouter.swift in Sources */,
@@ -816,7 +818,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3C0BA29C268DC98F00C47C74 /* Base */,
-				9E12D29427D1CD90000F1CF3 /* ru */,
+				9EAE91E227DA4B18003988F1 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -825,7 +827,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9E12D29627D1CDC2000F1CF3 /* en */,
-				9E12D29827D1CDC8000F1CF3 /* ru */,
+				9EAE91ED27DA5F3C003988F1 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
