@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,54 @@
 		3C0BA291268DC98D00C47C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BA290268DC98D00C47C74 /* AppDelegate.swift */; };
 		3C0BA29A268DC98F00C47C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA299268DC98F00C47C74 /* Assets.xcassets */; };
 		3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA29B268DC98F00C47C74 /* LaunchScreen.storyboard */; };
+		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
+		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
+		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
+		9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E12D29727D1CDC2000F1CF3 /* Localizable.strings */; };
+		9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E274727CFC32600D78244 /* UINavigationBar.swift */; };
+		9EBC235227CE233100AB1BA3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235127CE233100AB1BA3 /* MainTabBarController.swift */; };
+		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
+		9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */; };
+		9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */; };
+		9EBC236327CE2FE300AB1BA3 /* LabirintPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC236227CE2FE300AB1BA3 /* LabirintPresenter.swift */; };
+		9EBC236527CE339A00AB1BA3 /* LabirintRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC236427CE339A00AB1BA3 /* LabirintRouter.swift */; };
+		9EBC236727CE33EA00AB1BA3 /* LabirintRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC236627CE33EA00AB1BA3 /* LabirintRouterInput.swift */; };
+		9EBC237A27CE364900AB1BA3 /* LabirintConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC237927CE364900AB1BA3 /* LabirintConfigurator.swift */; };
+		9EBC238127CE38C400AB1BA3 /* MainTabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238027CE38C400AB1BA3 /* MainTabBarConfigurator.swift */; };
+		9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238227CE38EC00AB1BA3 /* MainTabBarRouter.swift */; };
+		9EBC238527CE390F00AB1BA3 /* MainTabBarRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238427CE390F00AB1BA3 /* MainTabBarRouterInput.swift */; };
+		9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238627CE392B00AB1BA3 /* MainTabBarPresenter.swift */; };
+		9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238827CE394C00AB1BA3 /* MainTabBarControllerInput.swift */; };
+		9EBC238B27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238A27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift */; };
+		9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238C27CE39A000AB1BA3 /* CatalogConfigurator.swift */; };
+		9EBC238F27CE3A4C00AB1BA3 /* CatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC238E27CE3A4C00AB1BA3 /* CatalogRouter.swift */; };
+		9EBC239127CE3A5C00AB1BA3 /* CatalogRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC239027CE3A5C00AB1BA3 /* CatalogRouterInput.swift */; };
+		9EBC239327CE3FB900AB1BA3 /* BasketConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC239227CE3FB900AB1BA3 /* BasketConfigurator.swift */; };
+		9EBC239527CE3FD400AB1BA3 /* BasketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC239427CE3FD400AB1BA3 /* BasketRouter.swift */; };
+		9EBC239727CE3FED00AB1BA3 /* BasketRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC239627CE3FED00AB1BA3 /* BasketRouterInput.swift */; };
+		9EBC239927CE400700AB1BA3 /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC239827CE400700AB1BA3 /* BasketPresenter.swift */; };
+		9EBC239B27CE402B00AB1BA3 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC239A27CE402B00AB1BA3 /* BasketViewController.swift */; };
+		9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC239C27CE405900AB1BA3 /* BasketViewInput.swift */; };
+		9EBC239F27CE407800AB1BA3 /* BasketViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC239E27CE407800AB1BA3 /* BasketViewOutput.swift */; };
+		9EBC23A127CE40A900AB1BA3 /* PromoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23A027CE40A900AB1BA3 /* PromoConfigurator.swift */; };
+		9EBC23A327CE40C700AB1BA3 /* PromoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23A227CE40C700AB1BA3 /* PromoRouter.swift */; };
+		9EBC23A527CE40DB00AB1BA3 /* PromoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23A427CE40DB00AB1BA3 /* PromoRouterInput.swift */; };
+		9EBC23A727CE40F600AB1BA3 /* PromoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23A627CE40F600AB1BA3 /* PromoPresenter.swift */; };
+		9EBC23A927CE411700AB1BA3 /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23A827CE411700AB1BA3 /* PromoViewController.swift */; };
+		9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23AA27CE413A00AB1BA3 /* PromoViewInput.swift */; };
+		9EBC23AD27CE414500AB1BA3 /* PromoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23AC27CE414500AB1BA3 /* PromoViewOutput.swift */; };
+		9EBC23AF27CE419500AB1BA3 /* MyLabConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23AE27CE419500AB1BA3 /* MyLabConfigurator.swift */; };
+		9EBC23B127CE41A700AB1BA3 /* MyLabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23B027CE41A700AB1BA3 /* MyLabRouter.swift */; };
+		9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23B227CE41C000AB1BA3 /* MyLabRouterInput.swift */; };
+		9EBC23B527CE41D800AB1BA3 /* MyLabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23B427CE41D800AB1BA3 /* MyLabPresenter.swift */; };
+		9EBC23B727CE420100AB1BA3 /* MyLabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23B627CE420100AB1BA3 /* MyLabViewController.swift */; };
+		9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23B827CE422A00AB1BA3 /* MyLabViewInput.swift */; };
+		9EBC23BB27CE424200AB1BA3 /* MyLabViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23BA27CE424200AB1BA3 /* MyLabViewOutput.swift */; };
+		9EBC23BD27CE479100AB1BA3 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23BC27CE479100AB1BA3 /* CatalogPresenter.swift */; };
+		9EBC23BF27CE47AF00AB1BA3 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23BE27CE47AF00AB1BA3 /* CatalogViewController.swift */; };
+		9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */; };
+		9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */; };
+		9EC960E227D257EC00FB9787 /* MainTaBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC960E127D257EC00FB9787 /* MainTaBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +68,56 @@
 		3C0BA29C268DC98F00C47C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C0BA29E268DC98F00C47C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449573616019490BDAFFF4D4 /* Pods-LabirintMini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabirintMini.release.xcconfig"; path = "Target Support Files/Pods-LabirintMini/Pods-LabirintMini.release.xcconfig"; sourceTree = "<group>"; };
+		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9E2E274727CFC32600D78244 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		9EAE91E227DA4B18003988F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9EAE91ED27DA5F3C003988F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9EBC235127CE233100AB1BA3 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
+		9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewInput.swift; sourceTree = "<group>"; };
+		9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewOutput.swift; sourceTree = "<group>"; };
+		9EBC236227CE2FE300AB1BA3 /* LabirintPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintPresenter.swift; sourceTree = "<group>"; };
+		9EBC236427CE339A00AB1BA3 /* LabirintRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintRouter.swift; sourceTree = "<group>"; };
+		9EBC236627CE33EA00AB1BA3 /* LabirintRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintRouterInput.swift; sourceTree = "<group>"; };
+		9EBC237927CE364900AB1BA3 /* LabirintConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintConfigurator.swift; sourceTree = "<group>"; };
+		9EBC238027CE38C400AB1BA3 /* MainTabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarConfigurator.swift; sourceTree = "<group>"; };
+		9EBC238227CE38EC00AB1BA3 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
+		9EBC238427CE390F00AB1BA3 /* MainTabBarRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouterInput.swift; sourceTree = "<group>"; };
+		9EBC238627CE392B00AB1BA3 /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
+		9EBC238827CE394C00AB1BA3 /* MainTabBarControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerInput.swift; sourceTree = "<group>"; };
+		9EBC238A27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreeenOutput.swift; sourceTree = "<group>"; };
+		9EBC238C27CE39A000AB1BA3 /* CatalogConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogConfigurator.swift; sourceTree = "<group>"; };
+		9EBC238E27CE3A4C00AB1BA3 /* CatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRouter.swift; sourceTree = "<group>"; };
+		9EBC239027CE3A5C00AB1BA3 /* CatalogRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRouterInput.swift; sourceTree = "<group>"; };
+		9EBC239227CE3FB900AB1BA3 /* BasketConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketConfigurator.swift; sourceTree = "<group>"; };
+		9EBC239427CE3FD400AB1BA3 /* BasketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRouter.swift; sourceTree = "<group>"; };
+		9EBC239627CE3FED00AB1BA3 /* BasketRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRouterInput.swift; sourceTree = "<group>"; };
+		9EBC239827CE400700AB1BA3 /* BasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPresenter.swift; sourceTree = "<group>"; };
+		9EBC239A27CE402B00AB1BA3 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		9EBC239C27CE405900AB1BA3 /* BasketViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewInput.swift; sourceTree = "<group>"; };
+		9EBC239E27CE407800AB1BA3 /* BasketViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewOutput.swift; sourceTree = "<group>"; };
+		9EBC23A027CE40A900AB1BA3 /* PromoConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoConfigurator.swift; sourceTree = "<group>"; };
+		9EBC23A227CE40C700AB1BA3 /* PromoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoRouter.swift; sourceTree = "<group>"; };
+		9EBC23A427CE40DB00AB1BA3 /* PromoRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoRouterInput.swift; sourceTree = "<group>"; };
+		9EBC23A627CE40F600AB1BA3 /* PromoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoPresenter.swift; sourceTree = "<group>"; };
+		9EBC23A827CE411700AB1BA3 /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
+		9EBC23AA27CE413A00AB1BA3 /* PromoViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewInput.swift; sourceTree = "<group>"; };
+		9EBC23AC27CE414500AB1BA3 /* PromoViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewOutput.swift; sourceTree = "<group>"; };
+		9EBC23AE27CE419500AB1BA3 /* MyLabConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabConfigurator.swift; sourceTree = "<group>"; };
+		9EBC23B027CE41A700AB1BA3 /* MyLabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabRouter.swift; sourceTree = "<group>"; };
+		9EBC23B227CE41C000AB1BA3 /* MyLabRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabRouterInput.swift; sourceTree = "<group>"; };
+		9EBC23B427CE41D800AB1BA3 /* MyLabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabPresenter.swift; sourceTree = "<group>"; };
+		9EBC23B627CE420100AB1BA3 /* MyLabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewController.swift; sourceTree = "<group>"; };
+		9EBC23B827CE422A00AB1BA3 /* MyLabViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewInput.swift; sourceTree = "<group>"; };
+		9EBC23BA27CE424200AB1BA3 /* MyLabViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewOutput.swift; sourceTree = "<group>"; };
+		9EBC23BC27CE479100AB1BA3 /* CatalogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenter.swift; sourceTree = "<group>"; };
+		9EBC23BE27CE47AF00AB1BA3 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewInput.swift; sourceTree = "<group>"; };
+		9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewOutput.swift; sourceTree = "<group>"; };
+		9EC960E127D257EC00FB9787 /* MainTaBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTaBar.swift; sourceTree = "<group>"; };
 		C93EA6D505DF2CCA658F849A /* Pods-LabirintMini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabirintMini.debug.xcconfig"; path = "Target Support Files/Pods-LabirintMini/Pods-LabirintMini.debug.xcconfig"; sourceTree = "<group>"; };
 		F5ECB53148855FE14315F3F3 /* Pods_LabirintMini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabirintMini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -58,7 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				3C0BA2A4268DCB1C00C47C74 /* Application */,
+				9EBC235327CE283F00AB1BA3 /* Flows */,
 				3C0BA2A5268DCB2F00C47C74 /* Resources */,
+				9E2E274627CFAED100D78244 /* Extensions */,
 				3C0BA29E268DC98F00C47C74 /* Info.plist */,
 			);
 			path = LabirintMini;
@@ -76,7 +176,9 @@
 		3C0BA2A5268DCB2F00C47C74 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9E12D28A27D0E5C1000F1CF3 /* Constants */,
 				3C0BA2A6268DCB4300C47C74 /* Images */,
+				9E12D29727D1CDC2000F1CF3 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -106,6 +208,315 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E12D28A27D0E5C1000F1CF3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9E12D28B27D0E5C1000F1CF3 /* Strings.swift */,
+				9E12D28C27D0E5C1000F1CF3 /* Assets.swift */,
+				9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */,
+			);
+			name = Constants;
+			path = LabirintMini/Constants;
+			sourceTree = SOURCE_ROOT;
+		};
+		9E2E274627CFAED100D78244 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E2E274727CFC32600D78244 /* UINavigationBar.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9EBC235327CE283F00AB1BA3 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC237B27CE373F00AB1BA3 /* MainTabBar */,
+				9EBC235427CE28AF00AB1BA3 /* Labirint */,
+				9EBC235527CE28E000AB1BA3 /* Catalog */,
+				9EBC235627CE28EE00AB1BA3 /* Basket */,
+				9EBC235727CE292E00AB1BA3 /* Promo */,
+				9EBC235827CE299500AB1BA3 /* MyLab */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		9EBC235427CE28AF00AB1BA3 /* Labirint */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC236B27CE353500AB1BA3 /* Configurator */,
+				9EBC235927CE2B6C00AB1BA3 /* Router */,
+				9EBC235A27CE2B7A00AB1BA3 /* Presenter */,
+				9EBC235B27CE2B8600AB1BA3 /* View */,
+			);
+			path = Labirint;
+			sourceTree = "<group>";
+		};
+		9EBC235527CE28E000AB1BA3 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC236C27CE354200AB1BA3 /* Configurator */,
+				9EBC236827CE349000AB1BA3 /* Router */,
+				9EBC236A27CE34B600AB1BA3 /* Presenter */,
+				9EBC236927CE34AE00AB1BA3 /* View */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		9EBC235627CE28EE00AB1BA3 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC236D27CE355600AB1BA3 /* Configurator */,
+				9EBC236F27CE356800AB1BA3 /* Router */,
+				9EBC236E27CE355E00AB1BA3 /* Presenter */,
+				9EBC237027CE357100AB1BA3 /* View */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		9EBC235727CE292E00AB1BA3 /* Promo */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC237127CE357F00AB1BA3 /* Configurator */,
+				9EBC237227CE358500AB1BA3 /* Router */,
+				9EBC237327CE358C00AB1BA3 /* Presenter */,
+				9EBC237427CE359400AB1BA3 /* View */,
+			);
+			path = Promo;
+			sourceTree = "<group>";
+		};
+		9EBC235827CE299500AB1BA3 /* MyLab */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC237527CE359E00AB1BA3 /* Configurator */,
+				9EBC237827CE35C100AB1BA3 /* Router */,
+				9EBC237627CE35AD00AB1BA3 /* Presenter */,
+				9EBC237727CE35B800AB1BA3 /* View */,
+			);
+			path = MyLab;
+			sourceTree = "<group>";
+		};
+		9EBC235927CE2B6C00AB1BA3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC236427CE339A00AB1BA3 /* LabirintRouter.swift */,
+				9EBC236627CE33EA00AB1BA3 /* LabirintRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9EBC235A27CE2B7A00AB1BA3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC236227CE2FE300AB1BA3 /* LabirintPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9EBC235B27CE2B8600AB1BA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */,
+				9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */,
+				9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EBC236827CE349000AB1BA3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC238E27CE3A4C00AB1BA3 /* CatalogRouter.swift */,
+				9EBC239027CE3A5C00AB1BA3 /* CatalogRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9EBC236927CE34AE00AB1BA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23BE27CE47AF00AB1BA3 /* CatalogViewController.swift */,
+				9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */,
+				9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EBC236A27CE34B600AB1BA3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23BC27CE479100AB1BA3 /* CatalogPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9EBC236B27CE353500AB1BA3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC237927CE364900AB1BA3 /* LabirintConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9EBC236C27CE354200AB1BA3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC238C27CE39A000AB1BA3 /* CatalogConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9EBC236D27CE355600AB1BA3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC239227CE3FB900AB1BA3 /* BasketConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9EBC236E27CE355E00AB1BA3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC239827CE400700AB1BA3 /* BasketPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9EBC236F27CE356800AB1BA3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC239427CE3FD400AB1BA3 /* BasketRouter.swift */,
+				9EBC239627CE3FED00AB1BA3 /* BasketRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9EBC237027CE357100AB1BA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC239A27CE402B00AB1BA3 /* BasketViewController.swift */,
+				9EBC239C27CE405900AB1BA3 /* BasketViewInput.swift */,
+				9EBC239E27CE407800AB1BA3 /* BasketViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EBC237127CE357F00AB1BA3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23A027CE40A900AB1BA3 /* PromoConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9EBC237227CE358500AB1BA3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23A227CE40C700AB1BA3 /* PromoRouter.swift */,
+				9EBC23A427CE40DB00AB1BA3 /* PromoRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9EBC237327CE358C00AB1BA3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23A627CE40F600AB1BA3 /* PromoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9EBC237427CE359400AB1BA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23A827CE411700AB1BA3 /* PromoViewController.swift */,
+				9EBC23AA27CE413A00AB1BA3 /* PromoViewInput.swift */,
+				9EBC23AC27CE414500AB1BA3 /* PromoViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EBC237527CE359E00AB1BA3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23AE27CE419500AB1BA3 /* MyLabConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9EBC237627CE35AD00AB1BA3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23B427CE41D800AB1BA3 /* MyLabPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9EBC237727CE35B800AB1BA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23B627CE420100AB1BA3 /* MyLabViewController.swift */,
+				9EBC23B827CE422A00AB1BA3 /* MyLabViewInput.swift */,
+				9EBC23BA27CE424200AB1BA3 /* MyLabViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EBC237827CE35C100AB1BA3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC23B027CE41A700AB1BA3 /* MyLabRouter.swift */,
+				9EBC23B227CE41C000AB1BA3 /* MyLabRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9EBC237B27CE373F00AB1BA3 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC237C27CE37D200AB1BA3 /* Configurator */,
+				9EBC237D27CE37E300AB1BA3 /* Router */,
+				9EBC237E27CE381200AB1BA3 /* Presenter */,
+				9EBC237F27CE382700AB1BA3 /* View */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		9EBC237C27CE37D200AB1BA3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC238027CE38C400AB1BA3 /* MainTabBarConfigurator.swift */,
+				9EC960E127D257EC00FB9787 /* MainTaBar.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9EBC237D27CE37E300AB1BA3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC238227CE38EC00AB1BA3 /* MainTabBarRouter.swift */,
+				9EBC238427CE390F00AB1BA3 /* MainTabBarRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9EBC237E27CE381200AB1BA3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC238627CE392B00AB1BA3 /* MainTabBarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9EBC237F27CE382700AB1BA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC235127CE233100AB1BA3 /* MainTabBarController.swift */,
+				9EBC238827CE394C00AB1BA3 /* MainTabBarControllerInput.swift */,
+				9EBC238A27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,10 +525,12 @@
 			buildConfigurationList = 3C0BA2A1268DC98F00C47C74 /* Build configuration list for PBXNativeTarget "LabirintMini" */;
 			buildPhases = (
 				8AB06EEEB3BC731CF8565595 /* [CP] Check Pods Manifest.lock */,
+				9E600E8627D0BB7D00C826B1 /* SwiftGen */,
 				344BA4042695C620008B2B81 /* [RS] SwiftLint */,
 				3C0BA289268DC98D00C47C74 /* Sources */,
 				3C0BA28A268DC98D00C47C74 /* Frameworks */,
 				3C0BA28B268DC98D00C47C74 /* Resources */,
+				DD82443961B6E9A182D7F90E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +562,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 3C0BA284268DC98D00C47C74;
 			productRefGroup = 3C0BA28E268DC98D00C47C74 /* Products */;
@@ -166,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */,
+				9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */,
 				3C0BA29A268DC98F00C47C74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +590,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		344BA4042695C620008B2B81 /* [RS] SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -187,7 +602,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if which ${SRCROOT}/Pods/SwiftLint/swiftlint >/dev/null; then\n    ${SRCROOT}/Pods/SwiftLint/swiftlint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
 		};
@@ -213,6 +628,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9E600E8627D0BB7D00C826B1 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/Pods/SwiftGen/bin/swiftgen\n";
+		};
+		DD82443961B6E9A182D7F90E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LabirintMini/Pods-LabirintMini-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,7 +670,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EBC235227CE233100AB1BA3 /* MainTabBarController.swift in Sources */,
+				9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */,
+				9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */,
+				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
+				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
+				9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */,
+				9EBC237A27CE364900AB1BA3 /* LabirintConfigurator.swift in Sources */,
+				9EBC238F27CE3A4C00AB1BA3 /* CatalogRouter.swift in Sources */,
+				9EBC239327CE3FB900AB1BA3 /* BasketConfigurator.swift in Sources */,
+				9EC960E227D257EC00FB9787 /* MainTaBar.swift in Sources */,
+				9EBC238B27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift in Sources */,
+				9EBC23B127CE41A700AB1BA3 /* MyLabRouter.swift in Sources */,
+				9EBC236727CE33EA00AB1BA3 /* LabirintRouterInput.swift in Sources */,
+				9EBC23AF27CE419500AB1BA3 /* MyLabConfigurator.swift in Sources */,
+				9EBC23AD27CE414500AB1BA3 /* PromoViewOutput.swift in Sources */,
+				9EBC239127CE3A5C00AB1BA3 /* CatalogRouterInput.swift in Sources */,
+				9EBC239727CE3FED00AB1BA3 /* BasketRouterInput.swift in Sources */,
+				9EBC23BF27CE47AF00AB1BA3 /* CatalogViewController.swift in Sources */,
+				9EBC239927CE400700AB1BA3 /* BasketPresenter.swift in Sources */,
+				9EBC23B527CE41D800AB1BA3 /* MyLabPresenter.swift in Sources */,
 				3C0BA291268DC98D00C47C74 /* AppDelegate.swift in Sources */,
+				9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */,
+				9EBC23A127CE40A900AB1BA3 /* PromoConfigurator.swift in Sources */,
+				9EBC23A727CE40F600AB1BA3 /* PromoPresenter.swift in Sources */,
+				9EBC23A327CE40C700AB1BA3 /* PromoRouter.swift in Sources */,
+				9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */,
+				9EBC236327CE2FE300AB1BA3 /* LabirintPresenter.swift in Sources */,
+				9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */,
+				9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */,
+				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
+				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
+				9EBC23BB27CE424200AB1BA3 /* MyLabViewOutput.swift in Sources */,
+				9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */,
+				9EBC238527CE390F00AB1BA3 /* MainTabBarRouterInput.swift in Sources */,
+				9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */,
+				9EBC23BD27CE479100AB1BA3 /* CatalogPresenter.swift in Sources */,
+				9EBC239527CE3FD400AB1BA3 /* BasketRouter.swift in Sources */,
+				9EBC238127CE38C400AB1BA3 /* MainTabBarConfigurator.swift in Sources */,
+				9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */,
+				9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */,
+				9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */,
+				9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */,
+				9EBC239F27CE407800AB1BA3 /* BasketViewOutput.swift in Sources */,
+				9EBC23A927CE411700AB1BA3 /* PromoViewController.swift in Sources */,
+				9EBC239B27CE402B00AB1BA3 /* BasketViewController.swift in Sources */,
+				9EBC236527CE339A00AB1BA3 /* LabirintRouter.swift in Sources */,
+				9EBC23B727CE420100AB1BA3 /* MyLabViewController.swift in Sources */,
+				9EBC23A527CE40DB00AB1BA3 /* PromoRouterInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +728,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				3C0BA29C268DC98F00C47C74 /* Base */,
+				9EAE91E227DA4B18003988F1 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9E12D29727D1CDC2000F1CF3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E12D29627D1CDC2000F1CF3 /* en */,
+				9EAE91ED27DA5F3C003988F1 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -242,6 +749,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -289,7 +797,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -303,6 +811,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -344,7 +853,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -360,7 +869,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LabirintMini/Info.plist;
@@ -384,7 +894,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LabirintMini/Info.plist;

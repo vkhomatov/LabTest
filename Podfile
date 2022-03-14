@@ -5,6 +5,8 @@ use_modular_headers!
 
 target 'LabirintMini' do
   pod 'SwiftLint'
+  pod 'SwiftGen', '~> 6.0'
+  pod 'ReactiveDataDisplayManager', '~> 7.2.1'
 end
 
 post_install do |installer|

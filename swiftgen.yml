@@ -1,0 +1,27 @@
+xcassets:
+  - inputs:
+      - LabirintMini/Resources/Images/Assets.xcassets
+    outputs:
+      - templateName: swift5
+        output: LabirintMini/Constants/Assets.swift
+        params:
+          enumName: Assets
+          publicAccess: true
+
+fonts:
+  inputs:
+    - LabirintMini/Resources/Fonts
+  outputs:
+    - templateName: swift5
+      output: LabirintMini/Constants/Fonts.swift
+      params:
+        publicAccess: true
+
+strings:
+  inputs:
+    - LabirintMini/Resources/en.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: LabirintMini/Constants/Strings.swift
+      params:
+        publicAccess: true
