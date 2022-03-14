@@ -13,6 +13,21 @@
 		3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA29B268DC98F00C47C74 /* LaunchScreen.storyboard */; };
 		9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E06B1A127D8E76600E0DC46 /* MyLabViewController.xib */; };
 		9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22327DF90520004EBD9 /* MainTabBarController.swift */; };
+		9E0AA23E27DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22827DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift */; };
+		9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22B27DFB42A0004EBD9 /* EnterButtonView.swift */; };
+		9E0AA24027DFB42A0004EBD9 /* EnterButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22C27DFB42A0004EBD9 /* EnterButtonView.xib */; };
+		9E0AA24127DFB42A0004EBD9 /* CodeEnterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */; };
+		9E0AA24227DFB42A0004EBD9 /* CodeEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */; };
+		9E0AA24327DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */; };
+		9E0AA24427DFB42A0004EBD9 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA23227DFB42A0004EBD9 /* HeaderView.xib */; };
+		9E0AA24527DFB42A0004EBD9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23327DFB42A0004EBD9 /* HeaderView.swift */; };
+		9E0AA24627DFB42A0004EBD9 /* InfoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23527DFB42A0004EBD9 /* InfoTextCell.swift */; };
+		9E0AA24727DFB42A0004EBD9 /* InfoTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA23627DFB42A0004EBD9 /* InfoTextCell.xib */; };
+		9E0AA24827DFB42A0004EBD9 /* LoginDiscountCodeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23727DFB42A0004EBD9 /* LoginDiscountCodeInput.swift */; };
+		9E0AA24927DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */; };
+		9E0AA24A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift */; };
+		9E0AA24B27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23C27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift */; };
+		9E0AA24C27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */; };
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
@@ -84,6 +99,21 @@
 		9E06B1A127D8E76600E0DC46 /* MyLabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLabViewController.xib; sourceTree = "<group>"; };
 		9E0AA22327DF90520004EBD9 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9E0AA22527DF9F0C0004EBD9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9E0AA22827DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodePresenter.swift; sourceTree = "<group>"; };
+		9E0AA22B27DFB42A0004EBD9 /* EnterButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterButtonView.swift; sourceTree = "<group>"; };
+		9E0AA22C27DFB42A0004EBD9 /* EnterButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterButtonView.xib; sourceTree = "<group>"; };
+		9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEnterCell.swift; sourceTree = "<group>"; };
+		9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CodeEnterCell.xib; sourceTree = "<group>"; };
+		9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeOutput.swift; sourceTree = "<group>"; };
+		9E0AA23227DFB42A0004EBD9 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		9E0AA23327DFB42A0004EBD9 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		9E0AA23527DFB42A0004EBD9 /* InfoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTextCell.swift; sourceTree = "<group>"; };
+		9E0AA23627DFB42A0004EBD9 /* InfoTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTextCell.xib; sourceTree = "<group>"; };
+		9E0AA23727DFB42A0004EBD9 /* LoginDiscountCodeInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeInput.swift; sourceTree = "<group>"; };
+		9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeViewController.swift; sourceTree = "<group>"; };
+		9E0AA23A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeConfigurator.swift; sourceTree = "<group>"; };
+		9E0AA23C27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeRouterInput.swift; sourceTree = "<group>"; };
+		9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeRouter.swift; sourceTree = "<group>"; };
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -233,6 +263,92 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E0AA22627DFB42A0004EBD9 /* Login with discount code screen  */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA22727DFB42A0004EBD9 /* Presenter */,
+				9E0AA22927DFB42A0004EBD9 /* View */,
+				9E0AA23927DFB42A0004EBD9 /* Configurator */,
+				9E0AA23B27DFB42A0004EBD9 /* Router */,
+			);
+			path = "Login with discount code screen ";
+			sourceTree = "<group>";
+		};
+		9E0AA22727DFB42A0004EBD9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA22827DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9E0AA22927DFB42A0004EBD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA22A27DFB42A0004EBD9 /* EnterButtonView */,
+				9E0AA22D27DFB42A0004EBD9 /* CodeEnterCell */,
+				9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */,
+				9E0AA23127DFB42A0004EBD9 /* HeaderView */,
+				9E0AA23427DFB42A0004EBD9 /* InfoTextCell */,
+				9E0AA23727DFB42A0004EBD9 /* LoginDiscountCodeInput.swift */,
+				9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E0AA22A27DFB42A0004EBD9 /* EnterButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA22B27DFB42A0004EBD9 /* EnterButtonView.swift */,
+				9E0AA22C27DFB42A0004EBD9 /* EnterButtonView.xib */,
+			);
+			path = EnterButtonView;
+			sourceTree = "<group>";
+		};
+		9E0AA22D27DFB42A0004EBD9 /* CodeEnterCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */,
+				9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */,
+			);
+			path = CodeEnterCell;
+			sourceTree = "<group>";
+		};
+		9E0AA23127DFB42A0004EBD9 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA23227DFB42A0004EBD9 /* HeaderView.xib */,
+				9E0AA23327DFB42A0004EBD9 /* HeaderView.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		9E0AA23427DFB42A0004EBD9 /* InfoTextCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA23527DFB42A0004EBD9 /* InfoTextCell.swift */,
+				9E0AA23627DFB42A0004EBD9 /* InfoTextCell.xib */,
+			);
+			path = InfoTextCell;
+			sourceTree = "<group>";
+		};
+		9E0AA23927DFB42A0004EBD9 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA23A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9E0AA23B27DFB42A0004EBD9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA23C27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift */,
+				9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		9E12D28A27D0E5C1000F1CF3 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +417,7 @@
 		9EBC235327CE283F00AB1BA3 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				9E0AA22627DFB42A0004EBD9 /* Login with discount code screen  */,
 				9EBC237B27CE373F00AB1BA3 /* MainTabBar */,
 				9EBC235427CE28AF00AB1BA3 /* Labirint */,
 				9EBC235527CE28E000AB1BA3 /* Catalog */,
@@ -660,12 +777,16 @@
 				9E3C492727D3737700F4D9E6 /* DeliveryAddressCell.xib in Resources */,
 				9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */,
 				3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */,
+				9E0AA24427DFB42A0004EBD9 /* HeaderView.xib in Resources */,
 				9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */,
 				3C0BA29A268DC98F00C47C74 /* assets.xcassets in Resources */,
 				9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */,
+				9E0AA24727DFB42A0004EBD9 /* InfoTextCell.xib in Resources */,
 				9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */,
 				9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */,
 				9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */,
+				9E0AA24027DFB42A0004EBD9 /* EnterButtonView.xib in Resources */,
+				9E0AA24227DFB42A0004EBD9 /* CodeEnterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,12 +875,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E0AA23E27DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift in Sources */,
 				9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */,
 				9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */,
 				9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */,
+				9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */,
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
 				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
 				9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */,
+				9E0AA24827DFB42A0004EBD9 /* LoginDiscountCodeInput.swift in Sources */,
 				9EBC237A27CE364900AB1BA3 /* LabirintConfigurator.swift in Sources */,
 				9EBC238F27CE3A4C00AB1BA3 /* CatalogRouter.swift in Sources */,
 				9E3C491D27D36D1C00F4D9E6 /* AutorizedHeaderView.swift in Sources */,
@@ -778,15 +902,20 @@
 				9EBC23B527CE41D800AB1BA3 /* MyLabPresenter.swift in Sources */,
 				3C0BA291268DC98D00C47C74 /* AppDelegate.swift in Sources */,
 				9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */,
+				9E0AA24B27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift in Sources */,
 				9EBC23A127CE40A900AB1BA3 /* PromoConfigurator.swift in Sources */,
+				9E0AA24927DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift in Sources */,
 				9EBC23A727CE40F600AB1BA3 /* PromoPresenter.swift in Sources */,
+				9E0AA24A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift in Sources */,
 				9EBC23A327CE40C700AB1BA3 /* PromoRouter.swift in Sources */,
 				9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */,
 				9EBC236327CE2FE300AB1BA3 /* LabirintPresenter.swift in Sources */,
 				9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */,
 				9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */,
+				9E0AA24327DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift in Sources */,
 				9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */,
 				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
+				9E0AA24127DFB42A0004EBD9 /* CodeEnterCell.swift in Sources */,
 				9EAE91F127DB9941003988F1 /* MyLabViewModel.swift in Sources */,
 				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
 				9EBC23BB27CE424200AB1BA3 /* MyLabViewOutput.swift in Sources */,
@@ -801,10 +930,13 @@
 				9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */,
 				9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */,
 				9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */,
+				9E0AA24627DFB42A0004EBD9 /* InfoTextCell.swift in Sources */,
 				9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */,
 				9EBC239F27CE407800AB1BA3 /* BasketViewOutput.swift in Sources */,
 				9EBC23A927CE411700AB1BA3 /* PromoViewController.swift in Sources */,
 				9EBC239B27CE402B00AB1BA3 /* BasketViewController.swift in Sources */,
+				9E0AA24C27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift in Sources */,
+				9E0AA24527DFB42A0004EBD9 /* HeaderView.swift in Sources */,
 				9EBC236527CE339A00AB1BA3 /* LabirintRouter.swift in Sources */,
 				9EBC23B727CE420100AB1BA3 /* MyLabViewController.swift in Sources */,
 				9EBC23A527CE40DB00AB1BA3 /* PromoRouterInput.swift in Sources */,
