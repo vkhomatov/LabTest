@@ -52,7 +52,7 @@ private extension MainTabBar {
         case .promo:
             return PromoConfigurator().configure()
         case .mylab:
-            return MyLabConfigurator().configure()
+            return MyLabConfigurator().configure(state: .loguot)
         }
     }
 

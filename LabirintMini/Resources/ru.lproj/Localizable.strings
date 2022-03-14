@@ -8,28 +8,31 @@
 
 // MARK: - TabBar
 
-"Labirint" = "Лабиринт";
-"Catalog" = "Каталог";
-"Basket" = "Корзина";
-"Promo" = "Акции";
-"My lab" = "Мой лаб";
+"TabBar.labirint" = "Лабиринт";
+"TabBar.catalog" = "Каталог";
+"TabBar.basket" = "Корзина";
+"TabBar.promo" = "Акции";
+"TabBar.mylab" = "Мой лаб";
 
 
 // MARK: - MyLabTab
 
-"My orders" = "Мои заказы";
-"My coupons" = "Мои купоны";
-"Saving goods" = "Отложенные товары";
-"My subscriptions" = "Мои подписки";
-"Purchased goods" = "Купленные товары";
-"My reviews" = "Мои рецензии";
-"Delivery" = "Доставка";
-"156 pickup points" = "156 пунктов самовывоза";
-"Profile settings" = "Настройки профиля";
-"App settings" = "Настройки приложения";
-"Store Information" = "Информация о магазине";
-"Logout" = "Выход";
-"Login" = "Войти";
-"Sign in to get all the features of the profile" = "Войдите, чтобы получить все позможности профиля";
-"By logging in or registering, I agree with terms and conditions" = "Входя или регистрируясь, я соглашаюсь с условиями и правилами";
+"MyLab.myOrders" = "Мои заказы";
+"MyLab.myCoupons" = "Мои купоны";
+"MyLab.savingGoods" = "Отложенные товары";
+"MyLab.mySubscriptions" = "Мои подписки";
+"MyLab.purchasedGoods" = "Купленные товары";
+"MyLab.myReviews" = "Мои рецензии";
+"MyLab.delivery" = "Доставка";
+"MyLab.pickupPoints" = "156 пунктов самовывоза";
+"MyLab.profileSettings" = "Настройки профиля";
+"MyLab.appSettings" = "Настройки приложения";
+"MyLab.storeInformation" = "Информация о магазине";
+"MyLab.logout" = "Выход";
+"MyLab.login" = "Войти";
+"MyLab.signInInfo" = "Войдите, чтобы получить все позможности профиля";
+"MyLab.signInAgree" = "Входя или регистрируясь, я соглашаюсь с условиями и правилами";
+"MyLab.discount" = "Скидка";
+"MyLab.balance" = "Баланс";
+"MyLab.discountIncrease" = "5 865 ₽ до повышения скидки до 15%";
 

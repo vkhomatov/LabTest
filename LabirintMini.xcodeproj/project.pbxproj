@@ -12,6 +12,7 @@
 		3C0BA29A268DC98F00C47C74 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA299268DC98F00C47C74 /* assets.xcassets */; };
 		3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BA29B268DC98F00C47C74 /* LaunchScreen.storyboard */; };
 		9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E06B1A127D8E76600E0DC46 /* MyLabViewController.xib */; };
+		9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22327DF90520004EBD9 /* MainTabBarController.swift */; };
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
@@ -29,7 +30,6 @@
 		9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */; };
 		9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91EE27DB3061003988F1 /* UIButton.swift */; };
 		9EAE91F127DB9941003988F1 /* MyLabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91F027DB9941003988F1 /* MyLabViewModel.swift */; };
-		9EBC235227CE233100AB1BA3 /* MainTabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
 		9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */; };
 		9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */; };
@@ -82,6 +82,8 @@
 		3C0BA29E268DC98F00C47C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449573616019490BDAFFF4D4 /* Pods-LabirintMini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabirintMini.release.xcconfig"; path = "Target Support Files/Pods-LabirintMini/Pods-LabirintMini.release.xcconfig"; sourceTree = "<group>"; };
 		9E06B1A127D8E76600E0DC46 /* MyLabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLabViewController.xib; sourceTree = "<group>"; };
+		9E0AA22327DF90520004EBD9 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9E0AA22527DF9F0C0004EBD9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -99,7 +101,6 @@
 		9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitButtonCell.xib; sourceTree = "<group>"; };
 		9EAE91EE27DB3061003988F1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		9EAE91F027DB9941003988F1 /* MyLabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewModel.swift; sourceTree = "<group>"; };
-		9EBC235127CE233100AB1BA3 /* MainTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarScreen.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
 		9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewInput.swift; sourceTree = "<group>"; };
 		9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewOutput.swift; sourceTree = "<group>"; };
@@ -587,7 +588,7 @@
 		9EBC237F27CE382700AB1BA3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9EBC235127CE233100AB1BA3 /* MainTabBarController.swift */,
+				9E0AA22327DF90520004EBD9 /* MainTabBarController.swift */,
 				9EBC238827CE394C00AB1BA3 /* MainTabBarControllerInput.swift */,
 				9EBC238A27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift */,
 			);
@@ -753,9 +754,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBC235227CE233100AB1BA3 /* MainTabBarController.swift in Sources */,
 				9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */,
 				9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */,
+				9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */,
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
 				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
 				9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */,
@@ -784,7 +785,7 @@
 				9EBC236327CE2FE300AB1BA3 /* LabirintPresenter.swift in Sources */,
 				9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */,
 				9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */,
-				9EBC238927CE394C00AB1BA3 /* MainTabBarScreenInput.swift in Sources */,
+				9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */,
 				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
 				9EAE91F127DB9941003988F1 /* MyLabViewModel.swift in Sources */,
 				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
@@ -818,7 +819,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				3C0BA29C268DC98F00C47C74 /* Base */,
-				9EAE91E227DA4B18003988F1 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -827,7 +827,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9E12D29627D1CDC2000F1CF3 /* en */,
-				9EAE91ED27DA5F3C003988F1 /* ru */,
+				9E0AA22527DF9F0C0004EBD9 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

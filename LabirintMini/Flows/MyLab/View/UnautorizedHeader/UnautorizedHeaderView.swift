@@ -67,13 +67,13 @@ private extension UnautorizedHeaderView {
         mainLabel.numberOfLines = 2
         mainLabel?.font = .systemFont(ofSize: Constants.bigFont)
         mainLabel?.textColor = Constants.whiteColor
-        mainLabel.text = L10n.signInToGetAllTheFeaturesOfTheProfile
+        mainLabel.text = L10n.MyLab.signInInfo
         
         infoLabel.numberOfLines = 3
         infoLabel?.font = .systemFont(ofSize: Constants.smallFont)
         infoLabel?.textColor = Constants.greyColor
         
-        let infoText = NSMutableAttributedString.init(string:  L10n.byLoggingInOrRegisteringIAgreeWithTermsAndConditions)
+        let infoText = NSMutableAttributedString.init(string:  L10n.MyLab.signInAgree)
         if Locale.current.languageCode == "en"{
             infoText.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: NSRange.init(location: 43, length: 5))
             infoText.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: NSRange.init(location: 53, length: 10))
@@ -83,7 +83,7 @@ private extension UnautorizedHeaderView {
         }
 
         infoLabel.attributedText = infoText
-        enterButton.loginButton(title: L10n.login)
+        enterButton.loginButton(title: L10n.MyLab.login)
     }
 
 }

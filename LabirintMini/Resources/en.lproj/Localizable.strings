@@ -7,27 +7,31 @@
 */
 // MARK: - TabBar
 
-"Labirint" = "Labirint";
-"Catalog" = "Catalog";
-"Basket" = "Basket";
-"Promo" = "Promo";
-"My lab" = "My lab";
+"TabBar.labirint" = "Labirint";
+"TabBar.catalog" = "Catalog";
+"TabBar.basket" = "Basket";
+"TabBar.promo" = "Promo";
+"TabBar.mylab" = "My lab";
 
 // MARK: - MyLabTab
 
-"My orders" = "My orders";
-"My coupons" = "My coupons";
-"Saving goods" = "Saving goods";
-"My subscriptions" = "My subscriptions";
-"Purchased goods" = "Purchased goods";
-"My reviews" = "My reviews";
-"Delivery" = "Delivery";
-"156 pickup points" = "156 pickup points";
-"Profile settings" = "Profile settings";
-"App settings" = "App settings";
-"Store Information" = "Store Information";
-"Logout" = "Logout";
-"Login" = "Login";
-"Sign in to get all the features of the profile" = "Sign in to get all the features of the profile";
-"By logging in or registering, I agree with terms and conditions" = "By logging in or registering, I agree with terms and conditions";
+"MyLab.myOrders" = "My orders";
+"MyLab.myCoupons" = "My coupons";
+"MyLab.savingGoods" = "Saving goods";
+"MyLab.mySubscriptions" = "My subscriptions";
+"MyLab.purchasedGoods" = "Purchased goods";
+"MyLab.myReviews" = "My reviews";
+"MyLab.delivery" = "Delivery";
+"MyLab.pickupPoints" = "156 pickup points";
+"MyLab.profileSettings" = "Profile settings";
+"MyLab.appSettings" = "App settings";
+"MyLab.storeInformation" = "Store Information";
+"MyLab.logout" = "Logout";
+"MyLab.login" = "Login";
+"MyLab.signInInfo" = "Sign in to get all the features of the profile";
+"MyLab.signInAgree" = "By logging in or registering, I agree with terms and conditions";
+"MyLab.discount" = "Discount";
+"MyLab.balance" = "Balance";
+"MyLab.discountIncrease" = "5 865 ₽ for discount increase for 15%";
+
 

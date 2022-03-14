@@ -66,7 +66,7 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
         valueLabel.text = model.value
         valueLabel.textColor = model.valueTextColor
 
-        if model.title == L10n.myOrders {
+        if model.title == L10n.MyLab.myOrders {
             layer.masksToBounds = true
             layer.cornerRadius = Constants.cornerRadius
             layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]

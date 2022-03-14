@@ -64,22 +64,25 @@ private extension AutorizedHeaderView {
         discountTitleLabel.numberOfLines = 1
         discountTitleLabel?.font = .systemFont(ofSize: Constants.preMiddleFont)
         discountTitleLabel?.textColor = .white
+        discountTitleLabel.text = L10n.MyLab.discount
         
         discountLabel.numberOfLines = 1
         discountLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        discountLabel?.textColor = .white
+        discountLabel?.textColor = Constants.whiteColor
         
         discountInfoLabel.numberOfLines = 2
         discountInfoLabel?.font = .systemFont(ofSize: Constants.smallFont)
         discountInfoLabel?.textColor = Constants.greyColor
-        
+        discountInfoLabel.text = L10n.MyLab.discountIncrease
+
         balanceTitleLabel.numberOfLines = 1
         balanceTitleLabel?.font = .systemFont(ofSize: Constants.preMiddleFont)
         balanceTitleLabel?.textColor = .white
+        balanceTitleLabel.text = L10n.MyLab.balance
         
         balanceLabel.numberOfLines = 1
         balanceLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        balanceLabel?.textColor = .white
+        balanceLabel?.textColor = Constants.whiteColor
         
         ballanceInfoImageView.image = Assets.TabBar.ic.image
         discountInfoImageView.image = Assets.TabBar.ic.image

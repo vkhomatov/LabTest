@@ -22,7 +22,7 @@ extension UIButton {
         backgroundColor = Constants.whiteColor
         titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
         setTitleColor(Constants.blueColor, for: .normal)
-        titleLabel?.text = title
+        setTitle(title, for: .normal)
     }
 
 }
