@@ -15,9 +15,14 @@ final class LoginDiscountCodeViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet weak var enterButtonView: EnterButtonView!
     
+    // MARK: - NSLayoutConstraint
+    
+    @IBOutlet weak var enterButtonViewBottomConstraint: NSLayoutConstraint!
+
     // MARK: - Properties
 
     var output: LoginDiscountCodeOutput?
+    let center = NotificationCenter.default
     
     // MARK: - Private Properties
 
@@ -32,6 +37,10 @@ final class LoginDiscountCodeViewController: UIViewController {
         output?.viewLoaded()
         setupInitialState()
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(center)
+    }
 
 }
 
@@ -40,9 +49,11 @@ final class LoginDiscountCodeViewController: UIViewController {
 extension LoginDiscountCodeViewController: LoginDiscountCodeInput {
     
     func setupInitialState() {
+        setupView()
         setupTableView()
         setupCells()
         setupNavBar()
+        setupKeyboardNotificaition()
     }
     
 }
@@ -51,8 +62,12 @@ extension LoginDiscountCodeViewController: LoginDiscountCodeInput {
 
 private extension LoginDiscountCodeViewController {
     
-    func setupTableView() {
+    func setupView() {
         view.backgroundColor = .white
+        self.hideKeyboardWhenViewTapped()
+    }
+    
+    func setupTableView() {
         tableView.backgroundColor = .white
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
@@ -61,6 +76,27 @@ private extension LoginDiscountCodeViewController {
     
     func setupNavBar() {
         navigationController?.navigationBar.barStyle = .default
+    }
+    
+    func setupKeyboardNotificaition() {
+        center.addObserver(self, selector: #selector(keyboardWillBeShown(note:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillBeShown(note: Notification) {
+        let userInfo = note.userInfo
+        guard let keyboardFrame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+            self?.enterButtonViewBottomConstraint.constant = keyboardFrame.height
+            self?.view.layoutIfNeeded()
+        })
+    }
+    
+    @objc func keyboardWillBeHidden(note: Notification) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+            self?.enterButtonViewBottomConstraint.constant = .zero
+            self?.view.layoutIfNeeded()
+        })
     }
     
     func setupCells() {

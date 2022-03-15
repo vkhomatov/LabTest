@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginDiscountCodeViewController" customModule="LabirintMini" customModuleProvider="target">
             <connections>
                 <outlet property="enterButtonView" destination="cvf-NF-yfd" id="lnT-0q-eB5"/>
+                <outlet property="enterButtonViewBottomConstraint" destination="kpC-mD-g6a" id="ZGM-20-Ufv"/>
                 <outlet property="tableView" destination="Qxi-ao-v5G" id="nW0-v8-tJm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="fqv-C8-K2L"/>
             </connections>

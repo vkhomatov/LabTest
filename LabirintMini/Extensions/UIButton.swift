@@ -8,11 +8,6 @@
 import UIKit
 
 extension UIButton {
-
-//    enum ButtonStyle {
-//        case myLabEnter(bgrColor: UIColor, titleColor: UIColor)
-//        case myLabEnterCode(bgrColor: UIColor, titleColor: UIColor)
-//    }
     
     enum Constants {
         static let blueColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
@@ -39,17 +34,6 @@ extension UIButton {
         setTitleColor(Constants.whiteColor, for: .normal)
         setTitle(title, for: .normal)
     }
-    
-//    func changeState(style: ButtonStyle) {
-//        switch style {
-//        case .myLabEnter(let bgrColor, let titleColor):
-//            backgroundColor = bgrColor
-//            setTitleColor(titleColor, for: .normal)
-//        case .myLabEnterCode(let bgrColor, let titleColor):
-//            backgroundColor = bgrColor
-//            setTitleColor(titleColor, for: .normal)
-//        }
-//    }
 
 }
 

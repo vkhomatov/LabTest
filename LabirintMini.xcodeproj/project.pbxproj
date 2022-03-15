@@ -28,6 +28,7 @@
 		9E0AA24B27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23C27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift */; };
 		9E0AA24C27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */; };
 		9E0AA24E27DFBCE40004EBD9 /* LoginDiscountCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */; };
+		9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */; };
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
@@ -114,6 +115,7 @@
 		9E0AA23C27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeRouterInput.swift; sourceTree = "<group>"; };
 		9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeRouter.swift; sourceTree = "<group>"; };
 		9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginDiscountCodeView.xib; sourceTree = "<group>"; };
+		9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 			children = (
 				9E2E274727CFC32600D78244 /* UINavigationBar.swift */,
 				9EAE91EE27DB3061003988F1 /* UIButton.swift */,
+				9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */,
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
 				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
+				9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */,
 				9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */,
 				9E0AA24827DFB42A0004EBD9 /* LoginDiscountCodeInput.swift in Sources */,
 				9EBC237A27CE364900AB1BA3 /* LabirintConfigurator.swift in Sources */,
