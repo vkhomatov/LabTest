@@ -33,5 +33,10 @@
 "MyLab.discount" = "Discount";
 "MyLab.balance" = "Balance";
 "MyLab.discountIncrease" = "5 865 ₽ for discount increase for 15%";
+"MyLab.discountCodeTitle" = "Enter by discount code";
+"MyLab.discountCodeInfo" = "The discount code can be found in your personal account";
+"MyLab.discountCode" = "Discount code";
+"MyLab.youDiscountCode" = "You discount code";
+
 
 

@@ -1,21 +1,63 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="InfoTextCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="InfoTextCell" customModule="LabirintMini" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fh-AE-ybc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkW-qI-yOb">
+                                <rect key="frame" x="15" y="57" width="290" height="44"/>
+                                <string key="text">Код скидки можно посмотреть в вашем
+личном кабинете на сайте</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="115" id="9CV-iB-p70"/>
+                            <constraint firstItem="kkW-qI-yOb" firstAttribute="top" secondItem="0Fh-AE-ybc" secondAttribute="top" constant="57" id="B7l-wQ-dQT"/>
+                            <constraint firstAttribute="bottom" secondItem="kkW-qI-yOb" secondAttribute="bottom" constant="14" id="OFm-EB-fQH"/>
+                            <constraint firstAttribute="trailing" secondItem="kkW-qI-yOb" secondAttribute="trailing" constant="15" id="YiO-GC-kDJ"/>
+                            <constraint firstItem="kkW-qI-yOb" firstAttribute="leading" secondItem="0Fh-AE-ybc" secondAttribute="leading" constant="15" id="aRU-Nm-QXI"/>
+                            <constraint firstAttribute="width" constant="320" id="gp5-Y8-bLz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="0Fh-AE-ybc" secondAttribute="bottom" id="9wy-EE-PMW"/>
+                    <constraint firstAttribute="trailing" secondItem="0Fh-AE-ybc" secondAttribute="trailing" id="f8M-cy-LZt"/>
+                    <constraint firstItem="0Fh-AE-ybc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vaY-UI-T9n"/>
+                    <constraint firstItem="0Fh-AE-ybc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zlh-6e-al4"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="infoTextLabel" destination="kkW-qI-yOb" id="rlY-G5-wIw"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="58.59375"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

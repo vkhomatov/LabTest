@@ -21,5 +21,9 @@ final class LoginDiscountCodePresenter {
 extension LoginDiscountCodePresenter: LoginDiscountCodeOutput {
 
     func viewLoaded() { }
+    
+    func closeModule() {
+        router?.closeModule()
+    }
 
 }

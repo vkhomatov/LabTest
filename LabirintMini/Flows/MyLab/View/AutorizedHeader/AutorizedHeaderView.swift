@@ -84,8 +84,8 @@ private extension AutorizedHeaderView {
         balanceLabel?.font = .systemFont(ofSize: Constants.bigFont)
         balanceLabel?.textColor = Constants.whiteColor
         
-        ballanceInfoImageView.image = Assets.TabBar.ic.image
-        discountInfoImageView.image = Assets.TabBar.ic.image
+        ballanceInfoImageView.image = Assets.MyLab.ic.image
+        discountInfoImageView.image = Assets.MyLab.ic.image
     }
 
 }

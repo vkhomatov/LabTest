@@ -22,12 +22,15 @@ public enum Assets {
   public enum Launch {
     public static let labirintLabel = ImageAsset(name: "Launch/LabirintLabel")
   }
+  public enum MyLab {
+    public static let closeButton = ImageAsset(name: "MyLab/closeButton")
+    public static let ic = ImageAsset(name: "MyLab/ic")
+  }
   public enum TabBar {
     public static let basketActive = ImageAsset(name: "TabBar/basketActive")
     public static let basketUnactive = ImageAsset(name: "TabBar/basketUnactive")
     public static let catalogActive = ImageAsset(name: "TabBar/catalogActive")
     public static let catalogUnactive = ImageAsset(name: "TabBar/catalogUnactive")
-    public static let ic = ImageAsset(name: "TabBar/ic")
     public static let labirintActive = ImageAsset(name: "TabBar/labirintActive")
     public static let labirintUnactive = ImageAsset(name: "TabBar/labirintUnactive")
     public static let mylabActive = ImageAsset(name: "TabBar/mylabActive")

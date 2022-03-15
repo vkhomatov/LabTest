@@ -10,5 +10,7 @@ import Foundation
 protocol LoginDiscountCodeOutput {
 
     func viewLoaded()
+    
+    func closeModule()
 
 }

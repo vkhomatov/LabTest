@@ -51,6 +51,10 @@ private extension MyLabViewController {
         view.addSubview(tableView)
     }
     
+    func setupNavBar() {
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
 }
 
 // MARK: - MyLabViewInput
@@ -90,7 +94,10 @@ extension MyLabViewController: MyLabViewInput {
             adapter.addSectionHeaderGenerator(headerGenerator)
             if let header = headerGenerator.generate() as? UnautorizedHeaderView {
                 header.stateChangeCallback = { [weak self] state in
-                    self?.output?.changeState(state)
+                    let vc = LoginDiscountCodeConfigurator().configure()
+                    //self?.navigationController?.pushViewController(vc, animated: true)
+                    self?.present(vc, animated: true, completion: nil)
+                    //self?.output?.changeState(state)
                 }
             }
             
@@ -106,6 +113,7 @@ extension MyLabViewController: MyLabViewInput {
     
     func setupInitialState() {
         setupTableView()
+        setupNavBar()
         // заглушка, которая не очень работает
         blackViewHeightConstraint.constant = tableView.frame.height / 3
     }

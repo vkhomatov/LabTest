@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginDiscountCodeViewController" customModule="LabirintMini" customModuleProvider="target">
+            <connections>
+                <outlet property="enterButtonView" destination="cvf-NF-yfd" id="lnT-0q-eB5"/>
+                <outlet property="tableView" destination="Qxi-ao-v5G" id="nW0-v8-tJm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fqv-C8-K2L"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qxi-ao-v5G">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="QDz-Z1-xoO"/>
+                        <constraint firstAttribute="width" constant="414" id="wbb-aC-D0d"/>
+                    </constraints>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-NF-yfd" customClass="EnterButtonView" customModule="LabirintMini" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="760" width="414" height="102"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-BG-Sx2">
+                            <rect key="frame" x="15" y="30" width="384" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="kNA-kg-9kV"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="enterButtonTouchDown:" destination="cvf-NF-yfd" eventType="touchDown" id="1MV-bn-x2c"/>
+                                <action selector="enterButtonTouchUp:" destination="cvf-NF-yfd" eventType="touchUpInside" id="Ysl-KN-kQe"/>
+                                <action selector="enterButtonTouchUpOutside:" destination="cvf-NF-yfd" eventType="touchUpOutside" id="cTu-YJ-ky0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="jSr-fm-1aK"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="102" id="3e0-RH-9q1"/>
+                        <constraint firstItem="ih9-BG-Sx2" firstAttribute="top" secondItem="cvf-NF-yfd" secondAttribute="top" constant="30" id="DDl-tE-1Rg"/>
+                        <constraint firstAttribute="width" constant="414" id="GHJ-nk-Tiw"/>
+                        <constraint firstAttribute="bottom" secondItem="ih9-BG-Sx2" secondAttribute="bottom" constant="36" id="byT-IV-3aP"/>
+                        <constraint firstItem="ih9-BG-Sx2" firstAttribute="leading" secondItem="jSr-fm-1aK" secondAttribute="leading" constant="15" id="gLC-SR-x8b"/>
+                        <constraint firstItem="jSr-fm-1aK" firstAttribute="trailing" secondItem="ih9-BG-Sx2" secondAttribute="trailing" constant="15" id="pSK-3a-msO"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="enterButton" destination="ih9-BG-Sx2" id="Wmm-Sg-ClC"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Qxi-ao-v5G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R66-9C-3D0"/>
+                <constraint firstItem="Qxi-ao-v5G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YJp-PN-V1L"/>
+                <constraint firstItem="Qxi-ao-v5G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZoQ-eK-uGd"/>
+                <constraint firstItem="cvf-NF-yfd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aZ3-X0-2dh"/>
+                <constraint firstItem="Qxi-ao-v5G" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hbH-ea-rOF"/>
+                <constraint firstItem="cvf-NF-yfd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jFe-ZR-JQQ"/>
+                <constraint firstItem="cvf-NF-yfd" firstAttribute="top" secondItem="Qxi-ao-v5G" secondAttribute="bottom" priority="900" constant="460" id="kFf-ei-Tq8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cvf-NF-yfd" secondAttribute="bottom" id="kpC-mD-g6a"/>
+                <constraint firstItem="Qxi-ao-v5G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pC3-9Z-VFA"/>
+                <constraint firstItem="Qxi-ao-v5G" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="xSl-yq-1jp"/>
+            </constraints>
+            <point key="canvasLocation" x="44.927536231884062" y="58.928571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

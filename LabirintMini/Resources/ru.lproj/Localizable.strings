@@ -35,4 +35,9 @@
 "MyLab.discount" = "Скидка";
 "MyLab.balance" = "Баланс";
 "MyLab.discountIncrease" = "5 865 ₽ до повышения скидки до 15%";
+"MyLab.discountCodeTitle" = "Вход по коду скидки";
+"MyLab.discountCodeInfo" = "Код скидки можно посмотреть в вашем личном кабинете на сайте";
+"MyLab.discountCode" = "Код скидки";
+"MyLab.youDiscountCode" = "Ваш код скидки";
+
 

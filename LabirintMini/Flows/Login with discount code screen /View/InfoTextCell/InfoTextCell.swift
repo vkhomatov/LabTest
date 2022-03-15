@@ -6,15 +6,57 @@
 //
 
 import UIKit
+import ReactiveDataDisplayManager
 
-class InfoTextCell: UITableViewCell {
+struct InfoTextCellViewModel {
+    let title: String
+}
+
+class InfoTextCell: UITableViewCell, ConfigurableItem {
+    
+    // MARK: - Typealias
+
+    typealias Model = InfoTextCellViewModel
+    
+    // MARK: - Constants
+    
+    enum Constants {
+        static let blackColor: UIColor = .black
+        static let whiteColor: UIColor = .white
+        static let fontSize: CGFloat = 15
+    }
+    
+    // MARK: - IBOutlets
+
+    @IBOutlet weak var infoTextLabel: UILabel!
+
+    // MARK: - System Methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        setupInitialState()
     }
     
+    // MARK: - Internal Methods
+
+    func configure(with model: Model) {
+        infoTextLabel.text = model.title
+    }
+}
+
+// MARK: - Configuration
+
+private extension InfoTextCell {
+
+    func setupInitialState() {
+        infoTextLabel.numberOfLines = 2
+        infoTextLabel?.font = .systemFont(ofSize: Constants.fontSize)
+        infoTextLabel?.textColor = Constants.blackColor
+        
+        selectionStyle = .none
+        accessoryType = .none
+        separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
+        backgroundColor = Constants.whiteColor
+    }
+
 }

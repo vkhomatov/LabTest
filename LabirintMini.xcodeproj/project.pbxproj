@@ -15,7 +15,6 @@
 		9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22327DF90520004EBD9 /* MainTabBarController.swift */; };
 		9E0AA23E27DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22827DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift */; };
 		9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22B27DFB42A0004EBD9 /* EnterButtonView.swift */; };
-		9E0AA24027DFB42A0004EBD9 /* EnterButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22C27DFB42A0004EBD9 /* EnterButtonView.xib */; };
 		9E0AA24127DFB42A0004EBD9 /* CodeEnterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */; };
 		9E0AA24227DFB42A0004EBD9 /* CodeEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */; };
 		9E0AA24327DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */; };
@@ -28,6 +27,7 @@
 		9E0AA24A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift */; };
 		9E0AA24B27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23C27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift */; };
 		9E0AA24C27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */; };
+		9E0AA24E27DFBCE40004EBD9 /* LoginDiscountCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */; };
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
@@ -101,7 +101,6 @@
 		9E0AA22527DF9F0C0004EBD9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E0AA22827DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodePresenter.swift; sourceTree = "<group>"; };
 		9E0AA22B27DFB42A0004EBD9 /* EnterButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterButtonView.swift; sourceTree = "<group>"; };
-		9E0AA22C27DFB42A0004EBD9 /* EnterButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterButtonView.xib; sourceTree = "<group>"; };
 		9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEnterCell.swift; sourceTree = "<group>"; };
 		9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CodeEnterCell.xib; sourceTree = "<group>"; };
 		9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeOutput.swift; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		9E0AA23A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeConfigurator.swift; sourceTree = "<group>"; };
 		9E0AA23C27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeRouterInput.swift; sourceTree = "<group>"; };
 		9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeRouter.swift; sourceTree = "<group>"; };
+		9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginDiscountCodeView.xib; sourceTree = "<group>"; };
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -266,10 +266,10 @@
 		9E0AA22627DFB42A0004EBD9 /* Login with discount code screen  */ = {
 			isa = PBXGroup;
 			children = (
-				9E0AA22727DFB42A0004EBD9 /* Presenter */,
-				9E0AA22927DFB42A0004EBD9 /* View */,
 				9E0AA23927DFB42A0004EBD9 /* Configurator */,
 				9E0AA23B27DFB42A0004EBD9 /* Router */,
+				9E0AA22727DFB42A0004EBD9 /* Presenter */,
+				9E0AA22927DFB42A0004EBD9 /* View */,
 			);
 			path = "Login with discount code screen ";
 			sourceTree = "<group>";
@@ -285,13 +285,14 @@
 		9E0AA22927DFB42A0004EBD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9E0AA22A27DFB42A0004EBD9 /* EnterButtonView */,
-				9E0AA22D27DFB42A0004EBD9 /* CodeEnterCell */,
-				9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */,
 				9E0AA23127DFB42A0004EBD9 /* HeaderView */,
 				9E0AA23427DFB42A0004EBD9 /* InfoTextCell */,
-				9E0AA23727DFB42A0004EBD9 /* LoginDiscountCodeInput.swift */,
+				9E0AA22D27DFB42A0004EBD9 /* CodeEnterCell */,
+				9E0AA22A27DFB42A0004EBD9 /* EnterButtonView */,
 				9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */,
+				9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */,
+				9E0AA23727DFB42A0004EBD9 /* LoginDiscountCodeInput.swift */,
+				9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -300,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				9E0AA22B27DFB42A0004EBD9 /* EnterButtonView.swift */,
-				9E0AA22C27DFB42A0004EBD9 /* EnterButtonView.xib */,
 			);
 			path = EnterButtonView;
 			sourceTree = "<group>";
@@ -782,10 +782,10 @@
 				3C0BA29A268DC98F00C47C74 /* assets.xcassets in Resources */,
 				9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */,
 				9E0AA24727DFB42A0004EBD9 /* InfoTextCell.xib in Resources */,
+				9E0AA24E27DFBCE40004EBD9 /* LoginDiscountCodeView.xib in Resources */,
 				9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */,
 				9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */,
 				9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */,
-				9E0AA24027DFB42A0004EBD9 /* EnterButtonView.xib in Resources */,
 				9E0AA24227DFB42A0004EBD9 /* CodeEnterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

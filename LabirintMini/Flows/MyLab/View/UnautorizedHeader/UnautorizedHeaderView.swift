@@ -14,6 +14,7 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     // MARK: - Constants
 
     enum Constants {
+        static let blueColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
         static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
         static let whiteColor: UIColor = .white
         static let headerHeight: CGFloat = 208
@@ -22,6 +23,7 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     }
     
     // MARK: - IBOutlets
+
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
@@ -84,6 +86,7 @@ private extension UnautorizedHeaderView {
 
         infoLabel.attributedText = infoText
         enterButton.loginButton(title: L10n.MyLab.login)
+
     }
 
 }
