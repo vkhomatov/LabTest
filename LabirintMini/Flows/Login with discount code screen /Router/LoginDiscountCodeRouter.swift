@@ -18,6 +18,7 @@ final class LoginDiscountCodeRouter {
 extension LoginDiscountCodeRouter: LoginDiscountCodeRouterInput {
     
     func closeModule() {
+        //view?.navigationController?.popViewController(animated: true)
         view?.dismiss(animated: true)
     }
 }

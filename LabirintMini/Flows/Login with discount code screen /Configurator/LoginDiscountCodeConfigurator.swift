@@ -9,7 +9,7 @@ import UIKit
 
 final class LoginDiscountCodeConfigurator {
     
-    func configure() -> LoginDiscountCodeViewController {
+    func configure() -> UIViewController {
         let view = LoginDiscountCodeViewController()
         let router = LoginDiscountCodeRouter()
         let presenter = LoginDiscountCodePresenter()
@@ -19,7 +19,7 @@ final class LoginDiscountCodeConfigurator {
         router.view = view
         view.output = presenter
 
-        return view
+        return UINavigationController(rootViewController: view)
     }
 
     

@@ -14,7 +14,6 @@ class EnterButtonView: UIView {
     enum Constants {
         static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
         static let blueColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
-        static let whiteColor: UIColor = .white
         static let bigFont: CGFloat = 15
         static let smallFont: CGFloat = 13
     }
@@ -51,7 +50,7 @@ class EnterButtonView: UIView {
 private extension EnterButtonView {
     
     func setupInitialState() {
-        backgroundColor = Constants.whiteColor
+        backgroundColor = .none
         enterButton.isEnabled = false
         enterButton.enterCodeButton(title: L10n.MyLab.login)
     }

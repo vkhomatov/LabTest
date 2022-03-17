@@ -37,6 +37,11 @@ final class MyLabViewController: UIViewController {
         setupInitialState()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setupNavBar()
+    }
+    
 }
 
 // MARK: - Private Methods
@@ -53,6 +58,10 @@ private extension MyLabViewController {
     
     func setupNavBar() {
         navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
 }
@@ -99,6 +108,7 @@ extension MyLabViewController: MyLabViewInput {
                     //self?.navigationController?.pushViewController(vc, animated: true)
                     //self?.output?.changeState(state)
                     self?.present(vc, animated: true, completion: nil)
+                   // self?.navigationController?.pushViewController(vc, animated: true)
                 }
             }
             

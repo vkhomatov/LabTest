@@ -18,10 +18,6 @@
 		9E0AA24127DFB42A0004EBD9 /* CodeEnterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */; };
 		9E0AA24227DFB42A0004EBD9 /* CodeEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */; };
 		9E0AA24327DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */; };
-		9E0AA24427DFB42A0004EBD9 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA23227DFB42A0004EBD9 /* HeaderView.xib */; };
-		9E0AA24527DFB42A0004EBD9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23327DFB42A0004EBD9 /* HeaderView.swift */; };
-		9E0AA24627DFB42A0004EBD9 /* InfoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23527DFB42A0004EBD9 /* InfoTextCell.swift */; };
-		9E0AA24727DFB42A0004EBD9 /* InfoTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA23627DFB42A0004EBD9 /* InfoTextCell.xib */; };
 		9E0AA24827DFB42A0004EBD9 /* LoginDiscountCodeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23727DFB42A0004EBD9 /* LoginDiscountCodeInput.swift */; };
 		9E0AA24927DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */; };
 		9E0AA24A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift */; };
@@ -30,6 +26,9 @@
 		9E0AA24E27DFBCE40004EBD9 /* LoginDiscountCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */; };
 		9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */; };
 		9E0AA25327E0CDE10004EBD9 /* CodeTextEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */; };
+		9E0AA25B27E337070004EBD9 /* SFUIText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA25A27E337070004EBD9 /* SFUIText-Medium.ttf */; };
+		9E0AA25F27E351960004EBD9 /* InfoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA25D27E351960004EBD9 /* InfoTextCell.swift */; };
+		9E0AA26027E351960004EBD9 /* InfoTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA25E27E351960004EBD9 /* InfoTextCell.xib */; };
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
@@ -106,10 +105,6 @@
 		9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEnterCell.swift; sourceTree = "<group>"; };
 		9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CodeEnterCell.xib; sourceTree = "<group>"; };
 		9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeOutput.swift; sourceTree = "<group>"; };
-		9E0AA23227DFB42A0004EBD9 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		9E0AA23327DFB42A0004EBD9 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		9E0AA23527DFB42A0004EBD9 /* InfoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTextCell.swift; sourceTree = "<group>"; };
-		9E0AA23627DFB42A0004EBD9 /* InfoTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTextCell.xib; sourceTree = "<group>"; };
 		9E0AA23727DFB42A0004EBD9 /* LoginDiscountCodeInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeInput.swift; sourceTree = "<group>"; };
 		9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeViewController.swift; sourceTree = "<group>"; };
 		9E0AA23A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeConfigurator.swift; sourceTree = "<group>"; };
@@ -118,6 +113,9 @@
 		9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginDiscountCodeView.xib; sourceTree = "<group>"; };
 		9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextEdit.swift; sourceTree = "<group>"; };
+		9E0AA25A27E337070004EBD9 /* SFUIText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Medium.ttf"; path = "LabirintMini/Resources/Fonts/SFUIText-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		9E0AA25D27E351960004EBD9 /* InfoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTextCell.swift; sourceTree = "<group>"; };
+		9E0AA25E27E351960004EBD9 /* InfoTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTextCell.xib; sourceTree = "<group>"; };
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -290,8 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				9E0AA25127E0CDB50004EBD9 /* CodeTextEdit */,
-				9E0AA23127DFB42A0004EBD9 /* HeaderView */,
-				9E0AA23427DFB42A0004EBD9 /* InfoTextCell */,
+				9E0AA25C27E351960004EBD9 /* InfoTextCell */,
 				9E0AA22D27DFB42A0004EBD9 /* CodeEnterCell */,
 				9E0AA22A27DFB42A0004EBD9 /* EnterButtonView */,
 				9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */,
@@ -319,24 +316,6 @@
 			path = CodeEnterCell;
 			sourceTree = "<group>";
 		};
-		9E0AA23127DFB42A0004EBD9 /* HeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				9E0AA23227DFB42A0004EBD9 /* HeaderView.xib */,
-				9E0AA23327DFB42A0004EBD9 /* HeaderView.swift */,
-			);
-			path = HeaderView;
-			sourceTree = "<group>";
-		};
-		9E0AA23427DFB42A0004EBD9 /* InfoTextCell */ = {
-			isa = PBXGroup;
-			children = (
-				9E0AA23527DFB42A0004EBD9 /* InfoTextCell.swift */,
-				9E0AA23627DFB42A0004EBD9 /* InfoTextCell.xib */,
-			);
-			path = InfoTextCell;
-			sourceTree = "<group>";
-		};
 		9E0AA23927DFB42A0004EBD9 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,9 +341,19 @@
 			path = CodeTextEdit;
 			sourceTree = "<group>";
 		};
+		9E0AA25C27E351960004EBD9 /* InfoTextCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA25D27E351960004EBD9 /* InfoTextCell.swift */,
+				9E0AA25E27E351960004EBD9 /* InfoTextCell.xib */,
+			);
+			path = InfoTextCell;
+			sourceTree = "<group>";
+		};
 		9E12D28A27D0E5C1000F1CF3 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				9E0AA25A27E337070004EBD9 /* SFUIText-Medium.ttf */,
 				9E12D28B27D0E5C1000F1CF3 /* Strings.swift */,
 				9E12D28C27D0E5C1000F1CF3 /* Assets.swift */,
 				9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */,
@@ -791,14 +780,14 @@
 				9E3C492727D3737700F4D9E6 /* DeliveryAddressCell.xib in Resources */,
 				9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */,
 				3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */,
-				9E0AA24427DFB42A0004EBD9 /* HeaderView.xib in Resources */,
+				9E0AA26027E351960004EBD9 /* InfoTextCell.xib in Resources */,
 				9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */,
 				3C0BA29A268DC98F00C47C74 /* assets.xcassets in Resources */,
 				9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */,
-				9E0AA24727DFB42A0004EBD9 /* InfoTextCell.xib in Resources */,
 				9E0AA24E27DFBCE40004EBD9 /* LoginDiscountCodeView.xib in Resources */,
 				9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */,
 				9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */,
+				9E0AA25B27E337070004EBD9 /* SFUIText-Medium.ttf in Resources */,
 				9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */,
 				9E0AA24227DFB42A0004EBD9 /* CodeEnterCell.xib in Resources */,
 			);
@@ -919,6 +908,7 @@
 				9E0AA25327E0CDE10004EBD9 /* CodeTextEdit.swift in Sources */,
 				9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */,
 				9E0AA24B27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift in Sources */,
+				9E0AA25F27E351960004EBD9 /* InfoTextCell.swift in Sources */,
 				9EBC23A127CE40A900AB1BA3 /* PromoConfigurator.swift in Sources */,
 				9E0AA24927DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift in Sources */,
 				9EBC23A727CE40F600AB1BA3 /* PromoPresenter.swift in Sources */,
@@ -946,13 +936,11 @@
 				9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */,
 				9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */,
 				9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */,
-				9E0AA24627DFB42A0004EBD9 /* InfoTextCell.swift in Sources */,
 				9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */,
 				9EBC239F27CE407800AB1BA3 /* BasketViewOutput.swift in Sources */,
 				9EBC23A927CE411700AB1BA3 /* PromoViewController.swift in Sources */,
 				9EBC239B27CE402B00AB1BA3 /* BasketViewController.swift in Sources */,
 				9E0AA24C27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift in Sources */,
-				9E0AA24527DFB42A0004EBD9 /* HeaderView.swift in Sources */,
 				9EBC236527CE339A00AB1BA3 /* LabirintRouter.swift in Sources */,
 				9EBC23B727CE420100AB1BA3 /* MyLabViewController.swift in Sources */,
 				9EBC23A527CE40DB00AB1BA3 /* PromoRouterInput.swift in Sources */,

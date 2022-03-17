@@ -22,16 +22,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qxi-ao-v5G">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qxi-ao-v5G">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="QDz-Z1-xoO"/>
+                        <constraint firstAttribute="height" constant="200" id="QDz-Z1-xoO"/>
                         <constraint firstAttribute="width" constant="414" id="wbb-aC-D0d"/>
                     </constraints>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-NF-yfd" customClass="EnterButtonView" customModule="LabirintMini" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="763" width="414" height="99"/>
+                    <rect key="frame" x="0.0" y="797" width="414" height="99"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-BG-Sx2">
                             <rect key="frame" x="15" y="30" width="384" height="36"/>
@@ -47,7 +47,7 @@
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="jSr-fm-1aK"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="ih9-BG-Sx2" firstAttribute="top" secondItem="cvf-NF-yfd" secondAttribute="top" constant="30" id="DDl-tE-1Rg"/>
                         <constraint firstAttribute="width" constant="414" id="GHJ-nk-Tiw"/>
@@ -69,8 +69,8 @@
                 <constraint firstItem="cvf-NF-yfd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aZ3-X0-2dh"/>
                 <constraint firstItem="Qxi-ao-v5G" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hbH-ea-rOF"/>
                 <constraint firstItem="cvf-NF-yfd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jFe-ZR-JQQ"/>
-                <constraint firstItem="cvf-NF-yfd" firstAttribute="top" secondItem="Qxi-ao-v5G" secondAttribute="bottom" priority="900" constant="460" id="kFf-ei-Tq8"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cvf-NF-yfd" secondAttribute="bottom" id="kpC-mD-g6a"/>
+                <constraint firstItem="cvf-NF-yfd" firstAttribute="top" secondItem="Qxi-ao-v5G" secondAttribute="bottom" priority="900" constant="597" id="kFf-ei-Tq8"/>
+                <constraint firstAttribute="bottom" secondItem="cvf-NF-yfd" secondAttribute="bottom" id="kpC-mD-g6a"/>
                 <constraint firstItem="Qxi-ao-v5G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pC3-9Z-VFA"/>
                 <constraint firstItem="Qxi-ao-v5G" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="xSl-yq-1jp"/>
             </constraints>

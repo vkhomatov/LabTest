@@ -38,8 +38,14 @@ final class LoginDiscountCodeViewController: UIViewController {
         setupInitialState()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setupNavBar()
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(notificationCenter)
+        tabBarController?.tabBar.isHidden = false
     }
 
 }
@@ -53,6 +59,7 @@ extension LoginDiscountCodeViewController: LoginDiscountCodeInput {
         setupTableView()
         setupCells()
         setupNavBar()
+        setupBarButtonItem()
         setupKeyboardNotificaition()
     }
     
@@ -74,8 +81,28 @@ private extension LoginDiscountCodeViewController {
         tableView.keyboardDismissMode = .onDrag
     }
     
+    func setupBarButtonItem() {
+        let closeButton = UIButton(type: .custom)
+        closeButton.backgroundColor = .clear
+        closeButton.setImage(Assets.MyLab.closeButton.image, for: .normal)
+        closeButton.frame = CGRect(x: 0, y: 0, width: 19, height: 19)
+        closeButton.addTarget(self, action: #selector(closeCodeModule), for: UIControl.Event.touchUpInside)
+        let barButton = UIBarButtonItem(customView: closeButton)
+        navigationItem.rightBarButtonItem = barButton
+    }
+    
     func setupNavBar() {
         navigationController?.navigationBar.barStyle = .default
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationItem.title = L10n.MyLab.discountCodeTitle
+        navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "SFUIText-Medium", size: 17) ?? .systemFont(ofSize: 17)]
+    }
+    
+    @objc func closeCodeModule() {
+        output?.closeModule()
     }
     
     func setupKeyboardNotificaition() {
@@ -100,14 +127,6 @@ private extension LoginDiscountCodeViewController {
     }
     
     func setupCells() {
-        
-        let headerGenerator = HeaderViewGenerator()
-        adapter.addSectionHeaderGenerator(headerGenerator)
-        if let header = headerGenerator.generate() as? HeaderView {
-            header.closeCallback = { [weak self] in
-                self?.output?.closeModule()
-            }
-        }
         
         let infoTextCellModel = InfoTextCellViewModel(title: L10n.MyLab.discountCodeInfo)
         let infoTextCellGenerator =  BaseNonReusableCellGenerator<InfoTextCell>(with: infoTextCellModel)

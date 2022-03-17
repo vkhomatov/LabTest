@@ -16,9 +16,6 @@ public final class CodeTextEdit: UITextField {
 
     // MARK: - Properties
 
-    public var pasteActionEnabled = true
-    public var caretMovmentEnabled = true
-    public var textPadding = UIEdgeInsets.zero
     public var placeholderPadding = UIEdgeInsets.zero
     public var placeHolderYesText: (() -> Void)?
 
@@ -54,4 +51,3 @@ extension CodeTextEdit {
     }
 
 }
-
