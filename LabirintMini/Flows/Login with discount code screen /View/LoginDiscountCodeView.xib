@@ -31,7 +31,7 @@
                     </constraints>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-NF-yfd" customClass="EnterButtonView" customModule="LabirintMini" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="760" width="414" height="102"/>
+                    <rect key="frame" x="0.0" y="763" width="414" height="99"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-BG-Sx2">
                             <rect key="frame" x="15" y="30" width="384" height="36"/>
@@ -49,10 +49,9 @@
                     <viewLayoutGuide key="safeArea" id="jSr-fm-1aK"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="102" id="3e0-RH-9q1"/>
                         <constraint firstItem="ih9-BG-Sx2" firstAttribute="top" secondItem="cvf-NF-yfd" secondAttribute="top" constant="30" id="DDl-tE-1Rg"/>
                         <constraint firstAttribute="width" constant="414" id="GHJ-nk-Tiw"/>
-                        <constraint firstAttribute="bottom" secondItem="ih9-BG-Sx2" secondAttribute="bottom" constant="36" id="byT-IV-3aP"/>
+                        <constraint firstAttribute="bottom" secondItem="ih9-BG-Sx2" secondAttribute="bottom" constant="33" id="byT-IV-3aP"/>
                         <constraint firstItem="ih9-BG-Sx2" firstAttribute="leading" secondItem="jSr-fm-1aK" secondAttribute="leading" constant="15" id="gLC-SR-x8b"/>
                         <constraint firstItem="jSr-fm-1aK" firstAttribute="trailing" secondItem="ih9-BG-Sx2" secondAttribute="trailing" constant="15" id="pSK-3a-msO"/>
                     </constraints>

@@ -29,6 +29,7 @@
 		9E0AA24C27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */; };
 		9E0AA24E27DFBCE40004EBD9 /* LoginDiscountCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */; };
 		9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */; };
+		9E0AA25327E0CDE10004EBD9 /* CodeTextEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */; };
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
@@ -116,6 +117,7 @@
 		9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDiscountCodeRouter.swift; sourceTree = "<group>"; };
 		9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginDiscountCodeView.xib; sourceTree = "<group>"; };
 		9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextEdit.swift; sourceTree = "<group>"; };
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		9E0AA22927DFB42A0004EBD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9E0AA25127E0CDB50004EBD9 /* CodeTextEdit */,
 				9E0AA23127DFB42A0004EBD9 /* HeaderView */,
 				9E0AA23427DFB42A0004EBD9 /* InfoTextCell */,
 				9E0AA22D27DFB42A0004EBD9 /* CodeEnterCell */,
@@ -349,6 +352,14 @@
 				9E0AA23D27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		9E0AA25127E0CDB50004EBD9 /* CodeTextEdit */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */,
+			);
+			path = CodeTextEdit;
 			sourceTree = "<group>";
 		};
 		9E12D28A27D0E5C1000F1CF3 /* Constants */ = {
@@ -905,6 +916,7 @@
 				9EBC239927CE400700AB1BA3 /* BasketPresenter.swift in Sources */,
 				9EBC23B527CE41D800AB1BA3 /* MyLabPresenter.swift in Sources */,
 				3C0BA291268DC98D00C47C74 /* AppDelegate.swift in Sources */,
+				9E0AA25327E0CDE10004EBD9 /* CodeTextEdit.swift in Sources */,
 				9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */,
 				9E0AA24B27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift in Sources */,
 				9EBC23A127CE40A900AB1BA3 /* PromoConfigurator.swift in Sources */,

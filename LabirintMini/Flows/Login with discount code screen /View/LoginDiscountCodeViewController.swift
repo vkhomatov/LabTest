@@ -22,7 +22,7 @@ final class LoginDiscountCodeViewController: UIViewController {
     // MARK: - Properties
 
     var output: LoginDiscountCodeOutput?
-    let center = NotificationCenter.default
+    let notificationCenter = NotificationCenter.default
     
     // MARK: - Private Properties
 
@@ -39,7 +39,7 @@ final class LoginDiscountCodeViewController: UIViewController {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(center)
+        NotificationCenter.default.removeObserver(notificationCenter)
     }
 
 }
@@ -64,7 +64,7 @@ private extension LoginDiscountCodeViewController {
     
     func setupView() {
         view.backgroundColor = .white
-        self.hideKeyboardWhenViewTapped()
+        hideKeyboardWhenViewTapped()
     }
     
     func setupTableView() {
@@ -79,8 +79,8 @@ private extension LoginDiscountCodeViewController {
     }
     
     func setupKeyboardNotificaition() {
-        center.addObserver(self, selector: #selector(keyboardWillBeShown(note:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillBeShown(note:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillBeShown(note: Notification) {
@@ -110,12 +110,20 @@ private extension LoginDiscountCodeViewController {
         }
         
         let infoTextCellModel = InfoTextCellViewModel(title: L10n.MyLab.discountCodeInfo)
-        let infoTextCellGenerator =  BaseCellGenerator<InfoTextCell>(with: infoTextCellModel)
+        let infoTextCellGenerator =  BaseNonReusableCellGenerator<InfoTextCell>(with: infoTextCellModel)
         adapter.addCellGenerator(infoTextCellGenerator)
         
         let codeEnterCellModel = CodeEnterCellViewModel(text: "", placeholder: L10n.MyLab.discountCode)
-        let codeEnterCellGenerator =  BaseCellGenerator<CodeEnterCell>(with: codeEnterCellModel)
+        let codeEnterCellGenerator =  BaseNonReusableCellGenerator<CodeEnterCell>(with: codeEnterCellModel)
         adapter.addCellGenerator(codeEnterCellGenerator)
+        
+        codeEnterCellGenerator.cell?.editingDidBegin = { [weak self] text in
+            self?.output?.editingDidBegin(text)
+        }
+        
+        codeEnterCellGenerator.cell?.editingDidEnd = { [weak self] text in
+            self?.output?.editingDidEnd(text)
+        }
         
         adapter.forceRefill()
         

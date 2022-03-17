@@ -95,9 +95,10 @@ extension MyLabViewController: MyLabViewInput {
             if let header = headerGenerator.generate() as? UnautorizedHeaderView {
                 header.stateChangeCallback = { [weak self] state in
                     let vc = LoginDiscountCodeConfigurator().configure()
+                    // показываем контроллер для авторизации по коду
                     //self?.navigationController?.pushViewController(vc, animated: true)
-                    self?.present(vc, animated: true, completion: nil)
                     //self?.output?.changeState(state)
+                    self?.present(vc, animated: true, completion: nil)
                 }
             }
             

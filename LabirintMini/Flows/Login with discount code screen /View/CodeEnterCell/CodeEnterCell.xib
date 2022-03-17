@@ -21,25 +21,35 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nr-nr-2NP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код скидки" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQN-Q0-s9k">
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код скидки" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQN-Q0-s9k" customClass="CodeTextEdit" customModule="LabirintMini" customModuleProvider="target">
                                 <rect key="frame" x="15" y="32" width="285" height="23"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                 <connections>
-                                    <action selector="codeTextFieldEditingChange:" destination="KGk-i7-Jjw" eventType="editingChanged" id="kPk-Uc-qdD"/>
+                                    <action selector="codeTextFieldEditinDidEnd:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="FwK-Qy-RQh"/>
                                     <action selector="codeTextFieldEditingDidBegin:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="fI3-Ou-7Tc"/>
-                                    <action selector="codeTextFieldValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="aHe-I7-btv"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Ваш код скидки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFp-2F-uc6" userLabel="Label">
+                                <rect key="frame" x="15" y="10.5" width="285" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pFp-2F-uc6" firstAttribute="top" secondItem="6nr-nr-2NP" secondAttribute="top" constant="10.5" id="6al-4G-w5s"/>
                             <constraint firstAttribute="width" constant="320" id="7oV-OE-XyF"/>
                             <constraint firstAttribute="trailing" secondItem="rQN-Q0-s9k" secondAttribute="trailing" constant="20" id="Fil-M3-NtB"/>
                             <constraint firstAttribute="height" constant="69" id="Jzk-JY-WN5"/>
                             <constraint firstItem="rQN-Q0-s9k" firstAttribute="leading" secondItem="6nr-nr-2NP" secondAttribute="leading" constant="15" id="KpC-e2-HXr"/>
+                            <constraint firstItem="pFp-2F-uc6" firstAttribute="leading" secondItem="6nr-nr-2NP" secondAttribute="leading" constant="15" id="VcP-zT-12i"/>
                             <constraint firstAttribute="bottom" secondItem="rQN-Q0-s9k" secondAttribute="bottom" constant="14" id="gWn-NL-QeC"/>
+                            <constraint firstAttribute="trailing" secondItem="pFp-2F-uc6" secondAttribute="trailing" priority="900" constant="20" symbolic="YES" id="qx2-Md-8x7"/>
                             <constraint firstItem="rQN-Q0-s9k" firstAttribute="top" secondItem="6nr-nr-2NP" secondAttribute="top" constant="32" id="rga-JF-Tdx"/>
+                            <constraint firstItem="rQN-Q0-s9k" firstAttribute="top" secondItem="pFp-2F-uc6" secondAttribute="bottom" constant="4.5" id="tsw-Q1-F8i"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -53,11 +63,15 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="codeTextField" destination="rQN-Q0-s9k" id="Zrc-XW-NqX"/>
+                <outlet property="discountCodeTitle" destination="pFp-2F-uc6" id="aOg-3c-S0f"/>
             </connections>
             <point key="canvasLocation" x="185.50724637681162" y="74.665178571428569"/>
         </tableViewCell>
     </objects>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

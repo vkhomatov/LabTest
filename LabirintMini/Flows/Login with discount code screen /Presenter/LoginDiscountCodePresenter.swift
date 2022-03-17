@@ -13,6 +13,7 @@ final class LoginDiscountCodePresenter {
 
     weak var view: LoginDiscountCodeInput?
     var router: LoginDiscountCodeRouterInput?
+    var discountCode: String?
 
 }
 
@@ -25,5 +26,21 @@ extension LoginDiscountCodePresenter: LoginDiscountCodeOutput {
     func closeModule() {
         router?.closeModule()
     }
+    
+    func textDidChange(_ text: String) {
+        discountCode = text
+    }
+    
+    func editingChange(_ editing: Bool) {
+    }
+    
+    func editingDidBegin(_ text: String) {
+        discountCode = text
+    }
+    
+    func editingDidEnd(_ text: String) {
+        discountCode = text
+    }
+    
 
 }

@@ -13,4 +13,8 @@ protocol LoginDiscountCodeOutput {
     
     func closeModule()
 
+    func editingDidBegin(_ text: String)
+    
+    func editingDidEnd(_ text: String)
+
 }
