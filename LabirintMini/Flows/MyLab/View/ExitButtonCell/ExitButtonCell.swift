@@ -16,7 +16,7 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
-    typealias Model = ExitButtonCellViewModel
+    typealias Model = CellViewModel
     
     // MARK: - Constants
     
@@ -32,12 +32,12 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     // MARK: - Actions
 
     @IBAction func exitButtonAction(_ sender: UIButton) {
-        stateChangeCallback?(.loguot)
+        exiButtonCallback?()
     }
     
     // MARK: - Properites
     
-    public var stateChangeCallback: ((_ state: LogState) -> Void)?
+    public var exiButtonCallback: (() -> Void)?
 
     // MARK: - System Methods
 
@@ -63,14 +63,12 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
 private extension ExitButtonCell {
 
     func setupInitialState() {
-        
         exitButton.backgroundColor = .clear
         exitButton.titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
         exitButton.setTitleColor(Constants.redColor, for: .normal)
         
         selectionStyle = .none
-        separatorInset = UIEdgeInsets(top: .zero, left: .greatestFiniteMagnitude, bottom: .zero, right: .zero)
-        
+        separatorInset = UIEdgeInsets(top: .zero, left: 400, bottom: .zero, right: .zero)
     }
 
 }

@@ -38,12 +38,12 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     
     @IBAction func enterButtonTouchUp(_ sender: UIButton) {
         enterButton.backgroundColor = Constants.whiteColor
-        stateChangeCallback?(.login)
+        enterButtonCallback?()
     }
     
     // MARK: - Properites
     
-    public var stateChangeCallback: ((_ state: LogState) -> Void)?
+    public var enterButtonCallback: (() -> Void)?
     
     // MARK: - System Methods
     

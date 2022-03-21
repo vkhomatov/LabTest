@@ -11,17 +11,11 @@ import ReactiveDataDisplayManager
 
 // MARK: - CellViewModel
 
-struct DeliveryAddressCellViewModel {
-    let title: String
-    let address: String
-    let state: LogState
-}
-
 class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
 
     // MARK: - Typealias
 
-    typealias Model = DeliveryAddressCellViewModel
+    typealias Model = CellViewModel
     
     // MARK: - Constants
     
@@ -54,13 +48,17 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
     
     func configure(with model: Model) {
         deliveryTitleLabel.text = model.title
-        deliveryAddressLabel.text = model.address
+        deliveryAddressLabel.text = model.value
         
-        if model.state == .loguot {
+        switch model.state {
+        case .logout(_):
             layer.masksToBounds = true
             layer.cornerRadius = Constants.cornerRadius
             layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        default:
+            return
         }
+        
     }
     
 }

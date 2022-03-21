@@ -20,8 +20,12 @@ public enum L10n {
     public static let delivery = L10n.tr("Localizable", "MyLab.delivery")
     /// Discount
     public static let discount = L10n.tr("Localizable", "MyLab.discount")
-    /// 5 865 ₽ for discount increase for 15%
+    ///  ₽ for discount increase for 
     public static let discountIncrease = L10n.tr("Localizable", "MyLab.discountIncrease")
+    ///  in fire
+    public static let inFire = L10n.tr("Localizable", "MyLab.inFire")
+    ///  in processing
+    public static let inProcessing = L10n.tr("Localizable", "MyLab.inProcessing")
     /// Login
     public static let login = L10n.tr("Localizable", "MyLab.login")
     /// Logout
@@ -34,7 +38,7 @@ public enum L10n {
     public static let myReviews = L10n.tr("Localizable", "MyLab.myReviews")
     /// My subscriptions
     public static let mySubscriptions = L10n.tr("Localizable", "MyLab.mySubscriptions")
-    /// 156 pickup points
+    ///  pickup points
     public static let pickupPoints = L10n.tr("Localizable", "MyLab.pickupPoints")
     /// Profile settings
     public static let profileSettings = L10n.tr("Localizable", "MyLab.profileSettings")
@@ -48,6 +52,8 @@ public enum L10n {
     public static let signInInfo = L10n.tr("Localizable", "MyLab.signInInfo")
     /// Store Information
     public static let storeInformation = L10n.tr("Localizable", "MyLab.storeInformation")
+    ///  updates
+    public static let updates = L10n.tr("Localizable", "MyLab.updates")
   }
 
   public enum TabBar {

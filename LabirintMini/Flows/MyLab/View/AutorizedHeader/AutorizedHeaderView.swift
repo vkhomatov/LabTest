@@ -9,7 +9,36 @@ import UIKit
 import ReactiveDataDisplayManager
 
 
+struct MyLabAutorizedHeaderDataModel {
+    var name: String
+    var number: String
+    var discount: Int
+    var balance: Int
+    var nextDiscount: Int
+    var nextDiscountSumm: Int
+    
+    init(name: String = "Иван Человеков",
+         number: String = "T25O4-M4AJY-YG5TR",
+         discount: Int = 12,
+         balance: Int = 0,
+         nextDiscount: Int = 5_865,
+         nextDiscountSumm: Int = 15)
+    {
+        self.name = name
+        self.number = number
+        self.discount = discount
+        self.balance = balance
+        self.nextDiscount = nextDiscount
+        self.nextDiscountSumm = nextDiscountSumm
+    }
+}
+
+
 class AutorizedHeaderView: UITableViewHeaderFooterView {
+    
+    // MARK: - Typealias
+
+    typealias Model = MyLabAutorizedHeaderDataModel
     
     // MARK: - Constants
 
@@ -44,6 +73,16 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
+    }
+    
+    // MARK: - Internal Methods
+    
+    func configure(with model: Model) {
+        nameLabel.text = model.name
+        numberLabel.text = model.number
+        discountLabel.text = String(model.discount) + " %"
+        balanceLabel.text = String(model.balance) + " ₽"
+        discountInfoLabel.text = String(model.nextDiscountSumm) + L10n.MyLab.discountIncrease + String(model.nextDiscount) + "%"
     }
 }
 
@@ -101,10 +140,18 @@ final class AutorizedHeaderGenerator: TableHeaderGenerator {
     // MARK: - Private Properties
 
     private lazy var header: AutorizedHeaderView? = AutorizedHeaderView.instanceFromNib() as? AutorizedHeaderView
+    var model: MyLabAutorizedHeaderDataModel
+    
+    // MARK: - Initialization
+    
+    init(model: MyLabAutorizedHeaderDataModel) {
+        self.model = model
+    }
 
     // MARK: - TableHeaderGenerator
 
     override func generate() -> UIView {
+        header?.configure(with: model)
         return header ?? UIView()
     }
 

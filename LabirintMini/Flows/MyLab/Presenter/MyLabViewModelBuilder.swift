@@ -1,5 +1,5 @@
 //
-//  MyLabViewModel.swift
+//  MyLabViewModelBuilder.swift
 //  LabirintMini
 //
 //  Created by homatov on 11.03.2022.
@@ -9,7 +9,7 @@ import UIKit
 import ReactiveDataDisplayManager
 
 
-struct ServerMyLabDataModel {
+struct MyLabCellsDataModel {
     let myOrders: Int
     let myCoupons: Int
     let couponsOnFire: Int
@@ -22,7 +22,7 @@ struct ServerMyLabDataModel {
     init(myOrders: Int = 1,
          myCoupons: Int = 3,
          couponsOnFire: Int = 1,
-         myGoods: Int = 1,
+         myGoods: Int = 367,
          myPurchasedGoods: Int = 1,
          mySubscriptions: Int = 78,
          delivryAddress: String = "г. Петропавловск, от 1600 р. бесплатно, доставим завтра",
@@ -40,7 +40,7 @@ struct ServerMyLabDataModel {
 }
 
 enum LoginState {
-    case login(headerModel: MyLabAutorizedHeaderModel = MyLabAutorizedHeaderModel(), cellModels: [CellViewModel] = [])
+    case login(headerModel: MyLabAutorizedHeaderDataModel = MyLabAutorizedHeaderDataModel(), cellModels: [CellViewModel] = [])
     case logout(cellModels: [CellViewModel] = [])
 }
 

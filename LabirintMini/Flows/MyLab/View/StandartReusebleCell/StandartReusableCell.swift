@@ -10,10 +10,11 @@ import ReactiveDataDisplayManager
 
 // MARK: - CellViewModel
 
-struct StandartReusableCellViewModel {
+struct CellViewModel {
     let title: String
     var value: String? = nil
     var valueTextColor: UIColor? = UIColor(red: 0.878, green: 0.376, blue: 0.376, alpha: 1)
+    var state: LoginState? = .logout()
 }
 
 // MARK: - CellClass
@@ -22,7 +23,7 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
-    typealias Model = StandartReusableCellViewModel
+    typealias Model = CellViewModel
 
     // MARK: - Constants
     
@@ -50,9 +51,10 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
     }
 
     override func prepareForReuse() {
+        layer.cornerRadius = .zero
         layer.masksToBounds = false
-        contentView.layer.cornerRadius = .zero
         valueLabel?.textColor = Constants.redColor
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -63,7 +65,7 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
 
     func configure(with model: Model) {
         titleLabel.text = model.title
-        valueLabel.text = model.value
+        valueLabel.text = model.value 
         valueLabel.textColor = model.valueTextColor
 
         if model.title == L10n.MyLab.myOrders {
@@ -73,7 +75,7 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
         }
     }
     
-    static func getHeight(forWidth width: CGFloat, with model: StandartReusableCellViewModel) -> CGFloat {
+    static func getHeight(forWidth width: CGFloat, with model: CellViewModel) -> CGFloat {
         return Constants.rowHeight
     }
 
@@ -83,7 +85,7 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
 
 private extension StandartReusableCell {
 
-    func setupInitialState() {
+    func setupInitialState() {        
         titleLabel.numberOfLines = 1
         titleLabel?.font = .systemFont(ofSize: Constants.bigFont)
         titleLabel?.textColor = Constants.blackColor

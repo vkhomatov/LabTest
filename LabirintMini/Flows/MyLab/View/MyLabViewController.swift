@@ -48,7 +48,7 @@ private extension MyLabViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.keyboardDismissMode = .onDrag
-        view.addSubview(tableView)
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 1))
     }
     
 }
@@ -57,57 +57,34 @@ private extension MyLabViewController {
 
 extension MyLabViewController: MyLabViewInput {
 
-    func setupViewState(_ model: MyLabViewModel) {
+    func setupViewState(with state: LoginState) {
         adapter.clearHeaderGenerators()
         adapter.clearCellGenerators()
         
-        switch model.state {
+        let headerGenerator = MyLabViewModelBuilder(with: state).makeHeader()
+        let cells = MyLabViewModelBuilder(with: state).makeCellsGenerators()
         
-        case .login:
-            
-            adapter.addSectionHeaderGenerator(model.makeHeader(with: .loginHeader))
-            adapter.addCellGenerator(model.makeStandartRow(with: .myOrders))
-            adapter.addCellGenerator(model.makeStandartRow(with: .myCoupons))
-            adapter.addCellGenerator(model.makeStandartRow(with: .savingGoods))
-            adapter.addCellGenerator(model.makeStandartRow(with: .mySubscription))
-            adapter.addCellGenerator(model.makeStandartRow(with: .purchasedGoods))
-            adapter.addCellGenerator(model.makeStandartRow(with: .myReviews))
-            adapter.addCellGenerator(model.makeDeliveryRow(model.state))
-            adapter.addCellGenerator(model.makeStandartRow(with: .pickupPoints))
-            adapter.addCellGenerator(model.makeStandartRow(with: .profileSetting))
-            adapter.addCellGenerator(model.makeStandartRow(with: .appSetting))
-            adapter.addCellGenerator(model.makeStandartRow(with: .aboutStore))
-            
-            let logoutGenerator = model.makeExitRow()
-            adapter.addCellGenerator(logoutGenerator)
-            logoutGenerator.cell?.stateChangeCallback = { [weak self] state in
-                self?.output?.changeState(state)
+        if let header = headerGenerator.generate() as? UnautorizedHeaderView {
+            header.enterButtonCallback = { [weak self] in
+                self?.output?.changeState(with: .login())
             }
-            
-        case .loguot:
-            
-            let headerGenerator = model.makeHeader(with: .logoutHeader)
-            adapter.addSectionHeaderGenerator(headerGenerator)
-            if let header = headerGenerator.generate() as? UnautorizedHeaderView {
-                header.stateChangeCallback = { [weak self] state in
-                    self?.output?.changeState(state)
+        }
+        
+        if cells.last?.identifier == "ExitButtonCell" {
+            if let logoutGenerator = cells.last as? BaseNonReusableCellGenerator<ExitButtonCell>   {
+                logoutGenerator.cell?.exiButtonCallback = { [weak self] in
+                    self?.output?.changeState(with: .logout())
                 }
             }
-            
-            adapter.addCellGenerator(model.makeDeliveryRow(model.state))
-            adapter.addCellGenerator(model.makeStandartRow(with: .appSetting))
-            adapter.addCellGenerator(model.makeStandartRow(with: .aboutStore))
-            
         }
-
+       
+        adapter.addSectionHeaderGenerator(headerGenerator)
+        adapter.addCellGenerators(cells)
         adapter.forceRefill()
-
     }
     
     func setupInitialState() {
         setupTableView()
-        // заглушка, которая не очень работает
-        blackViewHeightConstraint.constant = tableView.frame.height / 3
     }
 
 }

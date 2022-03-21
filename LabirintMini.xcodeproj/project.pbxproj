@@ -29,7 +29,7 @@
 		9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */; };
 		9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */; };
 		9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91EE27DB3061003988F1 /* UIButton.swift */; };
-		9EAE91F127DB9941003988F1 /* MyLabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91F027DB9941003988F1 /* MyLabViewModel.swift */; };
+		9EAE91F127DB9941003988F1 /* MyLabViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91F027DB9941003988F1 /* MyLabViewModelBuilder.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
 		9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */; };
 		9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */; };
@@ -100,7 +100,7 @@
 		9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonCell.swift; sourceTree = "<group>"; };
 		9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitButtonCell.xib; sourceTree = "<group>"; };
 		9EAE91EE27DB3061003988F1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		9EAE91F027DB9941003988F1 /* MyLabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewModel.swift; sourceTree = "<group>"; };
+		9EAE91F027DB9941003988F1 /* MyLabViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewModelBuilder.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
 		9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewInput.swift; sourceTree = "<group>"; };
 		9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewOutput.swift; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				9EBC23B427CE41D800AB1BA3 /* MyLabPresenter.swift */,
-				9EAE91F027DB9941003988F1 /* MyLabViewModel.swift */,
+				9EAE91F027DB9941003988F1 /* MyLabViewModelBuilder.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -787,7 +787,7 @@
 				9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */,
 				9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */,
 				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
-				9EAE91F127DB9941003988F1 /* MyLabViewModel.swift in Sources */,
+				9EAE91F127DB9941003988F1 /* MyLabViewModelBuilder.swift in Sources */,
 				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
 				9EBC23BB27CE424200AB1BA3 /* MyLabViewOutput.swift in Sources */,
 				9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */,
