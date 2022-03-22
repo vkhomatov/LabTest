@@ -22,14 +22,15 @@
 		9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */; };
 		9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */; };
 		9E3C491D27D36D1C00F4D9E6 /* AutorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491C27D36D1C00F4D9E6 /* AutorizedHeaderView.swift */; };
-		9E3C492127D3706B00F4D9E6 /* StandartReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491F27D3706B00F4D9E6 /* StandartReusableCell.swift */; };
-		9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492027D3706B00F4D9E6 /* StandartReusableCell.xib */; };
+		9E3C492127D3706B00F4D9E6 /* MyLabStandartReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491F27D3706B00F4D9E6 /* MyLabStandartReusableCell.swift */; };
+		9E3C492227D3706B00F4D9E6 /* MyLabStandartReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492027D3706B00F4D9E6 /* MyLabStandartReusableCell.xib */; };
 		9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C492427D3737700F4D9E6 /* DeliveryAddressCell.swift */; };
 		9E3C492727D3737700F4D9E6 /* DeliveryAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */; };
 		9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */; };
 		9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */; };
+		9E5B1C2027E9FD9B004ADB32 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C1F27E9FD9B004ADB32 /* UserEntity.swift */; };
 		9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91EE27DB3061003988F1 /* UIButton.swift */; };
-		9EAE91F127DB9941003988F1 /* MyLabViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91F027DB9941003988F1 /* MyLabViewModelBuilder.swift */; };
+		9EAE91F127DB9941003988F1 /* MyLabViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91F027DB9941003988F1 /* MyLabViewBuilder.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
 		9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */; };
 		9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */; };
@@ -93,14 +94,15 @@
 		9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
 		9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
 		9E3C491C27D36D1C00F4D9E6 /* AutorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizedHeaderView.swift; sourceTree = "<group>"; };
-		9E3C491F27D3706B00F4D9E6 /* StandartReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartReusableCell.swift; sourceTree = "<group>"; };
-		9E3C492027D3706B00F4D9E6 /* StandartReusableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandartReusableCell.xib; sourceTree = "<group>"; };
+		9E3C491F27D3706B00F4D9E6 /* MyLabStandartReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabStandartReusableCell.swift; sourceTree = "<group>"; };
+		9E3C492027D3706B00F4D9E6 /* MyLabStandartReusableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLabStandartReusableCell.xib; sourceTree = "<group>"; };
 		9E3C492427D3737700F4D9E6 /* DeliveryAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressCell.swift; sourceTree = "<group>"; };
 		9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressCell.xib; sourceTree = "<group>"; };
 		9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonCell.swift; sourceTree = "<group>"; };
 		9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitButtonCell.xib; sourceTree = "<group>"; };
+		9E5B1C1F27E9FD9B004ADB32 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		9EAE91EE27DB3061003988F1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		9EAE91F027DB9941003988F1 /* MyLabViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewModelBuilder.swift; sourceTree = "<group>"; };
+		9EAE91F027DB9941003988F1 /* MyLabViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewBuilder.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
 		9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewInput.swift; sourceTree = "<group>"; };
 		9EBC236027CE2DBE00AB1BA3 /* LabirintViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewOutput.swift; sourceTree = "<group>"; };
@@ -274,8 +276,8 @@
 		9E3C491E27D3701B00F4D9E6 /* StandartReusebleCell */ = {
 			isa = PBXGroup;
 			children = (
-				9E3C491F27D3706B00F4D9E6 /* StandartReusableCell.swift */,
-				9E3C492027D3706B00F4D9E6 /* StandartReusableCell.xib */,
+				9E3C491F27D3706B00F4D9E6 /* MyLabStandartReusableCell.swift */,
+				9E3C492027D3706B00F4D9E6 /* MyLabStandartReusableCell.xib */,
 			);
 			path = StandartReusebleCell;
 			sourceTree = "<group>";
@@ -518,7 +520,8 @@
 			isa = PBXGroup;
 			children = (
 				9EBC23B427CE41D800AB1BA3 /* MyLabPresenter.swift */,
-				9EAE91F027DB9941003988F1 /* MyLabViewModelBuilder.swift */,
+				9EAE91F027DB9941003988F1 /* MyLabViewBuilder.swift */,
+				9E5B1C1F27E9FD9B004ADB32 /* UserEntity.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -665,7 +668,7 @@
 				9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */,
 				9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */,
 				9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */,
-				9E3C492227D3706B00F4D9E6 /* StandartReusableCell.xib in Resources */,
+				9E3C492227D3706B00F4D9E6 /* MyLabStandartReusableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,7 +769,7 @@
 				9EBC239327CE3FB900AB1BA3 /* BasketConfigurator.swift in Sources */,
 				9EC960E227D257EC00FB9787 /* MainTaBar.swift in Sources */,
 				9EBC238B27CE396500AB1BA3 /* MainTabBarScreeenOutput.swift in Sources */,
-				9E3C492127D3706B00F4D9E6 /* StandartReusableCell.swift in Sources */,
+				9E3C492127D3706B00F4D9E6 /* MyLabStandartReusableCell.swift in Sources */,
 				9EBC23B127CE41A700AB1BA3 /* MyLabRouter.swift in Sources */,
 				9EBC236727CE33EA00AB1BA3 /* LabirintRouterInput.swift in Sources */,
 				9EBC23AF27CE419500AB1BA3 /* MyLabConfigurator.swift in Sources */,
@@ -787,12 +790,13 @@
 				9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */,
 				9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */,
 				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
-				9EAE91F127DB9941003988F1 /* MyLabViewModelBuilder.swift in Sources */,
+				9EAE91F127DB9941003988F1 /* MyLabViewBuilder.swift in Sources */,
 				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
 				9EBC23BB27CE424200AB1BA3 /* MyLabViewOutput.swift in Sources */,
 				9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */,
 				9EBC238527CE390F00AB1BA3 /* MainTabBarRouterInput.swift in Sources */,
 				9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */,
+				9E5B1C2027E9FD9B004ADB32 /* UserEntity.swift in Sources */,
 				9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */,
 				9EBC23BD27CE479100AB1BA3 /* CatalogPresenter.swift in Sources */,
 				9EBC239527CE3FD400AB1BA3 /* BasketRouter.swift in Sources */,

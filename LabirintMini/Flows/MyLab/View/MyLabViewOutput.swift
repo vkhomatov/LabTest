@@ -10,7 +10,9 @@ import Foundation
 protocol MyLabViewOutput {
 
     func viewLoaded()
+        
+    func exitButtonPush()
     
-    func changeState(with state: LoginState)
+    func enterButtonPush()
 
 }

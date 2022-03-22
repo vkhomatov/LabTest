@@ -15,7 +15,7 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
 
     // MARK: - Typealias
 
-    typealias Model = CellViewModel
+    typealias Model = MyLabCellViewModel
     
     // MARK: - Constants
     
@@ -33,6 +33,10 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
     @IBOutlet weak var deliveryTitleLabel: UILabel!
     @IBOutlet weak var deliveryAddressLabel: UILabel!
     
+    // MARK: - Properites
+    
+    var didPushCallback: (() -> Void)?
+    
     // MARK: - System Methods
     
     override func awakeFromNib() {
@@ -43,22 +47,23 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+
     // MARK: - Internal Methods
     
     func configure(with model: Model) {
         deliveryTitleLabel.text = model.title
         deliveryAddressLabel.text = model.value
         
-        switch model.state {
-        case .logout(_):
+        if model.roundСorners {
             layer.masksToBounds = true
             layer.cornerRadius = Constants.cornerRadius
             layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        default:
-            return
         }
         
+    }
+    
+    @objc func gestureAction() {
+        didPushCallback?()
     }
     
 }
@@ -81,6 +86,9 @@ private extension DeliveryAddressCell {
         accessoryType = .disclosureIndicator
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
         backgroundColor = Constants.whiteColor
+        
+        let panGesture = UITapGestureRecognizer(target: self,action: #selector(gestureAction))
+        addGestureRecognizer(panGesture)
     }
 
 }

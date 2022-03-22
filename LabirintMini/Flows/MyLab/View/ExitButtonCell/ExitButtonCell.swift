@@ -16,7 +16,7 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
-    typealias Model = CellViewModel
+    typealias Model = MyLabCellViewModel
     
     // MARK: - Constants
     
@@ -32,12 +32,12 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     // MARK: - Actions
 
     @IBAction func exitButtonAction(_ sender: UIButton) {
-        exiButtonCallback?()
+        exitButtonCallback?()
     }
     
     // MARK: - Properites
     
-    public var exiButtonCallback: (() -> Void)?
+    var exitButtonCallback: (() -> Void)?
 
     // MARK: - System Methods
 

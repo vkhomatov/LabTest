@@ -43,7 +43,7 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - Properites
     
-    public var enterButtonCallback: (() -> Void)?
+    var enterButtonCallback: (() -> Void)?
     
     // MARK: - System Methods
     

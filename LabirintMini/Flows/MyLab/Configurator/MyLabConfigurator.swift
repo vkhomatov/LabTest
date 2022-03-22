@@ -12,7 +12,7 @@ final class MyLabConfigurator {
     func configure() -> MyLabViewController {
         let view = MyLabViewController()
         let router = MyLabRouter()
-        let presenter = MyLabPresenter(state: .logout(cellModels: []))
+        let presenter = MyLabPresenter()
 
         presenter.view = view
         presenter.router = router

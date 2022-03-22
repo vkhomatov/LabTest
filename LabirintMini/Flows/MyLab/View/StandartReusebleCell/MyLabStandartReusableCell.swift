@@ -1,5 +1,5 @@
 //
-//  StandartReusableCell.swift
+//  MyLabStandartReusableCell.swift
 //  LabirintMini
 //
 //  Created by homatov on 05.03.2022.
@@ -8,22 +8,44 @@
 import UIKit
 import ReactiveDataDisplayManager
 
+struct MyLabCellsDataModel {
+    let myOrders: Int
+    let myCoupons: Int
+    let couponsOnFire: Int
+    let myGoods: Int
+    let mySubscriptions: Int
+    let myPurchasedGoods: Int
+    let delivryAddress: String
+    let pickupPoints: Int
+    
+    init(from user: UserEntity) {
+        self.myOrders = user.myOrders
+        self.myCoupons = user.myCoupons
+        self.couponsOnFire = user.couponsOnFire
+        self.myGoods = user.myGoods
+        self.myPurchasedGoods = user.myPurchasedGoods
+        self.mySubscriptions = user.mySubscriptions
+        self.delivryAddress = user.delivryAddress
+        self.pickupPoints = user.pickupPoints
+    }
+}
+
 // MARK: - CellViewModel
 
-struct CellViewModel {
+struct MyLabCellViewModel {
     let title: String
     var value: String? = nil
     var valueTextColor: UIColor? = UIColor(red: 0.878, green: 0.376, blue: 0.376, alpha: 1)
-    var state: LoginState? = .logout()
+    var roundСorners: Bool = false
 }
 
 // MARK: - CellClass
 
-class StandartReusableCell: UITableViewCell, ConfigurableItem {
+class MyLabStandartReusableCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
-    typealias Model = CellViewModel
+    typealias Model = MyLabCellViewModel
 
     // MARK: - Constants
     
@@ -43,6 +65,10 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
+    // MARK: - Properites
+    
+    var didPushCallback: (() -> Void)?
+    
     // MARK: - System Methods
 
     override func awakeFromNib() {
@@ -54,7 +80,7 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
         layer.cornerRadius = .zero
         layer.masksToBounds = false
         valueLabel?.textColor = Constants.redColor
-
+        didPushCallback = nil
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -68,14 +94,18 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
         valueLabel.text = model.value 
         valueLabel.textColor = model.valueTextColor
 
-        if model.title == L10n.MyLab.myOrders {
+        if model.roundСorners {
             layer.masksToBounds = true
             layer.cornerRadius = Constants.cornerRadius
             layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         }
     }
     
-    static func getHeight(forWidth width: CGFloat, with model: CellViewModel) -> CGFloat {
+    @objc func gestureAction() {
+        didPushCallback?()
+    }
+    
+    static func getHeight(forWidth width: CGFloat, with model: MyLabCellViewModel) -> CGFloat {
         return Constants.rowHeight
     }
 
@@ -83,7 +113,7 @@ class StandartReusableCell: UITableViewCell, ConfigurableItem {
 
 // MARK: - Configuration
 
-private extension StandartReusableCell {
+private extension MyLabStandartReusableCell {
 
     func setupInitialState() {        
         titleLabel.numberOfLines = 1
@@ -98,6 +128,9 @@ private extension StandartReusableCell {
         accessoryType = .disclosureIndicator
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
         backgroundColor = Constants.whiteColor
+        
+        let panGesture = UITapGestureRecognizer(target: self,action: #selector(gestureAction))
+        addGestureRecognizer(panGesture)
     }
 
 }

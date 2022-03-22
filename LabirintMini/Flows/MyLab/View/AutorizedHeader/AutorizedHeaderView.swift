@@ -8,37 +8,29 @@
 import UIKit
 import ReactiveDataDisplayManager
 
-
-struct MyLabAutorizedHeaderDataModel {
-    var name: String
-    var number: String
-    var discount: Int
-    var balance: Int
-    var nextDiscount: Int
-    var nextDiscountSumm: Int
+struct MyLabAuthorizedHeaderDataModel {
+    let name: String
+    let number: String
+    let discount: Int
+    let balance: Int
+    let nextDiscount: Int
+    let nextDiscountSumm: Int
     
-    init(name: String = "Иван Человеков",
-         number: String = "T25O4-M4AJY-YG5TR",
-         discount: Int = 12,
-         balance: Int = 0,
-         nextDiscount: Int = 5_865,
-         nextDiscountSumm: Int = 15)
-    {
-        self.name = name
-        self.number = number
-        self.discount = discount
-        self.balance = balance
-        self.nextDiscount = nextDiscount
-        self.nextDiscountSumm = nextDiscountSumm
+    init(from user: UserEntity) {
+        self.name = user.name
+        self.number = user.number
+        self.discount = user.discount
+        self.balance = user.balance
+        self.nextDiscount = user.nextDiscount
+        self.nextDiscountSumm = user.nextDiscountSumm
     }
 }
-
 
 class AutorizedHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - Typealias
 
-    typealias Model = MyLabAutorizedHeaderDataModel
+    typealias Model = MyLabAuthorizedHeaderDataModel
     
     // MARK: - Constants
 
@@ -140,11 +132,11 @@ final class AutorizedHeaderGenerator: TableHeaderGenerator {
     // MARK: - Private Properties
 
     private lazy var header: AutorizedHeaderView? = AutorizedHeaderView.instanceFromNib() as? AutorizedHeaderView
-    var model: MyLabAutorizedHeaderDataModel
+    var model: MyLabAuthorizedHeaderDataModel
     
     // MARK: - Initialization
     
-    init(model: MyLabAutorizedHeaderDataModel) {
+    init(model: MyLabAuthorizedHeaderDataModel) {
         self.model = model
     }
 
