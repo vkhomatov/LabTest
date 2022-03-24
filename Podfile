@@ -7,6 +7,7 @@ target 'LabirintMini' do
   pod 'SwiftLint'
   pod 'SwiftGen', '~> 6.0'
   pod 'ReactiveDataDisplayManager', '~> 7.2.1'
+  pod 'NodeKit/UrlCache', :git => 'https://github.com/surfstudio/NodeKit', :tag => '3.2.0'
 end
 
 post_install do |installer|

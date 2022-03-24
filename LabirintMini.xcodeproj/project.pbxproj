@@ -44,6 +44,13 @@
 		9E3C492727D3737700F4D9E6 /* DeliveryAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */; };
 		9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */; };
 		9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */; };
+		9E5B1C2427EAFBC4004ADB32 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C2327EAFBC4004ADB32 /* UserService.swift */; };
+		9E5B1C2627EB1DF8004ADB32 /* SignatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C2527EB1DF8004ADB32 /* SignatureService.swift */; };
+		9E5B1C2827EB31F7004ADB32 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C2727EB31F7004ADB32 /* Bundle.swift */; };
+		9E5B1C2A27EB4B5A004ADB32 /* MD5Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C2927EB4B5A004ADB32 /* MD5Digest.swift */; };
+		9E5B1C2D27EB5851004ADB32 /* TokenEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C2C27EB5851004ADB32 /* TokenEntry.swift */; };
+		9E5B1C2F27EB585E004ADB32 /* TokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C2E27EB585E004ADB32 /* TokenEntity.swift */; };
+		9E5B1C3327EC2D76004ADB32 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C3227EC2D76004ADB32 /* KeyChainService.swift */; };
 		9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91EE27DB3061003988F1 /* UIButton.swift */; };
 		9EAE91F127DB9941003988F1 /* MyLabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91F027DB9941003988F1 /* MyLabViewModel.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
@@ -131,6 +138,13 @@
 		9E3C492527D3737700F4D9E6 /* DeliveryAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressCell.xib; sourceTree = "<group>"; };
 		9E3C492927D375A300F4D9E6 /* ExitButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonCell.swift; sourceTree = "<group>"; };
 		9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitButtonCell.xib; sourceTree = "<group>"; };
+		9E5B1C2327EAFBC4004ADB32 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		9E5B1C2527EB1DF8004ADB32 /* SignatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureService.swift; sourceTree = "<group>"; };
+		9E5B1C2727EB31F7004ADB32 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		9E5B1C2927EB4B5A004ADB32 /* MD5Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5Digest.swift; sourceTree = "<group>"; };
+		9E5B1C2C27EB5851004ADB32 /* TokenEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEntry.swift; sourceTree = "<group>"; };
+		9E5B1C2E27EB585E004ADB32 /* TokenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEntity.swift; sourceTree = "<group>"; };
+		9E5B1C3227EC2D76004ADB32 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		9EAE91EE27DB3061003988F1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		9EAE91F027DB9941003988F1 /* MyLabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewModel.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +226,8 @@
 		3C0BA28F268DC98D00C47C74 /* LabirintMini */ = {
 			isa = PBXGroup;
 			children = (
+				9E5B1C2B27EB581F004ADB32 /* Entites */,
+				9E5B1C2227EAF821004ADB32 /* Services */,
 				3C0BA2A4268DCB1C00C47C74 /* Application */,
 				9EBC235327CE283F00AB1BA3 /* Flows */,
 				3C0BA2A5268DCB2F00C47C74 /* Resources */,
@@ -365,9 +381,11 @@
 		9E2E274627CFAED100D78244 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9E5B1C2927EB4B5A004ADB32 /* MD5Digest.swift */,
 				9E2E274727CFC32600D78244 /* UINavigationBar.swift */,
 				9EAE91EE27DB3061003988F1 /* UIButton.swift */,
 				9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */,
+				9E5B1C2727EB31F7004ADB32 /* Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +433,25 @@
 				9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */,
 			);
 			path = ExitButtonCell;
+			sourceTree = "<group>";
+		};
+		9E5B1C2227EAF821004ADB32 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9E5B1C2327EAFBC4004ADB32 /* UserService.swift */,
+				9E5B1C2527EB1DF8004ADB32 /* SignatureService.swift */,
+				9E5B1C3227EC2D76004ADB32 /* KeyChainService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9E5B1C2B27EB581F004ADB32 /* Entites */ = {
+			isa = PBXGroup;
+			children = (
+				9E5B1C2C27EB5851004ADB32 /* TokenEntry.swift */,
+				9E5B1C2E27EB585E004ADB32 /* TokenEntity.swift */,
+			);
+			path = Entites;
 			sourceTree = "<group>";
 		};
 		9EBC235327CE283F00AB1BA3 /* Flows */ = {
@@ -879,6 +916,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0AA23E27DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift in Sources */,
+				9E5B1C2D27EB5851004ADB32 /* TokenEntry.swift in Sources */,
 				9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */,
 				9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */,
 				9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */,
@@ -886,6 +924,7 @@
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
 				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
 				9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */,
+				9E5B1C2A27EB4B5A004ADB32 /* MD5Digest.swift in Sources */,
 				9EBC238D27CE39A000AB1BA3 /* CatalogConfigurator.swift in Sources */,
 				9E0AA24827DFB42A0004EBD9 /* LoginDiscountCodeInput.swift in Sources */,
 				9EBC237A27CE364900AB1BA3 /* LabirintConfigurator.swift in Sources */,
@@ -917,10 +956,14 @@
 				9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */,
 				9EBC236327CE2FE300AB1BA3 /* LabirintPresenter.swift in Sources */,
 				9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */,
+				9E5B1C3327EC2D76004ADB32 /* KeyChainService.swift in Sources */,
 				9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */,
+				9E5B1C2427EAFBC4004ADB32 /* UserService.swift in Sources */,
 				9E0AA24327DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift in Sources */,
 				9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */,
+				9E5B1C2827EB31F7004ADB32 /* Bundle.swift in Sources */,
 				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
+				9E5B1C2F27EB585E004ADB32 /* TokenEntity.swift in Sources */,
 				9E0AA24127DFB42A0004EBD9 /* CodeEnterCell.swift in Sources */,
 				9EAE91F127DB9941003988F1 /* MyLabViewModel.swift in Sources */,
 				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
@@ -928,6 +971,7 @@
 				9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */,
 				9EBC238527CE390F00AB1BA3 /* MainTabBarRouterInput.swift in Sources */,
 				9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */,
+				9E5B1C2627EB1DF8004ADB32 /* SignatureService.swift in Sources */,
 				9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */,
 				9EBC23BD27CE479100AB1BA3 /* CatalogPresenter.swift in Sources */,
 				9EBC239527CE3FD400AB1BA3 /* BasketRouter.swift in Sources */,
@@ -1097,7 +1141,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 242;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LabirintMini/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1105,7 +1149,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1;
+				MARKETING_VERSION = 1.4.9;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.surf.LabirintMini.homatov;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1122,7 +1166,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 242;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LabirintMini/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1130,7 +1174,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1;
+				MARKETING_VERSION = 1.4.9;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.surf.LabirintMini.homatov;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
