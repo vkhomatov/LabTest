@@ -42,10 +42,9 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        configureDeiveryTitleLabel()
+        configureDeliveryAdressLabel()
+        configureGestureRecognizer()
     }
 
     // MARK: - Internal Methods
@@ -59,36 +58,46 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
             layer.cornerRadius = Constants.cornerRadius
             layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         }
-        
-    }
-    
-    @objc func gestureAction() {
-        didPushCallback?()
     }
     
 }
-
 
 // MARK: - Configuration
 
 private extension DeliveryAddressCell {
 
     func setupInitialState() {
-        deliveryTitleLabel.numberOfLines = 1
-        deliveryTitleLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        deliveryTitleLabel?.textColor = Constants.blackColor
-        
-        deliveryAddressLabel.numberOfLines = 3
-        deliveryAddressLabel?.font = .systemFont(ofSize: Constants.smallFont)
-        deliveryAddressLabel?.textColor = Constants.greyColor
-
         selectionStyle = .gray
         accessoryType = .disclosureIndicator
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
         backgroundColor = Constants.whiteColor
-        
+    }
+    
+    func configureDeiveryTitleLabel() {
+        deliveryTitleLabel.numberOfLines = 1
+        deliveryTitleLabel?.font = .systemFont(ofSize: Constants.bigFont)
+        deliveryTitleLabel?.textColor = Constants.blackColor
+    }
+    
+    func configureDeliveryAdressLabel() {
+        deliveryAddressLabel.numberOfLines = 3
+        deliveryAddressLabel?.font = .systemFont(ofSize: Constants.smallFont)
+        deliveryAddressLabel?.textColor = Constants.greyColor
+    }
+    
+    func configureGestureRecognizer() {
         let panGesture = UITapGestureRecognizer(target: self,action: #selector(gestureAction))
         addGestureRecognizer(panGesture)
+    }
+
+}
+
+// MARK: - Actions
+
+private extension DeliveryAddressCell {
+
+    @objc func gestureAction() {
+        didPushCallback?()
     }
 
 }

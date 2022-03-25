@@ -22,7 +22,7 @@
 "MyLab.purchasedGoods" = "Purchased goods";
 "MyLab.myReviews" = "My reviews";
 "MyLab.delivery" = "Delivery";
-"MyLab.pickupPoints" = " pickup points";
+"MyLab.pickupPoints" = "%@ pickup points";
 "MyLab.profileSettings" = "Profile settings";
 "MyLab.appSettings" = "App settings";
 "MyLab.storeInformation" = "Store Information";
@@ -32,10 +32,12 @@
 "MyLab.signInAgree" = "By logging in or registering, I agree with terms and conditions";
 "MyLab.discount" = "Discount";
 "MyLab.balance" = "Balance";
-"MyLab.discountIncrease" = " ₽ for discount increase for ";
-"MyLab.inProcessing" = " in processing";
-"MyLab.inFire" = " in fire";
-"MyLab.updates" = " updates";
+"MyLab.discountIncrease" = "%@ ₽ for discount increase for  %@ %%";
+"MyLab.inProcessing" = "%@ in processing";
+"MyLab.inFire" = "%@ in fire";
+"MyLab.updates" = "%@ updates";
+"MyLab.discountSing" = "%@ %%";
+"MyLab.balanceSing" = "%@ ₽"; 
 
 
 

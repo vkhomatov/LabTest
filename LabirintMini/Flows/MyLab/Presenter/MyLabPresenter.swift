@@ -5,8 +5,6 @@
 //  Created by homatov on 01.03.2022.
 //
 
-import UIKit
-
 final class MyLabPresenter {
 
     // MARK: - Properties
@@ -14,17 +12,17 @@ final class MyLabPresenter {
     weak var view: MyLabViewInput?
     var router: MyLabRouterInput?
     private var state: LoginState
-    private let userData: UserEntity
+    private let userModel: UserModel
     
     // MARK: - Initialization
 
     init() {
-        self.userData = .init(name: "Иван Человеков",
+        self.userModel = .init(name: "Иван Человеков",
                               number: "T25O4-M4AJY-YG5TR",
                               discount: 12,
                               balance: 0,
-                              nextDiscount: 5_865,
-                              nextDiscountSumm: 15,
+                              nextDiscount: 15,
+                              nextDiscountSumm: 5_865,
                               myOrders: 1,
                               myCoupons: 3,
                               couponsOnFire: 1,
@@ -34,7 +32,7 @@ final class MyLabPresenter {
                               delivryAddress: "г. Петропавловск, от 1600 р. бесплатно, доставим завтра",
                               pickupPoints: 156)
         
-        self.state = .logout(.init(headerViewModel: .init(from: userData), contentViewModel: .init(from: userData)))
+        self.state = .logout(.init(headerViewModel: .init(from: userModel), contentViewModel: .init(from: userModel)))
     }
 
 }
@@ -48,13 +46,17 @@ extension MyLabPresenter: MyLabViewOutput {
     }
     
     func exitButtonPush() {
-        self.state = .logout(.init(headerViewModel: .init(from: userData), contentViewModel: .init(from: userData)))
+        self.state = .logout(.init(headerViewModel: .init(from: userModel), contentViewModel: .init(from: userModel)))
         view?.setupViewState(with: state)
     }
     
     func enterButtonPush() {
-        self.state = .login(.init(headerViewModel: .init(from: userData), contentViewModel: .init(from: userData)))
+        self.state = .login(.init(headerViewModel: .init(from: userModel), contentViewModel: .init(from: userModel)))
         view?.setupViewState(with: state)
+    }
+    
+    func cellPressed(of type: MyLabRowTypes) {
+        print("Cell of type \(type) pressed")
     }
 
 }

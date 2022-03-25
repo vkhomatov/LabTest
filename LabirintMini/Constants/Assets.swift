@@ -27,7 +27,7 @@ public enum Assets {
     public static let basketUnactive = ImageAsset(name: "TabBar/basketUnactive")
     public static let catalogActive = ImageAsset(name: "TabBar/catalogActive")
     public static let catalogUnactive = ImageAsset(name: "TabBar/catalogUnactive")
-    public static let ic = ImageAsset(name: "TabBar/ic")
+    public static let infoIcon = ImageAsset(name: "TabBar/infoIcon")
     public static let labirintActive = ImageAsset(name: "TabBar/labirintActive")
     public static let labirintUnactive = ImageAsset(name: "TabBar/labirintUnactive")
     public static let mylabActive = ImageAsset(name: "TabBar/mylabActive")

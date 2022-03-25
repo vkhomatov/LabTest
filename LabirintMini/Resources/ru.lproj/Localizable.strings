@@ -24,7 +24,7 @@
 "MyLab.purchasedGoods" = "Купленные товары";
 "MyLab.myReviews" = "Мои рецензии";
 "MyLab.delivery" = "Доставка";
-"MyLab.pickupPoints" = " пунктов самовывоза";
+"MyLab.pickupPoints" = "%@ пунктов самовывоза";
 "MyLab.profileSettings" = "Настройки профиля";
 "MyLab.appSettings" = "Настройки приложения";
 "MyLab.storeInformation" = "Информация о магазине";
@@ -34,8 +34,10 @@
 "MyLab.signInAgree" = "Входя или регистрируясь, я соглашаюсь с условиями и правилами";
 "MyLab.discount" = "Скидка";
 "MyLab.balance" = "Баланс";
-"MyLab.discountIncrease" = " ₽ до повышения скидки до ";
-"MyLab.inProcessing" = " в обработке";
-"MyLab.inFire" = " сгорает";
-"MyLab.updates" = " обновлений";
+"MyLab.discountIncrease" = "%@ ₽ до повышения скидки до %@ %%";
+"MyLab.inProcessing" = "%@ в обработке";
+"MyLab.inFire" = "%@ сгорает";
+"MyLab.updates" = "%@ обновлений";
+"MyLab.discountSing" = "%@ %%";
+"MyLab.balanceSing" = "%@ ₽"; 
 

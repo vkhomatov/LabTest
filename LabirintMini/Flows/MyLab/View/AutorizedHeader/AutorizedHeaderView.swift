@@ -16,7 +16,7 @@ struct MyLabAuthorizedHeaderDataModel {
     let nextDiscount: Int
     let nextDiscountSumm: Int
     
-    init(from user: UserEntity) {
+    init(from user: UserModel) {
         self.name = user.name
         self.number = user.number
         self.discount = user.discount
@@ -64,7 +64,14 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupInitialState()
+        configureNameLabel()
+        configureNumberLabel()
+        configureDiscountTitleLabel()
+        configureDiscountLabel()
+        configureDiscountInfoLabel()
+        configureBalanceTitleLabel()
+        configureBalanceLabel()
+        configureImages()
     }
     
     // MARK: - Internal Methods
@@ -72,53 +79,63 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
     func configure(with model: Model) {
         nameLabel.text = model.name
         numberLabel.text = model.number
-        discountLabel.text = String(model.discount) + " %"
-        balanceLabel.text = String(model.balance) + " ₽"
-        discountInfoLabel.text = String(model.nextDiscountSumm) + L10n.MyLab.discountIncrease + String(model.nextDiscount) + "%"
+        discountLabel.text =  L10n.MyLab.discountSing(model.discount)
+        balanceLabel.text = L10n.MyLab.balanceSing(model.balance)
+        discountInfoLabel.text = L10n.MyLab.discountIncrease(model.nextDiscountSumm, model.nextDiscount)
     }
 }
-
 
 // MARK: - Configuration
 
 private extension AutorizedHeaderView {
 
-    func setupInitialState() {
+    func configureNameLabel() {
         nameLabel.numberOfLines = 1
         nameLabel?.font = .systemFont(ofSize: Constants.middleFont)
         nameLabel?.textColor = Constants.whiteColor
-
+    }
+    
+    func configureNumberLabel() {
         numberLabel.numberOfLines = 1
         numberLabel?.font = .systemFont(ofSize: Constants.middleFont)
         numberLabel?.textColor = Constants.greyColor
-        
+    }
+
+    func configureDiscountTitleLabel() {
         discountTitleLabel.numberOfLines = 1
         discountTitleLabel?.font = .systemFont(ofSize: Constants.preMiddleFont)
         discountTitleLabel?.textColor = .white
-        discountTitleLabel.text = L10n.MyLab.discount
-        
+    }
+    
+    func configureDiscountLabel() {
         discountLabel.numberOfLines = 1
         discountLabel?.font = .systemFont(ofSize: Constants.bigFont)
         discountLabel?.textColor = Constants.whiteColor
-        
+    }
+    
+    func configureDiscountInfoLabel() {
         discountInfoLabel.numberOfLines = 2
         discountInfoLabel?.font = .systemFont(ofSize: Constants.smallFont)
         discountInfoLabel?.textColor = Constants.greyColor
-        discountInfoLabel.text = L10n.MyLab.discountIncrease
-
+    }
+    
+    func configureBalanceTitleLabel() {
         balanceTitleLabel.numberOfLines = 1
         balanceTitleLabel?.font = .systemFont(ofSize: Constants.preMiddleFont)
         balanceTitleLabel?.textColor = .white
-        balanceTitleLabel.text = L10n.MyLab.balance
-        
+    }
+    
+    func configureBalanceLabel() {
         balanceLabel.numberOfLines = 1
         balanceLabel?.font = .systemFont(ofSize: Constants.bigFont)
         balanceLabel?.textColor = Constants.whiteColor
-        
-        ballanceInfoImageView.image = Assets.TabBar.ic.image
-        discountInfoImageView.image = Assets.TabBar.ic.image
     }
-
+    
+    func configureImages() {
+        ballanceInfoImageView.image = Assets.TabBar.infoIcon.image
+        discountInfoImageView.image = Assets.TabBar.infoIcon.image
+    }
+    
 }
 
 final class AutorizedHeaderGenerator: TableHeaderGenerator {

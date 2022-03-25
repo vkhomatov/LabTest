@@ -8,7 +8,12 @@
 import UIKit
 import ReactiveDataDisplayManager
 
-struct MyLabCellsDataModel {
+enum CellValueTextColor {
+    case gray
+    case red
+}
+
+struct MyLabStandartCellModel {
     let myOrders: Int
     let myCoupons: Int
     let couponsOnFire: Int
@@ -18,7 +23,7 @@ struct MyLabCellsDataModel {
     let delivryAddress: String
     let pickupPoints: Int
     
-    init(from user: UserEntity) {
+    init(from user: UserModel) {
         self.myOrders = user.myOrders
         self.myCoupons = user.myCoupons
         self.couponsOnFire = user.couponsOnFire
@@ -33,15 +38,47 @@ struct MyLabCellsDataModel {
 // MARK: - CellViewModel
 
 struct MyLabCellViewModel {
-    let title: String
+    
+    var title: String {
+        switch type {
+        case .myOrders:
+            return L10n.MyLab.myOrders
+        case .myCoupons:
+            return L10n.MyLab.myCoupons
+        case .myGoods:
+            return L10n.MyLab.savingGoods
+        case .mySubscription:
+            return L10n.MyLab.mySubscriptions
+        case .purchasedGoods:
+            return L10n.MyLab.purchasedGoods
+        case .myReviews:
+            return L10n.MyLab.myReviews
+        case .pickupPoints(let points):
+            return L10n.MyLab.pickupPoints(points)
+        case .profileSetting:
+            return L10n.MyLab.profileSettings
+        case .appSetting:
+            return L10n.MyLab.appSettings
+        case .aboutStore:
+            return L10n.MyLab.storeInformation
+        case .delivery:
+            return L10n.MyLab.delivery
+        case .logout:
+            return L10n.MyLab.logout
+        case .login:
+            return L10n.MyLab.login
+        }
+    }
+    
+    let type: MyLabRowTypes
     var value: String? = nil
-    var valueTextColor: UIColor? = UIColor(red: 0.878, green: 0.376, blue: 0.376, alpha: 1)
+    var valueTextColor: CellValueTextColor = .red
     var roundСorners: Bool = false
 }
 
 // MARK: - CellClass
 
-class MyLabStandartReusableCell: UITableViewCell, ConfigurableItem {
+class MyLabStandartCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
@@ -56,7 +93,6 @@ class MyLabStandartReusableCell: UITableViewCell, ConfigurableItem {
         static let whiteColor: UIColor = .white
         static let bigFont: CGFloat = 17
         static let smallFont: CGFloat = 14
-        static let rowHeight: CGFloat = 65
         static let cornerRadius: CGFloat = 6
     }
     
@@ -74,25 +110,23 @@ class MyLabStandartReusableCell: UITableViewCell, ConfigurableItem {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
-    }
-
-    override func prepareForReuse() {
-        layer.cornerRadius = .zero
-        layer.masksToBounds = false
-        valueLabel?.textColor = Constants.redColor
-        didPushCallback = nil
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        configureTitleLabel()
+        configureValueLabel()
+        configureGestureRecognizer()
     }
 
     // MARK: - Internal Methods
 
     func configure(with model: Model) {
         titleLabel.text = model.title
-        valueLabel.text = model.value 
-        valueLabel.textColor = model.valueTextColor
+        valueLabel.text = model.value
+        
+        switch model.valueTextColor {
+        case .gray:
+            valueLabel.textColor = Constants.greyColor
+        case .red:
+            valueLabel.textColor = Constants.redColor
+        }
 
         if model.roundСorners {
             layer.masksToBounds = true
@@ -101,37 +135,45 @@ class MyLabStandartReusableCell: UITableViewCell, ConfigurableItem {
         }
     }
     
-    @objc func gestureAction() {
-        didPushCallback?()
-    }
-    
-    static func getHeight(forWidth width: CGFloat, with model: MyLabCellViewModel) -> CGFloat {
-        return Constants.rowHeight
-    }
-
 }
 
 // MARK: - Configuration
 
-private extension MyLabStandartReusableCell {
+private extension MyLabStandartCell {
 
-    func setupInitialState() {        
-        titleLabel.numberOfLines = 1
-        titleLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        titleLabel?.textColor = Constants.blackColor
-
-        valueLabel.numberOfLines = 1
-        valueLabel?.font = .systemFont(ofSize: Constants.smallFont)
-        valueLabel?.textColor = Constants.redColor
-
+    func setupInitialState() {
         selectionStyle = .gray
         accessoryType = .disclosureIndicator
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
         backgroundColor = Constants.whiteColor
-        
+    }
+    
+    func configureTitleLabel() {
+        titleLabel.numberOfLines = 1
+        titleLabel?.font = .systemFont(ofSize: Constants.bigFont)
+        titleLabel?.textColor = Constants.blackColor
+    }
+    
+    func configureValueLabel() {
+        valueLabel.numberOfLines = 1
+        valueLabel?.font = .systemFont(ofSize: Constants.smallFont)
+        valueLabel?.textColor = Constants.redColor
+
+    }
+    
+    func configureGestureRecognizer() {
         let panGesture = UITapGestureRecognizer(target: self,action: #selector(gestureAction))
         addGestureRecognizer(panGesture)
     }
 
 }
 
+// MARK: - Actions
+
+private extension MyLabStandartCell {
+
+    @objc func gestureAction() {
+        didPushCallback?()
+    }
+
+}

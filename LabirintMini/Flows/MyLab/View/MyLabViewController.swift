@@ -22,7 +22,6 @@ final class MyLabViewController: UIViewController {
     // MARK: - Private Properties
 
     private lazy var adapter = tableView.rddm.manualBuilder
-        .add(plugin: .selectable())
         .build()
 
     // MARK: - Properties
@@ -61,7 +60,7 @@ extension MyLabViewController: MyLabViewInput {
     func setupViewState(with state: LoginState) {
         adapter.clearHeaderGenerators()
         adapter.clearCellGenerators()
-        let header = viewBuilder.makeHeader(with: state)
+        let header = viewBuilder.makeHeaderGenerator(with: state)
         let cells = viewBuilder.makeCellsContent(with: state)
         adapter.addSectionHeaderGenerator(header)
         adapter.addCellGenerators(cells)
@@ -70,40 +69,14 @@ extension MyLabViewController: MyLabViewInput {
     
     func setBaseCellCallbacks() {
         viewBuilder.didPushCellCallback = { [weak self] cellType in
-            switch cellType {
-            case .myOrders:
-                print(L10n.MyLab.myOrders)
-            case .myCoupons:
-                print(L10n.MyLab.myCoupons)
-            case .myGoods:
-                print(L10n.MyLab.purchasedGoods)
-            case .mySubscription:
-                print(L10n.MyLab.mySubscriptions)
-            case .purchasedGoods:
-                print(L10n.MyLab.purchasedGoods)
-            case .myReviews:
-                print(L10n.MyLab.myReviews)
-            case .pickupPoints:
-                print(L10n.MyLab.pickupPoints)
-            case .profileSetting:
-                print(L10n.MyLab.profileSettings)
-            case .appSetting:
-                print(L10n.MyLab.appSettings)
-            case .aboutStore:
-                print(L10n.MyLab.storeInformation)
-            case .delivery:
-                print(L10n.MyLab.delivery)
-            }
+            self?.output?.cellPressed(of: cellType)
         }
-
         viewBuilder.exitButtonCallback = { [weak self] in
             self?.output?.exitButtonPush()
         }
-        
         viewBuilder.enterButtonCallback = { [weak self] in
             self?.output?.enterButtonPush()
         }
-    
     }
     
     func setupInitialState() {

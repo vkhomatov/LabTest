@@ -29,12 +29,6 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
 
     @IBOutlet weak var exitButton: UIButton!
     
-    // MARK: - Actions
-
-    @IBAction func exitButtonAction(_ sender: UIButton) {
-        exitButtonCallback?()
-    }
-    
     // MARK: - Properites
     
     var exitButtonCallback: (() -> Void)?
@@ -44,10 +38,7 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        exitButtonSetup()
     }
     
     // MARK: - Internal Methods
@@ -63,12 +54,24 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
 private extension ExitButtonCell {
 
     func setupInitialState() {
+        selectionStyle = .none
+        separatorInset = UIEdgeInsets(top: .zero, left: 400, bottom: .zero, right: .zero)
+    }
+    
+    func exitButtonSetup() {
         exitButton.backgroundColor = .clear
         exitButton.titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
         exitButton.setTitleColor(Constants.redColor, for: .normal)
-        
-        selectionStyle = .none
-        separatorInset = UIEdgeInsets(top: .zero, left: 400, bottom: .zero, right: .zero)
+    }
+
+}
+
+// MARK: - Actions
+
+private extension ExitButtonCell {
+
+    @IBAction func exitButtonAction(_ sender: UIButton) {
+        exitButtonCallback?()
     }
 
 }

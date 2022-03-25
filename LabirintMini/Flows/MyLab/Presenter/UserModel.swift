@@ -1,13 +1,11 @@
 //
-//  UserEntity.swift
+//  UserModel.swift
 //  LabirintMini
 //
 //  Created by homatov on 22.03.2022.
 //
 
-import Foundation
-
-struct UserEntity {
+struct UserModel {
     let name: String
     let number: String
     let discount: Int

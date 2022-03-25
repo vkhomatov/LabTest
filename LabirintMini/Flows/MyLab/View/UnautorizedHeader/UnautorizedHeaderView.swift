@@ -22,24 +22,10 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     }
     
     // MARK: - IBOutlets
+
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
-    
-    // MARK: - IBActions
-
-    @IBAction func enterButtonTouchDown(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.greyColor
-    }
-
-    @IBAction func enterButtonTouchUpOutside(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.whiteColor
-    }
-    
-    @IBAction func enterButtonTouchUp(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.whiteColor
-        enterButtonCallback?()
-    }
     
     // MARK: - Properites
     
@@ -53,7 +39,9 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupInitialState()
+        configureMainLabel()
+        configureInfolabel()
+        configureEnterbutton()
     }
 }
 
@@ -62,13 +50,14 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
 
 private extension UnautorizedHeaderView {
 
-    func setupInitialState() {
-        
+    func configureMainLabel() {
         mainLabel.numberOfLines = 2
         mainLabel?.font = .systemFont(ofSize: Constants.bigFont)
         mainLabel?.textColor = Constants.whiteColor
         mainLabel.text = L10n.MyLab.signInInfo
-        
+    }
+    
+    func configureInfolabel() {
         infoLabel.numberOfLines = 3
         infoLabel?.font = .systemFont(ofSize: Constants.smallFont)
         infoLabel?.textColor = Constants.greyColor
@@ -83,7 +72,30 @@ private extension UnautorizedHeaderView {
         }
 
         infoLabel.attributedText = infoText
+    }
+    
+    func configureEnterbutton() {
         enterButton.loginButton(title: L10n.MyLab.login)
+    }
+    
+}
+
+
+// MARK: - Actions
+
+private extension UnautorizedHeaderView {
+
+    @IBAction func enterButtonTouchDown(_ sender: UIButton) {
+        enterButton.backgroundColor = Constants.greyColor
+    }
+
+    @IBAction func enterButtonTouchUpOutside(_ sender: UIButton) {
+        enterButton.backgroundColor = Constants.whiteColor
+    }
+    
+    @IBAction func enterButtonTouchUp(_ sender: UIButton) {
+        enterButton.backgroundColor = Constants.whiteColor
+        enterButtonCallback?()
     }
 
 }
@@ -95,10 +107,23 @@ final class UnautorizedHeaderGenerator: TableHeaderGenerator {
     enum Constants {
         static let headerHeight: CGFloat = 208
     }
+    
+    // MARK: - Properites
+    
+    var  viewButtonCallback: (() -> Void)?
 
     // MARK: - Private Properties
 
     private lazy var header: UnautorizedHeaderView? = UnautorizedHeaderView.instanceFromNib() as? UnautorizedHeaderView
+    
+    // MARK: - Inicialization
+    
+    override init() {
+        super.init()
+        header?.enterButtonCallback = { [weak self] in
+            self?.viewButtonCallback?()
+        }
+    }
 
     // MARK: - TableHeaderGenerator
 

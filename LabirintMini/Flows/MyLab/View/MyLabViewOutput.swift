@@ -14,5 +14,7 @@ protocol MyLabViewOutput {
     func exitButtonPush()
     
     func enterButtonPush()
+    
+    func cellPressed(of type: MyLabRowTypes)
 
 }
