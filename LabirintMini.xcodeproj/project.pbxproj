@@ -31,6 +31,8 @@
 		9E5B1C2027E9FD9B004ADB32 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C1F27E9FD9B004ADB32 /* UserModel.swift */; };
 		9E5B1C3527EC9C3C004ADB32 /* MyLabRowTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C3427EC9C3C004ADB32 /* MyLabRowTypes.swift */; };
 		9E5B1C3727EC9CC3004ADB32 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C3627EC9CC3004ADB32 /* LoginState.swift */; };
+		9E5B1C3C27ED758E004ADB32 /* colorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E5B1C3B27ED758E004ADB32 /* colorAssets.xcassets */; };
+		9E5B1C4027ED8035004ADB32 /* colorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C3F27ED8035004ADB32 /* colorAssets.swift */; };
 		9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91EE27DB3061003988F1 /* UIButton.swift */; };
 		9EAE91F127DB9941003988F1 /* MyLabViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91F027DB9941003988F1 /* MyLabViewBuilder.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
@@ -105,6 +107,8 @@
 		9E5B1C1F27E9FD9B004ADB32 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9E5B1C3427EC9C3C004ADB32 /* MyLabRowTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabRowTypes.swift; sourceTree = "<group>"; };
 		9E5B1C3627EC9CC3004ADB32 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		9E5B1C3B27ED758E004ADB32 /* colorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colorAssets.xcassets; sourceTree = "<group>"; };
+		9E5B1C3F27ED8035004ADB32 /* colorAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorAssets.swift; sourceTree = "<group>"; };
 		9EAE91EE27DB3061003988F1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		9EAE91F027DB9941003988F1 /* MyLabViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewBuilder.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 		3C0BA2A5268DCB2F00C47C74 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9E5B1C3827ED734E004ADB32 /* Colors */,
 				9E12D28A27D0E5C1000F1CF3 /* Constants */,
 				3C0BA2A6268DCB4300C47C74 /* Images */,
 				9E12D29727D1CDC2000F1CF3 /* Localizable.strings */,
@@ -242,6 +247,7 @@
 		9E12D28A27D0E5C1000F1CF3 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				9E5B1C3F27ED8035004ADB32 /* colorAssets.swift */,
 				9E12D28B27D0E5C1000F1CF3 /* Strings.swift */,
 				9E12D28C27D0E5C1000F1CF3 /* Assets.swift */,
 				9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */,
@@ -302,6 +308,14 @@
 				9E3C492A27D375A300F4D9E6 /* ExitButtonCell.xib */,
 			);
 			path = ExitButtonCell;
+			sourceTree = "<group>";
+		};
+		9E5B1C3827ED734E004ADB32 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				9E5B1C3B27ED758E004ADB32 /* colorAssets.xcassets */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		9EBC235327CE283F00AB1BA3 /* Flows */ = {
@@ -667,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E3C492727D3737700F4D9E6 /* DeliveryAddressCell.xib in Resources */,
+				9E5B1C3C27ED758E004ADB32 /* colorAssets.xcassets in Resources */,
 				9E3C492C27D375A300F4D9E6 /* ExitButtonCell.xib in Resources */,
 				3C0BA29D268DC98F00C47C74 /* LaunchScreen.storyboard in Resources */,
 				9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */,
@@ -813,6 +828,7 @@
 				9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */,
 				9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */,
 				9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */,
+				9E5B1C4027ED8035004ADB32 /* colorAssets.swift in Sources */,
 				9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */,
 				9EBC239F27CE407800AB1BA3 /* BasketViewOutput.swift in Sources */,
 				9EBC23A927CE411700AB1BA3 /* PromoViewController.swift in Sources */,

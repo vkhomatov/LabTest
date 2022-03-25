@@ -14,8 +14,6 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     // MARK: - Constants
 
     enum Constants {
-        static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
-        static let whiteColor: UIColor = .white
         static let headerHeight: CGFloat = 208
         static let bigFont: CGFloat = 15
         static let smallFont: CGFloat = 13
@@ -53,14 +51,14 @@ private extension UnautorizedHeaderView {
     func configureMainLabel() {
         mainLabel.numberOfLines = 2
         mainLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        mainLabel?.textColor = Constants.whiteColor
+        mainLabel?.textColor = ColorAssets.whiteColor.color
         mainLabel.text = L10n.MyLab.signInInfo
     }
     
     func configureInfolabel() {
         infoLabel.numberOfLines = 3
         infoLabel?.font = .systemFont(ofSize: Constants.smallFont)
-        infoLabel?.textColor = Constants.greyColor
+        infoLabel?.textColor = ColorAssets.greyColor.color
         
         let infoText = NSMutableAttributedString.init(string:  L10n.MyLab.signInAgree)
         if Locale.current.languageCode == "en"{
@@ -86,15 +84,15 @@ private extension UnautorizedHeaderView {
 private extension UnautorizedHeaderView {
 
     @IBAction func enterButtonTouchDown(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.greyColor
+        enterButton.backgroundColor = ColorAssets.greyColor.color
     }
 
     @IBAction func enterButtonTouchUpOutside(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.whiteColor
+        enterButton.backgroundColor = ColorAssets.whiteColor.color
     }
     
     @IBAction func enterButtonTouchUp(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.whiteColor
+        enterButton.backgroundColor = ColorAssets.whiteColor.color
         enterButtonCallback?()
     }
 

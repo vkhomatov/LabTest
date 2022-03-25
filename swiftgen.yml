@@ -1,12 +1,20 @@
 xcassets:
-  - inputs:
-      - LabirintMini/Resources/Images/Assets.xcassets
+  - inputs: LabirintMini/Resources/Images/Assets.xcassets
     outputs:
       - templateName: swift5
         output: LabirintMini/Constants/Assets.swift
         params:
           enumName: Assets
           publicAccess: true
+  - inputs: LabirintMini/Resources/Colors/colorAssets.xcassets
+    outputs:
+      - templateName: swift5
+        output: LabirintMini/Constants/colorAssets.swift
+        params:
+          enumName: ColorAssets
+          publicAccess: true
+
+
 
 fonts:
   inputs:

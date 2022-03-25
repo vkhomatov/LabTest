@@ -21,7 +21,6 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     // MARK: - Constants
     
     enum Constants {
-        static let redColor =  UIColor(red: 0.902, green: 0.082, blue: 0.169, alpha: 1)
         static let fontSize: CGFloat = 16
     }
 
@@ -61,7 +60,7 @@ private extension ExitButtonCell {
     func exitButtonSetup() {
         exitButton.backgroundColor = .clear
         exitButton.titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
-        exitButton.setTitleColor(Constants.redColor, for: .normal)
+        exitButton.setTitleColor(ColorAssets.mainRedColor.color, for: .normal)
     }
 
 }

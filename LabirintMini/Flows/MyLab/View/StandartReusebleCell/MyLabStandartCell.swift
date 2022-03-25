@@ -87,10 +87,6 @@ class MyLabStandartCell: UITableViewCell, ConfigurableItem {
     // MARK: - Constants
     
     enum Constants {
-        static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
-        static let redColor = UIColor(red: 0.878, green: 0.376, blue: 0.376, alpha: 1)
-        static let blackColor: UIColor = .black
-        static let whiteColor: UIColor = .white
         static let bigFont: CGFloat = 17
         static let smallFont: CGFloat = 14
         static let cornerRadius: CGFloat = 6
@@ -123,9 +119,9 @@ class MyLabStandartCell: UITableViewCell, ConfigurableItem {
         
         switch model.valueTextColor {
         case .gray:
-            valueLabel.textColor = Constants.greyColor
+            valueLabel.textColor = ColorAssets.greyColor.color
         case .red:
-            valueLabel.textColor = Constants.redColor
+            valueLabel.textColor = ColorAssets.labelRedColor.color
         }
 
         if model.roundСorners {
@@ -145,19 +141,19 @@ private extension MyLabStandartCell {
         selectionStyle = .gray
         accessoryType = .disclosureIndicator
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
-        backgroundColor = Constants.whiteColor
+        backgroundColor = ColorAssets.whiteColor.color
     }
     
     func configureTitleLabel() {
         titleLabel.numberOfLines = 1
         titleLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        titleLabel?.textColor = Constants.blackColor
+        titleLabel?.textColor = ColorAssets.blackColor.color
     }
     
     func configureValueLabel() {
         valueLabel.numberOfLines = 1
         valueLabel?.font = .systemFont(ofSize: Constants.smallFont)
-        valueLabel?.textColor = Constants.redColor
+        valueLabel?.textColor = ColorAssets.labelRedColor.color
 
     }
     

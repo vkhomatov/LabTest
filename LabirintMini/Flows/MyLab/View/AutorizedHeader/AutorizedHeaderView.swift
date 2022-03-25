@@ -35,8 +35,6 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
     // MARK: - Constants
 
     enum Constants {
-        static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
-        static let whiteColor: UIColor = .white
         static let headerHeight: CGFloat = 208
         static let bigFont: CGFloat = 27
         static let middleFont: CGFloat = 14
@@ -92,13 +90,13 @@ private extension AutorizedHeaderView {
     func configureNameLabel() {
         nameLabel.numberOfLines = 1
         nameLabel?.font = .systemFont(ofSize: Constants.middleFont)
-        nameLabel?.textColor = Constants.whiteColor
+        nameLabel?.textColor = ColorAssets.whiteColor.color
     }
     
     func configureNumberLabel() {
         numberLabel.numberOfLines = 1
         numberLabel?.font = .systemFont(ofSize: Constants.middleFont)
-        numberLabel?.textColor = Constants.greyColor
+        numberLabel?.textColor = ColorAssets.greyColor.color
     }
 
     func configureDiscountTitleLabel() {
@@ -110,13 +108,13 @@ private extension AutorizedHeaderView {
     func configureDiscountLabel() {
         discountLabel.numberOfLines = 1
         discountLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        discountLabel?.textColor = Constants.whiteColor
+        discountLabel?.textColor = ColorAssets.whiteColor.color
     }
     
     func configureDiscountInfoLabel() {
         discountInfoLabel.numberOfLines = 2
         discountInfoLabel?.font = .systemFont(ofSize: Constants.smallFont)
-        discountInfoLabel?.textColor = Constants.greyColor
+        discountInfoLabel?.textColor = ColorAssets.greyColor.color
     }
     
     func configureBalanceTitleLabel() {
@@ -128,7 +126,7 @@ private extension AutorizedHeaderView {
     func configureBalanceLabel() {
         balanceLabel.numberOfLines = 1
         balanceLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        balanceLabel?.textColor = Constants.whiteColor
+        balanceLabel?.textColor = ColorAssets.whiteColor.color
     }
     
     func configureImages() {

@@ -20,9 +20,6 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
     // MARK: - Constants
     
     enum Constants {
-        static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
-        static let blackColor: UIColor = .black
-        static let whiteColor: UIColor = .white
         static let bigFont: CGFloat = 17
         static let smallFont: CGFloat = 13
         static let cornerRadius: CGFloat = 6
@@ -70,19 +67,19 @@ private extension DeliveryAddressCell {
         selectionStyle = .gray
         accessoryType = .disclosureIndicator
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
-        backgroundColor = Constants.whiteColor
+        backgroundColor = ColorAssets.whiteColor.color
     }
     
     func configureDeiveryTitleLabel() {
         deliveryTitleLabel.numberOfLines = 1
         deliveryTitleLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        deliveryTitleLabel?.textColor = Constants.blackColor
+        deliveryTitleLabel?.textColor = ColorAssets.blackColor.color
     }
     
     func configureDeliveryAdressLabel() {
         deliveryAddressLabel.numberOfLines = 3
         deliveryAddressLabel?.font = .systemFont(ofSize: Constants.smallFont)
-        deliveryAddressLabel?.textColor = Constants.greyColor
+        deliveryAddressLabel?.textColor = ColorAssets.greyColor.color
     }
     
     func configureGestureRecognizer() {
