@@ -14,9 +14,6 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     // MARK: - Constants
 
     enum Constants {
-        static let blueColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
-        static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
-        static let whiteColor: UIColor = .white
         static let headerHeight: CGFloat = 208
         static let bigFont: CGFloat = 15
         static let smallFont: CGFloat = 13
@@ -28,24 +25,9 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
     
-    // MARK: - IBActions
-
-    @IBAction func enterButtonTouchDown(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.greyColor
-    }
-
-    @IBAction func enterButtonTouchUpOutside(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.whiteColor
-    }
-    
-    @IBAction func enterButtonTouchUp(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.whiteColor
-        stateChangeCallback?(.login)
-    }
-    
     // MARK: - Properites
     
-    public var stateChangeCallback: ((_ state: LogState) -> Void)?
+    var enterButtonCallback: (() -> Void)?
     
     // MARK: - System Methods
     
@@ -55,7 +37,9 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupInitialState()
+        configureMainLabel()
+        configureInfolabel()
+        configureEnterbutton()
     }
 }
 
@@ -64,16 +48,17 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
 
 private extension UnautorizedHeaderView {
 
-    func setupInitialState() {
-        
+    func configureMainLabel() {
         mainLabel.numberOfLines = 2
         mainLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        mainLabel?.textColor = Constants.whiteColor
+        mainLabel?.textColor = ColorAssets.whiteColor.color
         mainLabel.text = L10n.MyLab.signInInfo
-        
+    }
+    
+    func configureInfolabel() {
         infoLabel.numberOfLines = 3
         infoLabel?.font = .systemFont(ofSize: Constants.smallFont)
-        infoLabel?.textColor = Constants.greyColor
+        infoLabel?.textColor = ColorAssets.greyColor.color
         
         let infoText = NSMutableAttributedString.init(string:  L10n.MyLab.signInAgree)
         if Locale.current.languageCode == "en"{
@@ -85,8 +70,30 @@ private extension UnautorizedHeaderView {
         }
 
         infoLabel.attributedText = infoText
-        enterButton.setStyle(.login(title: L10n.MyLab.login))
+    }
+    
+    func configureEnterbutton() {
+        enterButton.loginButton(title: L10n.MyLab.login)
+    }
+    
+}
 
+
+// MARK: - Actions
+
+private extension UnautorizedHeaderView {
+
+    @IBAction func enterButtonTouchDown(_ sender: UIButton) {
+        enterButton.backgroundColor = ColorAssets.greyColor.color
+    }
+
+    @IBAction func enterButtonTouchUpOutside(_ sender: UIButton) {
+        enterButton.backgroundColor = ColorAssets.whiteColor.color
+    }
+    
+    @IBAction func enterButtonTouchUp(_ sender: UIButton) {
+        enterButton.backgroundColor = ColorAssets.whiteColor.color
+        enterButtonCallback?()
     }
 
 }
@@ -98,10 +105,23 @@ final class UnautorizedHeaderGenerator: TableHeaderGenerator {
     enum Constants {
         static let headerHeight: CGFloat = 208
     }
+    
+    // MARK: - Properites
+    
+    var  viewButtonCallback: (() -> Void)?
 
     // MARK: - Private Properties
 
     private lazy var header: UnautorizedHeaderView? = UnautorizedHeaderView.instanceFromNib() as? UnautorizedHeaderView
+    
+    // MARK: - Inicialization
+    
+    override init() {
+        super.init()
+        header?.enterButtonCallback = { [weak self] in
+            self?.viewButtonCallback?()
+        }
+    }
 
     // MARK: - TableHeaderGenerator
 
