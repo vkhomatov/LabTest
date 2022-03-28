@@ -27,7 +27,6 @@ final class LoginDiscountCodeViewController: UIViewController {
     // MARK: - Private Properties
 
     private lazy var adapter = tableView.rddm.manualBuilder
-        .add(plugin: .displayable())
         .build()
 
     // MARK: - UIViewController

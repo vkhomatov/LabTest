@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum ButtonStyle {
+    case login(title: String)
+    case enterCode(title: String)
+}
+
 extension UIButton {
     
     enum Constants {
@@ -17,22 +22,22 @@ extension UIButton {
         static let cornerRadius: CGFloat = 6
     }
     
-    func loginButton(title: String)  {
-        layer.masksToBounds = true
-        layer.cornerRadius = Constants.cornerRadius
-        backgroundColor = Constants.whiteColor
-        titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
-        setTitleColor(Constants.blueColor, for: .normal)
-        setTitle(title, for: .normal)
-    }
+    func setStyle(_ style: ButtonStyle) {
     
-    func enterCodeButton(title: String)  {
+        switch style {
+        case .login(let title):
+            setTitle(title, for: .normal)
+            backgroundColor = Constants.whiteColor
+            setTitleColor(Constants.blueColor, for: .normal)
+        case .enterCode(let title):
+            setTitle(title, for: .normal)
+            backgroundColor = Constants.blueColor
+            setTitleColor(Constants.whiteColor, for: .normal)
+        }
+        
         layer.masksToBounds = true
         layer.cornerRadius = Constants.cornerRadius
-        backgroundColor = Constants.blueColor
         titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
-        setTitleColor(Constants.whiteColor, for: .normal)
-        setTitle(title, for: .normal)
     }
 
 }

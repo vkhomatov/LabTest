@@ -30,10 +30,7 @@ extension LoginDiscountCodePresenter: LoginDiscountCodeOutput {
     func textDidChange(_ text: String) {
         discountCode = text
     }
-    
-    func editingChange(_ editing: Bool) {
-    }
-    
+
     func editingDidBegin(_ text: String) {
         discountCode = text
     }

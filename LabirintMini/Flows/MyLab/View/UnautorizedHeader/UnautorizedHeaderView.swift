@@ -85,7 +85,7 @@ private extension UnautorizedHeaderView {
         }
 
         infoLabel.attributedText = infoText
-        enterButton.loginButton(title: L10n.MyLab.login)
+        enterButton.setStyle(.login(title: L10n.MyLab.login))
 
     }
 

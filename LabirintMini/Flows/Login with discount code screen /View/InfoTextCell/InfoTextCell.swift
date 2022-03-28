@@ -35,6 +35,7 @@ class InfoTextCell: UITableViewCell, ConfigurableItem {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
+        configureInfoTextLabel()
     }
     
     // MARK: - Internal Methods
@@ -49,14 +50,16 @@ class InfoTextCell: UITableViewCell, ConfigurableItem {
 private extension InfoTextCell {
 
     func setupInitialState() {
-        infoTextLabel.numberOfLines = 2
-        infoTextLabel?.font = .systemFont(ofSize: Constants.fontSize)
-        infoTextLabel?.textColor = Constants.blackColor
-        
         selectionStyle = .none
         accessoryType = .none
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
         backgroundColor = Constants.whiteColor
+    }
+    
+    func configureInfoTextLabel() {
+        infoTextLabel.numberOfLines = 2
+        infoTextLabel?.font = .systemFont(ofSize: Constants.fontSize)
+        infoTextLabel?.textColor = Constants.blackColor
     }
 
 }

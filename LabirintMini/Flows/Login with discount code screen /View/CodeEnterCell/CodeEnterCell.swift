@@ -32,9 +32,75 @@ class CodeEnterCell: UITableViewCell, ConfigurableItem {
     
     @IBOutlet private weak var codeTextField: CodeTextEdit!
     @IBOutlet private weak var discountCodeTitle: UILabel!
+        
+    // MARK: - Properites
     
+    public var editingDidBegin: ((_ text: String) -> Void)?
+    public var editingDidEnd: ((_ text: String) -> Void)?
+    private var labelOrigin = CGPoint()
+    
+    // MARK: - System Methods
 
-    // MARK: - IBActions
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupInitialState()
+        configureCodeTextField()
+        configureDiscountCodeTitle()
+    }
+    
+    // MARK: - Internal Methods
+    
+    func configure(with model: Model) {
+        codeTextField.placeholder = model.placeholder
+        codeTextField.text = model.text
+        labelOrigin = discountCodeTitle.frame.origin
+        discountCodeTitle.isHidden = codeTextField.text == ""
+        if !discountCodeTitle.isHidden {
+            discountCodeTitle.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            discountCodeTitle.frame.origin = labelOrigin
+        }
+    }
+
+}
+
+
+// MARK: - Configuration
+
+private extension CodeEnterCell {
+
+    func setupInitialState() {
+        accessoryType = .none
+        selectionStyle = .none
+        separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
+        backgroundColor = Constants.whiteColor        
+    }
+    
+    func configureCodeTextField() {
+        codeTextField.font = .systemFont(ofSize: Constants.bigFont)
+        codeTextField.textColor = Constants.blackColor
+        
+        codeTextField.placeHolderYesText = { [weak self] in
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+                guard let self = self else { return }
+                self.codeTextField.placeholder = .none
+                self.discountCodeTitle.isHidden = false
+                self.discountCodeTitle.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                self.discountCodeTitle.frame.origin = self.labelOrigin
+                self.contentView.layoutIfNeeded()
+            })
+        }
+    }
+    
+    func configureDiscountCodeTitle() {
+        discountCodeTitle.font = .systemFont(ofSize: Constants.bigFont)
+        discountCodeTitle.text = L10n.MyLab.discountCode
+    }
+    
+}
+
+// MARK: - IBActions
+
+private extension CodeEnterCell {
 
     // 1. начал редактировать, текста нет:
     //    - анимируем placeholder в верхнюю позицию
@@ -67,68 +133,11 @@ class CodeEnterCell: UITableViewCell, ConfigurableItem {
                 self.discountCodeTitle.frame.origin = self.labelOrigin
                 self.contentView.layoutIfNeeded()
             }, completion: { [weak self] _ in
-                self?.discountCodeTitle.isHidden = true
-                self?.codeTextField.placeholder = L10n.MyLab.discountCode
-                self?.codeTextField.setPlaceHolderPading(.noText())
-            })
-        }
-    }
-        
-    // MARK: - Properites
-    
-    public var editingDidBegin: ((_ text: String) -> Void)?
-    public var editingDidEnd: ((_ text: String) -> Void)?
-    private var labelOrigin = CGPoint()
-    
-    // MARK: - System Methods
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupInitialState()
-    }
-    
-    // MARK: - Internal Methods
-    
-    func configure(with model: Model) {
-        codeTextField.placeholder = model.placeholder
-        codeTextField.text = model.text
-        labelOrigin = discountCodeTitle.frame.origin
-        discountCodeTitle.isHidden = codeTextField.text == ""
-        if !discountCodeTitle.isHidden {
-            discountCodeTitle.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-            discountCodeTitle.frame.origin = labelOrigin
-        }
-    }
-
-}
-
-
-// MARK: - Configuration
-
-extension CodeEnterCell {
-
-    private func setupInitialState() {
-        codeTextField.font = .systemFont(ofSize: Constants.bigFont)
-        codeTextField.textColor = Constants.blackColor
-        
-        codeTextField.placeHolderYesText = { [weak self] in
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
                 guard let self = self else { return }
-                self.codeTextField.placeholder = .none
-                self.discountCodeTitle.isHidden = false
-                self.discountCodeTitle.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-                self.discountCodeTitle.frame.origin = self.labelOrigin
-                self.contentView.layoutIfNeeded()
+                self.discountCodeTitle.isHidden = true
+                self.codeTextField.placeholder = L10n.MyLab.discountCode
+                self.codeTextField.setPlaceHolderPading(.noText())
             })
         }
-        
-        discountCodeTitle.font = .systemFont(ofSize: Constants.bigFont)
-        discountCodeTitle.text = L10n.MyLab.discountCode
-                
-        accessoryType = .none
-        selectionStyle = .none
-        separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
-        backgroundColor = Constants.whiteColor        
     }
-    
 }
