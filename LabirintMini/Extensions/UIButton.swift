@@ -15,9 +15,6 @@ enum ButtonStyle {
 extension UIButton {
     
     enum Constants {
-        static let blueColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
-        static let sirenColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
-        static let whiteColor: UIColor = .white
         static let fontSize: CGFloat = 16
         static let cornerRadius: CGFloat = 6
     }
@@ -27,12 +24,12 @@ extension UIButton {
         switch style {
         case .login(let title):
             setTitle(title, for: .normal)
-            backgroundColor = Constants.whiteColor
-            setTitleColor(Constants.blueColor, for: .normal)
+            backgroundColor = ColorAssets.whiteColor.color
+            setTitleColor(ColorAssets.blueColor.color, for: .normal)
         case .enterCode(let title):
             setTitle(title, for: .normal)
-            backgroundColor = Constants.blueColor
-            setTitleColor(Constants.whiteColor, for: .normal)
+            backgroundColor = ColorAssets.blueColor.color
+            setTitleColor(ColorAssets.whiteColor.color, for: .normal)
         }
         
         layer.masksToBounds = true

@@ -73,7 +73,7 @@ private extension UnautorizedHeaderView {
     }
     
     func configureEnterbutton() {
-        enterButton.loginButton(title: L10n.MyLab.login)
+        enterButton.setStyle(.login(title: L10n.MyLab.login))
     }
     
 }

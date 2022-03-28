@@ -37,7 +37,11 @@
 "MyLab.inFire" = "%@ in fire";
 "MyLab.updates" = "%@ updates";
 "MyLab.discountSing" = "%@ %%";
-"MyLab.balanceSing" = "%@ ₽"; 
+"MyLab.balanceSing" = "%@ ₽";
+"MyLab.discountCodeTitle" = "Enter by discount code";
+"MyLab.discountCodeInfo" = "The discount code can be found in your personal account";
+"MyLab.discountCode" = "Discount code";
+"MyLab.youDiscountCode" = "You discount code";
 
 
 

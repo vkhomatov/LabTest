@@ -24,6 +24,12 @@ public enum L10n {
     public static let delivery = L10n.tr("Localizable", "MyLab.delivery")
     /// Discount
     public static let discount = L10n.tr("Localizable", "MyLab.discount")
+    /// Discount code
+    public static let discountCode = L10n.tr("Localizable", "MyLab.discountCode")
+    /// The discount code can be found in your personal account
+    public static let discountCodeInfo = L10n.tr("Localizable", "MyLab.discountCodeInfo")
+    /// Enter by discount code
+    public static let discountCodeTitle = L10n.tr("Localizable", "MyLab.discountCodeTitle")
     /// %@ ₽ for discount increase for  %@ %%
     public static func discountIncrease(_ p1: Any, _ p2: Any) -> String {
       return L10n.tr("Localizable", "MyLab.discountIncrease", String(describing: p1), String(describing: p2))
@@ -72,6 +78,8 @@ public enum L10n {
     public static func updates(_ p1: Any) -> String {
       return L10n.tr("Localizable", "MyLab.updates", String(describing: p1))
     }
+    /// You discount code
+    public static let youDiscountCode = L10n.tr("Localizable", "MyLab.youDiscountCode")
   }
 
   public enum TabBar {

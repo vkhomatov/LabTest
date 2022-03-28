@@ -15,8 +15,6 @@
 		9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22327DF90520004EBD9 /* MainTabBarController.swift */; };
 		9E0AA23E27DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22827DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift */; };
 		9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22B27DFB42A0004EBD9 /* EnterButtonView.swift */; };
-		9E0AA24127DFB42A0004EBD9 /* CodeEnterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */; };
-		9E0AA24227DFB42A0004EBD9 /* CodeEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */; };
 		9E0AA24327DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */; };
 		9E0AA24827DFB42A0004EBD9 /* LoginDiscountCodeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23727DFB42A0004EBD9 /* LoginDiscountCodeInput.swift */; };
 		9E0AA24927DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */; };
@@ -26,14 +24,14 @@
 		9E0AA24E27DFBCE40004EBD9 /* LoginDiscountCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */; };
 		9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */; };
 		9E0AA25327E0CDE10004EBD9 /* CodeTextEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */; };
-		9E0AA25B27E337070004EBD9 /* SFUIText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA25A27E337070004EBD9 /* SFUIText-Medium.ttf */; };
 		9E0AA25F27E351960004EBD9 /* InfoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA25D27E351960004EBD9 /* InfoTextCell.swift */; };
 		9E0AA26027E351960004EBD9 /* InfoTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA25E27E351960004EBD9 /* InfoTextCell.xib */; };
 		9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28B27D0E5C1000F1CF3 /* Strings.swift */; };
 		9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28C27D0E5C1000F1CF3 /* Assets.swift */; };
 		9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */; };
 		9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E12D29727D1CDC2000F1CF3 /* Localizable.strings */; };
-		9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E274727CFC32600D78244 /* UINavigationBar.swift */; };
+		9E176EFC27F218F300098563 /* CodeEnterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */; };
+		9E176EFD27F222DB00098563 /* CodeEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */; };
 		9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */; };
 		9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */; };
 		9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */; };
@@ -118,14 +116,12 @@
 		9E0AA24D27DFBCE40004EBD9 /* LoginDiscountCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginDiscountCodeView.xib; sourceTree = "<group>"; };
 		9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextEdit.swift; sourceTree = "<group>"; };
-		9E0AA25A27E337070004EBD9 /* SFUIText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Medium.ttf"; path = "LabirintMini/Resources/Fonts/SFUIText-Medium.ttf"; sourceTree = SOURCE_ROOT; };
 		9E0AA25D27E351960004EBD9 /* InfoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTextCell.swift; sourceTree = "<group>"; };
 		9E0AA25E27E351960004EBD9 /* InfoTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTextCell.xib; sourceTree = "<group>"; };
 		9E12D28B27D0E5C1000F1CF3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9E2E274727CFC32600D78244 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
 		9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
 		9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
@@ -376,7 +372,6 @@
 		9E2E274627CFAED100D78244 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9E2E274727CFC32600D78244 /* UINavigationBar.swift */,
 				9EAE91EE27DB3061003988F1 /* UIButton.swift */,
 				9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */,
 			);
@@ -807,6 +802,7 @@
 				9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */,
 				3C0BA29A268DC98F00C47C74 /* assets.xcassets in Resources */,
 				9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */,
+				9E176EFD27F222DB00098563 /* CodeEnterCell.xib in Resources */,
 				9E0AA24E27DFBCE40004EBD9 /* LoginDiscountCodeView.xib in Resources */,
 				9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */,
 				9E06B1A227D8E76600E0DC46 /* MyLabViewController.xib in Resources */,
@@ -904,6 +900,7 @@
 				9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */,
 				9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */,
 				9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */,
+				9E176EFC27F218F300098563 /* CodeEnterCell.swift in Sources */,
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
 				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
 				9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */,
@@ -949,7 +946,6 @@
 				9EBC23BB27CE424200AB1BA3 /* MyLabViewOutput.swift in Sources */,
 				9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */,
 				9EBC238527CE390F00AB1BA3 /* MainTabBarRouterInput.swift in Sources */,
-				9E2E274827CFC32600D78244 /* UINavigationBar.swift in Sources */,
 				9E5B1C2027E9FD9B004ADB32 /* UserModel.swift in Sources */,
 				9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */,
 				9EBC23BD27CE479100AB1BA3 /* CatalogPresenter.swift in Sources */,

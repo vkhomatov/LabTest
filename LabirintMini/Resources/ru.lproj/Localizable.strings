@@ -40,4 +40,7 @@
 "MyLab.updates" = "%@ обновлений";
 "MyLab.discountSing" = "%@ %%";
 "MyLab.balanceSing" = "%@ ₽"; 
-
+"MyLab.discountCodeTitle" = "Вход по коду скидки";
+"MyLab.discountCodeInfo" = "Код скидки можно посмотреть в вашем личном кабинете на сайте";
+"MyLab.discountCode" = "Код скидки";
+"MyLab.youDiscountCode" = "Ваш код скидки";

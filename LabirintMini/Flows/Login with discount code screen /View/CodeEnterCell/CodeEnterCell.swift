@@ -22,8 +22,6 @@ class CodeEnterCell: UITableViewCell, ConfigurableItem {
     // MARK: - Constants
     
     enum Constants {
-        static let blackColor: UIColor = .black
-        static let whiteColor: UIColor = .white
         static let bigFont: CGFloat = 17
         static let smallFont: CGFloat = 14
     }
@@ -72,12 +70,12 @@ private extension CodeEnterCell {
         accessoryType = .none
         selectionStyle = .none
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
-        backgroundColor = Constants.whiteColor        
+        backgroundColor = ColorAssets.whiteColor.color
     }
     
     func configureCodeTextField() {
         codeTextField.font = .systemFont(ofSize: Constants.bigFont)
-        codeTextField.textColor = Constants.blackColor
+        codeTextField.textColor = ColorAssets.blackColor.color
         
         codeTextField.placeHolderYesText = { [weak self] in
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
@@ -110,7 +108,7 @@ private extension CodeEnterCell {
     @IBAction private func codeTextFieldEditingDidBegin(_ sender: CodeTextEdit) {
         guard let text = sender.text else { return }
         editingDidBegin?(text)
-        if text == "" {
+        if text.isEmpty {
             codeTextField.setPlaceHolderPading(.yesText())
         } else {
             codeTextField.placeholder = .none
@@ -126,7 +124,7 @@ private extension CodeEnterCell {
     @IBAction func codeTextFieldEditinDidEnd(_ sender: UITextField) {
         guard let text = sender.text else { return }
         editingDidEnd?(text)
-        if text == "" {
+        if text.isEmpty {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
                 guard let self = self else { return }
                 self.discountCodeTitle.transform = .identity

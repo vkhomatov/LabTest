@@ -39,7 +39,7 @@ final class LoginDiscountCodeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        setupNavBar()
+        configureNavBar()
     }
     
     deinit {
@@ -54,11 +54,11 @@ final class LoginDiscountCodeViewController: UIViewController {
 extension LoginDiscountCodeViewController: LoginDiscountCodeInput {
     
     func setupInitialState() {
-        setupView()
-        setupTableView()
-        setupCells()
-        setupNavBar()
-        setupBarButtonItem()
+        configureView()
+        configureTableView()
+        configureCells()
+        configureNavBar()
+        configureBarButtonItem()
         setupKeyboardNotificaition()
     }
     
@@ -68,40 +68,36 @@ extension LoginDiscountCodeViewController: LoginDiscountCodeInput {
 
 private extension LoginDiscountCodeViewController {
     
-    func setupView() {
+    func configureView() {
         view.backgroundColor = .white
         hideKeyboardWhenViewTapped()
     }
     
-    func setupTableView() {
+    func configureTableView() {
         tableView.backgroundColor = .white
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.keyboardDismissMode = .onDrag
     }
     
-    func setupBarButtonItem() {
+    func configureBarButtonItem() {
         let closeButton = UIButton(type: .custom)
         closeButton.backgroundColor = .clear
         closeButton.setImage(Assets.MyLab.closeButton.image, for: .normal)
         closeButton.frame = CGRect(x: 0, y: 0, width: 19, height: 19)
-        closeButton.addTarget(self, action: #selector(closeCodeModule), for: UIControl.Event.touchUpInside)
+        closeButton.addTarget(self, action: #selector(closeCodeModule), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: closeButton)
         navigationItem.rightBarButtonItem = barButton
     }
     
-    func setupNavBar() {
+    func configureNavBar() {
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationItem.title = L10n.MyLab.discountCodeTitle
         navigationItem.hidesBackButton = true
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "SFUIText-Medium", size: 17) ?? .systemFont(ofSize: 17)]
-    }
-    
-    @objc func closeCodeModule() {
-        output?.closeModule()
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
     }
     
     func setupKeyboardNotificaition() {
@@ -109,23 +105,7 @@ private extension LoginDiscountCodeViewController {
         notificationCenter.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @objc func keyboardWillBeShown(note: Notification) {
-        let userInfo = note.userInfo
-        guard let keyboardFrame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
-            self?.enterButtonViewBottomConstraint.constant = keyboardFrame.height
-            self?.view.layoutIfNeeded()
-        })
-    }
-    
-    @objc func keyboardWillBeHidden(note: Notification) {
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
-            self?.enterButtonViewBottomConstraint.constant = .zero
-            self?.view.layoutIfNeeded()
-        })
-    }
-    
-    func setupCells() {
+    func configureCells() {
         
         let infoTextCellModel = InfoTextCellViewModel(title: L10n.MyLab.discountCodeInfo)
         let infoTextCellGenerator =  BaseNonReusableCellGenerator<InfoTextCell>(with: infoTextCellModel)
@@ -148,4 +128,31 @@ private extension LoginDiscountCodeViewController {
     }
     
 }
+
+// MARK: -  @objc Methods
+
+private extension LoginDiscountCodeViewController {
+    
+    @objc func closeCodeModule() {
+        output?.closeModule()
+    }
+    
+    @objc func keyboardWillBeShown(note: Notification) {
+        let userInfo = note.userInfo
+        guard let keyboardFrame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+            self?.enterButtonViewBottomConstraint.constant = keyboardFrame.height
+            self?.view.layoutIfNeeded()
+        })
+    }
+    
+    @objc func keyboardWillBeHidden(note: Notification) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+            self?.enterButtonViewBottomConstraint.constant = .zero
+            self?.view.layoutIfNeeded()
+        })
+    }
+    
+}
+
 
