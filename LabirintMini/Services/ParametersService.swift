@@ -15,6 +15,7 @@ protocol ParametersServiceProtocol {
     func makeParams(add parameters: [String : String]) -> [String : String]
     func getParamString(parameters: [String : String]) -> String
     func hashToMD5(from string: String) -> String
+    func getHoursFromGmt() -> String
 }
 
 final class ParametersService: ParametersServiceProtocol {
@@ -24,19 +25,25 @@ final class ParametersService: ParametersServiceProtocol {
     private var constantParam: [String : String] = ["build": Bundle.main.buildVersionNumber,
                                             "bundleId": "91528577",
                                             "debug": "true",
-                                            "imageSize": "2",
+                                            "imageSize": "1",
                                             "version": Bundle.main.releaseVersionNumber]
     
-    func makeParams(add parameters: [String : String] = ["token" : (try? KeyChainService().readToken()) ?? ""]) -> [String : String] {
-        let newParams = constantParam.merging(parameters) { (current, _) in current }
+    func makeParams(add parameters: [String : String]) -> [String : String] {
+        let newParams = constantParam.merging(parameters) { (new, _) in new }
         let paramString = getParamString(parameters: newParams)
         let signature = hashToMD5(from: paramString)
-        return newParams.merging(["sig": signature]) { (current, _) in current }
+        return newParams.merging(["sig": signature]) { (new, _) in new }
     }
     
     func getParamString(parameters: [String : String]) -> String {
         let sortingDict = parameters.sorted { $0.key < $1.key }
-        return sortingDict.map { $0.key + $0.value }.joined(separator: "") + privateKey
+        return (parameters["token"] ?? "") + sortingDict.map { $0.key + $0.value }.joined(separator: "") + privateKey
+    }
+    
+    func getHoursFromGmt() -> String {
+        let secondsFromGmt: Int = TimeZone.current.secondsFromGMT()
+        let hoursFromGmt = secondsFromGmt / 3600
+        return hoursFromGmt > 0 ? "+\(hoursFromGmt)" : "\(hoursFromGmt)"
     }
     
     func hashToMD5(from string: String) -> String {

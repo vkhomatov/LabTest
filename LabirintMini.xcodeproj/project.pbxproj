@@ -38,6 +38,10 @@
 		9E176F0D27F2E1B600098563 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0A27F2E1B600098563 /* UserService.swift */; };
 		9E176F0E27F2E1B600098563 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0B27F2E1B600098563 /* KeyChainService.swift */; };
 		9E176F1327F300F500098563 /* ParametersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1227F300F400098563 /* ParametersService.swift */; };
+		9E176F1927F30BFA00098563 /* AuthEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1527F30BFA00098563 /* AuthEntry.swift */; };
+		9E176F1A27F30BFA00098563 /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1627F30BFA00098563 /* AuthEntity.swift */; };
+		9E176F1B27F30BFA00098563 /* UserEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1727F30BFA00098563 /* UserEntry.swift */; };
+		9E176F1C27F30BFA00098563 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1827F30BFA00098563 /* UserEntity.swift */; };
 		9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */; };
 		9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */; };
 		9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */; };
@@ -134,6 +138,10 @@
 		9E176F0A27F2E1B600098563 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9E176F0B27F2E1B600098563 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		9E176F1227F300F400098563 /* ParametersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParametersService.swift; path = LabirintMini/Services/ParametersService.swift; sourceTree = SOURCE_ROOT; };
+		9E176F1527F30BFA00098563 /* AuthEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthEntry.swift; path = LabirintMini/Entites/AuthEntry.swift; sourceTree = SOURCE_ROOT; };
+		9E176F1627F30BFA00098563 /* AuthEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthEntity.swift; path = LabirintMini/Entites/AuthEntity.swift; sourceTree = SOURCE_ROOT; };
+		9E176F1727F30BFA00098563 /* UserEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEntry.swift; path = LabirintMini/Entites/UserEntry.swift; sourceTree = SOURCE_ROOT; };
+		9E176F1827F30BFA00098563 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEntity.swift; path = LabirintMini/Entites/UserEntity.swift; sourceTree = SOURCE_ROOT; };
 		9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
 		9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
 		9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
@@ -386,6 +394,10 @@
 		9E176F0227F2E07A00098563 /* Entites */ = {
 			isa = PBXGroup;
 			children = (
+				9E176F1627F30BFA00098563 /* AuthEntity.swift */,
+				9E176F1527F30BFA00098563 /* AuthEntry.swift */,
+				9E176F1827F30BFA00098563 /* UserEntity.swift */,
+				9E176F1727F30BFA00098563 /* UserEntry.swift */,
 				9E176F0327F2E07A00098563 /* TokenEntity.swift */,
 				9E176F0427F2E07A00098563 /* TokenEntry.swift */,
 			);
@@ -937,6 +949,7 @@
 				9E0AA22427DF90520004EBD9 /* MainTabBarController.swift in Sources */,
 				9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */,
 				9E176EFC27F218F300098563 /* CodeEnterCell.swift in Sources */,
+				9E176F1927F30BFA00098563 /* AuthEntry.swift in Sources */,
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
 				9E176F0727F2E07A00098563 /* TokenEntry.swift in Sources */,
 				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
@@ -953,8 +966,10 @@
 				9EBC23B127CE41A700AB1BA3 /* MyLabRouter.swift in Sources */,
 				9EBC236727CE33EA00AB1BA3 /* LabirintRouterInput.swift in Sources */,
 				9EBC23AF27CE419500AB1BA3 /* MyLabConfigurator.swift in Sources */,
+				9E176F1C27F30BFA00098563 /* UserEntity.swift in Sources */,
 				9EBC23AD27CE414500AB1BA3 /* PromoViewOutput.swift in Sources */,
 				9E5B1C3727EC9CC3004ADB32 /* LoginState.swift in Sources */,
+				9E176F1B27F30BFA00098563 /* UserEntry.swift in Sources */,
 				9E5B1C3527EC9C3C004ADB32 /* MyLabRowTypes.swift in Sources */,
 				9E176F0D27F2E1B600098563 /* UserService.swift in Sources */,
 				9EBC239127CE3A5C00AB1BA3 /* CatalogRouterInput.swift in Sources */,
@@ -994,6 +1009,7 @@
 				9EBC238127CE38C400AB1BA3 /* MainTabBarConfigurator.swift in Sources */,
 				9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */,
 				9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */,
+				9E176F1A27F30BFA00098563 /* AuthEntity.swift in Sources */,
 				9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */,
 				9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */,
 				9E5B1C4027ED8035004ADB32 /* colorAssets.swift in Sources */,
@@ -1159,7 +1175,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 242;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LabirintMini/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1167,7 +1183,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1;
+				MARKETING_VERSION = 1.4.9;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.surf.LabirintMini.homatov;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1184,7 +1200,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 242;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LabirintMini/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1192,7 +1208,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1;
+				MARKETING_VERSION = 1.4.9;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.surf.LabirintMini.homatov;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

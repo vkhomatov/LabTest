@@ -9,28 +9,28 @@ import NodeKit
 
 struct AuthEntity: DTOEncodable {
 
-    var code: String? = nil// "T25O4-M4AJY-TTTTT",
-    let tmpPass: String? = nil//"123456",
-    let confirmType: String? = nil//"sms"
-    let firstName: String? = nil//"Ivan",
-    let lastName: String? = nil//"Petrovich",
-    let middleName: String? = nil//"",
-    let gender: String? = nil//"female",
-    let dob: String? = nil//"1426494564",
-    let location: String? = nil//"",
-    let avatarUrl: String? = nil//"http://upload.wikimedia.org/wikipedia/en/3/30/AC_Surf_logo.PNG",
-    let nickname: String? = nil//"Surf",
-    let email: String? = nil//"test@test.ru",
-    let vkId: String? = nil//"123",
-    let facebookId: String? = nil//"456",
-    let twitterId: String? = nil//"789",
-    let livejournalId: String? = nil//"101"
-    let googleId: String? = nil//"112",
-    let okId: String? = nil//"234",
-    let mailRuId: String? = nil//"777",
-    let yandexPassportId: String? = nil//"123",
-    let appleUserString: String? = nil//"000123.a06249abdf1d49dd9bc83b30ed4dac6d.1234",
-    let appleUserName: String? = nil//"Test"
+    var code: String? = nil
+    let tmpPass: String? = nil
+    let confirmType: String? = nil
+    let firstName: String? = nil
+    let lastName: String? = nil
+    let middleName: String? = nil
+    let gender: String? = nil
+    let dob: String? = nil
+    let location: String? = nil
+    let avatarUrl: String? = nil
+    let nickname: String? = nil
+    let email: String? = nil
+    let vkId: String? = nil
+    let facebookId: String? = nil
+    let twitterId: String? = nil
+    let livejournalId: String? = nil
+    let googleId: String? = nil
+    let okId: String? = nil
+    let mailRuId: String? = nil
+    let yandexPassportId: String? = nil
+    let appleUserString: String? = nil
+    let appleUserName: String? = nil
 
     func toDTO() throws -> AuthEntry {
         return .init(code: self.code,
