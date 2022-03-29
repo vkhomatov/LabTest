@@ -10,12 +10,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Private Properties
 
     private var userService: UserServiceProtocol
-    private var signatureService: SignatureServiceProtocol
+    private var parametersService: ParametersServiceProtocol
     private var keyChainService: KeyChainServiceProtocol
     private var tokenEntity: TokenEntity? {
         didSet {
             if let token = self.tokenEntity?.token {
-                try? self.keyChainService.saveToken(token: token)
+                guard let _ = try? self.keyChainService.updateToken(token: token) else {
+                    try? self.keyChainService.saveToken(token: token)
+                    return
+                }
+                    
             }
         }
     }
@@ -24,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     override init() {
         userService = UserService()
-        signatureService = SignatureService()
+        parametersService = ParametersService()
         keyChainService = KeyChainService()
         super.init()
     }
@@ -46,16 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     
-    func getToken() {
-        if let savedToken = try? keyChainService.readToken() {
+    func getToken(update: Bool = true) {
+        if let savedToken = try? keyChainService.readToken(), !update {
             debugPrint("Saved token from KeyChain = \(savedToken)")
         } else {
-            let token = ""
-            let imagesize = "2"
-            let paramString = signatureService.getParamString(parameters: userService.buildParameters(add: [:], token: token, imagesize: imagesize))
-            let sig = signatureService.getMD5Signature(strParameters: paramString)
-        
-            userService.getToken(with: userService.buildParameters(add: ["sig" : sig], token: token, imagesize: imagesize))
+            userService.getToken(with: parametersService.makeParams(add: [:]))
                 .onCompleted { [weak self] data in
                     self?.tokenEntity = data
                 }.onError { error in

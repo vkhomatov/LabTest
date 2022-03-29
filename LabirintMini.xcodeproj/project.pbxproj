@@ -33,12 +33,11 @@
 		9E176EFC27F218F300098563 /* CodeEnterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */; };
 		9E176EFD27F222DB00098563 /* CodeEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */; };
 		9E176F0027F2D57400098563 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176EFE27F2D57400098563 /* Bundle.swift */; };
-		9E176F0127F2D57400098563 /* MD5Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176EFF27F2D57400098563 /* MD5Digest.swift */; };
 		9E176F0627F2E07A00098563 /* TokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0327F2E07A00098563 /* TokenEntity.swift */; };
 		9E176F0727F2E07A00098563 /* TokenEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0427F2E07A00098563 /* TokenEntry.swift */; };
 		9E176F0D27F2E1B600098563 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0A27F2E1B600098563 /* UserService.swift */; };
 		9E176F0E27F2E1B600098563 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0B27F2E1B600098563 /* KeyChainService.swift */; };
-		9E176F0F27F2E1B600098563 /* SignatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0C27F2E1B600098563 /* SignatureService.swift */; };
+		9E176F1127F2E6CF00098563 /* ParametersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1027F2E6CF00098563 /* ParametersService.swift */; };
 		9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */; };
 		9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */; };
 		9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */; };
@@ -130,12 +129,11 @@
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E176EFE27F2D57400098563 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bundle.swift; path = ../../../Desktop/1/Extensions/Bundle.swift; sourceTree = "<group>"; };
-		9E176EFF27F2D57400098563 /* MD5Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MD5Digest.swift; path = ../../../Desktop/1/Extensions/MD5Digest.swift; sourceTree = "<group>"; };
 		9E176F0327F2E07A00098563 /* TokenEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenEntity.swift; sourceTree = "<group>"; };
 		9E176F0427F2E07A00098563 /* TokenEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenEntry.swift; sourceTree = "<group>"; };
 		9E176F0A27F2E1B600098563 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9E176F0B27F2E1B600098563 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
-		9E176F0C27F2E1B600098563 /* SignatureService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureService.swift; sourceTree = "<group>"; };
+		9E176F1027F2E6CF00098563 /* ParametersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersService.swift; sourceTree = "<group>"; };
 		9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
 		9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
 		9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
@@ -398,9 +396,9 @@
 		9E176F0927F2E1B600098563 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9E176F0A27F2E1B600098563 /* UserService.swift */,
 				9E176F0B27F2E1B600098563 /* KeyChainService.swift */,
-				9E176F0C27F2E1B600098563 /* SignatureService.swift */,
+				9E176F1027F2E6CF00098563 /* ParametersService.swift */,
+				9E176F0A27F2E1B600098563 /* UserService.swift */,
 			);
 			name = Services;
 			path = ../../Desktop/1/Services;
@@ -410,7 +408,6 @@
 			isa = PBXGroup;
 			children = (
 				9E176EFE27F2D57400098563 /* Bundle.swift */,
-				9E176EFF27F2D57400098563 /* MD5Digest.swift */,
 				9EAE91EE27DB3061003988F1 /* UIButton.swift */,
 				9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */,
 			);
@@ -934,8 +931,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E176F0F27F2E1B600098563 /* SignatureService.swift in Sources */,
-				9E176F0127F2D57400098563 /* MD5Digest.swift in Sources */,
 				9E0AA23E27DFB42A0004EBD9 /* LoginDiscountCodePresenter.swift in Sources */,
 				9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */,
 				9EBC236127CE2DBE00AB1BA3 /* LabirintViewOutput.swift in Sources */,
@@ -943,6 +938,7 @@
 				9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */,
 				9E176EFC27F218F300098563 /* CodeEnterCell.swift in Sources */,
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
+				9E176F1127F2E6CF00098563 /* ParametersService.swift in Sources */,
 				9E176F0727F2E07A00098563 /* TokenEntry.swift in Sources */,
 				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
 				9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */,
