@@ -16,8 +16,8 @@ public final class CodeTextEdit: UITextField {
 
     // MARK: - Properties
 
-    public var placeholderPadding = UIEdgeInsets.zero
-    public var placeHolderYesText: (() -> Void)?
+    var placeholderPadding = UIEdgeInsets.zero
+    var placeHolderYesText: (() -> Void)?
 
     // MARK: - UITextField
     

@@ -21,8 +21,6 @@ class InfoTextCell: UITableViewCell, ConfigurableItem {
     // MARK: - Constants
     
     enum Constants {
-        static let blackColor: UIColor = .black
-        static let whiteColor: UIColor = .white
         static let fontSize: CGFloat = 15
     }
     
@@ -35,6 +33,7 @@ class InfoTextCell: UITableViewCell, ConfigurableItem {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
+        configureInfoTextLabel()
     }
     
     // MARK: - Internal Methods
@@ -49,14 +48,16 @@ class InfoTextCell: UITableViewCell, ConfigurableItem {
 private extension InfoTextCell {
 
     func setupInitialState() {
-        infoTextLabel.numberOfLines = 2
-        infoTextLabel?.font = .systemFont(ofSize: Constants.fontSize)
-        infoTextLabel?.textColor = Constants.blackColor
-        
         selectionStyle = .none
         accessoryType = .none
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
-        backgroundColor = Constants.whiteColor
+        backgroundColor = ColorAssets.whiteColor.color
+    }
+    
+    func configureInfoTextLabel() {
+        infoTextLabel.numberOfLines = 2
+        infoTextLabel?.font = .systemFont(ofSize: Constants.fontSize)
+        infoTextLabel?.textColor = ColorAssets.blackColor.color
     }
 
 }

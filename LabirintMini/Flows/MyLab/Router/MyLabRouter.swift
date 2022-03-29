@@ -15,4 +15,13 @@ final class MyLabRouter {
 
 // MARK: - MyLabRouterInput
 
-extension MyLabRouter: MyLabRouterInput { }
+extension MyLabRouter: MyLabRouterInput {
+    
+    func openLoginScreen() {
+        let module = LoginDiscountCodeConfigurator().configure()
+        module.modalPresentationCapturesStatusBarAppearance = true
+        module.modalPresentationStyle = .overFullScreen
+        view?.present(module, animated: true, completion: nil)
+    }
+
+}

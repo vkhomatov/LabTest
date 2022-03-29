@@ -52,7 +52,7 @@ private extension EnterButtonView {
     func setupInitialState() {
         backgroundColor = .none
         enterButton.isEnabled = false
-        enterButton.enterCodeButton(title: L10n.MyLab.login)
+        enterButton.setStyle(.enterCode(title: L10n.MyLab.login))
     }
     
 }

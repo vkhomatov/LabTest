@@ -22,24 +22,19 @@ final class MyLabViewController: UIViewController {
     // MARK: - Private Properties
 
     private lazy var adapter = tableView.rddm.manualBuilder
-        .add(plugin: .selectable())
         .build()
 
     // MARK: - Properties
 
     var output: MyLabViewOutput?
-
+    var viewBuilder = MyLabViewBuilder()
+    
     // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
         setupInitialState()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        setupNavBar()
     }
     
 }
@@ -53,15 +48,7 @@ private extension MyLabViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.keyboardDismissMode = .onDrag
-        view.addSubview(tableView)
-    }
-    
-    func setupNavBar() {
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 1))
     }
     
 }
@@ -70,63 +57,31 @@ private extension MyLabViewController {
 
 extension MyLabViewController: MyLabViewInput {
 
-    func setupViewState(_ model: MyLabViewModel) {
+    func setupViewState(with state: LoginState) {
         adapter.clearHeaderGenerators()
         adapter.clearCellGenerators()
-        
-        switch model.state {
-        
-        case .login:
-            
-            adapter.addSectionHeaderGenerator(model.makeHeader(with: .loginHeader))
-            adapter.addCellGenerator(model.makeStandartRow(with: .myOrders))
-            adapter.addCellGenerator(model.makeStandartRow(with: .myCoupons))
-            adapter.addCellGenerator(model.makeStandartRow(with: .savingGoods))
-            adapter.addCellGenerator(model.makeStandartRow(with: .mySubscription))
-            adapter.addCellGenerator(model.makeStandartRow(with: .purchasedGoods))
-            adapter.addCellGenerator(model.makeStandartRow(with: .myReviews))
-            adapter.addCellGenerator(model.makeDeliveryRow(model.state))
-            adapter.addCellGenerator(model.makeStandartRow(with: .pickupPoints))
-            adapter.addCellGenerator(model.makeStandartRow(with: .profileSetting))
-            adapter.addCellGenerator(model.makeStandartRow(with: .appSetting))
-            adapter.addCellGenerator(model.makeStandartRow(with: .aboutStore))
-            
-            let logoutGenerator = model.makeExitRow()
-            adapter.addCellGenerator(logoutGenerator)
-            logoutGenerator.cell?.stateChangeCallback = { [weak self] state in
-                self?.output?.changeState(state)
-            }
-            
-        case .loguot:
-            
-            let headerGenerator = model.makeHeader(with: .logoutHeader)
-            adapter.addSectionHeaderGenerator(headerGenerator)
-            if let header = headerGenerator.generate() as? UnautorizedHeaderView {
-                header.stateChangeCallback = { [weak self] state in
-                    let vc = LoginDiscountCodeConfigurator().configure()
-                    // показываем контроллер для авторизации по коду
-                    //self?.navigationController?.pushViewController(vc, animated: true)
-                    //self?.output?.changeState(state)
-                    self?.present(vc, animated: true, completion: nil)
-                   // self?.navigationController?.pushViewController(vc, animated: true)
-                }
-            }
-            
-            adapter.addCellGenerator(model.makeDeliveryRow(model.state))
-            adapter.addCellGenerator(model.makeStandartRow(with: .appSetting))
-            adapter.addCellGenerator(model.makeStandartRow(with: .aboutStore))
-            
-        }
-
+        let header = viewBuilder.makeHeaderGenerator(with: state)
+        let cells = viewBuilder.makeCellsContent(with: state)
+        adapter.addSectionHeaderGenerator(header)
+        adapter.addCellGenerators(cells)
         adapter.forceRefill()
-
+    }
+    
+    func setBaseCellCallbacks() {
+        viewBuilder.didPushCellCallback = { [weak self] cellType in
+            self?.output?.cellPressed(of: cellType)
+        }
+        viewBuilder.exitButtonCallback = { [weak self] in
+            self?.output?.exitButtonPush()
+        }
+        viewBuilder.enterButtonCallback = { [weak self] in
+            self?.output?.enterButtonPush()
+        }
     }
     
     func setupInitialState() {
         setupTableView()
-        setupNavBar()
-        // заглушка, которая не очень работает
-        blackViewHeightConstraint.constant = tableView.frame.height / 3
+        setBaseCellCallbacks()
     }
 
 }

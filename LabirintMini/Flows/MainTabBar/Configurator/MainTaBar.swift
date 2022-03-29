@@ -30,8 +30,8 @@ extension MainTabBar {
                                    selectedImage: activeIcon)
         barItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         navigationController.tabBarItem = barItem
-        navigationController.navigationBar.makeBlackNavBar()
-
+        navigationController.navigationBar.barStyle = .black
+        navigationController.navigationBar.isTranslucent = false
         return navigationController
     }
 
@@ -52,7 +52,7 @@ private extension MainTabBar {
         case .promo:
             return PromoConfigurator().configure()
         case .mylab:
-            return MyLabConfigurator().configure(state: .loguot)
+            return MyLabConfigurator().configure()
         }
     }
 

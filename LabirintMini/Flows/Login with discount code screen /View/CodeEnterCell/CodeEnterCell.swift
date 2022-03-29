@@ -22,8 +22,6 @@ class CodeEnterCell: UITableViewCell, ConfigurableItem {
     // MARK: - Constants
     
     enum Constants {
-        static let blackColor: UIColor = .black
-        static let whiteColor: UIColor = .white
         static let bigFont: CGFloat = 17
         static let smallFont: CGFloat = 14
     }
@@ -32,47 +30,6 @@ class CodeEnterCell: UITableViewCell, ConfigurableItem {
     
     @IBOutlet private weak var codeTextField: CodeTextEdit!
     @IBOutlet private weak var discountCodeTitle: UILabel!
-    
-
-    // MARK: - IBActions
-
-    // 1. начал редактировать, текста нет:
-    //    - анимируем placeholder в верхнюю позицию
-    //    - ставим текст плейхолдера в .none
-    //    - открываем и анимируем лейбл в меньший масштаб
-    
-    @IBAction private func codeTextFieldEditingDidBegin(_ sender: CodeTextEdit) {
-        guard let text = sender.text else { return }
-        editingDidBegin?(text)
-        if text == "" {
-            codeTextField.setPlaceHolderPading(.yesText())
-        } else {
-            codeTextField.placeholder = .none
-        }
-    }
-
-    // 3. закончил редактировать, текста нет:
-    //   - анимируем текст лейбла до нормального состояния
-    //   - скрываем текст лейбла
-    //   - назначаем текст плейхолдеру
-    //   - анимируем плейсхолдер на старое место
-
-    @IBAction func codeTextFieldEditinDidEnd(_ sender: UITextField) {
-        guard let text = sender.text else { return }
-        editingDidEnd?(text)
-        if text == "" {
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
-                guard let self = self else { return }
-                self.discountCodeTitle.transform = .identity
-                self.discountCodeTitle.frame.origin = self.labelOrigin
-                self.contentView.layoutIfNeeded()
-            }, completion: { [weak self] _ in
-                self?.discountCodeTitle.isHidden = true
-                self?.codeTextField.placeholder = L10n.MyLab.discountCode
-                self?.codeTextField.setPlaceHolderPading(.noText())
-            })
-        }
-    }
         
     // MARK: - Properites
     
@@ -85,6 +42,8 @@ class CodeEnterCell: UITableViewCell, ConfigurableItem {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
+        configureCodeTextField()
+        configureDiscountCodeTitle()
     }
     
     // MARK: - Internal Methods
@@ -105,11 +64,18 @@ class CodeEnterCell: UITableViewCell, ConfigurableItem {
 
 // MARK: - Configuration
 
-extension CodeEnterCell {
+private extension CodeEnterCell {
 
-    private func setupInitialState() {
+    func setupInitialState() {
+        accessoryType = .none
+        selectionStyle = .none
+        separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
+        backgroundColor = ColorAssets.whiteColor.color
+    }
+    
+    func configureCodeTextField() {
         codeTextField.font = .systemFont(ofSize: Constants.bigFont)
-        codeTextField.textColor = Constants.blackColor
+        codeTextField.textColor = ColorAssets.blackColor.color
         
         codeTextField.placeHolderYesText = { [weak self] in
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
@@ -121,14 +87,55 @@ extension CodeEnterCell {
                 self.contentView.layoutIfNeeded()
             })
         }
-        
-        discountCodeTitle.font = .systemFont(ofSize: Constants.bigFont)
-        discountCodeTitle.text = L10n.MyLab.discountCode
-                
-        accessoryType = .none
-        selectionStyle = .none
-        separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
-        backgroundColor = Constants.whiteColor        
     }
     
+    func configureDiscountCodeTitle() {
+        discountCodeTitle.font = .systemFont(ofSize: Constants.bigFont)
+        discountCodeTitle.text = L10n.MyLab.discountCode
+    }
+    
+}
+
+// MARK: - IBActions
+
+private extension CodeEnterCell {
+
+    // 1. начал редактировать, текста нет:
+    //    - анимируем placeholder в верхнюю позицию
+    //    - ставим текст плейхолдера в .none
+    //    - открываем и анимируем лейбл в меньший масштаб
+    
+    @IBAction private func codeTextFieldEditingDidBegin(_ sender: CodeTextEdit) {
+        guard let text = sender.text else { return }
+        editingDidBegin?(text)
+        if text.isEmpty {
+            codeTextField.setPlaceHolderPading(.yesText())
+        } else {
+            codeTextField.placeholder = .none
+        }
+    }
+
+    // 3. закончил редактировать, текста нет:
+    //   - анимируем текст лейбла до нормального состояния
+    //   - скрываем текст лейбла
+    //   - назначаем текст плейхолдеру
+    //   - анимируем плейсхолдер на старое место
+
+    @IBAction func codeTextFieldEditinDidEnd(_ sender: UITextField) {
+        guard let text = sender.text else { return }
+        editingDidEnd?(text)
+        if text.isEmpty {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+                guard let self = self else { return }
+                self.discountCodeTitle.transform = .identity
+                self.discountCodeTitle.frame.origin = self.labelOrigin
+                self.contentView.layoutIfNeeded()
+            }, completion: { [weak self] _ in
+                guard let self = self else { return }
+                self.discountCodeTitle.isHidden = true
+                self.codeTextField.placeholder = L10n.MyLab.discountCode
+                self.codeTextField.setPlaceHolderPading(.noText())
+            })
+        }
+    }
 }

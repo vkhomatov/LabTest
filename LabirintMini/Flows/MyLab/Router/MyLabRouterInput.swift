@@ -7,4 +7,8 @@
 
 import Foundation
 
-protocol MyLabRouterInput { }
+protocol MyLabRouterInput {
+
+    func openLoginScreen()
+
+}

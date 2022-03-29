@@ -9,10 +9,10 @@ import UIKit
 
 final class MyLabConfigurator {
 
-    func configure(state: LogState) -> MyLabViewController {
+    func configure() -> MyLabViewController {
         let view = MyLabViewController()
         let router = MyLabRouter()
-        let presenter = MyLabPresenter(state: state)
+        let presenter = MyLabPresenter()
 
         presenter.view = view
         presenter.router = router

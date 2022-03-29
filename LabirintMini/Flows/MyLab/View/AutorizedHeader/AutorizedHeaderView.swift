@@ -8,14 +8,33 @@
 import UIKit
 import ReactiveDataDisplayManager
 
+struct MyLabAuthorizedHeaderDataModel {
+    let name: String
+    let number: String
+    let discount: Int
+    let balance: Int
+    let nextDiscount: Int
+    let nextDiscountSumm: Int
+    
+    init(from user: UserModel) {
+        self.name = user.name
+        self.number = user.number
+        self.discount = user.discount
+        self.balance = user.balance
+        self.nextDiscount = user.nextDiscount
+        self.nextDiscountSumm = user.nextDiscountSumm
+    }
+}
 
 class AutorizedHeaderView: UITableViewHeaderFooterView {
+    
+    // MARK: - Typealias
+
+    typealias Model = MyLabAuthorizedHeaderDataModel
     
     // MARK: - Constants
 
     enum Constants {
-        static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
-        static let whiteColor: UIColor = .white
         static let headerHeight: CGFloat = 208
         static let bigFont: CGFloat = 27
         static let middleFont: CGFloat = 14
@@ -43,51 +62,78 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupInitialState()
+        configureNameLabel()
+        configureNumberLabel()
+        configureDiscountTitleLabel()
+        configureDiscountLabel()
+        configureDiscountInfoLabel()
+        configureBalanceTitleLabel()
+        configureBalanceLabel()
+        configureImages()
+    }
+    
+    // MARK: - Internal Methods
+    
+    func configure(with model: Model) {
+        nameLabel.text = model.name
+        numberLabel.text = model.number
+        discountLabel.text =  L10n.MyLab.discountSing(model.discount)
+        balanceLabel.text = L10n.MyLab.balanceSing(model.balance)
+        discountInfoLabel.text = L10n.MyLab.discountIncrease(model.nextDiscountSumm, model.nextDiscount)
     }
 }
-
 
 // MARK: - Configuration
 
 private extension AutorizedHeaderView {
 
-    func setupInitialState() {
+    func configureNameLabel() {
         nameLabel.numberOfLines = 1
         nameLabel?.font = .systemFont(ofSize: Constants.middleFont)
-        nameLabel?.textColor = Constants.whiteColor
-
+        nameLabel?.textColor = ColorAssets.whiteColor.color
+    }
+    
+    func configureNumberLabel() {
         numberLabel.numberOfLines = 1
         numberLabel?.font = .systemFont(ofSize: Constants.middleFont)
-        numberLabel?.textColor = Constants.greyColor
-        
+        numberLabel?.textColor = ColorAssets.greyColor.color
+    }
+
+    func configureDiscountTitleLabel() {
         discountTitleLabel.numberOfLines = 1
         discountTitleLabel?.font = .systemFont(ofSize: Constants.preMiddleFont)
         discountTitleLabel?.textColor = .white
-        discountTitleLabel.text = L10n.MyLab.discount
-        
+    }
+    
+    func configureDiscountLabel() {
         discountLabel.numberOfLines = 1
         discountLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        discountLabel?.textColor = Constants.whiteColor
-        
+        discountLabel?.textColor = ColorAssets.whiteColor.color
+    }
+    
+    func configureDiscountInfoLabel() {
         discountInfoLabel.numberOfLines = 2
         discountInfoLabel?.font = .systemFont(ofSize: Constants.smallFont)
-        discountInfoLabel?.textColor = Constants.greyColor
-        discountInfoLabel.text = L10n.MyLab.discountIncrease
-
+        discountInfoLabel?.textColor = ColorAssets.greyColor.color
+    }
+    
+    func configureBalanceTitleLabel() {
         balanceTitleLabel.numberOfLines = 1
         balanceTitleLabel?.font = .systemFont(ofSize: Constants.preMiddleFont)
         balanceTitleLabel?.textColor = .white
-        balanceTitleLabel.text = L10n.MyLab.balance
-        
+    }
+    
+    func configureBalanceLabel() {
         balanceLabel.numberOfLines = 1
         balanceLabel?.font = .systemFont(ofSize: Constants.bigFont)
-        balanceLabel?.textColor = Constants.whiteColor
-        
-        ballanceInfoImageView.image = Assets.MyLab.ic.image
-        discountInfoImageView.image = Assets.MyLab.ic.image
+        balanceLabel?.textColor = ColorAssets.whiteColor.color
     }
-
+    
+    func configureImages() {
+        ballanceInfoImageView.image = Assets.TabBar.infoIcon.image
+        discountInfoImageView.image = Assets.TabBar.infoIcon.image
+    }
+    
 }
 
 final class AutorizedHeaderGenerator: TableHeaderGenerator {
@@ -101,10 +147,18 @@ final class AutorizedHeaderGenerator: TableHeaderGenerator {
     // MARK: - Private Properties
 
     private lazy var header: AutorizedHeaderView? = AutorizedHeaderView.instanceFromNib() as? AutorizedHeaderView
+    var model: MyLabAuthorizedHeaderDataModel
+    
+    // MARK: - Initialization
+    
+    init(model: MyLabAuthorizedHeaderDataModel) {
+        self.model = model
+    }
 
     // MARK: - TableHeaderGenerator
 
     override func generate() -> UIView {
+        header?.configure(with: model)
         return header ?? UIView()
     }
 

@@ -7,15 +7,14 @@
 
 import Foundation
 
-enum LogState {
-    case login 
-    case loguot
-}
-
 protocol MyLabViewOutput {
 
     func viewLoaded()
+        
+    func exitButtonPush()
     
-    func changeState(_ state: LogState)
+    func enterButtonPush()
+    
+    func cellPressed(of type: MyLabRowTypes)
 
 }

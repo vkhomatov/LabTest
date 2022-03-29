@@ -21,25 +21,25 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-h7-7Ok">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="322" id="QvX-pI-peF"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9JK-rs-3Ke">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-h7-7Ok">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
-                    <color key="backgroundColor" systemColor="labelColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="208" id="QvX-pI-peF"/>
-                    </constraints>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="9JK-rs-3Ke" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2QQ-3S-zMP"/>
                 <constraint firstItem="9JK-rs-3Ke" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GZS-Y4-S6S"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZLL-h7-7Ok" secondAttribute="bottom" priority="900" constant="654" id="NG1-3b-JM3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZLL-h7-7Ok" secondAttribute="bottom" priority="900" constant="540" id="NG1-3b-JM3"/>
                 <constraint firstItem="ZLL-h7-7Ok" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UM7-fw-GZG"/>
                 <constraint firstItem="9JK-rs-3Ke" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Xdo-TI-Jwi"/>
                 <constraint firstItem="ZLL-h7-7Ok" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="fdk-uy-TaD"/>

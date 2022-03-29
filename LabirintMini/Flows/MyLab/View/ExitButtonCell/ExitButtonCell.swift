@@ -16,12 +16,11 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
-    typealias Model = ExitButtonCellViewModel
+    typealias Model = MyLabCellViewModel
     
     // MARK: - Constants
     
     enum Constants {
-        static let redColor =  UIColor(red: 0.902, green: 0.082, blue: 0.169, alpha: 1)
         static let fontSize: CGFloat = 16
     }
 
@@ -29,25 +28,16 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
 
     @IBOutlet weak var exitButton: UIButton!
     
-    // MARK: - Actions
-
-    @IBAction func exitButtonAction(_ sender: UIButton) {
-        stateChangeCallback?(.loguot)
-    }
-    
     // MARK: - Properites
     
-    public var stateChangeCallback: ((_ state: LogState) -> Void)?
+    var exitButtonCallback: (() -> Void)?
 
     // MARK: - System Methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        exitButtonSetup()
     }
     
     // MARK: - Internal Methods
@@ -63,14 +53,24 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
 private extension ExitButtonCell {
 
     func setupInitialState() {
-        
+        selectionStyle = .none
+        separatorInset = UIEdgeInsets(top: .zero, left: 400, bottom: .zero, right: .zero)
+    }
+    
+    func exitButtonSetup() {
         exitButton.backgroundColor = .clear
         exitButton.titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
-        exitButton.setTitleColor(Constants.redColor, for: .normal)
-        
-        selectionStyle = .none
-        separatorInset = UIEdgeInsets(top: .zero, left: .greatestFiniteMagnitude, bottom: .zero, right: .zero)
-        
+        exitButton.setTitleColor(ColorAssets.mainRedColor.color, for: .normal)
+    }
+
+}
+
+// MARK: - Actions
+
+private extension ExitButtonCell {
+
+    @IBAction func exitButtonAction(_ sender: UIButton) {
+        exitButtonCallback?()
     }
 
 }

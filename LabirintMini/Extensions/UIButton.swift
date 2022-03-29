@@ -7,32 +7,34 @@
 
 import UIKit
 
+enum ButtonStyle {
+    case login(title: String)
+    case enterCode(title: String)
+}
+
 extension UIButton {
     
     enum Constants {
-        static let blueColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
-        static let sirenColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
-        static let whiteColor: UIColor = .white
         static let fontSize: CGFloat = 16
         static let cornerRadius: CGFloat = 6
     }
     
-    func loginButton(title: String)  {
-        layer.masksToBounds = true
-        layer.cornerRadius = Constants.cornerRadius
-        backgroundColor = Constants.whiteColor
-        titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
-        setTitleColor(Constants.blueColor, for: .normal)
-        setTitle(title, for: .normal)
-    }
+    func setStyle(_ style: ButtonStyle) {
     
-    func enterCodeButton(title: String)  {
+        switch style {
+        case .login(let title):
+            setTitle(title, for: .normal)
+            backgroundColor = ColorAssets.whiteColor.color
+            setTitleColor(ColorAssets.blueColor.color, for: .normal)
+        case .enterCode(let title):
+            setTitle(title, for: .normal)
+            backgroundColor = ColorAssets.blueColor.color
+            setTitleColor(ColorAssets.whiteColor.color, for: .normal)
+        }
+        
         layer.masksToBounds = true
         layer.cornerRadius = Constants.cornerRadius
-        backgroundColor = Constants.blueColor
         titleLabel?.font = .systemFont(ofSize: Constants.fontSize)
-        setTitleColor(Constants.whiteColor, for: .normal)
-        setTitle(title, for: .normal)
     }
 
 }

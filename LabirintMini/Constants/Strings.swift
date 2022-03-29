@@ -16,6 +16,10 @@ public enum L10n {
     public static let appSettings = L10n.tr("Localizable", "MyLab.appSettings")
     /// Balance
     public static let balance = L10n.tr("Localizable", "MyLab.balance")
+    /// %@ ₽
+    public static func balanceSing(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "MyLab.balanceSing", String(describing: p1))
+    }
     /// Delivery
     public static let delivery = L10n.tr("Localizable", "MyLab.delivery")
     /// Discount
@@ -26,8 +30,22 @@ public enum L10n {
     public static let discountCodeInfo = L10n.tr("Localizable", "MyLab.discountCodeInfo")
     /// Enter by discount code
     public static let discountCodeTitle = L10n.tr("Localizable", "MyLab.discountCodeTitle")
-    /// 5 865 ₽ for discount increase for 15%
-    public static let discountIncrease = L10n.tr("Localizable", "MyLab.discountIncrease")
+    /// %@ ₽ for discount increase for  %@ %%
+    public static func discountIncrease(_ p1: Any, _ p2: Any) -> String {
+      return L10n.tr("Localizable", "MyLab.discountIncrease", String(describing: p1), String(describing: p2))
+    }
+    /// %@ %%
+    public static func discountSing(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "MyLab.discountSing", String(describing: p1))
+    }
+    /// %@ in fire
+    public static func inFire(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "MyLab.inFire", String(describing: p1))
+    }
+    /// %@ in processing
+    public static func inProcessing(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "MyLab.inProcessing", String(describing: p1))
+    }
     /// Login
     public static let login = L10n.tr("Localizable", "MyLab.login")
     /// Logout
@@ -40,8 +58,10 @@ public enum L10n {
     public static let myReviews = L10n.tr("Localizable", "MyLab.myReviews")
     /// My subscriptions
     public static let mySubscriptions = L10n.tr("Localizable", "MyLab.mySubscriptions")
-    /// 156 pickup points
-    public static let pickupPoints = L10n.tr("Localizable", "MyLab.pickupPoints")
+    /// %@ pickup points
+    public static func pickupPoints(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "MyLab.pickupPoints", String(describing: p1))
+    }
     /// Profile settings
     public static let profileSettings = L10n.tr("Localizable", "MyLab.profileSettings")
     /// Purchased goods
@@ -54,6 +74,10 @@ public enum L10n {
     public static let signInInfo = L10n.tr("Localizable", "MyLab.signInInfo")
     /// Store Information
     public static let storeInformation = L10n.tr("Localizable", "MyLab.storeInformation")
+    /// %@ updates
+    public static func updates(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "MyLab.updates", String(describing: p1))
+    }
     /// You discount code
     public static let youDiscountCode = L10n.tr("Localizable", "MyLab.youDiscountCode")
   }
