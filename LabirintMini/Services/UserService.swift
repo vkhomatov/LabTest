@@ -7,39 +7,28 @@
 
 import NodeKit
 
-let base = URL(string: "https://apitest.labirint.ru/v3")
+//let base = URL(string: "https://apitest.labirint.ru/v3")
+let base = URL(string: "https://api.labirint.ru/v3")
 
 enum UserServiceRoute: UrlRouteProvider {
     case token
-    case auth
+    case login
     
     func url() throws -> URL {
         switch self {
         case .token:
             return try base + "/token"
-        case .auth:
-            return try base + "/auth"
+        case .login:
+            return try base + "/user/login"
         }
     }
 }
 
 protocol UserServiceProtocol {
-    func buildParameters(add parameters: [String : String], token: String, imagesize: String) -> [String : String]
     func getToken(with parameters: [String : String]) -> Observer<TokenEntity>
 }
 
 final class UserService: UserServiceProtocol {
-
-    func buildParameters(add parameters: [String : String], token: String, imagesize: String) -> [String : String] {
-        let parametersDict = ["build": Bundle.main.buildVersionNumber,
-                              "bundleId": "91528577",
-                              "debug": "true",
-                              "imageSize": imagesize,
-                              "token": token,
-                              "version": Bundle.main.releaseVersionNumber]
-        
-        return parametersDict.merging(parameters) { (current, _) in current }
-    }
     
     var builder: UrlChainsBuilder<UserServiceRoute> {
         return .init()

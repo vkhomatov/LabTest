@@ -51,8 +51,6 @@ extension MyLabPresenter: MyLabViewOutput {
     }
     
     func enterButtonPush() {
-        //self.state = .login(.init(headerViewModel: .init(from: userModel), contentViewModel: .init(from: userModel)))
-        //view?.setupViewState(with: state)
         router?.openLoginScreen()
     }
     

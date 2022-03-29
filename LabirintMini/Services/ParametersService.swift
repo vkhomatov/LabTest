@@ -27,7 +27,7 @@ final class ParametersService: ParametersServiceProtocol {
                                             "imageSize": "2",
                                             "version": Bundle.main.releaseVersionNumber]
     
-    func makeParams(add parameters: [String : String] = ["token" : (try? KeyChainService().readToken()) ?? ""]) -> [String : String] {
+    func makeParams(add parameters: [String : String]) -> [String : String] {
         let newParams = constantParam.merging(parameters) { (current, _) in current }
         let paramString = getParamString(parameters: newParams)
         let signature = hashToMD5(from: paramString)
