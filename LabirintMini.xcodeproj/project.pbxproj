@@ -37,7 +37,7 @@
 		9E176F0727F2E07A00098563 /* TokenEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0427F2E07A00098563 /* TokenEntry.swift */; };
 		9E176F0D27F2E1B600098563 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0A27F2E1B600098563 /* UserService.swift */; };
 		9E176F0E27F2E1B600098563 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0B27F2E1B600098563 /* KeyChainService.swift */; };
-		9E176F1127F2E6CF00098563 /* ParametersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1027F2E6CF00098563 /* ParametersService.swift */; };
+		9E176F1327F300F500098563 /* ParametersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1227F300F400098563 /* ParametersService.swift */; };
 		9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */; };
 		9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */; };
 		9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */; };
@@ -133,7 +133,7 @@
 		9E176F0427F2E07A00098563 /* TokenEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenEntry.swift; sourceTree = "<group>"; };
 		9E176F0A27F2E1B600098563 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9E176F0B27F2E1B600098563 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
-		9E176F1027F2E6CF00098563 /* ParametersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersService.swift; sourceTree = "<group>"; };
+		9E176F1227F300F400098563 /* ParametersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParametersService.swift; path = LabirintMini/Services/ParametersService.swift; sourceTree = SOURCE_ROOT; };
 		9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
 		9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
 		9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
@@ -396,8 +396,8 @@
 		9E176F0927F2E1B600098563 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9E176F1227F300F400098563 /* ParametersService.swift */,
 				9E176F0B27F2E1B600098563 /* KeyChainService.swift */,
-				9E176F1027F2E6CF00098563 /* ParametersService.swift */,
 				9E176F0A27F2E1B600098563 /* UserService.swift */,
 			);
 			name = Services;
@@ -938,7 +938,6 @@
 				9E0AA23F27DFB42A0004EBD9 /* EnterButtonView.swift in Sources */,
 				9E176EFC27F218F300098563 /* CodeEnterCell.swift in Sources */,
 				9EBC23AB27CE413A00AB1BA3 /* PromoViewInput.swift in Sources */,
-				9E176F1127F2E6CF00098563 /* ParametersService.swift in Sources */,
 				9E176F0727F2E07A00098563 /* TokenEntry.swift in Sources */,
 				9EBC23B327CE41C000AB1BA3 /* MyLabRouterInput.swift in Sources */,
 				9E0AA25027E0B8720004EBD9 /* UIViewController.swift in Sources */,
@@ -1007,6 +1006,7 @@
 				9EBC23B727CE420100AB1BA3 /* MyLabViewController.swift in Sources */,
 				9EBC23A527CE40DB00AB1BA3 /* PromoRouterInput.swift in Sources */,
 				9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */,
+				9E176F1327F300F500098563 /* ParametersService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

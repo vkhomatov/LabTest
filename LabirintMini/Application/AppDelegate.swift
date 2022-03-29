@@ -54,7 +54,7 @@ extension AppDelegate {
         if let savedToken = try? keyChainService.readToken(), !update {
             debugPrint("Saved token from KeyChain = \(savedToken)")
         } else {
-            userService.getToken(with: parametersService.makeParams(add: [:]))
+            userService.getToken(with: parametersService.makeParams(add: ["token" : ""]))
                 .onCompleted { [weak self] data in
                     self?.tokenEntity = data
                 }.onError { error in
