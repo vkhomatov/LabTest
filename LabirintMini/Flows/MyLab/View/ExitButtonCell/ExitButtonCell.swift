@@ -12,27 +12,27 @@ struct ExitButtonCellViewModel {
     let title: String
 }
 
-class ExitButtonCell: UITableViewCell, ConfigurableItem {
+final class ExitButtonCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
-    typealias Model = MyLabCellViewModel
+    internal typealias Model = MyLabCellViewModel
     
     // MARK: - Constants
     
-    enum Constants {
+    private enum Constants {
         static let fontSize: CGFloat = 16
     }
 
     // MARK: - IBOutlets
 
-    @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet private weak var exitButton: UIButton!
     
     // MARK: - Properites
     
     var exitButtonCallback: (() -> Void)?
 
-    // MARK: - System Methods
+    // MARK: - UITableViewCell
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +40,7 @@ class ExitButtonCell: UITableViewCell, ConfigurableItem {
         exitButtonSetup()
     }
     
-    // MARK: - Internal Methods
+    // MARK: - Internal
     
     func configure(with model: Model) {
         exitButton.setTitle(model.title, for: .normal)

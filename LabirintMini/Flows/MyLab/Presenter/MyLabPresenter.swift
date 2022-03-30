@@ -42,12 +42,12 @@ final class MyLabPresenter {
 extension MyLabPresenter: MyLabViewOutput {
     
     func viewLoaded() {
-        view?.setupViewState(with: state)
+        view?.configureViewState(with: state)
     }
     
     func exitButtonPush() {
         self.state = .logout(.init(headerViewModel: .init(from: userModel), contentViewModel: .init(from: userModel)))
-        view?.setupViewState(with: state)
+        view?.configureViewState(with: state)
     }
     
     func enterButtonPush() {

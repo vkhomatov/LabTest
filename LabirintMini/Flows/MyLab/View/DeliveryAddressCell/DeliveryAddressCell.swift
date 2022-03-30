@@ -8,18 +8,15 @@
 import UIKit
 import ReactiveDataDisplayManager
 
-
-// MARK: - CellViewModel
-
-class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
+final class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
 
     // MARK: - Typealias
 
-    typealias Model = MyLabCellViewModel
+    internal typealias Model = MyLabCellViewModel
     
     // MARK: - Constants
     
-    enum Constants {
+    private enum Constants {
         static let bigFont: CGFloat = 17
         static let smallFont: CGFloat = 13
         static let cornerRadius: CGFloat = 6
@@ -27,24 +24,21 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - IBOutlets
 
-    @IBOutlet weak var deliveryTitleLabel: UILabel!
-    @IBOutlet weak var deliveryAddressLabel: UILabel!
+    @IBOutlet private weak var deliveryTitleLabel: UILabel!
+    @IBOutlet private weak var deliveryAddressLabel: UILabel!
     
     // MARK: - Properites
     
     var didPushCallback: (() -> Void)?
     
-    // MARK: - System Methods
+    // MARK: - UITableViewCell
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
-        configureDeiveryTitleLabel()
-        configureDeliveryAdressLabel()
-        configureGestureRecognizer()
     }
 
-    // MARK: - Internal Methods
+    // MARK: - Internal
     
     func configure(with model: Model) {
         deliveryTitleLabel.text = model.title
@@ -64,6 +58,13 @@ class DeliveryAddressCell: UITableViewCell, ConfigurableItem {
 private extension DeliveryAddressCell {
 
     func setupInitialState() {
+        configureCell()
+        configureDeiveryTitleLabel()
+        configureDeliveryAdressLabel()
+        configureGestureRecognizer()
+    }
+    
+    func configureCell() {
         selectionStyle = .gray
         accessoryType = .disclosureIndicator
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)

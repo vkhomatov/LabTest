@@ -13,11 +13,11 @@ final class LoginDiscountCodePresenter {
 
     weak var view: LoginDiscountCodeInput?
     var router: LoginDiscountCodeRouterInput?
-    var discountCode: String?
+    private var discountCode: String?
 
 }
 
-// MARK: - LabirintViewOutput
+// MARK: - LoginDiscountCodeOutput
 
 extension LoginDiscountCodePresenter: LoginDiscountCodeOutput {
 

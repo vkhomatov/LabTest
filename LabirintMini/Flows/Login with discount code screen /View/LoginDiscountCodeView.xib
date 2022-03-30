@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qxi-ao-v5G">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qxi-ao-v5G">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -33,17 +33,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-NF-yfd" customClass="EnterButtonView" customModule="LabirintMini" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="797" width="414" height="99"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-BG-Sx2">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-BG-Sx2" customClass="LongButton" customModule="LabirintMini" customModuleProvider="target">
                             <rect key="frame" x="15" y="30" width="384" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="kNA-kg-9kV"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="enterButtonTouchDown:" destination="cvf-NF-yfd" eventType="touchDown" id="1MV-bn-x2c"/>
-                                <action selector="enterButtonTouchUp:" destination="cvf-NF-yfd" eventType="touchUpInside" id="Ysl-KN-kQe"/>
-                                <action selector="enterButtonTouchUpOutside:" destination="cvf-NF-yfd" eventType="touchUpOutside" id="cTu-YJ-ky0"/>
-                            </connections>
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="jSr-fm-1aK"/>

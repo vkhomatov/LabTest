@@ -24,7 +24,7 @@ public enum Assets {
   }
   public enum MyLab {
     public static let closeButton = ImageAsset(name: "MyLab/closeButton")
-    public static let ic = ImageAsset(name: "MyLab/ic")
+    public static let infoIcon = ImageAsset(name: "MyLab/infoIcon")
   }
   public enum TabBar {
     public static let basketActive = ImageAsset(name: "TabBar/basketActive")

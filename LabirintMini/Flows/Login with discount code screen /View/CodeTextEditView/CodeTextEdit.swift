@@ -8,8 +8,8 @@
 import UIKit
 
 enum CodeTextEditState {
-    case yesText(top: CGFloat = -50)
-    case noText(top: CGFloat = 0)
+    case normal
+    case empty
 }
 
 public final class CodeTextEdit: UITextField {
@@ -33,15 +33,15 @@ extension CodeTextEdit {
     func setPlaceHolderPading(_ state: CodeTextEditState) {
         switch state {
 
-        case .noText(let top):
+        case .empty:
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
-                self?.placeholderPadding = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+                self?.placeholderPadding = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
                 self?.layoutIfNeeded()
             })
     
-        case .yesText(let top):
+        case .normal:
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
-                self?.placeholderPadding = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+                self?.placeholderPadding = UIEdgeInsets(top: -50, left: 0, bottom: 0, right: 0)
                 self?.layoutIfNeeded()
             }, completion: { [weak self] _ in
                 self?.placeHolderYesText?()
