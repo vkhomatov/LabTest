@@ -7,36 +7,18 @@
 
 import UIKit
 
-class EnterButtonView: UIView {
-    
-    // MARK: - Constants
-
-    enum Constants {
-        static let greyColor = UIColor(red: 0.616, green: 0.616, blue: 0.616, alpha: 1)
-        static let blueColor = UIColor(red: 0.024, green: 0.314, blue: 0.761, alpha: 1)
-        static let bigFont: CGFloat = 15
-        static let smallFont: CGFloat = 13
-    }
+final class EnterButtonView: UIView {
     
     // MARK: - IBOutlets
 
-    @IBOutlet weak var enterButton: UIButton!
+    @IBOutlet private weak var enterButton: LongButton!
     
-    // MARK: - IBActions
+    // MARK: - Properites
 
-    @IBAction func enterButtonTouchDown(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.greyColor
-    }
-
-    @IBAction func enterButtonTouchUpOutside(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.blueColor
-    }
+    var touchesBegan: (() -> Void)?
+    var touchesEnded: (() -> Void)?
     
-    @IBAction func enterButtonTouchUp(_ sender: UIButton) {
-        enterButton.backgroundColor = Constants.blueColor
-    }
-    
-    // MARK: - System Methods
+    // MARK: - UIView
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,8 +33,18 @@ private extension EnterButtonView {
     
     func setupInitialState() {
         backgroundColor = .none
-        enterButton.isEnabled = false
-        enterButton.setStyle(.enterCode(title: L10n.MyLab.login))
+        setCallbaks()
+        enterButton.setStyle(.login(title: L10n.MyLab.login))
+    }
+    
+    func setCallbaks() {
+        enterButton?.touchesBegan = { [weak self] in
+            self?.touchesBegan?()
+        }
+        
+        enterButton?.touchesEnded = { [weak self] in
+            self?.touchesEnded?()
+        }
     }
     
 }

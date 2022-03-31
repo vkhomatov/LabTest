@@ -51,13 +51,13 @@ final class MyLabPresenter {
 extension MyLabPresenter: MyLabViewOutput {
     
     func viewLoaded() {
-        view?.setupViewState(with: state)
         authByQuery()
+        view?.configureViewState(with: state)
     }
     
     func exitButtonPush() {
         self.state = .logout(.init(headerViewModel: .init(from: userModel), contentViewModel: .init(from: userModel)))
-        view?.setupViewState(with: state)
+        view?.configureViewState(with: state)
     }
     
     func enterButtonPush() {
@@ -81,24 +81,7 @@ private extension MyLabPresenter {
         let discountCode = "0A58-48EE-8006"
         let parametres =  parametersService.makeParams(add: ["token" : token, "code" : discountCode])
         
-        userService.auth(with: parametres)
-            .onCompleted { [weak self] data in
-                self?.userEntity = data
-            }.onError { error in
-                print(error.localizedDescription)
-            }
-    }
-    
-    func authByBody() {
-        guard let _ = try? keyChainService.readToken() else {
-            print("Get a token first")
-            return
-        }
-        
-        let discountCode = "0A58-48EE-8006"
-        let parametres =  parametersService.makeParams(add: ["code" : discountCode])
-        
-        userService.authByBody(with: parametres)
+        userService.login(with: parametres)
             .onCompleted { [weak self] data in
                 self?.userEntity = data
             }.onError { error in

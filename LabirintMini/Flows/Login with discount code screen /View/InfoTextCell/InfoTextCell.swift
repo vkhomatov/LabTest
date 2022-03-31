@@ -12,11 +12,11 @@ struct InfoTextCellViewModel {
     let title: String
 }
 
-class InfoTextCell: UITableViewCell, ConfigurableItem {
+final class InfoTextCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
-    typealias Model = InfoTextCellViewModel
+    internal typealias Model = InfoTextCellViewModel
     
     // MARK: - Constants
     
@@ -26,21 +26,21 @@ class InfoTextCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - IBOutlets
 
-    @IBOutlet weak var infoTextLabel: UILabel!
+    @IBOutlet private weak var infoTextLabel: UILabel!
 
-    // MARK: - System Methods
+    // MARK: - UITableViewCell
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialState()
-        configureInfoTextLabel()
     }
     
-    // MARK: - Internal Methods
+    // MARK: - Internal
 
     func configure(with model: Model) {
         infoTextLabel.text = model.title
     }
+
 }
 
 // MARK: - Configuration
@@ -48,6 +48,11 @@ class InfoTextCell: UITableViewCell, ConfigurableItem {
 private extension InfoTextCell {
 
     func setupInitialState() {
+        configureCell()
+        configureInfoTextLabel()
+    }
+    
+    func configureCell() {
         selectionStyle = .none
         accessoryType = .none
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)

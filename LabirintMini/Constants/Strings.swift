@@ -38,6 +38,8 @@ public enum L10n {
     public static func discountSing(_ p1: Any) -> String {
       return L10n.tr("Localizable", "MyLab.discountSing", String(describing: p1))
     }
+    /// Enter
+    public static let enter = L10n.tr("Localizable", "MyLab.enter")
     /// %@ in fire
     public static func inFire(_ p1: Any) -> String {
       return L10n.tr("Localizable", "MyLab.inFire", String(describing: p1))

@@ -9,11 +9,11 @@ import UIKit
 import ReactiveDataDisplayManager
 
 
-class UnautorizedHeaderView: UITableViewHeaderFooterView {
+final class UnautorizedHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let headerHeight: CGFloat = 208
         static let bigFont: CGFloat = 15
         static let smallFont: CGFloat = 13
@@ -21,15 +21,16 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - IBOutlets
 
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var enterButton: UIButton!
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet private weak var mainLabel: UILabel!
+    @IBOutlet private weak var loginButton: LongButton!
+    @IBOutlet private weak var infoLabel: UILabel!
     
     // MARK: - Properites
     
-    var enterButtonCallback: (() -> Void)?
+    var touchesBegan: (() -> Void)?
+    var touchesEnded: (() -> Void)?
     
-    // MARK: - System Methods
+    // MARK: - UITableViewHeaderFooterView
     
     class func instanceFromNib() -> UIView? {
         return UINib(nibName: "UnautorizedHeaderView", bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
@@ -37,16 +38,21 @@ class UnautorizedHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureMainLabel()
-        configureInfolabel()
-        configureEnterbutton()
+        configureInitialState()
     }
-}
 
+}
 
 // MARK: - Configuration
 
 private extension UnautorizedHeaderView {
+    
+    func configureInitialState() {
+        configureMainLabel()
+        configureInfolabel()
+        setCallbaks()
+        loginButton.setStyle(.enterCode(title: L10n.MyLab.enter))
+    }
 
     func configureMainLabel() {
         mainLabel.numberOfLines = 2
@@ -68,41 +74,27 @@ private extension UnautorizedHeaderView {
             infoText.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: NSRange.init(location: 38, length: 11))
             infoText.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: NSRange.init(location: 52, length: 9))
         }
-
+    
         infoLabel.attributedText = infoText
     }
     
-    func configureEnterbutton() {
-        enterButton.setStyle(.login(title: L10n.MyLab.login))
+    func setCallbaks() {
+        loginButton?.touchesBegan = { [weak self] in
+            self?.touchesBegan?()
+        }
+        
+        loginButton?.touchesEnded = { [weak self] in
+            self?.touchesEnded?()
+        }
     }
     
-}
-
-
-// MARK: - Actions
-
-private extension UnautorizedHeaderView {
-
-    @IBAction func enterButtonTouchDown(_ sender: UIButton) {
-        enterButton.backgroundColor = ColorAssets.greyColor.color
-    }
-
-    @IBAction func enterButtonTouchUpOutside(_ sender: UIButton) {
-        enterButton.backgroundColor = ColorAssets.whiteColor.color
-    }
-    
-    @IBAction func enterButtonTouchUp(_ sender: UIButton) {
-        enterButton.backgroundColor = ColorAssets.whiteColor.color
-        enterButtonCallback?()
-    }
-
 }
 
 final class UnautorizedHeaderGenerator: TableHeaderGenerator {
     
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let headerHeight: CGFloat = 208
     }
     
@@ -114,11 +106,11 @@ final class UnautorizedHeaderGenerator: TableHeaderGenerator {
 
     private lazy var header: UnautorizedHeaderView? = UnautorizedHeaderView.instanceFromNib() as? UnautorizedHeaderView
     
-    // MARK: - Inicialization
+    // MARK: - Initialization
     
     override init() {
         super.init()
-        header?.enterButtonCallback = { [weak self] in
+        header?.touchesEnded = { [weak self] in
             self?.viewButtonCallback?()
         }
     }

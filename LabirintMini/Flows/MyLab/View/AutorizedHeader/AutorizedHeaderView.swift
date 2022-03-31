@@ -26,15 +26,15 @@ struct MyLabAuthorizedHeaderDataModel {
     }
 }
 
-class AutorizedHeaderView: UITableViewHeaderFooterView {
+final class AutorizedHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - Typealias
 
-    typealias Model = MyLabAuthorizedHeaderDataModel
+    internal typealias Model = MyLabAuthorizedHeaderDataModel
     
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let headerHeight: CGFloat = 208
         static let bigFont: CGFloat = 27
         static let middleFont: CGFloat = 14
@@ -44,17 +44,17 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - IBOutlets
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var discountTitleLabel: UILabel!
-    @IBOutlet weak var discountLabel: UILabel!
-    @IBOutlet weak var discountInfoLabel: UILabel!
-    @IBOutlet weak var balanceTitleLabel: UILabel!
-    @IBOutlet weak var balanceLabel: UILabel!
-    @IBOutlet weak var ballanceInfoImageView: UIImageView!
-    @IBOutlet weak var discountInfoImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var numberLabel: UILabel!
+    @IBOutlet private weak var discountTitleLabel: UILabel!
+    @IBOutlet private weak var discountLabel: UILabel!
+    @IBOutlet private weak var discountInfoLabel: UILabel!
+    @IBOutlet private weak var balanceTitleLabel: UILabel!
+    @IBOutlet private weak var balanceLabel: UILabel!
+    @IBOutlet private weak var ballanceInfoImageView: UIImageView!
+    @IBOutlet private weak var discountInfoImageView: UIImageView!
     
-    // MARK: - System Methods
+    // MARK: - UITableViewHeaderFooterView
     
     class func instanceFromNib() -> UIView? {
         return UINib(nibName: "AutorizedHeaderView", bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
@@ -62,17 +62,10 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureNameLabel()
-        configureNumberLabel()
-        configureDiscountTitleLabel()
-        configureDiscountLabel()
-        configureDiscountInfoLabel()
-        configureBalanceTitleLabel()
-        configureBalanceLabel()
-        configureImages()
+        configureInitialState()
     }
     
-    // MARK: - Internal Methods
+    // MARK: - Internal
     
     func configure(with model: Model) {
         nameLabel.text = model.name
@@ -86,6 +79,17 @@ class AutorizedHeaderView: UITableViewHeaderFooterView {
 // MARK: - Configuration
 
 private extension AutorizedHeaderView {
+    
+    func configureInitialState() {
+        configureNameLabel()
+        configureNumberLabel()
+        configureDiscountTitleLabel()
+        configureDiscountLabel()
+        configureDiscountInfoLabel()
+        configureBalanceTitleLabel()
+        configureBalanceLabel()
+        configureImages()
+    }
 
     func configureNameLabel() {
         nameLabel.numberOfLines = 1
@@ -140,14 +144,14 @@ final class AutorizedHeaderGenerator: TableHeaderGenerator {
     
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let headerHeight: CGFloat = 200
     }
 
     // MARK: - Private Properties
 
     private lazy var header: AutorizedHeaderView? = AutorizedHeaderView.instanceFromNib() as? AutorizedHeaderView
-    var model: MyLabAuthorizedHeaderDataModel
+    private var model: MyLabAuthorizedHeaderDataModel
     
     // MARK: - Initialization
     

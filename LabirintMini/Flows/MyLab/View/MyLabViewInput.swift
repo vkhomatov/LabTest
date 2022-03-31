@@ -11,6 +11,6 @@ protocol MyLabViewInput: AnyObject {
 
     func setupInitialState()
     
-    func setupViewState(with state: LoginState)
+    func configureViewState(with state: LoginState)
 
 }

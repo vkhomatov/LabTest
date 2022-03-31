@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nr-nr-2NP">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nr-nr-2NP" customClass="CodeTextEditView" customModule="LabirintMini" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код скидки" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQN-Q0-s9k" customClass="CodeTextEdit" customModule="LabirintMini" customModuleProvider="target">
@@ -27,8 +27,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                 <connections>
-                                    <action selector="codeTextFieldEditinDidEnd:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="FwK-Qy-RQh"/>
-                                    <action selector="codeTextFieldEditingDidBegin:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="fI3-Ou-7Tc"/>
+                                    <action selector="codeTextFieldEditingDidBegin:" destination="6nr-nr-2NP" eventType="editingDidBegin" id="6gr-l1-MgF"/>
+                                    <action selector="codeTextFieldEditingDidEnd:" destination="6nr-nr-2NP" eventType="editingDidEnd" id="C1V-cJ-kFw"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Ваш код скидки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFp-2F-uc6" userLabel="Label">
@@ -51,6 +51,10 @@
                             <constraint firstItem="rQN-Q0-s9k" firstAttribute="top" secondItem="6nr-nr-2NP" secondAttribute="top" constant="32" id="rga-JF-Tdx"/>
                             <constraint firstItem="rQN-Q0-s9k" firstAttribute="top" secondItem="pFp-2F-uc6" secondAttribute="bottom" constant="4.5" id="tsw-Q1-F8i"/>
                         </constraints>
+                        <connections>
+                            <outlet property="codeTextField" destination="rQN-Q0-s9k" id="d0C-wr-QZ5"/>
+                            <outlet property="discountCodeTitle" destination="pFp-2F-uc6" id="Gab-hq-azN"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>
@@ -62,8 +66,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="codeTextField" destination="rQN-Q0-s9k" id="Zrc-XW-NqX"/>
-                <outlet property="discountCodeTitle" destination="pFp-2F-uc6" id="aOg-3c-S0f"/>
+                <outlet property="codeTextEditView" destination="6nr-nr-2NP" id="I8l-bt-w0m"/>
             </connections>
             <point key="canvasLocation" x="185.50724637681162" y="74.665178571428569"/>
         </tableViewCell>

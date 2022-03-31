@@ -32,7 +32,6 @@
 		9E12D29527D1CDC2000F1CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E12D29727D1CDC2000F1CF3 /* Localizable.strings */; };
 		9E176EFC27F218F300098563 /* CodeEnterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA22E27DFB42A0004EBD9 /* CodeEnterCell.swift */; };
 		9E176EFD27F222DB00098563 /* CodeEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */; };
-		9E176F0027F2D57400098563 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176EFE27F2D57400098563 /* Bundle.swift */; };
 		9E176F0627F2E07A00098563 /* TokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0327F2E07A00098563 /* TokenEntity.swift */; };
 		9E176F0727F2E07A00098563 /* TokenEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0427F2E07A00098563 /* TokenEntry.swift */; };
 		9E176F0D27F2E1B600098563 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0A27F2E1B600098563 /* UserService.swift */; };
@@ -42,6 +41,8 @@
 		9E176F1A27F30BFA00098563 /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1627F30BFA00098563 /* AuthEntity.swift */; };
 		9E176F1B27F30BFA00098563 /* UserEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1727F30BFA00098563 /* UserEntry.swift */; };
 		9E176F1C27F30BFA00098563 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1827F30BFA00098563 /* UserEntity.swift */; };
+		9E176F2727F4389B00098563 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F2627F4389B00098563 /* UINavigationController.swift */; };
+		9E176F2927F43E8B00098563 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F2827F43E8B00098563 /* UINavigationItem.swift */; };
 		9E3C491727D35F6D00F4D9E6 /* UnautorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */; };
 		9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */; };
 		9E3C491B27D3659E00F4D9E6 /* AutorizedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */; };
@@ -57,7 +58,7 @@
 		9E5B1C3727EC9CC3004ADB32 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C3627EC9CC3004ADB32 /* LoginState.swift */; };
 		9E5B1C3C27ED758E004ADB32 /* colorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E5B1C3B27ED758E004ADB32 /* colorAssets.xcassets */; };
 		9E5B1C4027ED8035004ADB32 /* colorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B1C3F27ED8035004ADB32 /* colorAssets.swift */; };
-		9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91EE27DB3061003988F1 /* UIButton.swift */; };
+		9E5CCE3227F448260084CA63 /* CodeTextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CCE3127F448260084CA63 /* CodeTextEditView.swift */; };
 		9EAE91F127DB9941003988F1 /* MyLabViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE91F027DB9941003988F1 /* MyLabViewBuilder.swift */; };
 		9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */; };
 		9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */; };
@@ -101,6 +102,11 @@
 		9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */; };
 		9EBC23C327CE47E900AB1BA3 /* CatalogViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */; };
 		9EC960E227D257EC00FB9787 /* MainTaBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC960E127D257EC00FB9787 /* MainTaBar.swift */; };
+		9ED735FB27F5AD5A00C72319 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED735F827F5AD5A00C72319 /* UserService.swift */; };
+		9ED735FC27F5AD5A00C72319 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED735F927F5AD5A00C72319 /* KeyChainService.swift */; };
+		9ED735FD27F5AD5A00C72319 /* ParametersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED735FA27F5AD5A00C72319 /* ParametersService.swift */; };
+		9ED7360027F5AD6200C72319 /* LongButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED735FF27F5AD6200C72319 /* LongButton.swift */; };
+		9ED7360227F5AD7B00C72319 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED7360127F5AD7B00C72319 /* Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,7 +138,6 @@
 		9E12D28C27D0E5C1000F1CF3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9E12D28D27D0E5C1000F1CF3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9E176EFE27F2D57400098563 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bundle.swift; path = ../../../Desktop/1/Extensions/Bundle.swift; sourceTree = "<group>"; };
 		9E176F0327F2E07A00098563 /* TokenEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenEntity.swift; sourceTree = "<group>"; };
 		9E176F0427F2E07A00098563 /* TokenEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenEntry.swift; sourceTree = "<group>"; };
 		9E176F0A27F2E1B600098563 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -142,6 +147,8 @@
 		9E176F1627F30BFA00098563 /* AuthEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthEntity.swift; path = LabirintMini/Entites/AuthEntity.swift; sourceTree = SOURCE_ROOT; };
 		9E176F1727F30BFA00098563 /* UserEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEntry.swift; path = LabirintMini/Entites/UserEntry.swift; sourceTree = SOURCE_ROOT; };
 		9E176F1827F30BFA00098563 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEntity.swift; path = LabirintMini/Entites/UserEntity.swift; sourceTree = SOURCE_ROOT; };
+		9E176F2627F4389B00098563 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		9E176F2827F43E8B00098563 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		9E3C491627D35F6D00F4D9E6 /* UnautorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnautorizedHeaderView.xib; sourceTree = "<group>"; };
 		9E3C491827D364C200F4D9E6 /* UnautorizedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnautorizedHeaderView.swift; sourceTree = "<group>"; };
 		9E3C491A27D3659E00F4D9E6 /* AutorizedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutorizedHeaderView.xib; sourceTree = "<group>"; };
@@ -157,7 +164,7 @@
 		9E5B1C3627EC9CC3004ADB32 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		9E5B1C3B27ED758E004ADB32 /* colorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colorAssets.xcassets; sourceTree = "<group>"; };
 		9E5B1C3F27ED8035004ADB32 /* colorAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorAssets.swift; sourceTree = "<group>"; };
-		9EAE91EE27DB3061003988F1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		9E5CCE3127F448260084CA63 /* CodeTextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextEditView.swift; sourceTree = "<group>"; };
 		9EAE91F027DB9941003988F1 /* MyLabViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabViewBuilder.swift; sourceTree = "<group>"; };
 		9EBC235C27CE2D8900AB1BA3 /* LabirintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewController.swift; sourceTree = "<group>"; };
 		9EBC235E27CE2DAA00AB1BA3 /* LabirintViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabirintViewInput.swift; sourceTree = "<group>"; };
@@ -201,6 +208,11 @@
 		9EBC23C027CE47D200AB1BA3 /* CatalogViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewInput.swift; sourceTree = "<group>"; };
 		9EBC23C227CE47E900AB1BA3 /* CatalogViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewOutput.swift; sourceTree = "<group>"; };
 		9EC960E127D257EC00FB9787 /* MainTaBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTaBar.swift; sourceTree = "<group>"; };
+		9ED735F827F5AD5A00C72319 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		9ED735F927F5AD5A00C72319 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		9ED735FA27F5AD5A00C72319 /* ParametersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersService.swift; sourceTree = "<group>"; };
+		9ED735FF27F5AD6200C72319 /* LongButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongButton.swift; sourceTree = "<group>"; };
+		9ED7360127F5AD7B00C72319 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		C93EA6D505DF2CCA658F849A /* Pods-LabirintMini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabirintMini.debug.xcconfig"; path = "Target Support Files/Pods-LabirintMini/Pods-LabirintMini.debug.xcconfig"; sourceTree = "<group>"; };
 		F5ECB53148855FE14315F3F3 /* Pods_LabirintMini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabirintMini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -242,7 +254,8 @@
 				9E176F0227F2E07A00098563 /* Entites */,
 				9EBC235327CE283F00AB1BA3 /* Flows */,
 				3C0BA2A5268DCB2F00C47C74 /* Resources */,
-				9E176F0927F2E1B600098563 /* Services */,
+				9ED735F727F5AD5A00C72319 /* Services */,
+				9ED735FE27F5AD6200C72319 /* Reusable */,
 				9E2E274627CFAED100D78244 /* Extensions */,
 				3C0BA29E268DC98F00C47C74 /* Info.plist */,
 			);
@@ -316,9 +329,9 @@
 		9E0AA22927DFB42A0004EBD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9E0AA25127E0CDB50004EBD9 /* CodeTextEdit */,
-				9E0AA25C27E351960004EBD9 /* InfoTextCell */,
+				9E5CCE3027F447F80084CA63 /* CodeTextEditView */,
 				9E0AA22D27DFB42A0004EBD9 /* CodeEnterCell */,
+				9E0AA25C27E351960004EBD9 /* InfoTextCell */,
 				9E0AA22A27DFB42A0004EBD9 /* EnterButtonView */,
 				9E0AA23827DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift */,
 				9E0AA23027DFB42A0004EBD9 /* LoginDiscountCodeOutput.swift */,
@@ -362,14 +375,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		9E0AA25127E0CDB50004EBD9 /* CodeTextEdit */ = {
-			isa = PBXGroup;
-			children = (
-				9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */,
-			);
-			path = CodeTextEdit;
-			sourceTree = "<group>";
-		};
 		9E0AA25C27E351960004EBD9 /* InfoTextCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,23 +410,13 @@
 			path = Application/Entites;
 			sourceTree = "<group>";
 		};
-		9E176F0927F2E1B600098563 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				9E176F1227F300F400098563 /* ParametersService.swift */,
-				9E176F0B27F2E1B600098563 /* KeyChainService.swift */,
-				9E176F0A27F2E1B600098563 /* UserService.swift */,
-			);
-			name = Services;
-			path = ../../Desktop/1/Services;
-			sourceTree = "<group>";
-		};
 		9E2E274627CFAED100D78244 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9E176EFE27F2D57400098563 /* Bundle.swift */,
-				9EAE91EE27DB3061003988F1 /* UIButton.swift */,
+				9ED7360127F5AD7B00C72319 /* Bundle.swift */,
 				9E0AA24F27E0B8720004EBD9 /* UIViewController.swift */,
+				9E176F2627F4389B00098563 /* UINavigationController.swift */,
+				9E176F2827F43E8B00098563 /* UINavigationItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -477,6 +472,15 @@
 				9E5B1C3B27ED758E004ADB32 /* colorAssets.xcassets */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		9E5CCE3027F447F80084CA63 /* CodeTextEditView */ = {
+			isa = PBXGroup;
+			children = (
+				9E5CCE3127F448260084CA63 /* CodeTextEditView.swift */,
+				9E0AA25227E0CDE10004EBD9 /* CodeTextEdit.swift */,
+			);
+			path = CodeTextEditView;
 			sourceTree = "<group>";
 		};
 		9EBC235327CE283F00AB1BA3 /* Flows */ = {
@@ -780,6 +784,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9ED735F727F5AD5A00C72319 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9ED735F827F5AD5A00C72319 /* UserService.swift */,
+				9ED735F927F5AD5A00C72319 /* KeyChainService.swift */,
+				9ED735FA27F5AD5A00C72319 /* ParametersService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9ED735FE27F5AD6200C72319 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				9ED735FF27F5AD6200C72319 /* LongButton.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -971,7 +993,8 @@
 				9E5B1C3727EC9CC3004ADB32 /* LoginState.swift in Sources */,
 				9E176F1B27F30BFA00098563 /* UserEntry.swift in Sources */,
 				9E5B1C3527EC9C3C004ADB32 /* MyLabRowTypes.swift in Sources */,
-				9E176F0D27F2E1B600098563 /* UserService.swift in Sources */,
+				9E5CCE3227F448260084CA63 /* CodeTextEditView.swift in Sources */,
+				9ED735FB27F5AD5A00C72319 /* UserService.swift in Sources */,
 				9EBC239127CE3A5C00AB1BA3 /* CatalogRouterInput.swift in Sources */,
 				9E176F0627F2E07A00098563 /* TokenEntity.swift in Sources */,
 				9EBC239727CE3FED00AB1BA3 /* BasketRouterInput.swift in Sources */,
@@ -981,8 +1004,9 @@
 				3C0BA291268DC98D00C47C74 /* AppDelegate.swift in Sources */,
 				9E0AA25327E0CDE10004EBD9 /* CodeTextEdit.swift in Sources */,
 				9EBC23C127CE47D200AB1BA3 /* CatalogViewInput.swift in Sources */,
-				9E176F0027F2D57400098563 /* Bundle.swift in Sources */,
 				9E0AA24B27DFB42A0004EBD9 /* LoginDiscountCodeRouterInput.swift in Sources */,
+				9ED7360027F5AD6200C72319 /* LongButton.swift in Sources */,
+				9E176F2727F4389B00098563 /* UINavigationController.swift in Sources */,
 				9E0AA25F27E351960004EBD9 /* InfoTextCell.swift in Sources */,
 				9EBC23A127CE40A900AB1BA3 /* PromoConfigurator.swift in Sources */,
 				9E0AA24927DFB42A0004EBD9 /* LoginDiscountCodeViewController.swift in Sources */,
@@ -990,7 +1014,7 @@
 				9E0AA24A27DFB42A0004EBD9 /* LoginDiscountCodeConfigurator.swift in Sources */,
 				9EBC23A327CE40C700AB1BA3 /* PromoRouter.swift in Sources */,
 				9E12D28F27D0E5C1000F1CF3 /* Assets.swift in Sources */,
-				9E176F0E27F2E1B600098563 /* KeyChainService.swift in Sources */,
+				9ED735FC27F5AD5A00C72319 /* KeyChainService.swift in Sources */,
 				9EBC236327CE2FE300AB1BA3 /* LabirintPresenter.swift in Sources */,
 				9EBC238727CE392B00AB1BA3 /* MainTabBarPresenter.swift in Sources */,
 				9E3C492627D3737700F4D9E6 /* DeliveryAddressCell.swift in Sources */,
@@ -998,11 +1022,13 @@
 				9EBC238927CE394C00AB1BA3 /* MainTabBarControllerInput.swift in Sources */,
 				9E12D29027D0E5C1000F1CF3 /* Fonts.swift in Sources */,
 				9EAE91F127DB9941003988F1 /* MyLabViewBuilder.swift in Sources */,
+				9ED735FD27F5AD5A00C72319 /* ParametersService.swift in Sources */,
 				9EBC235F27CE2DAA00AB1BA3 /* LabirintViewInput.swift in Sources */,
 				9EBC23BB27CE424200AB1BA3 /* MyLabViewOutput.swift in Sources */,
 				9EBC238327CE38EC00AB1BA3 /* MainTabBarRouter.swift in Sources */,
 				9EBC238527CE390F00AB1BA3 /* MainTabBarRouterInput.swift in Sources */,
 				9E5B1C2027E9FD9B004ADB32 /* UserModel.swift in Sources */,
+				9ED7360227F5AD7B00C72319 /* Bundle.swift in Sources */,
 				9E3C492B27D375A300F4D9E6 /* ExitButtonCell.swift in Sources */,
 				9EBC23BD27CE479100AB1BA3 /* CatalogPresenter.swift in Sources */,
 				9EBC239527CE3FD400AB1BA3 /* BasketRouter.swift in Sources */,
@@ -1016,13 +1042,13 @@
 				9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */,
 				9EBC239F27CE407800AB1BA3 /* BasketViewOutput.swift in Sources */,
 				9EBC23A927CE411700AB1BA3 /* PromoViewController.swift in Sources */,
+				9E176F2927F43E8B00098563 /* UINavigationItem.swift in Sources */,
 				9EBC239B27CE402B00AB1BA3 /* BasketViewController.swift in Sources */,
 				9E0AA24C27DFB42A0004EBD9 /* LoginDiscountCodeRouter.swift in Sources */,
 				9EBC236527CE339A00AB1BA3 /* LabirintRouter.swift in Sources */,
 				9EBC23B727CE420100AB1BA3 /* MyLabViewController.swift in Sources */,
 				9EBC23A527CE40DB00AB1BA3 /* PromoRouterInput.swift in Sources */,
 				9E3C491927D364C200F4D9E6 /* UnautorizedHeaderView.swift in Sources */,
-				9E176F1327F300F500098563 /* ParametersService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
