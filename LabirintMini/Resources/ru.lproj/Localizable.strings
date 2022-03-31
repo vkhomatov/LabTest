@@ -30,6 +30,7 @@
 "MyLab.storeInformation" = "Информация о магазине";
 "MyLab.logout" = "Выход";
 "MyLab.login" = "Войти";
+"MyLab.enter" = "Вход";
 "MyLab.signInInfo" = "Войдите, чтобы получить все позможности профиля";
 "MyLab.signInAgree" = "Входя или регистрируясь, я соглашаюсь с условиями и правилами";
 "MyLab.discount" = "Скидка";

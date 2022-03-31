@@ -13,16 +13,16 @@ final class LoginDiscountCodeViewController: UIViewController {
     // MARK: - IBOutlet
 
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet weak var enterButtonView: EnterButtonView!
+    @IBOutlet private weak var enterButtonView: EnterButtonView!
     
     // MARK: - NSLayoutConstraint
     
-    @IBOutlet weak var enterButtonViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var enterButtonViewBottomConstraint: NSLayoutConstraint!
 
     // MARK: - Properties
 
     var output: LoginDiscountCodeOutput?
-    let notificationCenter = NotificationCenter.default
+    private let notificationCenter = NotificationCenter.default
     
     // MARK: - Private Properties
 
@@ -39,26 +39,26 @@ final class LoginDiscountCodeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        configureNavBar()
+        navigationController?.whitekNavBar(title: L10n.MyLab.discountCodeTitle)
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(notificationCenter)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(true)
         tabBarController?.tabBar.isHidden = false
     }
 
 }
 
-// MARK: - LabirintViewInput
+// MARK: - LoginDiscountCodeInput
 
 extension LoginDiscountCodeViewController: LoginDiscountCodeInput {
     
-    func setupInitialState() {
+    private func setupInitialState() {
         configureView()
         configureTableView()
         configureCells()
-        configureNavBar()
-        configureBarButtonItem()
+        navigationController?.whitekNavBar(title: L10n.MyLab.discountCodeTitle)
+        navigationItem.closeBarButtonItem(target: self, action: #selector(closeModule))
         setupKeyboardNotificaition()
     }
     
@@ -80,33 +80,12 @@ private extension LoginDiscountCodeViewController {
         tableView.keyboardDismissMode = .onDrag
     }
     
-    func configureBarButtonItem() {
-        let closeButton = UIButton(type: .custom)
-        closeButton.backgroundColor = .clear
-        closeButton.setImage(Assets.MyLab.closeButton.image, for: .normal)
-        closeButton.frame = CGRect(x: 0, y: 0, width: 19, height: 19)
-        closeButton.addTarget(self, action: #selector(closeCodeModule), for: .touchUpInside)
-        let barButton = UIBarButtonItem(customView: closeButton)
-        navigationItem.rightBarButtonItem = barButton
-    }
-    
-    func configureNavBar() {
-        navigationController?.navigationBar.barStyle = .default
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationItem.title = L10n.MyLab.discountCodeTitle
-        navigationItem.hidesBackButton = true
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
-    }
-    
     func setupKeyboardNotificaition() {
         notificationCenter.addObserver(self, selector: #selector(keyboardWillBeShown(note:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func configureCells() {
-        
         let infoTextCellModel = InfoTextCellViewModel(title: L10n.MyLab.discountCodeInfo)
         let infoTextCellGenerator =  BaseNonReusableCellGenerator<InfoTextCell>(with: infoTextCellModel)
         adapter.addCellGenerator(infoTextCellGenerator)
@@ -122,18 +101,16 @@ private extension LoginDiscountCodeViewController {
         codeEnterCellGenerator.cell?.editingDidEnd = { [weak self] text in
             self?.output?.editingDidEnd(text)
         }
-        
         adapter.forceRefill()
-        
     }
     
 }
 
-// MARK: -  @objc Methods
+// MARK: -  Actions
 
 private extension LoginDiscountCodeViewController {
     
-    @objc func closeCodeModule() {
+    @objc func closeModule() {
         output?.closeModule()
     }
     

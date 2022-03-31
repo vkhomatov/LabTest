@@ -28,6 +28,7 @@
 "MyLab.storeInformation" = "Store Information";
 "MyLab.logout" = "Logout";
 "MyLab.login" = "Login";
+"MyLab.enter" = "Enter";
 "MyLab.signInInfo" = "Sign in to get all the features of the profile";
 "MyLab.signInAgree" = "By logging in or registering, I agree with terms and conditions";
 "MyLab.discount" = "Discount";

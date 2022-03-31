@@ -78,15 +78,15 @@ struct MyLabCellViewModel {
 
 // MARK: - CellClass
 
-class MyLabStandartCell: UITableViewCell, ConfigurableItem {
+final class MyLabStandartCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - Typealias
 
-    typealias Model = MyLabCellViewModel
+    internal typealias Model = MyLabCellViewModel
 
     // MARK: - Constants
     
-    enum Constants {
+    private enum Constants {
         static let bigFont: CGFloat = 17
         static let smallFont: CGFloat = 14
         static let cornerRadius: CGFloat = 6
@@ -94,24 +94,21 @@ class MyLabStandartCell: UITableViewCell, ConfigurableItem {
     
     // MARK: - IBOutlets
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var valueLabel: UILabel!
     
     // MARK: - Properites
     
     var didPushCallback: (() -> Void)?
     
-    // MARK: - System Methods
+    // MARK: - UITableViewCell
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupInitialState()
-        configureTitleLabel()
-        configureValueLabel()
         configureGestureRecognizer()
     }
 
-    // MARK: - Internal Methods
+    // MARK: - Internal
 
     func configure(with model: Model) {
         titleLabel.text = model.title
@@ -138,6 +135,13 @@ class MyLabStandartCell: UITableViewCell, ConfigurableItem {
 private extension MyLabStandartCell {
 
     func setupInitialState() {
+        configureCell()
+        configureTitleLabel()
+        configureValueLabel()
+        configureGestureRecognizer()
+    }
+    
+    func configureCell() {
         selectionStyle = .gray
         accessoryType = .disclosureIndicator
         separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero)
@@ -154,7 +158,6 @@ private extension MyLabStandartCell {
         valueLabel.numberOfLines = 1
         valueLabel?.font = .systemFont(ofSize: Constants.smallFont)
         valueLabel?.textColor = ColorAssets.labelRedColor.color
-
     }
     
     func configureGestureRecognizer() {

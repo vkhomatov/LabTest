@@ -13,7 +13,7 @@ final class LoginDiscountCodeRouter {
 
 }
 
-// MARK: - LabirintRouterInput
+// MARK: - LoginDiscountCodeRouterInput
 
 extension LoginDiscountCodeRouter: LoginDiscountCodeRouterInput {
     

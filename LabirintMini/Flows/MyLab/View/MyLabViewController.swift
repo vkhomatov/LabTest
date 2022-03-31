@@ -17,7 +17,7 @@ final class MyLabViewController: UIViewController {
     
     // MARK: - NSLayoutConstraints
 
-    @IBOutlet weak var blackViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var blackViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: - Private Properties
 
@@ -27,7 +27,7 @@ final class MyLabViewController: UIViewController {
     // MARK: - Properties
 
     var output: MyLabViewOutput?
-    var viewBuilder = MyLabViewBuilder()
+    private var viewBuilder = MyLabViewBuilder()
     
     // MARK: - UIViewController
 
@@ -43,28 +43,12 @@ final class MyLabViewController: UIViewController {
 
 private extension MyLabViewController {
     
-    func setupTableView() {
+    func configureTableView() {
         tableView.backgroundColor = .clear
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.keyboardDismissMode = .onDrag
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 1))
-    }
-    
-}
-
-// MARK: - MyLabViewInput
-
-extension MyLabViewController: MyLabViewInput {
-
-    func setupViewState(with state: LoginState) {
-        adapter.clearHeaderGenerators()
-        adapter.clearCellGenerators()
-        let header = viewBuilder.makeHeaderGenerator(with: state)
-        let cells = viewBuilder.makeCellsContent(with: state)
-        adapter.addSectionHeaderGenerator(header)
-        adapter.addCellGenerators(cells)
-        adapter.forceRefill()
     }
     
     func setBaseCellCallbacks() {
@@ -79,9 +63,25 @@ extension MyLabViewController: MyLabViewInput {
         }
     }
     
+}
+
+// MARK: - MyLabViewInput
+
+extension MyLabViewController: MyLabViewInput {
+    
     func setupInitialState() {
-        setupTableView()
+        configureTableView()
         setBaseCellCallbacks()
     }
-
+    
+    func configureViewState(with state: LoginState) {
+        adapter.clearHeaderGenerators()
+        adapter.clearCellGenerators()
+        let header = viewBuilder.makeHeaderGenerator(with: state)
+        let cells = viewBuilder.makeCellsContent(with: state)
+        adapter.addSectionHeaderGenerator(header)
+        adapter.addCellGenerators(cells)
+        adapter.forceRefill()
+    }
+    
 }

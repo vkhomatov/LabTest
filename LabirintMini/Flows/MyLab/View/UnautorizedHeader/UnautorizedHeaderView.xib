@@ -32,18 +32,13 @@
                             <color key="textColor" systemColor="opaqueSeparatorColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPT-eX-aZS" userLabel="enterButton">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPT-eX-aZS" userLabel="enterButton" customClass="LongButton" customModule="LabirintMini" customModuleProvider="target">
                             <rect key="frame" x="15" y="86" width="290" height="36"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="O1a-b8-bBD"/>
                             </constraints>
                             <state key="normal" title="Вход"/>
-                            <connections>
-                                <action selector="enterButtonTouchDown:" destination="-1" eventType="touchDown" id="91P-Ta-G8B"/>
-                                <action selector="enterButtonTouchUp:" destination="-1" eventType="touchUpInside" id="iae-Rt-LjW"/>
-                                <action selector="enterButtonTouchUpOutside:" destination="-1" eventType="touchUpOutside" id="z0U-bA-0cc"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="labelColor"/>
@@ -73,8 +68,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="enterButton" destination="hPT-eX-aZS" id="YRD-eg-Gch"/>
                 <outlet property="infoLabel" destination="WVm-1R-vZu" id="ear-ax-qlh"/>
+                <outlet property="loginButton" destination="hPT-eX-aZS" id="YRD-eg-Gch"/>
                 <outlet property="mainLabel" destination="2WY-c6-cka" id="dG8-5I-7WI"/>
             </connections>
             <point key="canvasLocation" x="-7.2463768115942031" y="-221.65178571428569"/>
