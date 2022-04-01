@@ -27,6 +27,7 @@ enum UserServiceRoute: UrlRouteProvider {
 protocol UserServiceProtocol {
     func getToken(with parameters: [String : String]) -> Observer<TokenEntity>
     func login(with parameters: [String : String]) -> Observer<UserEntity>
+    func loginWithBody(with parameters: [String : String], code: String) -> Observer<UserEntity>
 }
 
 final class UserService: UserServiceProtocol {
@@ -36,7 +37,7 @@ final class UserService: UserServiceProtocol {
     }
 
     func getToken(with parameters: [String : String]) -> Observer<TokenEntity> {
-        return self.builder
+        return builder
             .route(.get, .token)
             .encode(as: .urlQuery)
             .set(query: parameters)
@@ -45,12 +46,22 @@ final class UserService: UserServiceProtocol {
     }
     
     func login(with parameters: [String : String]) -> Observer<UserEntity> {
-        return self.builder
+        return builder
             .route(.post, .login)
             .encode(as: .urlQuery)
             .set(query: parameters)
             .build()
             .process()
+    }
+    
+    func loginWithBody(with parameters: [String : String], code: String) -> Observer<UserEntity> {
+        let model = AuthEntity(code: code)
+        return builder
+            .route(.post, .login)
+            .encode(as: .formUrl)
+            .set(query: parameters)
+            .build()
+            .process(model)
     }
     
 }

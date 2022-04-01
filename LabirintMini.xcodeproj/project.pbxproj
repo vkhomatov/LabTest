@@ -34,9 +34,6 @@
 		9E176EFD27F222DB00098563 /* CodeEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA22F27DFB42A0004EBD9 /* CodeEnterCell.xib */; };
 		9E176F0627F2E07A00098563 /* TokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0327F2E07A00098563 /* TokenEntity.swift */; };
 		9E176F0727F2E07A00098563 /* TokenEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0427F2E07A00098563 /* TokenEntry.swift */; };
-		9E176F0D27F2E1B600098563 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0A27F2E1B600098563 /* UserService.swift */; };
-		9E176F0E27F2E1B600098563 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F0B27F2E1B600098563 /* KeyChainService.swift */; };
-		9E176F1327F300F500098563 /* ParametersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1227F300F400098563 /* ParametersService.swift */; };
 		9E176F1927F30BFA00098563 /* AuthEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1527F30BFA00098563 /* AuthEntry.swift */; };
 		9E176F1A27F30BFA00098563 /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1627F30BFA00098563 /* AuthEntity.swift */; };
 		9E176F1B27F30BFA00098563 /* UserEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E176F1727F30BFA00098563 /* UserEntry.swift */; };
@@ -140,9 +137,6 @@
 		9E12D29627D1CDC2000F1CF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9E176F0327F2E07A00098563 /* TokenEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenEntity.swift; sourceTree = "<group>"; };
 		9E176F0427F2E07A00098563 /* TokenEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenEntry.swift; sourceTree = "<group>"; };
-		9E176F0A27F2E1B600098563 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		9E176F0B27F2E1B600098563 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
-		9E176F1227F300F400098563 /* ParametersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParametersService.swift; path = LabirintMini/Services/ParametersService.swift; sourceTree = SOURCE_ROOT; };
 		9E176F1527F30BFA00098563 /* AuthEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthEntry.swift; path = LabirintMini/Entites/AuthEntry.swift; sourceTree = SOURCE_ROOT; };
 		9E176F1627F30BFA00098563 /* AuthEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthEntity.swift; path = LabirintMini/Entites/AuthEntity.swift; sourceTree = SOURCE_ROOT; };
 		9E176F1727F30BFA00098563 /* UserEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEntry.swift; path = LabirintMini/Entites/UserEntry.swift; sourceTree = SOURCE_ROOT; };
@@ -1036,7 +1030,6 @@
 				9EBC235D27CE2D8900AB1BA3 /* LabirintViewController.swift in Sources */,
 				9EBC239D27CE405900AB1BA3 /* BasketViewInput.swift in Sources */,
 				9E176F1A27F30BFA00098563 /* AuthEntity.swift in Sources */,
-				9EAE91EF27DB3061003988F1 /* UIButton.swift in Sources */,
 				9E12D28E27D0E5C1000F1CF3 /* Strings.swift in Sources */,
 				9E5B1C4027ED8035004ADB32 /* colorAssets.swift in Sources */,
 				9EBC23B927CE422A00AB1BA3 /* MyLabViewInput.swift in Sources */,

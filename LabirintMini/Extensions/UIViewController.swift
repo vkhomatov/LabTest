@@ -11,7 +11,7 @@ extension UIViewController {
     
     // устанавливает распознователь жестов тап на view
     func hideKeyboardWhenViewTapped() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }

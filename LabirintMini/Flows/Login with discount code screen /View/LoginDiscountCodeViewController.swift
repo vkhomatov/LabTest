@@ -57,9 +57,25 @@ extension LoginDiscountCodeViewController: LoginDiscountCodeInput {
         configureView()
         configureTableView()
         configureCells()
+        setCallbacks()
         navigationController?.whitekNavBar(title: L10n.MyLab.discountCodeTitle)
         navigationItem.closeBarButtonItem(target: self, action: #selector(closeModule))
         setupKeyboardNotificaition()
+    }
+    
+    func setCodeTextEditErrorState() {
+        tableView.separatorColor = ColorAssets.mainRedColor.color
+    }
+    
+    func blockScreen(block: Bool) {
+        view.isUserInteractionEnabled = !block
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+
     }
     
 }
@@ -96,12 +112,20 @@ private extension LoginDiscountCodeViewController {
         
         codeEnterCellGenerator.cell?.editingDidBegin = { [weak self] text in
             self?.output?.editingDidBegin(text)
+            self?.tableView.separatorColor = ColorAssets.greyColor.color
         }
         
         codeEnterCellGenerator.cell?.editingDidEnd = { [weak self] text in
             self?.output?.editingDidEnd(text)
         }
+
         adapter.forceRefill()
+    }
+    
+    func setCallbacks() {
+        enterButtonView.touchesEnded = { [weak self]  in
+            self?.output?.loginButtonPush()
+        }
     }
     
 }

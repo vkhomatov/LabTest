@@ -21,19 +21,20 @@ struct TokenEntry: Codable, RawDecodable {
 struct Region: Codable, RawDecodable  {
     typealias Raw = Json
     
-     let regionId: Int
-     let mo: Bool
-     let regionName: String
-     let lat: Double
-     let lon: Double
-     let phoneSupport: String
-     let deliveryDateString: String
-     let haveNewExw: Bool
-     let haveExWorks: Bool
-     let exwLastUpdate: Int
-     let newExwCount: Int
-     let zipCode: String
-     let isRussia: Int
+     let exWorksCount: Int
+     let regionId: Int //
+     let mo: Bool //
+     let regionName: String //
+     let lat: Double //
+     let lon: Double//
+     let phoneSupport: String //
+     let deliveryDateString: String //
+     let haveNewExw: Bool //
+     let haveExWorks: Bool //
+     let exwLastUpdate: Int //
+     let newExwCount: Int //
+     let zipCode: String //
+     let isRussia: Int //
 }
 
 struct MetaData: Codable, RawDecodable {

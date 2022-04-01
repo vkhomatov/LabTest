@@ -14,5 +14,7 @@ protocol LoginDiscountCodeOutput {
     func editingDidBegin(_ text: String)
     
     func editingDidEnd(_ text: String)
+    
+    func loginButtonPush()
 
 }

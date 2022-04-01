@@ -16,9 +16,6 @@ final class MyLabPresenter {
     private var state: LoginState
     private let userModel: UserModel
     private var userEntity: UserEntity?
-    private var userService: UserServiceProtocol
-    private var keyChainService: KeyChainServiceProtocol
-    private var parametersService: ParametersServiceProtocol
     
     // MARK: - Initialization
 
@@ -39,9 +36,6 @@ final class MyLabPresenter {
                               pickupPoints: 156)
         
         self.state = .logout(.init(headerViewModel: .init(from: userModel), contentViewModel: .init(from: userModel)))
-        self.parametersService = ParametersService()
-        self.userService = UserService()
-        self.keyChainService = KeyChainService()
     }
 
 }
@@ -51,7 +45,6 @@ final class MyLabPresenter {
 extension MyLabPresenter: MyLabViewOutput {
     
     func viewLoaded() {
-        authByQuery()
         view?.configureViewState(with: state)
     }
     
@@ -66,27 +59,6 @@ extension MyLabPresenter: MyLabViewOutput {
     
     func cellPressed(of type: MyLabRowTypes) {
         print("Cell of type \(type) pressed")
-    }
-
-}
-
-private extension MyLabPresenter {
-
-    func authByQuery() {
-        guard let token = try? keyChainService.readToken() else {
-            print("Get a token first")
-            return
-        }
-
-        let discountCode = "0A58-48EE-8006"
-        let parametres =  parametersService.makeParams(add: ["token" : token, "code" : discountCode])
-        
-        userService.login(with: parametres)
-            .onCompleted { [weak self] data in
-                self?.userEntity = data
-            }.onError { error in
-                print(error.localizedDescription)
-            }
     }
 
 }

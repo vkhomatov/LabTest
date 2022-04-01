@@ -7,7 +7,12 @@
 
 import UIKit
 
-class CodeTextEditView: UIView {
+enum TextEditState {
+    case normal
+    case error
+}
+
+final class CodeTextEditView: UIView {
     
     // MARK: - Typealias
 
@@ -44,7 +49,7 @@ class CodeTextEditView: UIView {
         codeTextField.placeholder = model.placeholder
         codeTextField.text = model.text
     }
-    
+
 }
 
 // MARK: - Configuration
@@ -53,6 +58,8 @@ private extension CodeTextEditView {
     
     func setupInitialState() {
         backgroundColor = ColorAssets.whiteColor.color
+        layer.cornerRadius = 8
+        clipsToBounds = false
         configureCodeTextField()
         configureDiscountCodeTitle()
     }
@@ -60,6 +67,8 @@ private extension CodeTextEditView {
     func configureCodeTextField() {
         codeTextField.font = .systemFont(ofSize: Constants.bigFont)
         codeTextField.textColor = ColorAssets.blackColor.color
+        codeTextField.backgroundColor = .clear
+
         
         labelOrigin = discountCodeTitle.frame.origin
         discountCodeTitle.isHidden = codeTextField.text == ""
@@ -69,7 +78,7 @@ private extension CodeTextEditView {
         }
         
         codeTextField.placeHolderYesText = { [weak self] in
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
                 guard let self = self else { return }
                 self.codeTextField.placeholder = .none
                 self.discountCodeTitle.isHidden = false
@@ -83,7 +92,9 @@ private extension CodeTextEditView {
     func configureDiscountCodeTitle() {
         discountCodeTitle.font = .systemFont(ofSize: Constants.bigFont)
         discountCodeTitle.text = L10n.MyLab.discountCode
+        discountCodeTitle.backgroundColor = .clear
     }
+
 }
 
 // MARK: - IBActions
@@ -115,7 +126,7 @@ private extension CodeTextEditView {
         guard let text = sender.text else { return }
         editingDidEnd?(text)
         if text.isEmpty {
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
                 guard let self = self else { return }
                 self.discountCodeTitle.transform = .identity
                 self.discountCodeTitle.frame.origin = self.labelOrigin

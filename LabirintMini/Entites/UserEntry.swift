@@ -25,7 +25,7 @@ struct User: Codable, RawDecodable {
     let patronymic: String
     let email: String
     let gender: String
-    let phones: Phones
+    let phones: [Phones]
     let nickname: String
     let avatarUrl: String
     let dob: String?
@@ -44,12 +44,12 @@ struct User: Codable, RawDecodable {
     let currentOrdersCount: Int
     let ordersStatus: String
     let lastModifiedWithOrder: String
-    let reviewsCount: Int
+    let reviewsCount: Int?
     let deliveryMainTitle: String
     let deliveryMainDescription: String
     let invitedFriendsCount: Int
     let invitationBonus: Int
-    let invitationAlert: String
+    let invitationAlert: String?
     let balanceUrl: String
     let vkId: String?
     let facebookId: String?
@@ -60,17 +60,17 @@ struct User: Codable, RawDecodable {
     let yandexPassportId: String?
     let mailRuId: String?
     let huaweiId: String?
-    let appleUserString: String
-    let vkName: String?//null
-    let facebookName: String?//null
-    let twitterName: String?//null
-    let livejournalName: String?//null
-    let googleName: String?//null
-    let okName: String?//null
-    let mailRuName: String?//null
-    let yandexPassportName: String?//null
-    let huaweiName: String?//null
-    let appleUserName: String
+    let appleUserString: Int?
+    let vkName: String?
+    let facebookName: String?
+    let twitterName: String?
+    let livejournalName: String?
+    let googleName: String?
+    let okName: String?
+    let mailRuName: String?
+    let yandexPassportName: String?
+    let huaweiName: Int?
+    let appleUserName: Int?
     let region: Region
     let paidOrderInfo: String
     let nextDiscountInfo: String
@@ -89,7 +89,7 @@ struct User: Codable, RawDecodable {
     let recommendationType: String
     let coupons: [String]
     let couponsInfo: String
-    let cashback: Int
+    let cashback: Int?
     let subscriptionsCount: Int
     let orderBadgeCount: Int
     let actionBadgeCount: Int
@@ -99,6 +99,7 @@ struct User: Codable, RawDecodable {
     let subscriptionsAvailableBadgeCount: Int
     let basketProductsCount: Int
     let deferredProductsCount: Int
+    let couponsBurning: Int
 }
 
 struct UserEntry: Codable, RawDecodable {
