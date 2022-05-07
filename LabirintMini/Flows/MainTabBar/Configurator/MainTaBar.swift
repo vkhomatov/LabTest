@@ -32,6 +32,8 @@ extension MainTabBar {
         navigationController.tabBarItem = barItem
         navigationController.navigationBar.barStyle = .black
         navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        navigationController.navigationBar.shadowImage = UIImage()
         return navigationController
     }
 

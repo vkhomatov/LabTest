@@ -9,6 +9,6 @@ import Foundation
 
 protocol MyLabRouterInput {
 
-    func openLoginScreen()
+    func openLoginScreen(delegate: LoginDiscountCodePresenterDelegate)
 
 }

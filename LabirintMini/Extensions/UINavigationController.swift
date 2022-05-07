@@ -10,7 +10,7 @@ import UIKit
 extension UINavigationController {
     
     // устанавливает белый навигейшн бар с размером шрифта тайтла 17 и скрытой кнопкой назад
-    func whitekNavBar(title: String) {
+    func whiteNavBar(title: String) {
         self.navigationBar.barStyle = .default
         self.navigationBar.barTintColor = .white
         self.navigationBar.isTranslucent = false

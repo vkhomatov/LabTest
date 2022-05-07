@@ -7,26 +7,26 @@
 
 import NodeKit
 
-//let base = URL(string: "https://apitest.labirint.ru/v3")
-let base = URL(string: "https://api.labirint.ru/v3")
-
 enum UserServiceRoute: UrlRouteProvider {
+    private enum Constants {
+        static let base = URL(string: "https://apitest.labirint.ru/v3")
+    }
+    
     case token
     case login
     
     func url() throws -> URL {
         switch self {
         case .token:
-            return try base + "/token"
+            return try Constants.base + "/token"
         case .login:
-            return try base + "/user/login"
+            return try Constants.base + "/user/login"
         }
     }
 }
 
 protocol UserServiceProtocol {
     func getToken(with parameters: [String : String]) -> Observer<TokenEntity>
-    func login(with parameters: [String : String]) -> Observer<UserEntity>
     func loginWithBody(with parameters: [String : String], code: String) -> Observer<UserEntity>
 }
 
@@ -39,15 +39,6 @@ final class UserService: UserServiceProtocol {
     func getToken(with parameters: [String : String]) -> Observer<TokenEntity> {
         return builder
             .route(.get, .token)
-            .encode(as: .urlQuery)
-            .set(query: parameters)
-            .build()
-            .process()
-    }
-    
-    func login(with parameters: [String : String]) -> Observer<UserEntity> {
-        return builder
-            .route(.post, .login)
             .encode(as: .urlQuery)
             .set(query: parameters)
             .build()

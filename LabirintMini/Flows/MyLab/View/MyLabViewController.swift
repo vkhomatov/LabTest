@@ -10,7 +10,7 @@ import ReactiveDataDisplayManager
 
 
 final class MyLabViewController: UIViewController {
-    
+ 
     // MARK: - IBOutlet
 
     @IBOutlet private weak var tableView: UITableView!

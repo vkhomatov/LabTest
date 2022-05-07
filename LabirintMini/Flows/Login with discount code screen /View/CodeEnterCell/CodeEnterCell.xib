@@ -27,7 +27,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                 <connections>
-                                    <action selector="codeTextFieldEditingDidBegin:" destination="6nr-nr-2NP" eventType="editingDidBegin" id="6gr-l1-MgF"/>
+                                    <action selector="codeTextFieldEditingBegin:" destination="6nr-nr-2NP" eventType="editingDidBegin" id="6gr-l1-MgF"/>
                                     <action selector="codeTextFieldEditingDidEnd:" destination="6nr-nr-2NP" eventType="editingDidEnd" id="C1V-cJ-kFw"/>
                                 </connections>
                             </textField>
@@ -41,9 +41,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pFp-2F-uc6" firstAttribute="top" secondItem="6nr-nr-2NP" secondAttribute="top" constant="10.5" id="6al-4G-w5s"/>
-                            <constraint firstAttribute="width" constant="320" id="7oV-OE-XyF"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="7oV-OE-XyF"/>
                             <constraint firstAttribute="trailing" secondItem="rQN-Q0-s9k" secondAttribute="trailing" constant="20" id="Fil-M3-NtB"/>
-                            <constraint firstAttribute="height" constant="69" id="Jzk-JY-WN5"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="69" id="Jzk-JY-WN5"/>
                             <constraint firstItem="rQN-Q0-s9k" firstAttribute="leading" secondItem="6nr-nr-2NP" secondAttribute="leading" constant="15" id="KpC-e2-HXr"/>
                             <constraint firstItem="pFp-2F-uc6" firstAttribute="leading" secondItem="6nr-nr-2NP" secondAttribute="leading" constant="15" id="VcP-zT-12i"/>
                             <constraint firstAttribute="bottom" secondItem="rQN-Q0-s9k" secondAttribute="bottom" constant="14" id="gWn-NL-QeC"/>

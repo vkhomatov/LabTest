@@ -32,12 +32,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="115" id="9CV-iB-p70"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="115" id="9CV-iB-p70"/>
                             <constraint firstItem="kkW-qI-yOb" firstAttribute="top" secondItem="0Fh-AE-ybc" secondAttribute="top" constant="57" id="B7l-wQ-dQT"/>
                             <constraint firstAttribute="bottom" secondItem="kkW-qI-yOb" secondAttribute="bottom" constant="14" id="OFm-EB-fQH"/>
                             <constraint firstAttribute="trailing" secondItem="kkW-qI-yOb" secondAttribute="trailing" constant="15" id="YiO-GC-kDJ"/>
                             <constraint firstItem="kkW-qI-yOb" firstAttribute="leading" secondItem="0Fh-AE-ybc" secondAttribute="leading" constant="15" id="aRU-Nm-QXI"/>
-                            <constraint firstAttribute="width" constant="320" id="gp5-Y8-bLz"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="gp5-Y8-bLz"/>
                         </constraints>
                     </view>
                 </subviews>

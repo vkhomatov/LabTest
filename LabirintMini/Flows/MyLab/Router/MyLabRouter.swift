@@ -17,8 +17,8 @@ final class MyLabRouter {
 
 extension MyLabRouter: MyLabRouterInput {
     
-    func openLoginScreen() {
-        let module = LoginDiscountCodeConfigurator().configure()
+    func openLoginScreen(delegate: LoginDiscountCodePresenterDelegate) {
+        let module = LoginDiscountCodeConfigurator().configure(delegate: delegate)
         module.modalPresentationCapturesStatusBarAppearance = true
         module.modalPresentationStyle = .overFullScreen
         view?.present(module, animated: true, completion: nil)

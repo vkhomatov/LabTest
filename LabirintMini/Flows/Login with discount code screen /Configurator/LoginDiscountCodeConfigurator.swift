@@ -9,7 +9,7 @@ import UIKit
 
 final class LoginDiscountCodeConfigurator {
     
-    func configure() -> UIViewController {
+    func configure(delegate: LoginDiscountCodePresenterDelegate) -> UIViewController {
         let view = LoginDiscountCodeViewController()
         let router = LoginDiscountCodeRouter()
         let presenter = LoginDiscountCodePresenter()
@@ -18,6 +18,7 @@ final class LoginDiscountCodeConfigurator {
         presenter.router = router
         router.view = view
         view.output = presenter
+        presenter.delegate = delegate
 
         return UINavigationController(rootViewController: view)
     }

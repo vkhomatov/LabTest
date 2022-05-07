@@ -29,11 +29,11 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="width" constant="320" id="8Wg-2Z-1ZK"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="8Wg-2Z-1ZK"/>
                             <constraint firstItem="Gb0-O6-db2" firstAttribute="leading" secondItem="khc-QY-jfl" secondAttribute="leading" constant="16" id="DZP-7M-0Ib"/>
                             <constraint firstItem="Gb0-O6-db2" firstAttribute="centerY" secondItem="khc-QY-jfl" secondAttribute="centerY" id="iMI-sm-Mho"/>
                             <constraint firstItem="Gb0-O6-db2" firstAttribute="centerX" secondItem="khc-QY-jfl" secondAttribute="centerX" id="lPp-gv-rjA"/>
-                            <constraint firstAttribute="height" constant="90" id="pGL-gv-8kR"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="pGL-gv-8kR"/>
                             <constraint firstAttribute="trailing" secondItem="Gb0-O6-db2" secondAttribute="trailing" constant="16" id="qxg-X2-p4G"/>
                         </constraints>
                     </view>

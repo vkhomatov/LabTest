@@ -246,6 +246,7 @@
 			children = (
 				3C0BA2A4268DCB1C00C47C74 /* Application */,
 				9E176F0227F2E07A00098563 /* Entites */,
+				58564A5D2824EAB000950DD0 /* Models */,
 				9EBC235327CE283F00AB1BA3 /* Flows */,
 				3C0BA2A5268DCB2F00C47C74 /* Resources */,
 				9ED735F727F5AD5A00C72319 /* Services */,
@@ -282,6 +283,14 @@
 				3C0BA299268DC98F00C47C74 /* assets.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		58564A5D2824EAB000950DD0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E5B1C1F27E9FD9B004ADB32 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9432D337A8CE82BED362B83A /* Pods */ = {
@@ -699,7 +708,6 @@
 			children = (
 				9EBC23B427CE41D800AB1BA3 /* MyLabPresenter.swift */,
 				9EAE91F027DB9941003988F1 /* MyLabViewBuilder.swift */,
-				9E5B1C1F27E9FD9B004ADB32 /* UserModel.swift */,
 				9E5B1C3427EC9C3C004ADB32 /* MyLabRowTypes.swift */,
 				9E5B1C3627EC9CC3004ADB32 /* LoginState.swift */,
 			);

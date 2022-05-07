@@ -15,10 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hq2-Ef-U7d">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                    <color key="backgroundColor" systemColor="labelColor"/>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Иван Человеков" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geG-Ez-4ta">
                     <rect key="frame" x="16" y="16" width="288" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -43,16 +39,16 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 865 ₽ до повышения скидки до 15% " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehR-CN-BrS">
-                    <rect key="frame" x="16" y="145" width="137" height="29"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 865 ₽ до повышения скидки до 15% " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehR-CN-BrS">
+                    <rect key="frame" x="16" y="145" width="154" height="29"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="137" id="unm-Tp-H4e"/>
+                        <constraint firstAttribute="width" constant="154" id="unm-Tp-H4e"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" systemColor="opaqueSeparatorColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="TabBar/ic" translatesAutoresizingMaskIntoConstraints="NO" id="IFX-iP-saI">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="TabBar/infoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IFX-iP-saI">
                     <rect key="frame" x="78" y="111" width="19" height="19"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
@@ -65,7 +61,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TabBar/ic" translatesAutoresizingMaskIntoConstraints="NO" id="uEB-bG-aTC">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TabBar/infoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uEB-bG-aTC">
                     <rect key="frame" x="211" y="111" width="19" height="19"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
@@ -77,23 +73,18 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ZvA-5r-VqQ"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
             <constraints>
                 <constraint firstItem="IFX-iP-saI" firstAttribute="leading" secondItem="eg2-qg-NOH" secondAttribute="trailing" constant="5" id="0T8-au-bCE"/>
                 <constraint firstItem="ehR-CN-BrS" firstAttribute="leading" secondItem="geG-Ez-4ta" secondAttribute="leading" id="39V-rq-UQC"/>
                 <constraint firstItem="lrk-2H-GgB" firstAttribute="baseline" secondItem="eg2-qg-NOH" secondAttribute="baseline" id="8Kd-kn-pfp"/>
-                <constraint firstItem="hq2-Ef-U7d" firstAttribute="bottom" secondItem="ZvA-5r-VqQ" secondAttribute="bottom" id="8nE-za-FKw"/>
                 <constraint firstItem="Kkv-xu-TG7" firstAttribute="centerY" secondItem="H1P-FX-cfV" secondAttribute="centerY" id="9jl-WN-y4S"/>
                 <constraint firstItem="uEB-bG-aTC" firstAttribute="leading" secondItem="lrk-2H-GgB" secondAttribute="trailing" constant="5" id="BJS-DW-N9S"/>
-                <constraint firstItem="uEB-bG-aTC" firstAttribute="leading" secondItem="lrk-2H-GgB" secondAttribute="trailing" constant="5" id="CId-Sa-ydi"/>
                 <constraint firstItem="V5o-pL-yfC" firstAttribute="top" secondItem="geG-Ez-4ta" secondAttribute="bottom" constant="4" id="Io4-vJ-P2X"/>
                 <constraint firstItem="ehR-CN-BrS" firstAttribute="top" secondItem="eg2-qg-NOH" secondAttribute="bottom" constant="8" symbolic="YES" id="OFY-n2-Zdy"/>
                 <constraint firstItem="lrk-2H-GgB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IFX-iP-saI" secondAttribute="trailing" constant="68" id="Tz3-34-yvF"/>
                 <constraint firstItem="IFX-iP-saI" firstAttribute="centerY" secondItem="eg2-qg-NOH" secondAttribute="centerY" id="Vgm-wi-Ckc"/>
-                <constraint firstItem="hq2-Ef-U7d" firstAttribute="leading" secondItem="ZvA-5r-VqQ" secondAttribute="leading" id="WAe-cE-eTi"/>
                 <constraint firstItem="uEB-bG-aTC" firstAttribute="centerY" secondItem="lrk-2H-GgB" secondAttribute="centerY" id="WOw-wD-PoF"/>
-                <constraint firstItem="hq2-Ef-U7d" firstAttribute="trailing" secondItem="ZvA-5r-VqQ" secondAttribute="trailing" id="YYX-9W-LBq"/>
-                <constraint firstItem="uEB-bG-aTC" firstAttribute="leading" secondItem="lrk-2H-GgB" secondAttribute="trailing" constant="5" id="ZEO-3Q-HwA"/>
                 <constraint firstItem="ZvA-5r-VqQ" firstAttribute="trailing" secondItem="uEB-bG-aTC" secondAttribute="trailing" constant="90" id="b4T-x1-KeI"/>
                 <constraint firstItem="geG-Ez-4ta" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="c5T-Oy-s4V"/>
                 <constraint firstItem="eg2-qg-NOH" firstAttribute="leading" secondItem="geG-Ez-4ta" secondAttribute="leading" id="cSn-F6-Lcm"/>
@@ -103,7 +94,6 @@
                 <constraint firstItem="Kkv-xu-TG7" firstAttribute="leading" secondItem="lrk-2H-GgB" secondAttribute="leading" id="lMi-Zd-fKX"/>
                 <constraint firstItem="V5o-pL-yfC" firstAttribute="leading" secondItem="ZvA-5r-VqQ" secondAttribute="leading" constant="16" id="mF2-eW-QBq"/>
                 <constraint firstItem="eg2-qg-NOH" firstAttribute="top" secondItem="H1P-FX-cfV" secondAttribute="bottom" constant="8" symbolic="YES" id="qoC-QZ-sVV"/>
-                <constraint firstItem="hq2-Ef-U7d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ram-Zg-C08"/>
                 <constraint firstAttribute="trailing" secondItem="geG-Ez-4ta" secondAttribute="trailing" constant="16" id="t2M-Rw-rGR"/>
                 <constraint firstItem="H1P-FX-cfV" firstAttribute="top" secondItem="V5o-pL-yfC" secondAttribute="bottom" constant="26" id="wpr-uM-9TZ"/>
             </constraints>
@@ -123,15 +113,12 @@
         </view>
     </objects>
     <resources>
-        <image name="TabBar/ic" width="19" height="19"/>
+        <image name="TabBar/infoIcon" width="19" height="19"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

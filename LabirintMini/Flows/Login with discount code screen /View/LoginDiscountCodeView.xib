@@ -27,7 +27,6 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="QDz-Z1-xoO"/>
-                        <constraint firstAttribute="width" constant="414" id="wbb-aC-D0d"/>
                     </constraints>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-NF-yfd" customClass="EnterButtonView" customModule="LabirintMini" customModuleProvider="target">
@@ -45,7 +44,6 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="ih9-BG-Sx2" firstAttribute="top" secondItem="cvf-NF-yfd" secondAttribute="top" constant="30" id="DDl-tE-1Rg"/>
-                        <constraint firstAttribute="width" constant="414" id="GHJ-nk-Tiw"/>
                         <constraint firstAttribute="bottom" secondItem="ih9-BG-Sx2" secondAttribute="bottom" constant="33" id="byT-IV-3aP"/>
                         <constraint firstItem="ih9-BG-Sx2" firstAttribute="leading" secondItem="jSr-fm-1aK" secondAttribute="leading" constant="15" id="gLC-SR-x8b"/>
                         <constraint firstItem="jSr-fm-1aK" firstAttribute="trailing" secondItem="ih9-BG-Sx2" secondAttribute="trailing" constant="15" id="pSK-3a-msO"/>

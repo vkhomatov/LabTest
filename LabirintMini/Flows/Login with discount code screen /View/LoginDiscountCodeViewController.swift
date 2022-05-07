@@ -39,7 +39,7 @@ final class LoginDiscountCodeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        navigationController?.whitekNavBar(title: L10n.MyLab.discountCodeTitle)
+        navigationController?.whiteNavBar(title: L10n.MyLab.discountCodeTitle)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,7 +58,7 @@ extension LoginDiscountCodeViewController: LoginDiscountCodeInput {
         configureTableView()
         configureCells()
         setCallbacks()
-        navigationController?.whitekNavBar(title: L10n.MyLab.discountCodeTitle)
+        navigationController?.whiteNavBar(title: L10n.MyLab.discountCodeTitle)
         navigationItem.closeBarButtonItem(target: self, action: #selector(closeModule))
         setupKeyboardNotificaition()
     }

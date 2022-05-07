@@ -118,7 +118,6 @@ final class UnautorizedHeaderGenerator: TableHeaderGenerator {
     // MARK: - TableHeaderGenerator
 
     override func generate() -> UIView {
-        header?.backgroundColor = .black
         return header ?? UIView()
     }
 

@@ -13,16 +13,16 @@ struct MyLabAuthorizedHeaderDataModel {
     let number: String
     let discount: Int
     let balance: Int
-    let nextDiscount: Int
+    let nextDiscount: String
     let nextDiscountSumm: Int
     
     init(from user: UserModel) {
-        self.name = user.name
-        self.number = user.number
-        self.discount = user.discount
-        self.balance = user.balance
-        self.nextDiscount = user.nextDiscount
-        self.nextDiscountSumm = user.nextDiscountSumm
+        self.name = user.name ?? ""
+        self.number = user.number ?? ""
+        self.discount = user.discount ?? 0
+        self.balance = user.balance ?? 0
+        self.nextDiscount = user.nextDiscount ?? ""
+        self.nextDiscountSumm = user.nextDiscountSumm ?? 0
     }
 }
 

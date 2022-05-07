@@ -10,11 +10,11 @@ import NodeKit
 struct UserEntity: DTODecodable {
     typealias DTO = UserEntry
             
-    let user: User
-    let developerMessage: String
-    let userMessage: String
-    let errorCode: Int
-    let metadata: MetaData
+    let user: User?
+    let developerMessage: String?
+    let userMessage: String?
+    let errorCode: Int?
+    let metadata: MetaData?
     
     static func from(dto: UserEntry) throws -> UserEntity {
         return .init(user: dto.user,

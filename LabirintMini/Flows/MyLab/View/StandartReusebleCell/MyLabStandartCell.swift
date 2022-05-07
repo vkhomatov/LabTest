@@ -24,14 +24,14 @@ struct MyLabStandartCellModel {
     let pickupPoints: Int
     
     init(from user: UserModel) {
-        self.myOrders = user.myOrders
-        self.myCoupons = user.myCoupons
-        self.couponsOnFire = user.couponsOnFire
-        self.myGoods = user.myGoods
-        self.myPurchasedGoods = user.myPurchasedGoods
-        self.mySubscriptions = user.mySubscriptions
-        self.delivryAddress = user.delivryAddress
-        self.pickupPoints = user.pickupPoints
+        self.myOrders = user.myOrders ?? 0
+        self.myCoupons = user.myCoupons ?? 0
+        self.couponsOnFire = user.couponsOnFire ?? 0
+        self.myGoods = user.myGoods ?? 0
+        self.myPurchasedGoods = user.myPurchasedGoods ?? 0
+        self.mySubscriptions = user.mySubscriptions ?? 0
+        self.delivryAddress = user.delivryAddress ?? ""
+        self.pickupPoints = user.pickupPoints ?? 0
     }
 }
 

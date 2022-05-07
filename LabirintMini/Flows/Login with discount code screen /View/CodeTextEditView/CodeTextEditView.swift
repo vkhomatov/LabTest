@@ -106,7 +106,7 @@ private extension CodeTextEditView {
     //    - ставим текст плейхолдера в .none
     //    - открываем и анимируем лейбл в меньший масштаб
     
-    @IBAction private func codeTextFieldEditingDidBegin(_ sender: CodeTextEdit) {
+    @IBAction private func codeTextFieldEditingBegin(_ sender: CodeTextEdit) {
         guard let text = sender.text else { return }
         editingDidBegin?(text)
         if text.isEmpty {

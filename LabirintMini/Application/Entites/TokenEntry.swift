@@ -10,31 +10,32 @@ import NodeKit
 struct TokenEntry: Codable, RawDecodable {
     typealias Raw = Json
     
-    let token: String
-    let region: Region
-    let developerMessage: String
-    let userMessage: String
-    let errorCode: Int
-    let _metadata: MetaData
+    let token: String?
+    let region: Region?
+    let developerMessage: String?
+    let userMessage: String?
+    let errorCode: Int?
+    let _metadata: MetaData?
 }
 
 struct Region: Codable, RawDecodable  {
     typealias Raw = Json
     
-     let exWorksCount: Int
-     let regionId: Int //
-     let mo: Bool //
-     let regionName: String //
-     let lat: Double //
-     let lon: Double//
-     let phoneSupport: String //
-     let deliveryDateString: String //
-     let haveNewExw: Bool //
-     let haveExWorks: Bool //
-     let exwLastUpdate: Int //
-     let newExwCount: Int //
-     let zipCode: String //
-     let isRussia: Int //
+    var exWorksCount: Int?
+    var regionId: Int?
+    var mo: Bool?
+    var regionName: String?
+    var lat: Double?
+    var lon: Double?
+    var phoneSupport: String?
+    var deliveryDateString: String?
+    var haveNewExw: Bool?
+    var haveExWorks: Bool?
+    var exwLastUpdate: Int?
+    var newExwCount: Int?
+    var zipCode: String?
+    var isRussia: Int?
+    
 }
 
 struct MetaData: Codable, RawDecodable {
